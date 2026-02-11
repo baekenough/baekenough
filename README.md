@@ -26,6 +26,7 @@
 
 [![Gmail](https://img.shields.io/badge/Gmail-baekenough@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:baekenough@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-baekenough-181717?style=flat-square&logo=github)](https://github.com/baekenough)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-SangYi_Baek-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sangyi-baek-a8b028203/)
 
 </div>
 
@@ -170,12 +171,23 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화
 
 ---
 
-## 📈 GitHub Stats
+## 📈 GitHub Activity
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=baekenough&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8" height="170"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=baekenough&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&text_color=94a3b8" height="170"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=baekenough&theme=tokyonight&hide_border=true&background=0a0a0b&ring=22d3ee&fire=a78bfa&currStreakLabel=22d3ee&sideLabels=94a3b8&dates=5a5a63&currStreakNum=e4e4e7&sideNums=e4e4e7" width="49%"/>
+<img src="https://github-profile-trophy.vercel.app/?username=baekenough&theme=algolia&no-bg=true&no-frame=true&column=4&margin-w=10" width="49%"/>
+
+</div>
+
+<div align="center">
+
+<a href="https://github.com/baekenough/oh-my-customcode">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=baekenough&repo=oh-my-customcode&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8" width="49%"/>
+</a>
+<a href="https://github.com/baekenough/clau-doom">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=baekenough&repo=clau-doom&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8" width="49%"/>
+</a>
 
 </div>
 
