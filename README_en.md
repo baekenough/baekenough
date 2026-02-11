@@ -1,10 +1,10 @@
-<!-- 🇰🇷 한국어 | [🇺🇸 English](./README_en.md) -->
+<!-- [🇰🇷 한국어](./README.md) | 🇺🇸 English -->
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Agentic%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=SangYi%20Baek&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Agentic%20Engineer%20·%208%2B%20Years%20in%20Software%20Engineering&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
 
-[![English](https://img.shields.io/badge/🇺🇸_English-Click_Here-2563eb?style=for-the-badge)](./README_en.md)
+[![한국어](https://img.shields.io/badge/🇰🇷_한국어-여기를_클릭-2563eb?style=for-the-badge)](./README.md)
 
 </div>
 
@@ -13,9 +13,10 @@
 <div align="center">
 
 ```
-설계와 가드레일은 직접 정의하고,
-실행·병렬 처리·자동화는 멀티 LLM 에이전트 시스템으로 오케스트레이션합니다.
-개인 단위에서 팀 수준의 처리량을 달성하는 것을 지향합니다.
+I define the design and guardrails myself.
+Execution, parallelism, and automation are orchestrated
+through a self-built multi-LLM agent system.
+I aim to achieve team-level throughput as an individual.
 ```
 
 </div>
@@ -33,32 +34,32 @@
 
 ## 🧠 About Me
 
-> **AI-Agent Native** 방식의 개발 워크플로우를 전제로 업무를 수행하는 8년차 소프트웨어 엔지니어입니다.
+> An **AI-Agent Native** software engineer with 8+ years of experience, building development workflows around multi-agent orchestration.
 
-- 🏥 의료(SaMD), On-Premise, 고객사별 커스터마이징 등 **복잡한 환경**에서 생산성을 극대화해왔습니다
-- 🤖 자체 구축한 **멀티 LLM 에이전트 시스템**으로 설계 → 실행 → 검증을 오케스트레이션합니다
-- 🔥 자체 개발한 하네스 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)를 오픈소스로 배포
-- 📈 LinkedIn에서 **조회수 16,000+** 기록한 claude-native 철학을 공유하고 있습니다
+- 🏥 Maximized productivity in complex environments: **Medical (SaMD)**, On-Premise, per-client customization
+- 🤖 Orchestrates design → execution → validation through a **self-built multi-LLM agent system**
+- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) — a Claude Code customization harness
+- 📈 Shared a **claude-native philosophy** that reached **16,000+ views** on LinkedIn
 
 ---
 
-## 📊 AI Workflow 실적
+## 📊 AI Workflow Metrics
 
 <div align="center">
 
 <table>
 <tr>
-<td align="center"><b>6,424</b><br/><sub>처리 메시지 (2일)</sub></td>
-<td align="center"><b>80</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>92%</b><br/><sub>만족도</sub></td>
-<td align="center"><b>60</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>6,424</b><br/><sub>Messages (2 days)</sub></td>
+<td align="center"><b>80</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>92%</b><br/><sub>Satisfaction</sub></td>
+<td align="center"><b>60</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 
 </div>
 
-> 멀티 에이전트 메모리 옵저버, 릴리스 파이프라인 자동화, 브라우저 연동 리서치 → 이슈 생성까지
-> 자체 하네스를 통한 실사용 데이터입니다.
+> Multi-agent memory observer, release pipeline automation, browser-integrated research → issue creation.
+> Real usage data from my custom harness.
 
 ---
 
@@ -70,10 +71,10 @@
 
 ### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
 
-**oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크**
+**oh-my-zsh style customization framework for Claude Code**
 
-멀티 에이전트 오케스트레이션, 자동화된 메모리 관찰 시스템,
-릴리스 파이프라인을 포함하는 종합 하네스
+Multi-agent orchestration, automated memory observation system,
+and release pipelines in a comprehensive harness
 
 `TypeScript` `Claude Code` `npm` `Multi-Agent`
 
@@ -82,10 +83,10 @@
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom)
 
-**LLM 오케스트레이션 기반 멀티에이전트 DOOM AI**
+**LLM-orchestrated Multi-Agent DOOM AI**
 
-RAG 경험 축적 + DOE 최적화 + 세대별 진화
-게임플레이 중 실시간 LLM 호출 없이 동작
+RAG experience accumulation + DOE optimization + generational evolution.
+No real-time LLM calls during gameplay.
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
@@ -95,28 +96,28 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화
 
 ---
 
-## 💼 경력
+## 💼 Career
 
 ```
-메디웨일 (Mediwhale)     2025.02 ~ 재직중     시스템 엔지니어
-├─ SaMD 백엔드 개발 (식약처/FDA 가이드라인)
-├─ Interface 서버 설계·개발 (응답 시간 4분+ → 절반 이하로 단축)
-├─ 어플리케이션 배포 서버 (NSIS + GitHub Actions 자동화)
-├─ Headless PACS 개발
-└─ PyQt 윈도우 어플리케이션 개발
+Mediwhale               2025.02 ~ Present    Systems Engineer
+├─ SaMD backend (KFDA/FDA guidelines)
+├─ Interface server (response time 4min+ → under half)
+├─ App deployment server (NSIS + GitHub Actions)
+├─ Headless PACS development
+└─ PyQt desktop application
 
-뷰노 (Vuno)              2022.07 ~ 2025.01    솔루션 엔지니어
-├─ EMR ↔ AI Server 인터페이스 (DB 파싱 속도 56%↑)
-├─ On-Premise 설치 간소화 (20+ steps → 1 step)
-└─ 원내 시스템 연동 컨설팅
+Vuno                    2022.07 ~ 2025.01    Solutions Engineer
+├─ EMR ↔ AI Server interface (DB parsing 56%↑)
+├─ On-Premise install simplification (20+ steps → 1 step)
+└─ Hospital system integration consulting
 
-에이치디정션 (HD Junction)  2021.02 ~ 2022.07    기술지원
-├─ Third-party 웹 어플리케이션 개발
-├─ DB 마이그레이션 솔루션 개발
-└─ Jira/Confluence 운영 자동화
+HD Junction             2021.02 ~ 2022.07    Technical Support
+├─ Third-party web application development
+├─ DB migration solution
+└─ Jira/Confluence automation
 
-유비케어 (UBcare)          2018.09 ~ 2021.01
-└─ TCP/IP 프린트 전달·출력 솔루션 TF PM
+UBcare                  2018.09 ~ 2021.01
+└─ TCP/IP print delivery solution TF PM
 ```
 
 ---
