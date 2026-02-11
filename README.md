@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=AI-Native%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Agentic%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
 
 [![English](https://img.shields.io/badge/🇺🇸_English-Click_Here-2563eb?style=for-the-badge)](./README_en.md)
 
@@ -49,17 +49,29 @@
 
 <table>
 <tr>
-<td align="center"><b>6,424</b><br/><sub>처리 메시지 (2일)</sub></td>
-<td align="center"><b>80</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>92%</b><br/><sub>만족도</sub></td>
-<td align="center"><b>60</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>7,386</b><br/><sub>처리 메시지 (3일)</sub></td>
+<td align="center"><b>162</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>95%</b><br/><sub>만족도 (205/215)</sub></td>
+<td align="center"><b>121</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 
 </div>
 
-> 멀티 에이전트 메모리 옵저버, 릴리스 파이프라인 자동화, 브라우저 연동 리서치 → 이슈 생성까지
-> 자체 하네스를 통한 실사용 데이터입니다.
+> 자체 하네스를 통한 실사용 데이터입니다. 멀티 에이전트 메모리 옵저버, 릴리스 파이프라인 자동화,
+> 브라우저 연동 리서치 → 이슈 생성, 자율 오케스트레이션 & 에이전트 핸드오프를 수행합니다.
+
+**핵심 도구 사용량**
+
+![Bash](https://img.shields.io/badge/Bash-114회-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task_Delegation-53회-a78bfa?style=flat-square)
+![Browser MCP](https://img.shields.io/badge/Browser_MCP-35회-34d399?style=flat-square)
+![Read](https://img.shields.io/badge/Read-23회-fb923c?style=flat-square)
+
+**주요 성과**
+- 🧠 **멀티 에이전트 메모리 옵저버** — 세션 간 구조화된 지식을 자동 캡처하는 전용 옵저버 에이전트 구축
+- ⚡ **자율 오케스트레이션** — 162개 세션에서 자동 작업 분석, 핸드오프, 위임 패턴 운영
+- 🚀 **E2E 릴리스 파이프라인** — PR fix → merge → npm publish → sauron 검증 → 후속 이슈 6건 등록을 단일 세션에서 완료
 
 ---
 
@@ -99,24 +111,24 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화
 ## 💼 경력
 
 ```
-메디웨일 (Mediwhale)     2025.02 ~ 2026.02    시스템 엔지니어
+메디웨일 (Mediwhale)       2025.02 ~ 2026.02    시스템 엔지니어
 ├─ SaMD 백엔드 개발 (식약처/FDA 가이드라인)
 ├─ Interface 서버 설계·개발 (응답 시간 4분+ → 절반 이하로 단축)
 ├─ 어플리케이션 배포 서버 (NSIS + GitHub Actions 자동화)
 ├─ Headless PACS 개발
 └─ PyQt 윈도우 어플리케이션 개발
 
-뷰노 (Vuno)              2022.07 ~ 2025.01    솔루션 엔지니어
+뷰노 (Vuno)                2022.07 ~ 2025.01    솔루션 엔지니어
 ├─ EMR ↔ AI Server 인터페이스 (DB 파싱 속도 56%↑)
 ├─ On-Premise 설치 간소화 (20+ steps → 1 step)
 └─ 원내 시스템 연동 컨설팅
 
-에이치디정션 (HD Junction)  2021.02 ~ 2022.07    기술지원
+에이치디정션 (HD Junction)    2021.02 ~ 2022.07    기술지원
 ├─ Third-party 웹 어플리케이션 개발
 ├─ DB 마이그레이션 솔루션 개발
 └─ Jira/Confluence 운영 자동화
 
-유비케어 (UBcare)          2018.09 ~ 2021.01
+유비케어 (UBcare)            2018.09 ~ 2021.01
 └─ TCP/IP 프린트 전달·출력 솔루션 TF PM
 ```
 

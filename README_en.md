@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=SangYi%20Baek&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=AI-Native%20Engineer%20·%208%2B%20Years%20in%20Software%20Engineering&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=SangYi%20Baek&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Agentic%20Engineer%20·%208%2B%20Years%20in%20Software%20Engineering&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
 
 [![한국어](https://img.shields.io/badge/🇰🇷_한국어-여기를_클릭-2563eb?style=for-the-badge)](./README.md)
 
@@ -50,17 +50,29 @@ I aim to achieve team-level throughput as an individual.
 
 <table>
 <tr>
-<td align="center"><b>6,424</b><br/><sub>Messages (2 days)</sub></td>
-<td align="center"><b>80</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>92%</b><br/><sub>Satisfaction</sub></td>
-<td align="center"><b>60</b><br/><sub>Parallel Session Events</sub></td>
+<td align="center"><b>7,386</b><br/><sub>Messages (3 days)</sub></td>
+<td align="center"><b>162</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>95%</b><br/><sub>Satisfaction (205/215)</sub></td>
+<td align="center"><b>121</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 
 </div>
 
-> Multi-agent memory observer, release pipeline automation, browser-integrated research → issue creation.
-> Real usage data from my custom harness.
+> Real usage data from my custom harness. Multi-agent memory observer, release pipeline automation,
+> browser-integrated research → issue creation, autonomous orchestration & agent handoffs.
+
+**Core Tool Usage**
+
+![Bash](https://img.shields.io/badge/Bash-114_calls-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task_Delegation-53_calls-a78bfa?style=flat-square)
+![Browser MCP](https://img.shields.io/badge/Browser_MCP-35_calls-34d399?style=flat-square)
+![Read](https://img.shields.io/badge/Read-23_calls-fb923c?style=flat-square)
+
+**Key Achievements**
+- 🧠 **Multi-Agent Memory Observer** — Built a dedicated observer agent that auto-captures structured knowledge across sessions
+- ⚡ **Autonomous Orchestration** — Auto work analysis, handoffs, and delegation patterns across 162 sessions
+- 🚀 **E2E Release Pipeline** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues in a single session
 
 ---
 
@@ -100,7 +112,7 @@ No real-time LLM calls during gameplay.
 ## 💼 Career
 
 ```
-Mediwhale               2025.02 ~ Present    Systems Engineer
+Mediwhale               2025.02 ~ 2026.02    Systems Engineer
 ├─ SaMD backend (KFDA/FDA guidelines)
 ├─ Interface server (response time 4min+ → under half)
 ├─ App deployment server (NSIS + GitHub Actions)
