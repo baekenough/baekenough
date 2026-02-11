@@ -175,19 +175,16 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=baekenough&theme=tokyonight&hide_border=true&background=0a0a0b&ring=22d3ee&fire=a78bfa&currStreakLabel=22d3ee&sideLabels=94a3b8&dates=5a5a63&currStreakNum=e4e4e7&sideNums=e4e4e7" width="49%"/>
-<img src="https://github-profile-trophy.vercel.app/?username=baekenough&theme=algolia&no-bg=true&no-frame=true&column=4&margin-w=10" width="49%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=baekenough&theme=tokyonight&hide_border=true&background=0a0a0b&ring=22d3ee&fire=a78bfa&currStreakLabel=22d3ee&sideLabels=94a3b8&dates=5a5a63&currStreakNum=e4e4e7&sideNums=e4e4e7" width="60%"/>
 
 </div>
 
 <div align="center">
 
-<a href="https://github.com/baekenough/oh-my-customcode">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=baekenough&repo=oh-my-customcode&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8" width="49%"/>
-</a>
-<a href="https://github.com/baekenough/clau-doom">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=baekenough&repo=clau-doom&theme=tokyonight&hide_border=true&bg_color=0a0a0b&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8" width="49%"/>
-</a>
+| 📌 Pinned Repositories | |
+|:---|:---|
+| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
+| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI |
 
 </div>
 
