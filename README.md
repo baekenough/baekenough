@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Agentic%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=AI-Native%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
 
 [![English](https://img.shields.io/badge/🇺🇸_English-Click_Here-2563eb?style=for-the-badge)](./README_en.md)
 
