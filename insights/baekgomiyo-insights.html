@@ -119,16 +119,16 @@
 <body>
   <div class="container">
     <h1>Claude Code Insights</h1>
-    <p class="subtitle">22 messages across 3 sessions | 2026-02-12 to 2026-02-12</p>
+    <p class="subtitle">490 messages across 34 sessions (166 total) | 2026-02-12 to 2026-02-12</p>
 
     
     <div class="at-a-glance">
       <div class="glance-title">At a Glance</div>
       <div class="glance-sections">
-        <div class="glance-section"><strong>What's working:</strong> You're running an impressively ambitious multi-agent setup — 42 agents, skills, guides, and rules — and you're genuinely using orchestration to delegate work rather than doing everything in a single thread. Your persistence in pushing through CI pipeline friction to get your v0.10.0 quality gates PR created, including debugging pre-commit hooks and fixing bad commands, shows strong iterative problem-solving with Claude. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
-        <div class="glance-section"><strong>What's hindering you:</strong> On Claude's side, sub-agents like mgr-gitnerd struggled to interpret pre-commit output correctly, burning through retries instead of escalating cleanly — that's wasted cycles Claude should handle better. On your side, sessions sometimes hit walls because environment prerequisites weren't checked upfront (like not being in a tmux session before configuring tmux teammate mode), and CI scripts contained commands that didn't exist, which only surfaced when they blocked real work. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
-        <div class="glance-section"><strong>Quick wins to try:</strong> Try using <strong>hooks</strong> to auto-validate your pre-commit scripts and CI commands before they get committed — this would catch issues like the false-positive grep pattern and non-existent `bun pm audit` before they block your pipeline. Also, give your sub-agents more explicit failure-handling instructions (e.g., &quot;if pre-commit fails with output X, report back instead of retrying&quot;) to cut down on retry spirals that require orchestrator rescue. <a href="#section-features" class="see-more">Features to Try →</a></div>
-        <div class="glance-section"><strong>Ambitious workflows:</strong> As models get more capable, your multi-agent orchestration could become truly autonomous — imagine kicking off a CI fix loop where Claude detects failures, diagnoses root causes, applies patches, and re-runs the pipeline until green, all without your intervention. Your tmux agent teams setup is also ripe for this: future models should be able to detect your terminal environment, bootstrap tmux if needed, apply configs, and spawn parallel agents in one shot instead of stalling on environment mismatches. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
+        <div class="glance-section"><strong>What's working:</strong> You're operating Claude Code as a full development platform — running parallel agent teams with git worktrees, maintaining a memory observer agent for cross-session context, and managing shared infrastructure across two accounts. Your ability to push through complex end-to-end release cycles (v0.10.0 through v0.10.3) and recover from mid-process failures like git index corruption shows real operational depth with the tool. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
+        <div class="glance-section"><strong>What's hindering you:</strong> On Claude's side, it frequently misreads your pipeline architecture — investigating the wrong direction, implementing unrequested features, or doing broad exploratory searches before finding root causes, which forces you to course-correct repeatedly. On your side, spreading work across many short sessions (rather than batching related tasks) means a lot of context gets lost, and the agent teams setup keeps hitting the same infrastructure issues (env var propagation, API encoding errors, idle workers) without a systematic playbook to avoid re-debugging them each time. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
+        <div class="glance-section"><strong>Quick wins to try:</strong> Try creating custom slash commands (/skills) for your most repeated workflows like release management steps and insights extraction — this would encode the pipeline direction and constraints that Claude keeps getting wrong. Also consider setting up hooks to auto-run verification checks before commits, which could catch the pre-commit false positives and destructive git operations that have burned you multiple times. <a href="#section-features" class="see-more">Features to Try →</a></div>
+        <div class="glance-section"><strong>Ambitious workflows:</strong> As models get more capable, your agent teams workflow should evolve from manual-recovery-required to self-healing — imagine an orchestrator that detects idle workers, retries with sanitized payloads, and falls back to direct execution automatically. Your full release pipeline (version bump through npm publish and branch cleanup) is also a prime candidate for end-to-end autonomy where Claude handles all 10+ steps and only surfaces for final approval, turning what currently takes multiple fragile sessions into a single reliable run. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
       </div>
     </div>
     
@@ -145,11 +145,11 @@
     </nav>
 
     <div class="stats-row">
-      <div class="stat"><div class="stat-value">22</div><div class="stat-label">Messages</div></div>
-      <div class="stat"><div class="stat-value">+0/-0</div><div class="stat-label">Lines</div></div>
-      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Files</div></div>
+      <div class="stat"><div class="stat-value">490</div><div class="stat-label">Messages</div></div>
+      <div class="stat"><div class="stat-value">+365/-0</div><div class="stat-label">Lines</div></div>
+      <div class="stat"><div class="stat-value">2</div><div class="stat-label">Files</div></div>
       <div class="stat"><div class="stat-value">1</div><div class="stat-label">Days</div></div>
-      <div class="stat"><div class="stat-value">22</div><div class="stat-label">Msgs/Day</div></div>
+      <div class="stat"><div class="stat-value">490</div><div class="stat-label">Msgs/Day</div></div>
     </div>
 
     
@@ -158,42 +158,42 @@
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">CI/CD Quality Gates &amp; Release Management</span>
-            <span class="area-count">~1 sessions</span>
+            <span class="area-name">oh-my-customcode Release Management &amp; CI</span>
+            <span class="area-count">~10 sessions</span>
           </div>
-          <div class="area-desc">Work on v0.10.0 CI quality gates including merging PRs, creating new PRs, and fixing CI failures. Claude Code was used heavily with Bash and Task tools to run CI commands, debug pre-commit hook false positives, and resolve issues like a non-existent 'bun pm audit' command. Sub-agents were delegated git and commit tasks, though repeated pre-commit hook failures required orchestrator intervention.</div>
+          <div class="area-desc">Extensive work on the oh-my-customcode project including version releases (v0.10.0 through v0.10.3), PR creation/merging, CI quality gates, fixing npm publish race conditions, and repository maintenance like secret consolidation. Claude Code was used heavily for git operations, branch management, changelog updates, tagging, and debugging CI failures caused by pre-commit hooks and audit commands.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Agent Teams &amp; tmux Configuration</span>
-            <span class="area-count">~1 sessions</span>
+            <span class="area-name">Agent Teams Orchestration &amp; Troubleshooting</span>
+            <span class="area-count">~10 sessions</span>
           </div>
-          <div class="area-desc">Research and setup of Agent Teams with iTerm2 auto-split panes using tmux teammate mode. Claude Code fetched documentation via WebFetch, read and modified configuration files across three config locations (JSON, YAML), and applied tmux settings. Live testing couldn't be completed since the session wasn't running inside tmux, requiring manual user intervention to validate.</div>
+          <div class="area-desc">Setting up and running parallel agent team workflows to process multiple GitHub issues simultaneously, including worktree creation, task spawning, and worker coordination. Significant friction was encountered with API JSON encoding errors, CLAUDE_CONFIG_DIR not propagating to child processes, workers going idle in bare repo environments, and iTerm2/tmux integration for split-pane agent teams. Claude Code was used to diagnose these issues, file/find upstream GitHub issues, and fall back to direct execution when agent workers failed.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">System Status Monitoring</span>
-            <span class="area-count">~1 sessions</span>
+            <span class="area-name">Insights Automation &amp; Cross-Account Data Pipeline</span>
+            <span class="area-count">~7 sessions</span>
           </div>
-          <div class="area-desc">User invoked the /status skill command to get a comprehensive overview of the system. Claude Code gathered and displayed status information covering 42 agents, skills, guides, and rules, providing a full snapshot of the project's agent infrastructure.</div>
+          <div class="area-desc">Building and debugging an automation pipeline for extracting Claude Code usage insights across two accounts (baekenough and baekgomiyo), generating per-account report.html files, deploying aggregated insights, and integrating with README updates and scheduling. Claude Code was used to trace deploy-insights update failures caused by stale git diff checks, migrate data between accounts, and plan the end-to-end automation script.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Multi-Agent Orchestration &amp; Delegation</span>
-            <span class="area-count">~2 sessions</span>
+            <span class="area-name">Memory &amp; Observation System</span>
+            <span class="area-count">~6 sessions</span>
           </div>
-          <div class="area-desc">Significant use of the Task tool (25 invocations) across sessions indicates heavy sub-agent delegation for git operations, code quality checks, and configuration tasks. Friction arose when sub-agents like mgr-gitnerd repeatedly failed to interpret pre-commit output correctly, highlighting challenges in multi-agent coordination that required direct debugging by the orchestrator.</div>
+          <div class="area-desc">Operating a memory observer agent pattern where a secondary Claude session records structured observations from primary session activity, including PR status tracking, issue analysis progress, and project exploration. Claude Code consistently produced well-formatted XML observation entries for future session memory, though some sessions were cut short or blocked by API rate limits.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Pre-commit Hooks &amp; Code Quality Tooling</span>
-            <span class="area-count">~1 sessions</span>
+            <span class="area-name">Project Configuration &amp; Plugin Management</span>
+            <span class="area-count">~5 sessions</span>
           </div>
-          <div class="area-desc">Debugging and fixing pre-commit hook issues that produced false positive grep patterns, blocking commits across the workflow. Claude Code used Bash extensively to diagnose hook behavior, test fixes, and ensure the quality gate pipeline could pass reliably for the v0.10.0 release cycle.</div>
+          <div class="area-desc">Analyzing and consolidating Claude Code configuration across multiple accounts, setting up shared plugins via symlinks, auditing oh-my-customcode integration to file upstream issues for discrepancies, and integrating brand assets into READMEs and wiki. Claude Code was used for deep exploration of settings.json architecture, symlinked config directories, and cross-project dependency verification.</div>
         </div>
       
     </div>
@@ -203,34 +203,34 @@
       <div class="chart-card">
         <div class="chart-title">What You Wanted</div>
         <div class="bar-row">
+        <div class="bar-label">Observation Recording</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
+        <div class="bar-value">5</div>
+      </div>
+<div class="bar-row">
         <div class="bar-label">Git Operations</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
+        <div class="bar-value">5</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Release Management</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:#2563eb"></div></div>
         <div class="bar-value">4</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Code Quality Verification</div>
-        <div class="bar-track"><div class="bar-fill" style="width:75%;background:#2563eb"></div></div>
+        <div class="bar-label">Commit And Push</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:#2563eb"></div></div>
+        <div class="bar-value">4</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Debugging</div>
+        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#2563eb"></div></div>
         <div class="bar-value">3</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Configuration And Setup</div>
-        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#2563eb"></div></div>
-        <div class="bar-value">2</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">System Status Check</div>
-        <div class="bar-track"><div class="bar-fill" style="width:25%;background:#2563eb"></div></div>
-        <div class="bar-value">1</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Research And Feasibility Analysis</div>
-        <div class="bar-track"><div class="bar-fill" style="width:25%;background:#2563eb"></div></div>
-        <div class="bar-value">1</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Testing Request</div>
-        <div class="bar-track"><div class="bar-fill" style="width:25%;background:#2563eb"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-label">Bug Fix</div>
+        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#2563eb"></div></div>
+        <div class="bar-value">3</div>
       </div>
       </div>
       <div class="chart-card">
@@ -238,32 +238,32 @@
         <div class="bar-row">
         <div class="bar-label">Bash</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#0891b2"></div></div>
-        <div class="bar-value">87</div>
+        <div class="bar-value">351</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:28.735632183908045%;background:#0891b2"></div></div>
-        <div class="bar-value">25</div>
+        <div class="bar-track"><div class="bar-fill" style="width:29.629629629629626%;background:#0891b2"></div></div>
+        <div class="bar-value">104</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Read</div>
-        <div class="bar-track"><div class="bar-fill" style="width:14.942528735632186%;background:#0891b2"></div></div>
-        <div class="bar-value">13</div>
+        <div class="bar-track"><div class="bar-fill" style="width:16.80911680911681%;background:#0891b2"></div></div>
+        <div class="bar-value">59</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Glob</div>
-        <div class="bar-track"><div class="bar-fill" style="width:5.747126436781609%;background:#0891b2"></div></div>
-        <div class="bar-value">5</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.262108262108262%;background:#0891b2"></div></div>
+        <div class="bar-value">29</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">WebFetch</div>
-        <div class="bar-track"><div class="bar-fill" style="width:2.2988505747126435%;background:#0891b2"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-label">SendMessage</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.128205128205128%;background:#0891b2"></div></div>
+        <div class="bar-value">18</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">AskUserQuestion</div>
-        <div class="bar-track"><div class="bar-fill" style="width:2.2988505747126435%;background:#0891b2"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.418803418803419%;background:#0891b2"></div></div>
+        <div class="bar-value">12</div>
       </div>
       </div>
     </div>
@@ -272,42 +272,57 @@
       <div class="chart-card">
         <div class="chart-title">Languages</div>
         <div class="bar-row">
-        <div class="bar-label">JSON</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
-        <div class="bar-value">3</div>
-      </div>
-<div class="bar-row">
         <div class="bar-label">Markdown</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
-        <div class="bar-value">3</div>
+        <div class="bar-value">20</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">JSON</div>
+        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#10b981"></div></div>
+        <div class="bar-value">12</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Shell</div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%;background:#10b981"></div></div>
+        <div class="bar-value">7</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">TypeScript</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.66666666666666%;background:#10b981"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:#10b981"></div></div>
+        <div class="bar-value">6</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">YAML</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.66666666666666%;background:#10b981"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:15%;background:#10b981"></div></div>
+        <div class="bar-value">3</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Python</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5%;background:#10b981"></div></div>
+        <div class="bar-value">1</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Session Types</div>
         <div class="bar-row">
-        <div class="bar-label">Single Task</div>
+        <div class="bar-label">Multi Task</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-value">16</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Single Task</div>
+        <div class="bar-track"><div class="bar-fill" style="width:68.75%;background:#8b5cf6"></div></div>
+        <div class="bar-value">11</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Iterative Refinement</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:25%;background:#8b5cf6"></div></div>
+        <div class="bar-value">4</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Multi Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-label">Exploration</div>
+        <div class="bar-track"><div class="bar-fill" style="width:18.75%;background:#8b5cf6"></div></div>
+        <div class="bar-value">3</div>
       </div>
       </div>
     </div>
@@ -315,10 +330,10 @@
     
     <h2 id="section-usage">How You Use Claude Code</h2>
     <div class="narrative">
-      <p>You pack a remarkable amount of work into very short sessions — 3 sessions, 22 messages, and 3 commits all within a single hour on one day. Your interaction style is that of a <strong>power user who delegates heavily and expects Claude to orchestrate complex, multi-step workflows</strong>. The extremely high Bash tool usage (87 invocations) combined with heavy Task delegation (25 invocations) shows you're leveraging Claude as a hands-off automation layer, letting sub-agents and scripts do the heavy lifting while you steer at a high level. Rather than giving detailed upfront specs, you issue concise, goal-oriented directives — &quot;resume v0.10.0 CI quality gates work,&quot; &quot;set up Agent Teams with iTerm2 auto-split panes&quot; — and trust Claude to figure out the implementation path.</p>
-<p>Your sessions reveal a <strong>CI/DevOps and infrastructure-focused workflow</strong> where you're configuring systems, merging PRs, fixing pipelines, and verifying quality gates. You don't micromanage — you let Claude run through multi-file changes across JSON, TypeScript, YAML, and Markdown configs — but you do stay engaged when things break. The friction data is telling: when the sub-agent (mgr-gitnerd) repeatedly failed to commit due to a false-positive pre-commit hook, and when `bun pm audit` turned out not to exist, you didn't abandon the approach but <strong>pushed through debugging cycles</strong>, expecting Claude to self-correct. The tmux testing limitation also shows you're comfortable hitting environment boundaries and deferring gracefully rather than getting stuck.</p>
-<p>Despite encountering buggy code and wrong approaches in two of three sessions, your satisfaction remained high (9 likely satisfied out of 11 signals), suggesting you have a <strong>pragmatic tolerance for iteration and imperfection</strong>. You value forward progress over perfection — &quot;mostly achieved&quot; is good enough to commit and move on. Your use of the `/status` skill command and agent team configurations indicates you're building out a sophisticated multi-agent development environment, treating Claude Code not as a simple assistant but as the central nervous system of a larger toolchain.</p>
-      <div class="key-insight"><strong>Key pattern:</strong> You operate as a high-level orchestrator who issues terse, goal-driven commands and lets Claude's sub-agents and Bash automation handle execution, intervening only when pipeline friction demands direct debugging.</div>
+      <p>You are an <strong>intense, high-throughput power user</strong> who crammed 34 sessions and 490 messages into a single day (February 12, 2026), averaging roughly 14 messages per session across just 6 hours. Your workflow revolves around <strong>orchestrating complex multi-agent architectures</strong> — you run agent teams with parallel workers, memory observer agents, and tmux-based split-pane coordination across multiple Claude Code accounts (baekenough/baekgomiyo). You don't give Claude detailed upfront specs; instead, you <strong>issue high-level directives and expect Claude to figure out the execution path</strong>, stepping in with corrections when it veers off course. For example, you had to redirect Claude multiple times when it misunderstood your /insights pipeline direction, explored unrelated filesystem paths instead of recognizing built-in features, or autonomously implemented git workflow detection when you'd asked for issue analysis.</p>
+<p>Your interaction style is best characterized as <strong>relentless forward momentum with frequent recovery from failures</strong>. You don't let API errors, git index corruption, or agent worker failures stop you — you pivot, ask Claude to take over directly, or restart approaches. The 351 Bash calls and 104 Task invocations show you're heavily leveraging Claude as an execution engine for shell operations and parallel task coordination rather than for code writing (only 1 &quot;correct_code_edits&quot; success noted). You maintain a <strong>release engineering cadence</strong> — version bumps, changelog updates, PR creation/merge, tagging, GitHub releases, branch cleanup — and you chain these operations across sessions with an expectation of continuity. The 12 instances of buggy code friction and 9 wrong-approach incidents don't seem to frustrate you much (76% likely satisfied), suggesting you treat Claude as a capable but imperfect collaborator whose mistakes are part of the workflow rather than dealbreakers.</p>
+<p>What's particularly distinctive is your <strong>meta-layer of tooling introspection</strong> — you analyze Claude's own configuration, debug agent team infrastructure issues (like CLAUDE_CONFIG_DIR not propagating to child processes), file upstream bug reports, and build automation pipelines around Claude Code's insights system. You're not just using the tool; you're <strong>engineering the system around the tool</strong>, sharing plugins via symlinks, auditing secrets, and building observer memory agents to maintain context across your rapid-fire sessions.</p>
+      <div class="key-insight"><strong>Key pattern:</strong> You operate as a high-velocity release engineer and multi-agent orchestrator who issues terse directives, expects autonomous execution, and rapidly course-corrects when Claude goes off-track — treating failures as routine obstacles in an aggressive single-day sprint.</div>
     </div>
     
 
@@ -327,41 +342,41 @@
       <div class="chart-title">User Response Time Distribution</div>
       <div class="bar-row">
         <div class="bar-label">2-10s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:16.666666666666664%;background:#6366f1"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:65.85365853658537%;background:#6366f1"></div></div>
+        <div class="bar-value">27</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">10-30s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
-        <div class="bar-value">6</div>
+        <div class="bar-track"><div class="bar-fill" style="width:95.1219512195122%;background:#6366f1"></div></div>
+        <div class="bar-value">39</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">30s-1m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.66666666666666%;background:#6366f1"></div></div>
-        <div class="bar-value">4</div>
+        <div class="bar-track"><div class="bar-fill" style="width:82.92682926829268%;background:#6366f1"></div></div>
+        <div class="bar-value">34</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">1-2m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:33.33333333333333%;background:#6366f1"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80.48780487804879%;background:#6366f1"></div></div>
+        <div class="bar-value">33</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">2-5m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:33.33333333333333%;background:#6366f1"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
+        <div class="bar-value">41</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">5-15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:0%;background:#6366f1"></div></div>
-        <div class="bar-value">0</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4.878048780487805%;background:#6366f1"></div></div>
+        <div class="bar-value">2</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">>15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:16.666666666666664%;background:#6366f1"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:2.4390243902439024%;background:#6366f1"></div></div>
         <div class="bar-value">1</div>
       </div>
       <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
-        Median: 33.9s &bull; Average: 130.8s
+        Median: 48.8s &bull; Average: 83.4s
       </div>
     </div>
 
@@ -371,15 +386,15 @@
       
         <div style="display: flex; gap: 24px; margin: 12px 0;">
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">1</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">28</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Overlap Events</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">2</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">28</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Sessions Involved</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">36%</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">30%</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Of Messages</div>
           </div>
         </div>
@@ -415,13 +430,13 @@
       <div class="bar-row">
         <div class="bar-label">Afternoon (12-18)</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">22</div>
+        <div class="bar-value">356</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Evening (18-24)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:0%;background:#8b5cf6"></div></div>
-        <div class="bar-value">0</div>
+        <div class="bar-track"><div class="bar-fill" style="width:37.640449438202246%;background:#8b5cf6"></div></div>
+        <div class="bar-value">134</div>
       </div>
 
       <div class="bar-row">
@@ -433,18 +448,23 @@
       <div class="chart-card">
         <div class="chart-title">Tool Errors Encountered</div>
         <div class="bar-row">
-        <div class="bar-label">Other</div>
+        <div class="bar-label">Command Failed</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">3</div>
+        <div class="bar-value">12</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Command Failed</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.66666666666666%;background:#dc2626"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-label">Other</div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%;background:#dc2626"></div></div>
+        <div class="bar-value">9</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">User Rejected</div>
-        <div class="bar-track"><div class="bar-fill" style="width:33.33333333333333%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:58.333333333333336%;background:#dc2626"></div></div>
+        <div class="bar-value">7</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">File Not Found</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.333333333333332%;background:#dc2626"></div></div>
         <div class="bar-value">1</div>
       </div>
       </div>
@@ -452,22 +472,22 @@
 
     
     <h2 id="section-wins">Impressive Things You Did</h2>
-    <p class="section-intro">You packed a productive hour across 3 sessions, leveraging heavy Bash automation and sub-agent orchestration to manage a complex multi-config development environment.</p>
+    <p class="section-intro">You packed an extraordinary amount of work into a single day — 34 sessions across 6 hours — orchestrating complex release workflows, multi-agent coordination, and cross-account infrastructure with impressive persistence.</p>
     <div class="big-wins">
       
         <div class="big-win">
-          <div class="big-win-title">Sub-Agent Orchestration at Scale</div>
-          <div class="big-win-desc">You're running a sophisticated setup with 42 agents, skills, guides, and rules, and you're actively using the Task tool (25 invocations) to delegate work to sub-agents. This kind of multi-agent orchestration shows you're pushing Claude Code well beyond simple single-turn usage into a genuinely agentic workflow.</div>
+          <div class="big-win-title">Resilient Multi-Agent Team Orchestration</div>
+          <div class="big-win-desc">You're pushing the boundaries of Claude Code by running parallel agent teams with git worktrees, tmux teammate mode, and iTerm2 split panes across multiple config directories. When agent workers failed due to API encoding errors, bare repo issues, or idle workers, you consistently recovered by falling back to direct Task tool execution and manual takeover — showing a deep operational understanding of the system's limits and workarounds.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">Resilient CI Pipeline Debugging</div>
-          <div class="big-win-desc">When your v0.10.0 CI quality gates hit friction — a false-positive pre-commit hook grep pattern and a non-existent `bun pm audit` command — you persisted through multiple retries and had the orchestrator step in to debug directly. Your ability to push through toolchain issues and still get the PR created demonstrates strong iterative problem-solving with Claude.</div>
+          <div class="big-win-title">End-to-End Release Pipeline Mastery</div>
+          <div class="big-win-desc">You executed complete release cycles (v0.10.0 through v0.10.3) including branch cleanup, version bumps, changelog updates, PR creation and merging, tagging, GitHub releases, and npm publishing — often recovering from mid-process failures like git index corruption that deleted 447 files. Your ability to chain these steps together across sessions and recover gracefully from catastrophic errors is remarkable.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">Cross-Config Environment Setup</div>
-          <div class="big-win-desc">You researched tmux-based Agent Teams with iTerm2 auto-split panes and had Claude apply teammate mode settings across all three config files in one session. Even though live testing wasn't possible in the current session context, you methodically got the configuration in place across JSON, YAML, and Markdown files, showing a deliberate approach to environment standardization.</div>
+          <div class="big-win-title">Cross-Account Infrastructure and Memory Architecture</div>
+          <div class="big-win-desc">You've built a sophisticated setup with shared symlinked plugins and settings across two Claude Code accounts (baekenough/baekgomiyo), a memory observer agent that records structured observations from primary sessions, and an insights automation pipeline that extracts data per account before aggregation. This layered architecture — combining shared config, persistent memory, and automated reporting — shows you're treating Claude Code as a full development platform rather than just an assistant.</div>
         </div>
       
     </div>
@@ -477,57 +497,72 @@
       <div class="chart-card">
         <div class="chart-title">What Helped Most (Claude's Capabilities)</div>
         <div class="bar-row">
-        <div class="bar-label">Fast/Accurate Search</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#16a34a"></div></div>
-        <div class="bar-value">1</div>
-      </div>
-<div class="bar-row">
         <div class="bar-label">Multi-file Changes</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#16a34a"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-value">13</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Proactive Help</div>
+        <div class="bar-track"><div class="bar-fill" style="width:69.23076923076923%;background:#16a34a"></div></div>
+        <div class="bar-value">9</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Good Debugging</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#16a34a"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:46.15384615384615%;background:#16a34a"></div></div>
+        <div class="bar-value">6</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Fast/Accurate Search</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38.46153846153847%;background:#16a34a"></div></div>
+        <div class="bar-value">5</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Correct Code Edits</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.6923076923076925%;background:#16a34a"></div></div>
         <div class="bar-value">1</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Outcomes</div>
         <div class="bar-row">
+        <div class="bar-label">Partially Achieved</div>
+        <div class="bar-track"><div class="bar-fill" style="width:84.61538461538461%;background:#8b5cf6"></div></div>
+        <div class="bar-value">11</div>
+      </div>
+<div class="bar-row">
         <div class="bar-label">Mostly Achieved</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-value">13</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Fully Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:76.92307692307693%;background:#8b5cf6"></div></div>
+        <div class="bar-value">10</div>
       </div>
       </div>
     </div>
 
     
     <h2 id="section-friction">Where Things Go Wrong</h2>
-    <p class="section-intro">Your sessions show friction primarily around untestable environment assumptions, buggy automation scripts, and sub-agent reliability issues that required manual intervention.</p>
+    <p class="section-intro">Your sessions are heavily impacted by buggy code and wrong approaches, particularly around agent team orchestration failures, pipeline misunderstandings, and Claude going off-track from your actual requests.</p>
     <div class="friction-categories">
       
         <div class="friction-category">
-          <div class="friction-title">Environment Mismatch Blocking Verification</div>
-          <div class="friction-desc">Claude made configuration changes that couldn't be validated because the current session didn't match the required runtime environment. You could avoid this by checking environment prerequisites before starting implementation, or by having Claude outline a clear post-session testing plan.</div>
-          <ul class="friction-examples"><li>Claude applied tmux teammate mode settings across three config files but couldn't test them because your session wasn't running inside tmux, forcing you to exit and restart manually to verify anything worked.</li><li>The iTerm2 auto-split pane setup was researched and configured but left in a 'mostly achieved' state with no live validation, meaning you had to trust the config was correct without proof.</li></ul>
+          <div class="friction-title">Agent Teams Infrastructure Fragility</div>
+          <div class="friction-desc">Your agent teams workflow repeatedly breaks due to API encoding errors, environment variable pollution, and workers failing in worktree environments. You could reduce friction by simplifying the orchestration layer—using fewer parallel agents with cleaner isolation—and filing upstream issues for the CLAUDE_CONFIG_DIR propagation problem rather than working around it each session.</div>
+          <ul class="friction-examples"><li>API 400 errors from invalid high surrogates in JSON bodies halted agent team processing multiple times, forcing you to manually shut down workers and take over directly, burning significant session time on recovery instead of actual work.</li><li>Agent team workers repeatedly went idle and failed to execute bash commands in bare repo worktree environments, forcing fallback to direct Task tool execution and negating the parallelism benefit you were trying to achieve.</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Buggy Automation in Pre-commit Hooks and CI Commands</div>
-          <div class="friction-desc">Your pre-commit hooks and CI pipeline contained incorrect commands and overly broad patterns that caused false failures. You should consider having Claude dry-run or lint these scripts before committing them, rather than discovering issues only when they block real workflows.</div>
-          <ul class="friction-examples"><li>The pre-commit hook had a false-positive grep pattern that flagged legitimate code as problematic, blocking commits and requiring direct debugging by the orchestrator agent.</li><li>The CI configuration referenced 'bun pm audit', a non-existent command, which caused CI failures that had to be diagnosed and fixed mid-session instead of being caught during initial setup.</li></ul>
+          <div class="friction-title">Misaligned Task Interpretation</div>
+          <div class="friction-desc">Claude frequently misunderstands your pipeline architecture or goes off-track implementing unrequested features, requiring you to course-correct mid-session. You could mitigate this by front-loading explicit constraints in your prompts—stating what NOT to do and defining the exact pipeline direction before Claude begins exploration.</div>
+          <ul class="friction-examples"><li>Claude autonomously implemented git workflow detection features instead of analyzing issues as you requested, then had to spend additional time debugging test failures caused by the unrequested implementation's environment variable pollution.</li><li>Claude investigated the wrong data pipeline direction for deploy-insights and explored unrelated filesystem paths for /insights data instead of recognizing it as a Claude Code built-in feature, requiring you to manually correct it twice across separate sessions.</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Sub-agent Failures Requiring Escalation</div>
-          <div class="friction-desc">Your delegated sub-agent (mgr-gitnerd) repeatedly failed to complete its task due to misinterpreting pre-commit output, burning through retries and forcing the orchestrator to step in. You could improve this by giving sub-agents more explicit instructions about expected output formats, or by having the orchestrator validate hook behavior before delegating commit tasks.</div>
-          <ul class="friction-examples"><li>The mgr-gitnerd sub-agent failed multiple times to commit because it misread pre-commit hook output as a real error, wasting significant tool calls (87 Bash invocations across just 3 sessions) on retries.</li><li>The orchestrator eventually had to debug and fix the pre-commit hook directly, negating the efficiency gains of delegating the git operations to a sub-agent in the first place.</li></ul>
+          <div class="friction-title">Destructive Git Operations and Recovery Overhead</div>
+          <div class="friction-desc">Git-related operations—commits, worktree management, and symlink setups—frequently result in corruption or data loss that requires manual recovery, eating into your productive time. You could reduce risk by asking Claude to do dry-run previews of destructive git operations and confirming before execution, especially in worktree-heavy workflows.</div>
+          <ul class="friction-examples"><li>A git index corruption in a worktree caused an initial commit to catastrophically delete 447 files, requiring a hard reset and full re-application of the version bump—a recovery that could have been avoided with a pre-commit diff check.</li><li>Setting up shared plugin symlinks required multiple retries because Claude didn't account for ln -sf not working on directories and the running Claude session kept regenerating settings.json, turning a simple config task into an extended debugging session.</li></ul>
         </div>
       
     </div>
@@ -537,22 +572,57 @@
       <div class="chart-card">
         <div class="chart-title">Primary Friction Types</div>
         <div class="bar-row">
-        <div class="bar-label">Wrong Approach</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">2</div>
-      </div>
-<div class="bar-row">
         <div class="bar-label">Buggy Code</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-value">12</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Wrong Approach</div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%;background:#dc2626"></div></div>
+        <div class="bar-value">9</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Misunderstood Request</div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#dc2626"></div></div>
+        <div class="bar-value">6</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Api Error</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.333333333333332%;background:#dc2626"></div></div>
+        <div class="bar-value">1</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">User Rejected Action</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.333333333333332%;background:#dc2626"></div></div>
+        <div class="bar-value">1</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Retry Needed</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.333333333333332%;background:#dc2626"></div></div>
+        <div class="bar-value">1</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Inferred Satisfaction (model-estimated)</div>
         <div class="bar-row">
+        <div class="bar-label">Frustrated</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.3157894736842104%;background:#eab308"></div></div>
+        <div class="bar-value">1</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Dissatisfied</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.263157894736842%;background:#eab308"></div></div>
+        <div class="bar-value">4</div>
+      </div>
+<div class="bar-row">
         <div class="bar-label">Likely Satisfied</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#eab308"></div></div>
-        <div class="bar-value">9</div>
+        <div class="bar-value">76</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Satisfied</div>
+        <div class="bar-track"><div class="bar-fill" style="width:10.526315789473683%;background:#eab308"></div></div>
+        <div class="bar-value">8</div>
       </div>
       </div>
     </div>
@@ -568,30 +638,57 @@
       </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a ## CI &amp; Git Hooks section\n\nWhen modifying pre-commit hooks or CI scripts, always test them locally with a dry-run commit (`git commit --allow-empty -m 'test'`) before considering the task complete.">
+          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a new ## Insights &amp; Data Pipeline section near the top of CLAUDE.md\n\nWhen working with /insights, remember: it generates report.html per account workspace directory first, then deploy-insights aggregates them. Do NOT search the filesystem for insights data — it's a Claude Code built-in feature.">
           <label for="cmd-0">
-            <code class="cmd-code">When modifying pre-commit hooks or CI scripts, always test them locally with a dry-run commit (`git commit --allow-empty -m 'test'`) before considering the task complete.</code>
+            <code class="cmd-code">When working with /insights, remember: it generates report.html per account workspace directory first, then deploy-insights aggregates them. Do NOT search the filesystem for insights data — it's a Claude Code built-in feature.</code>
             <button class="copy-btn" onclick="copyCmdItem(0)">Copy</button>
           </label>
-          <div class="cmd-why">Pre-commit hook bugs caused repeated CI failures and sub-agent commit retries, wasting significant time in the v0.10.0 session.</div>
+          <div class="cmd-why">User had to correct Claude's understanding of the /insights pipeline direction in at least 3 separate sessions, wasting significant time each occurrence.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under a ## Package Management section or ## Common Pitfalls section\n\nBefore using `bun pm` commands, verify the subcommand exists by running `bun pm --help`. Common gotcha: `bun pm audit` does not exist — use `bun audit` or an alternative.">
+          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under a new ## Environment &amp; Account Setup section at the top of CLAUDE.md\n\nThis project uses two Claude config directories (baekenough and baekgomiyo accounts) with shared symlinked settings via a shared-plugins directory. When making changes to settings or plugins, ensure both accounts are considered. CLAUDE_CONFIG_DIR must be explicitly passed to child processes (e.g., agent teams, iTerm2 split panes).">
           <label for="cmd-1">
-            <code class="cmd-code">Before using `bun pm` commands, verify the subcommand exists by running `bun pm --help`. Common gotcha: `bun pm audit` does not exist — use `bun audit` or an alternative.</code>
+            <code class="cmd-code">This project uses two Claude config directories (baekenough and baekgomiyo accounts) with shared symlinked settings via a shared-plugins directory. When making changes to settings or plugins, ensure both accounts are considered. CLAUDE_CONFIG_DIR must be explicitly passed to child processes (e.g., agent teams, iTerm2 split panes).</code>
             <button class="copy-btn" onclick="copyCmdItem(1)">Copy</button>
           </label>
-          <div class="cmd-why">A non-existent `bun pm audit` command caused CI failures that required debugging mid-session.</div>
+          <div class="cmd-why">Multi-account setup and CLAUDE_CONFIG_DIR propagation issues appeared across 4+ sessions, causing agent team failures and workflow debugging.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under a ## Environment Checks section\n\nWhen configuring tmux or terminal-specific features, check if the current session is running inside the target environment (e.g., `echo $TMUX`) before attempting live testing. If not, provide the user with exact steps to restart and test.">
+          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under a ## Behavioral Guidelines section in CLAUDE.md\n\nWhen asked to analyze issues or triage work, do NOT autonomously implement features or fixes unless explicitly asked. First present findings and wait for user direction before writing code.">
           <label for="cmd-2">
-            <code class="cmd-code">When configuring tmux or terminal-specific features, check if the current session is running inside the target environment (e.g., `echo $TMUX`) before attempting live testing. If not, provide the user with exact steps to restart and test.</code>
+            <code class="cmd-code">When asked to analyze issues or triage work, do NOT autonomously implement features or fixes unless explicitly asked. First present findings and wait for user direction before writing code.</code>
             <button class="copy-btn" onclick="copyCmdItem(2)">Copy</button>
           </label>
-          <div class="cmd-why">Claude couldn't test tmux agent teams because the session wasn't inside tmux, leading to an incomplete outcome that could have been caught earlier.</div>
+          <div class="cmd-why">Claude went off-track in at least 2 sessions implementing features instead of analyzing as requested, leading to wasted time and test failures.</div>
+        </div>
+      
+        <div class="claude-md-item">
+          <input type="checkbox" id="cmd-3" class="cmd-checkbox" checked data-text="Add under a ## Error Recovery section in CLAUDE.md\n\nWhen API JSON encoding errors occur (e.g., invalid high surrogate), immediately fall back to direct execution rather than retrying the same approach. Shut down failing worker agents and take over directly.">
+          <label for="cmd-3">
+            <code class="cmd-code">When API JSON encoding errors occur (e.g., invalid high surrogate), immediately fall back to direct execution rather than retrying the same approach. Shut down failing worker agents and take over directly.</code>
+            <button class="copy-btn" onclick="copyCmdItem(3)">Copy</button>
+          </label>
+          <div class="cmd-why">API 400 errors with JSON encoding halted agent teams in 3+ sessions; the successful recovery pattern was always to abandon workers and execute directly.</div>
+        </div>
+      
+        <div class="claude-md-item">
+          <input type="checkbox" id="cmd-4" class="cmd-checkbox" checked data-text="Add under a ## Git Workflow section in CLAUDE.md\n\nGit worktree environments can have different behavior than the main repo. When using worktrees: (1) verify the working directory is not a bare repo, (2) watch for environment variable pollution between worktrees, (3) be cautious with git index operations — always verify file status before committing to avoid catastrophic deletes.">
+          <label for="cmd-4">
+            <code class="cmd-code">Git worktree environments can have different behavior than the main repo. When using worktrees: (1) verify the working directory is not a bare repo, (2) watch for environment variable pollution between worktrees, (3) be cautious with git index operations — always verify file status before committing to avoid catastrophic deletes.</code>
+            <button class="copy-btn" onclick="copyCmdItem(4)">Copy</button>
+          </label>
+          <div class="cmd-why">Git index corruption in a worktree caused deletion of 447 files in one session, and worktree environment issues caused test failures in another.</div>
+        </div>
+      
+        <div class="claude-md-item">
+          <input type="checkbox" id="cmd-5" class="cmd-checkbox" checked data-text="Add under a ## oh-my-customcode Project Conventions section in CLAUDE.md\n\nThe oh-my-customcode repository uses GitHub milestones for version tracking and a project board with status labels. When filtering issues, use the correct milestone version numbers and 'In Progress' status. Always verify milestone numbering before making changes.">
+          <label for="cmd-5">
+            <code class="cmd-code">The oh-my-customcode repository uses GitHub milestones for version tracking and a project board with status labels. When filtering issues, use the correct milestone version numbers and 'In Progress' status. Always verify milestone numbering before making changes.</code>
+            <button class="copy-btn" onclick="copyCmdItem(5)">Copy</button>
+          </label>
+          <div class="cmd-why">User had to correct milestone versioning and status filtering in multiple sessions; incorrect milestone references (e.g., R018 vs R017) caused friction.</div>
         </div>
       
     </div>
@@ -601,21 +698,51 @@
     <div class="features-section">
       
         <div class="feature-card">
-          <div class="feature-title">Hooks</div>
-          <div class="feature-oneliner">Auto-run shell commands at specific lifecycle events like pre-commit or post-edit.</div>
-          <div class="feature-why"><strong>Why for you:</strong> Your pre-commit hooks caused repeated friction with false-positive grep patterns and sub-agent failures. A Claude hook that validates hook scripts after editing them would catch these bugs before they cascade into failed commits.</div>
+          <div class="feature-title">Custom Skills</div>
+          <div class="feature-oneliner">Reusable prompts that run with a single /command for repetitive workflows.</div>
+          <div class="feature-why"><strong>Why for you:</strong> You already use /status and /insights — but your most frequent workflows (release management, PR cleanup, agent team setup, branch cleanup) each appeared 3-5 times and follow repeatable patterns. Codifying these as skills eliminates the repeated corrections Claude needed about pipeline direction and milestone conventions.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code">// .claude/settings.json
+                <code class="example-code">mkdir -p .claude/skills/release &amp;&amp; cat &gt; .claude/skills/release/SKILL.md &lt;&lt; 'EOF'
+## Release Workflow
+1. Verify all PRs for milestone are merged
+2. Bump version in package.json
+3. Update CHANGELOG.md
+4. Create release branch, commit, push
+5. Create GitHub release with tag
+6. Clean up feature branches and worktrees
+
+Always verify milestone numbers before proceeding.
+EOF</code>
+                <button class="copy-btn" onclick="copyText(this)">Copy</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      
+        <div class="feature-card">
+          <div class="feature-title">Hooks</div>
+          <div class="feature-oneliner">Shell commands that auto-run at specific lifecycle events like before commit or after file edit.</div>
+          <div class="feature-why"><strong>Why for you:</strong> You had 12 buggy_code friction events and pre-commit hook false positives. Setting up hooks to auto-run type checks and lint before Claude attempts commits would catch issues like the 'bun pm audit' non-existent command and pre-commit grep false positives before they snowball into multi-retry debugging sessions.</div>
+          
+          <div class="feature-examples">
+            <div class="feature-example">
+              <div class="example-code-row">
+                <code class="example-code"># Add to .claude/settings.json:
 {
   &quot;hooks&quot;: {
     &quot;postToolUse&quot;: [
       {
         &quot;matcher&quot;: &quot;Edit|Write&quot;,
-        &quot;pathPattern&quot;: &quot;**/.husky/*|**/pre-commit&quot;,
-        &quot;command&quot;: &quot;git commit --allow-empty --dry-run -m 'hook-test' 2&gt;&amp;1 | head -20&quot;
+        &quot;command&quot;: &quot;if [[ \&quot;$CLAUDE_FILE\&quot; == *.ts ]]; then npx tsc --noEmit 2&gt;&amp;1 | head -20; fi&quot;
+      }
+    ],
+    &quot;preCommit&quot;: [
+      {
+        &quot;command&quot;: &quot;git diff --cached --name-only | head -5 &amp;&amp; echo 'Verifying no catastrophic deletes...' &amp;&amp; test $(git diff --cached --diff-filter=D --name-only | wc -l) -lt 50&quot;
       }
     ]
   }
@@ -628,45 +755,23 @@
         </div>
       
         <div class="feature-card">
-          <div class="feature-title">Custom Skills</div>
-          <div class="feature-oneliner">Reusable prompts as markdown files triggered with a single /command.</div>
-          <div class="feature-why"><strong>Why for you:</strong> You already use /status successfully. Your CI workflow (merge PR → commit → create PR → fix CI) is a recurring multi-step pattern that would benefit from a /release or /ci-fix skill to avoid the friction you hit with command errors and retries.</div>
+          <div class="feature-title">Headless Mode</div>
+          <div class="feature-oneliner">Run Claude non-interactively from scripts and CI/CD pipelines.</div>
+          <div class="feature-why"><strong>Why for you:</strong> Your insights automation pipeline (extract → generate report.html → aggregate → update README → commit/push) spans multiple sessions and accounts. Running this headlessly via cron or a script would eliminate the repeated session interruptions and manual restarts you experienced across 4+ insights-related sessions.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code"># .claude/skills/ci-fix/SKILL.md
+                <code class="example-code">#!/bin/bash
+# insights-pipeline.sh - run from cron or manually
+for config_dir in ~/.config/claude/baekenough ~/.config/claude/baekgomiyo; do
+  CLAUDE_CONFIG_DIR=&quot;$config_dir&quot; claude -p \
+    &quot;Generate insights report.html for this account workspace&quot; \
+    --allowedTools &quot;Bash,Read,Write,Glob&quot;
+done
 
-## CI Fix Workflow
-1. Run `git status` and identify the current branch
-2. Run the full CI check suite locally: `bun run lint &amp;&amp; bun run typecheck &amp;&amp; bun run test`
-3. For each failure, fix the issue and re-run only that check
-4. Stage and commit fixes with message: &quot;fix: resolve CI failures&quot;
-5. IMPORTANT: Before committing, do a dry-run: `git commit --dry-run` to verify pre-commit hooks pass
-6. Push and report results</code>
-                <button class="copy-btn" onclick="copyText(this)">Copy</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="feature-card">
-          <div class="feature-title">Task Agents</div>
-          <div class="feature-oneliner">Claude spawns focused sub-agents for parallel or complex work.</div>
-          <div class="feature-why"><strong>Why for you:</strong> You already use Task heavily (25 invocations), but your sub-agent (mgr-gitnerd) repeatedly failed to commit due to misinterpreting pre-commit output. Adding explicit instructions in CLAUDE.md about how sub-agents should handle pre-commit failures will improve their reliability.</div>
-          
-          <div class="feature-examples">
-            <div class="feature-example">
-              <div class="example-code-row">
-                <code class="example-code">Add to CLAUDE.md:
-
-## Sub-Agent Instructions
-When a Task agent encounters a pre-commit hook failure:
-1. Read the FULL output, not just the exit code
-2. Distinguish between actual errors and informational output
-3. If grep-based checks fail, verify the grep pattern is correct before retrying
-4. After 2 failed attempts, return control to the orchestrator with full error output</code>
+claude -p &quot;Run deploy-insights to aggregate all account reports and update README&quot; \
+  --allowedTools &quot;Bash,Read,Write,Glob&quot;</code>
                 <button class="copy-btn" onclick="copyText(this)">Copy</button>
               </div>
             </div>
@@ -682,14 +787,14 @@ When a Task agent encounters a pre-commit hook failure:
     <div class="patterns-section">
       
         <div class="pattern-card">
-          <div class="pattern-title">Validate CI commands before using them</div>
-          <div class="pattern-summary">Always verify that CLI subcommands exist before embedding them in CI configs or scripts.</div>
-          <div class="pattern-detail">Your session hit a failure with `bun pm audit` which doesn't exist. This is a common pattern with newer runtimes like Bun where the CLI surface differs from npm/yarn. Before adding any package manager command to CI, run it with `--help` first. This small check would have saved the debugging cycle in your v0.10.0 session.</div>
+          <div class="pattern-title">Agent Teams need a runbook, not ad-hoc recovery</div>
+          <div class="pattern-summary">Create a documented agent teams playbook with known failure modes and recovery steps to avoid repeated debugging of the same issues.</div>
+          <div class="pattern-detail">Across 34 sessions in a single day, agent teams appeared in 8+ sessions with recurring failures: API JSON encoding errors, CLAUDE_CONFIG_DIR not propagating, workers going idle in bare repo worktrees, and background task spawning failures. Each time, Claude had to rediscover the same recovery pattern (shut down workers, take over directly). A CLAUDE.md section documenting these failure modes and their fixes would let Claude recover instantly instead of exploring from scratch.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Before adding any CLI command to a CI config or script, verify it exists by running `&lt;command&gt; --help`. If it fails, find the correct alternative and document it in a comment.</code>
+              <code class="copyable-prompt">Create a ## Agent Teams Runbook section in CLAUDE.md that documents: (1) CLAUDE_CONFIG_DIR must be passed to all child processes, (2) if API JSON encoding errors occur, immediately shut down workers and execute directly, (3) worktree-based parallel work requires non-bare repos with proper env isolation, (4) if workers go idle 2+ times, fall back to Task tool execution</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -697,14 +802,14 @@ When a Task agent encounters a pre-commit hook failure:
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Pre-test environment assumptions</div>
-          <div class="pattern-summary">Check environment prerequisites at the start of a session, not when testing fails.</div>
-          <div class="pattern-detail">The tmux configuration session was mostly successful but couldn't be validated because the session wasn't running inside tmux. This cost time researching and applying config across three files without being able to verify any of it. A quick environment check at the start ('Are we in tmux? Is iTerm2 the active terminal?') would have let you restructure the workflow or set expectations upfront.</div>
+          <div class="pattern-title">Too many short interrupted sessions — batch your work</div>
+          <div class="pattern-summary">Consolidate related tasks into fewer, longer sessions with clear phase gates instead of 34 micro-sessions.</div>
+          <div class="pattern-detail">You ran 34 sessions in 6 hours (avg ~10 min each) with 11 only partially achieved, often because sessions were 'captured mid-progress' or 'interrupted before fix was implemented.' Many sessions were continuations of the same task (insights pipeline, agent teams, release management). Grouping related work into 3-4 focused sessions with explicit checkpoints would reduce context loss and the overhead of re-explaining your setup each time.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Before starting any environment-specific configuration task, check if we're running in the required environment. Run the relevant check command (e.g., `echo $TMUX`, `echo $TERM_PROGRAM`) and tell me the result before proceeding.</code>
+              <code class="copyable-prompt">I'm going to work on three phases today. Phase 1: Triage and merge all in-progress oh-my-customcode PRs. Phase 2: Release v0.10.3 with full workflow (version bump, changelog, tag, publish). Phase 3: Run insights pipeline across both accounts. Let's start with Phase 1 — show me all open PRs with their CI status.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -712,14 +817,14 @@ When a Task agent encounters a pre-commit hook failure:
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Reduce sub-agent retry loops</div>
-          <div class="pattern-summary">Give sub-agents explicit failure-handling instructions to prevent retry spirals.</div>
-          <div class="pattern-detail">With 25 Task invocations across only 3 sessions, you're a heavy sub-agent user. But the mgr-gitnerd agent repeatedly failed on commits due to misreading pre-commit output. Sub-agents work best with clear guardrails: max retry counts, explicit error-parsing instructions, and escalation paths. Adding these constraints to your CLAUDE.md will make every Task invocation more reliable.</div>
+          <div class="pattern-title">Leverage Task agents more strategically for exploration vs execution</div>
+          <div class="pattern-summary">Use Task agents for read-only exploration and analysis, but keep execution (commits, PRs, releases) in the main session.</div>
+          <div class="pattern-detail">Your top tools show heavy Task usage (104 calls) alongside heavy Bash (351 calls). The friction data shows agent workers failing on execution tasks (commits, bash in worktrees) while succeeding at exploration (finding issues, analyzing project structure). The sessions where Task agents did analysis and the main session did execution had the best outcomes. Explicitly split this in your prompts.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">When spawning a sub-agent for git operations, include these instructions: 'If a commit fails due to pre-commit hooks, read the full error output carefully. If the hook itself has a bug (not your code), escalate back immediately with the full output instead of retrying.'</code>
+              <code class="copyable-prompt">Use a task agent to explore and analyze all in-progress issues in oh-my-customcode across milestones 77-79. For each issue, summarize: current status, what's blocking, and what action I need to take. Do NOT make any changes — just report back so I can decide what to execute.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -732,28 +837,28 @@ When a Task agent encounters a pre-commit hook failure:
 
     
     <h2 id="section-horizon">On the Horizon</h2>
-    <p class="section-intro">Your usage shows a sophisticated multi-agent orchestration workflow that's hitting friction at the boundaries of environment validation and sub-agent reliability — exactly the seams where autonomous workflows can leap forward.</p>
+    <p class="section-intro">Your usage reveals a power user orchestrating complex multi-agent workflows, parallel issue processing, and release automation—but persistent friction with agent coordination, API encoding errors, and environment propagation points to massive gains from more resilient autonomous pipelines.</p>
     <div class="horizon-section">
       
         <div class="horizon-card">
-          <div class="horizon-title">Self-Healing CI Pipelines with Autonomous Fix Loops</div>
-          <div class="horizon-possible">Instead of manually debugging CI failures like the false-positive grep pattern and non-existent 'bun pm audit' command, Claude can autonomously detect CI failures, diagnose root causes, apply fixes, and re-run the pipeline in a tight loop until all quality gates pass. This turns your v0.10.0 CI gates workflow from a multi-retry slog into a single fire-and-forget command that converges on green.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code's Task tool to spawn a dedicated sub-agent that monitors CI output, while the orchestrator handles fix application and commit — iterate against the actual test/lint/audit commands until they pass.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I need you to fix all CI quality gate failures autonomously. Here's the workflow: 1) Run the full CI pipeline locally (lint, typecheck, test, audit). 2) For each failure, diagnose the root cause — distinguish between false positives in hooks, missing/incorrect CLI commands, and actual code issues. 3) Apply the fix. 4) Re-run only the affected stage to verify. 5) Repeat until all gates pass. 6) Then run the full pipeline end-to-end once more to confirm. If a pre-commit hook has a false positive, fix the hook pattern. If a command doesn't exist (like 'bun pm audit'), find the correct equivalent. Commit each fix separately with clear messages. Do not ask me for input — make your best judgment and iterate.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Self-Healing Agent Teams with Retry Orchestration</div>
+          <div class="horizon-possible">Your sessions show repeated patterns of agent workers going idle, API JSON encoding errors halting pipelines, and manual takeover being required. An autonomous orchestrator agent could detect these failure modes, automatically retry with sanitized payloads, fall back to direct Task execution when workers fail, and resume from the last successful checkpoint—turning your 'partially_achieved' sessions into 'fully_achieved' without intervention.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Build a resilient orchestration wrapper using Claude Code's Task tool with structured error handling, checkpoint files, and automatic fallback strategies. Store recovery state in JSON so any session can resume.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Create a resilient agent orchestration system for processing GitHub issues in parallel. Build an orchestrator script that: 1) Reads a list of GitHub issues to process from a JSON manifest, 2) Creates git worktrees for each issue, 3) Spawns parallel Task agents for each issue with structured JSON instructions, 4) Monitors each task's output for common failure patterns (API 400 errors, JSON encoding issues, git index corruption, 'command not found' errors, idle workers), 5) Automatically retries failed tasks up to 3 times with sanitized inputs and fallback approaches (e.g., switching from agent workers to direct Task execution), 6) Writes checkpoint state to .agent-checkpoints/ after each task completes so the workflow can be resumed from any point, 7) Generates a final summary of completed/failed/skipped tasks. Include error handling for: invalid JSON high surrogate characters (sanitize before sending), git worktree environment variable pollution (reset GIT_DIR, GIT_WORK_TREE), and shell wrapper 'command not found' issues (use absolute paths). Test it against 3 mock issues.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Parallel Agent Teams with Environment Pre-Validation</div>
-          <div class="horizon-possible">Your tmux agent teams setup stalled because the environment wasn't validated before configuration was applied. An autonomous pre-flight workflow can detect the current terminal environment, verify tmux availability, bootstrap the session if needed, apply teammate configs, and spawn parallel agents — all without requiring you to exit and restart. This makes multi-agent orchestration truly zero-friction.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Leverage the Task tool to run a pre-validation sub-agent that checks environment prerequisites before the main agent applies configuration changes, and use Bash to programmatically enter tmux if needed.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Before configuring agent teams, run a full environment pre-flight check: 1) Detect if we're inside tmux (check $TMUX env var). 2) If not, check if tmux is installed and what version. 3) Check if iTerm2's tmux -CC integration is available. 4) Report the current terminal emulator. 5) If we're NOT in tmux, create a new tmux session programmatically and provide me the exact one-liner to attach with 'tmux -CC attach'. 6) Only AFTER confirming the tmux environment is active, apply the teammate mode settings to all config files (.claude/settings.json, .claude/settings.local.json, project config). 7) Then spawn a test agent team of 2 agents to verify the split-pane behavior works. Validate each step before proceeding to the next.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Autonomous Release Pipeline with Verification Gates</div>
+          <div class="horizon-possible">You're manually shepherding releases through version bumps, changelog updates, PR creation, CI waiting, merging, tagging, npm publishing, and branch cleanup—and hitting friction at nearly every step (CI race conditions, pre-commit false positives, npm publish timing). A fully autonomous release pipeline could execute all 10+ steps sequentially, wait intelligently for CI, verify each gate, and only ask for your approval at the final publish step.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Encode your proven release workflow as a Claude Code skill or shell script that chains each step with verification, using `gh` CLI for PR/release operations and polling for CI status before proceeding.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Build an autonomous release pipeline script and matching Claude Code skill for oh-my-customcode. The pipeline should execute these steps in order with verification gates between each: 1) Verify clean working tree and correct branch, 2) Bump version in package.json (accept semver type as argument), 3) Update CHANGELOG.md with commits since last tag, 4) Run full test suite locally and abort if failing, 5) Create feature branch and commit changes, 6) Push and create PR via `gh pr create`, 7) Poll CI status every 30 seconds with `gh pr checks` until all checks pass (timeout after 10 minutes), 8) Merge PR via `gh pr merge --squash`, 9) Pull main, create git tag, push tag, 10) Create GitHub release with changelog excerpt via `gh release create`, 11) Verify npm publish completed (poll npmjs registry), 12) Clean up feature branch locally and remotely. Each step should: log its action, verify success before proceeding, and write state to .release-state.json so it can be resumed if interrupted. Handle known issues: wait 60s after merge before tagging (CI race condition), use --no-verify flag if pre-commit hooks fail on changelog-only changes, retry npm publish once if timing out. Create this as both a standalone bash script and a CLAUDE.md-compatible /release skill.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Autonomous Sub-Agent Reliability and Retry Orchestration</div>
-          <div class="horizon-possible">Your mgr-gitnerd sub-agent repeatedly failed to commit because it misinterpreted pre-commit output, burning retries and requiring orchestrator intervention. An intelligent retry strategy can wrap sub-agent tasks with output validation, automatic error classification, and escalation rules — so sub-agents either self-correct or escalate with structured diagnostics instead of blindly retrying the same failing approach.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Use the Task tool with explicit instructions that include failure classification rules and fallback strategies, so sub-agents know when to retry, adapt their approach, or escalate back to the orchestrator with a structured error report.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I want you to create a reusable sub-agent delegation pattern for git operations. When spawning a Task sub-agent for commits, PRs, or merges, include these rules in the sub-agent prompt: 1) BEFORE committing, do a dry-run: run 'git commit --dry-run' and parse the output. 2) If pre-commit hooks fail, classify the failure: is it a lint error (fixable), a false positive (hook needs fixing), or a real code issue? 3) For false positives, DO NOT retry the same commit — instead return a structured report: {hook_name, error_output, classification, suggested_fix}. 4) For fixable lint errors, fix them and retry ONCE. 5) Max 2 retries per operation, then escalate. Apply this pattern now: commit all staged changes, and if any pre-commit hook fails, follow the classification and escalation rules above instead of blindly retrying.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Cross-Account Insights Automation with Scheduled Sync</div>
+          <div class="horizon-possible">You're running Claude Code across multiple accounts (baekenough/baekgomiyo) with shared plugins via symlinks, but insights extraction, aggregation, and deployment is still a manual multi-step process that keeps breaking due to stale data detection and wrong pipeline assumptions. A fully automated scheduled pipeline could extract insights from all accounts, generate per-account reports, aggregate into a deploy-ready bundle, and commit/push—all triggered by a single cron job or command.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Create a unified insights automation script that handles both accounts' CLAUDE_CONFIG_DIR paths, runs extraction in sequence, and uses deploy-insights as the final aggregation step. Schedule it with cron or launchd.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Build a complete cross-account Claude Code insights automation system. Create a script called `sync-insights.sh` that: 1) Defines an array of Claude Code account configs with their CLAUDE_CONFIG_DIR paths (baekenough at ~/.config/claude-code/baekenough, baekgomiyo at ~/.config/claude-code/baekgomiyo), 2) For each account: sets CLAUDE_CONFIG_DIR, runs the insights extraction to generate report.html in that account's workspace directory, validates the output file exists and is newer than the last run, 3) After all accounts are extracted: runs the deploy-insights aggregation pipeline that combines all account reports, 4) Verifies the aggregated output differs from the last deployed version (fix the stale git diff check that was causing early exits), 5) Commits and pushes changes with a timestamped commit message, 6) Logs all operations to ~/.insights-sync/sync.log with timestamps. Also create: a launchd plist (or cron entry) to run this daily at midnight, a health-check command that reports last sync time and status per account, and error handling for when an account's data directory doesn't exist or extraction fails. The script should work correctly whether run from a tmux session or standalone terminal, properly propagating CLAUDE_CONFIG_DIR to all child processes (addressing the known iTerm2/tmux environment variable issue).</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
     </div>
@@ -761,8 +866,8 @@ When a Task agent encounters a pre-commit hook failure:
 
     
     <div class="fun-ending">
-      <div class="fun-headline">"A sub-agent named 'mgr-gitnerd' kept failing to commit because it couldn't understand its own pre-commit hook output, forcing the boss agent to step in and debug it like a frustrated manager"</div>
-      <div class="fun-detail">During v0.10.0 CI quality gates work, the orchestrator agent delegated git commits to a sub-agent called mgr-gitnerd, which repeatedly choked on a false-positive grep pattern in the pre-commit hook — misinterpreting the output and retrying in circles until the orchestrator had to personally intervene and fix the mess.</div>
+      <div class="fun-headline">"A git commit gone wrong catastrophically deleted 447 files, requiring an emergency hard reset mid-release"</div>
+      <div class="fun-detail">While resuming halted project work to merge PRs and prepare a 0.10.2 release, a git index corruption in a worktree caused what should have been a simple version bump commit to instead catastrophically delete 447 files. Claude had to perform a hard reset and carefully re-apply the changes — and still managed to pull off the full release by the end of the session.</div>
     </div>
     
 
@@ -808,7 +913,7 @@ When a Task agent encounters a pre-commit hook failure:
       }
     }
     // Timezone selector for time of day chart (data is from our own analytics, not user input)
-    const rawHourCounts = {"13":2,"14":20};
+    const rawHourCounts = {"13":2,"14":22,"15":19,"16":39,"17":274,"18":134};
     function updateHourHistogram(offsetFromPT) {
       const periods = [
         { label: "Morning (6-12)", range: [6,7,8,9,10,11] },

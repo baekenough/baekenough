@@ -50,10 +50,10 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>17,370</b><br/><sub>처리 메시지 (4일)</sub></td>
-<td align="center"><b>402</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>91%</b><br/><sub>만족도 (357/392)</sub></td>
-<td align="center"><b>72</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>19,341</b><br/><sub>처리 메시지 (4일)</sub></td>
+<td align="center"><b>498</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>91%</b><br/><sub>만족도 (433/473)</sub></td>
+<td align="center"><b>152</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
@@ -66,10 +66,10 @@
 **핵심 도구 사용량**
 
 <!-- insights:tools:start -->
-![Bash](https://img.shields.io/badge/Bash-227회-22d3ee?style=flat-square)
-![Task](https://img.shields.io/badge/Task-72회-a78bfa?style=flat-square)
-![Read](https://img.shields.io/badge/Read-48회-34d399?style=flat-square)
-![Grep](https://img.shields.io/badge/Grep-18회-fb923c?style=flat-square)
+![Bash](https://img.shields.io/badge/Bash-489회-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task-152회-a78bfa?style=flat-square)
+![Read](https://img.shields.io/badge/Read-94회-34d399?style=flat-square)
+![Glob](https://img.shields.io/badge/Glob-37회-fb923c?style=flat-square)
 <!-- insights:tools:end -->
 
 **주요 성과**
