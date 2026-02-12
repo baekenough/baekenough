@@ -48,14 +48,16 @@ I aim to achieve team-level throughput as an individual.
 
 <div align="center">
 
+<!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>7,386</b><br/><sub>Messages (3 days)</sub></td>
-<td align="center"><b>162</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>95%</b><br/><sub>Satisfaction (205/215)</sub></td>
-<td align="center"><b>121</b><br/><sub>Parallel Session Events</sub></td>
+<td align="center"><b>17,370</b><br/><sub>Messages (4 days)</sub></td>
+<td align="center"><b>402</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>91%</b><br/><sub>Satisfaction (357/392)</sub></td>
+<td align="center"><b>72</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
+<!-- insights:metrics:end -->
 
 </div>
 
@@ -64,10 +66,12 @@ I aim to achieve team-level throughput as an individual.
 
 **Core Tool Usage**
 
-![Bash](https://img.shields.io/badge/Bash-114_calls-22d3ee?style=flat-square)
-![Task](https://img.shields.io/badge/Task_Delegation-53_calls-a78bfa?style=flat-square)
-![Browser MCP](https://img.shields.io/badge/Browser_MCP-35_calls-34d399?style=flat-square)
-![Read](https://img.shields.io/badge/Read-23_calls-fb923c?style=flat-square)
+<!-- insights:tools:start -->
+![Bash](https://img.shields.io/badge/Bash-227_calls-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task-72_calls-a78bfa?style=flat-square)
+![Read](https://img.shields.io/badge/Read-48_calls-34d399?style=flat-square)
+![Grep](https://img.shields.io/badge/Grep-18_calls-fb923c?style=flat-square)
+<!-- insights:tools:end -->
 
 **Key Achievements**
 - 🧠 **Multi-Agent Memory Observer** — Built a dedicated observer agent that auto-captures structured knowledge across sessions

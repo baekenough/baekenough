@@ -47,14 +47,16 @@
 
 <div align="center">
 
+<!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>7,386</b><br/><sub>처리 메시지 (3일)</sub></td>
-<td align="center"><b>162</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>95%</b><br/><sub>만족도 (205/215)</sub></td>
-<td align="center"><b>121</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>17,370</b><br/><sub>처리 메시지 (4일)</sub></td>
+<td align="center"><b>402</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>91%</b><br/><sub>만족도 (357/392)</sub></td>
+<td align="center"><b>72</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
+<!-- insights:metrics:end -->
 
 </div>
 
@@ -63,10 +65,12 @@
 
 **핵심 도구 사용량**
 
-![Bash](https://img.shields.io/badge/Bash-114회-22d3ee?style=flat-square)
-![Task](https://img.shields.io/badge/Task_Delegation-53회-a78bfa?style=flat-square)
-![Browser MCP](https://img.shields.io/badge/Browser_MCP-35회-34d399?style=flat-square)
-![Read](https://img.shields.io/badge/Read-23회-fb923c?style=flat-square)
+<!-- insights:tools:start -->
+![Bash](https://img.shields.io/badge/Bash-227회-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task-72회-a78bfa?style=flat-square)
+![Read](https://img.shields.io/badge/Read-48회-34d399?style=flat-square)
+![Grep](https://img.shields.io/badge/Grep-18회-fb923c?style=flat-square)
+<!-- insights:tools:end -->
 
 **주요 성과**
 - 🧠 **멀티 에이전트 메모리 옵저버** — 세션 간 구조화된 지식을 자동 캡처하는 전용 옵저버 에이전트 구축
