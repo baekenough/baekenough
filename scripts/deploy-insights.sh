@@ -31,16 +31,16 @@ cd "$REPO_DIR"
 
 echo -e "${GREEN}[3/8] Checking for changes...${NC}"
 # Check if there are any changes in the relevant files
-if git diff --quiet README.md README_en.md insights/ 2>/dev/null; then
+if git diff --quiet README.md README_en.md insights/ scripts/ 2>/dev/null; then
     echo -e "${YELLOW}No changes to commit${NC}"
     exit 0
 fi
 
 echo -e "${GREEN}[4/8] Changes detected in README or insights/${NC}"
-git status --short README.md README_en.md insights/
+git status --short README.md README_en.md insights/ scripts/
 
 echo -e "${GREEN}[5/8] Staging files...${NC}"
-git add README.md README_en.md insights/
+git add README.md README_en.md insights/ scripts/
 
 echo -e "${GREEN}[6/8] Creating commit...${NC}"
 git commit -m "chore: update AI workflow insights"
