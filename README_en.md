@@ -40,7 +40,7 @@ I aim to achieve team-level throughput as an individual.
 - 🏥 Maximized productivity in complex environments: **Medical (SaMD)**, On-Premise, per-client customization
 - 🤖 Orchestrates design → execution → validation through a **self-built multi-LLM agent system**
 - 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) — a Claude Code customization harness
-- 📈 Shared a **claude-native philosophy** that reached **16,000+ views** on LinkedIn
+- 📈 Shared a **claude-native philosophy** that reached **18,000+ views** on LinkedIn
 
 ---
 
@@ -110,13 +110,26 @@ with local Codex CLI via Native Messaging
 </td>
 </tr>
 <tr>
-<td colspan="2">
+<td width="50%">
+
+### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
+
+**High-performance web video player powered by WebAssembly**
+
+FFmpeg.wasm + WebCodecs hardware acceleration. Universal format support
+including MKV, AVI, HEVC. Web & Desktop (Tauri)
+
+`TypeScript` `WebAssembly` `FFmpeg` `Tauri`
+
+</td>
+<td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
 
 **LLM-orchestrated Multi-Agent DOOM AI**
 
-RAG experience accumulation + DOE optimization + generational evolution. No real-time LLM calls during gameplay.
+RAG experience accumulation + DOE optimization + generational evolution.
+No real-time LLM calls during gameplay
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
@@ -215,6 +228,7 @@ UBcare                  2018.09 ~ 2021.01
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
+| [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
 
 </div>

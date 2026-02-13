@@ -39,7 +39,7 @@
 - 🏥 의료(SaMD), On-Premise, 고객사별 커스터마이징 등 **복잡한 환경**에서 생산성을 극대화해왔습니다
 - 🤖 자체 구축한 **멀티 LLM 에이전트 시스템**으로 설계 → 실행 → 검증을 오케스트레이션합니다
 - 🔥 자체 개발한 하네스 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)를 오픈소스로 배포
-- 📈 LinkedIn에서 **조회수 16,000+** 기록한 claude-native 철학을 공유하고 있습니다
+- 📈 LinkedIn에서 **조회수 18,000+** 기록한 claude-native 철학을 공유하고 있습니다
 
 ---
 
@@ -109,13 +109,26 @@
 </td>
 </tr>
 <tr>
-<td colspan="2">
+<td width="50%">
+
+### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
+
+**WebAssembly 기반 고성능 웹 비디오 플레이어**
+
+FFmpeg.wasm + WebCodecs 하드웨어 가속. MKV, AVI, HEVC 등
+범용 포맷 지원. Web & Desktop(Tauri)
+
+`TypeScript` `WebAssembly` `FFmpeg` `Tauri`
+
+</td>
+<td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
 
 **LLM 오케스트레이션 기반 멀티에이전트 DOOM AI**
 
-RAG 경험 축적 + DOE 최적화 + 세대별 진화. 게임플레이 중 실시간 LLM 호출 없이 동작
+RAG 경험 축적 + DOE 최적화 + 세대별 진화.
+게임플레이 중 실시간 LLM 호출 없이 동작
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
@@ -214,6 +227,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화. 게임플레이 중 실시
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
+| [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
 
 </div>
