@@ -51,10 +51,10 @@ I aim to achieve team-level throughput as an individual.
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>19,341</b><br/><sub>Messages (4 days)</sub></td>
-<td align="center"><b>498</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>91%</b><br/><sub>Satisfaction (433/473)</sub></td>
-<td align="center"><b>152</b><br/><sub>Parallel Session Events</sub></td>
+<td align="center"><b>21,629</b><br/><sub>Messages (5 days)</sub></td>
+<td align="center"><b>631</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>91%</b><br/><sub>Satisfaction (485/530)</sub></td>
+<td align="center"><b>198</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
@@ -67,10 +67,10 @@ I aim to achieve team-level throughput as an individual.
 **Core Tool Usage**
 
 <!-- insights:tools:start -->
-![Bash](https://img.shields.io/badge/Bash-489_calls-22d3ee?style=flat-square)
-![Task](https://img.shields.io/badge/Task-152_calls-a78bfa?style=flat-square)
-![Read](https://img.shields.io/badge/Read-94_calls-34d399?style=flat-square)
-![Glob](https://img.shields.io/badge/Glob-37_calls-fb923c?style=flat-square)
+![Bash](https://img.shields.io/badge/Bash-586_calls-22d3ee?style=flat-square)
+![Task](https://img.shields.io/badge/Task-198_calls-a78bfa?style=flat-square)
+![Read](https://img.shields.io/badge/Read-142_calls-34d399?style=flat-square)
+![Glob](https://img.shields.io/badge/Glob-49_calls-fb923c?style=flat-square)
 <!-- insights:tools:end -->
 
 **Key Achievements**
