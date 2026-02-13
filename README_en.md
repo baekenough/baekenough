@@ -98,12 +98,25 @@ and release pipelines in a comprehensive harness
 </td>
 <td width="50%">
 
-### 🎮 [clau-doom](https://github.com/baekenough/clau-doom)
+### ⚡ [textswift](https://github.com/baekenough/textswift)
+
+**Instant in-page translation Chrome extension powered by Codex**
+
+Select text on any webpage → instant translation. Securely communicates
+with local Codex CLI via Native Messaging
+
+`TypeScript` `Chrome Extension` `Codex` `Native Messaging`
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
 
 **LLM-orchestrated Multi-Agent DOOM AI**
 
-RAG experience accumulation + DOE optimization + generational evolution.
-No real-time LLM calls during gameplay.
+RAG experience accumulation + DOE optimization + generational evolution. No real-time LLM calls during gameplay.
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
@@ -201,7 +214,8 @@ UBcare                  2018.09 ~ 2021.01
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
-| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI |
+| [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
+| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
 
 </div>
 

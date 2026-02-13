@@ -97,12 +97,25 @@
 </td>
 <td width="50%">
 
-### 🎮 [clau-doom](https://github.com/baekenough/clau-doom)
+### ⚡ [textswift](https://github.com/baekenough/textswift)
+
+**Codex 기반 인페이지 번역 Chrome 확장 프로그램**
+
+웹페이지에서 텍스트 선택 → 즉시 번역. Native Messaging으로
+로컬 Codex CLI와 안전하게 통신
+
+`TypeScript` `Chrome Extension` `Codex` `Native Messaging`
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
 
 **LLM 오케스트레이션 기반 멀티에이전트 DOOM AI**
 
-RAG 경험 축적 + DOE 최적화 + 세대별 진화
-게임플레이 중 실시간 LLM 호출 없이 동작
+RAG 경험 축적 + DOE 최적화 + 세대별 진화. 게임플레이 중 실시간 LLM 호출 없이 동작
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
@@ -200,7 +213,8 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
-| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI |
+| [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
+| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
 
 </div>
 
