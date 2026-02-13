@@ -64,15 +64,6 @@ I aim to achieve team-level throughput as an individual.
 > Real usage data from my custom harness. Multi-agent memory observer, release pipeline automation,
 > browser-integrated research → issue creation, autonomous orchestration & agent handoffs.
 
-**Core Tool Usage**
-
-<!-- insights:tools:start -->
-![Bash](https://img.shields.io/badge/Bash-586_calls-22d3ee?style=flat-square)
-![Task](https://img.shields.io/badge/Task-198_calls-a78bfa?style=flat-square)
-![Read](https://img.shields.io/badge/Read-142_calls-34d399?style=flat-square)
-![Glob](https://img.shields.io/badge/Glob-49_calls-fb923c?style=flat-square)
-<!-- insights:tools:end -->
-
 **Key Achievements**
 - 🧠 **Multi-Agent Memory Observer** — Built a dedicated observer agent that auto-captures structured knowledge across sessions
 - ⚡ **Autonomous Orchestration** — Auto work analysis, handoffs, and delegation patterns across 162 sessions
