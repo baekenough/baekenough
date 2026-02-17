@@ -119,16 +119,16 @@
 <body>
   <div class="container">
     <h1>Claude Code Insights</h1>
-    <p class="subtitle">1,278 messages across 73 sessions (700 total) | 2026-02-12 to 2026-02-13</p>
+    <p class="subtitle">1,981 messages across 103 sessions (1,430 total) | 2026-02-12 to 2026-02-17</p>
 
     
     <div class="at-a-glance">
       <div class="glance-title">At a Glance</div>
       <div class="glance-sections">
-        <div class="glance-section"><strong>What's working:</strong> You've built an impressively sophisticated multi-agent workflow — running parallel worker agents across git worktrees, pairing primary sessions with memory observer agents, and managing a dual-account setup with shared configurations. Your end-to-end release pipeline (version bumps through GitHub releases and npm publish) is genuinely repeatable and you've refined it across multiple release cycles. You're one of the more advanced Claude Code power users out there, and the orchestration patterns you've developed are pushing the boundaries of what's currently practical. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
-        <div class="glance-section"><strong>What's hindering you:</strong> On Claude's side, it repeatedly misunderstands your custom pipelines and tooling (like the /insights flow direction or project board filtering), and it occasionally goes rogue — implementing unrequested features or exploring the wrong solution space before you course-correct. On your side, the biggest drag is that your agent teams infrastructure isn't robust enough yet: API JSON encoding errors, workers going idle in worktree environments, and environment variable leakage (CLAUDE_CONFIG_DIR, GIT_DIR) across worktrees are eating up sessions with recovery work instead of actual progress. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
-        <div class="glance-section"><strong>Quick wins to try:</strong> Define your release pipeline and insights workflow as <strong>Custom Skills</strong> (slash commands) so Claude starts each run with the exact steps and context instead of guessing your pipeline's direction. Set up <strong>Hooks</strong> to auto-validate worktree environments before agent team spawning — catching the GIT_DIR pollution and missing tool issues before they derail workers. For your recurring git operations and deploy-insights pipeline, try <strong>Headless Mode</strong> to run them from cron or CI scripts so they execute without needing an interactive session at all. <a href="#section-features" class="see-more">Features to Try →</a></div>
-        <div class="glance-section"><strong>Ambitious workflows:</strong> As models get more capable, your parallel agent teams workflow should become self-healing — automatically detecting API encoding failures, retrying with sanitized payloads, and falling back to direct execution without you intervening. Your full release pipeline (merge → bump → changelog → tag → publish → GitHub release) should become a single autonomous run with one human approval gate, where Claude independently diagnoses and fixes CI failures or npm credential issues along the way. Start documenting your failure modes and recovery patterns now so future models can reference them as built-in playbooks. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
+        <div class="glance-section"><strong>What's working:</strong> You've built a highly effective release engineering workflow where Claude handles full git-flow pipelines end-to-end — version bumps, changelogs, tags, and GitHub releases across multiple projects. Your multi-agent observer/memory pattern for carrying context across sessions is genuinely creative and shows sophisticated use of Claude's capabilities. You're also comfortable letting Claude operate deeply across multiple repos simultaneously, which is a real force multiplier. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
+        <div class="glance-section"><strong>What's hindering you:</strong> On Claude's side, it sometimes over-interprets your intent (like archiving a repo you didn't want archived) and burns too many cycles searching for things that don't exist — one session had 10+ redundant file searches before giving up. On your side, preventable environment issues keep derailing sessions: wrong working directories, untracked assets, broken npm tokens, and missing changelog entries turn straightforward tasks into multi-attempt debugging. You're also hitting rate limits frequently, partly because sessions involve high volumes of individual tool calls. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
+        <div class="glance-section"><strong>Quick wins to try:</strong> Create a custom `/release` skill that codifies your full release checklist — changelog validation, version bump, dry-run publish, tagging — so Claude never misses a step and you stop hitting the same preventable failures across releases. Also consider adding hooks to auto-run lint or build checks before commits, which would catch issues like the bin path bug or stale test parameters before they reach CI. <a href="#section-features" class="see-more">Features to Try →</a></div>
+        <div class="glance-section"><strong>Ambitious workflows:</strong> As models get more capable, your release pipeline could become a fully autonomous pre-flight-validated workflow that runs changelog checks, dry-run publishes, CI verification, and GitHub releases unattended — halting only on genuine blockers instead of requiring multi-session iteration. Your cross-repo audit pattern (baekgom-agents, ontology-rag, oh-my-customcode) is also ripe for parallel agent teams with scoped responsibilities, completing in one pass what currently takes multiple sessions of redundant exploration. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
       </div>
     </div>
     
@@ -145,11 +145,11 @@
     </nav>
 
     <div class="stats-row">
-      <div class="stat"><div class="stat-value">1,278</div><div class="stat-label">Messages</div></div>
-      <div class="stat"><div class="stat-value">+993/-26</div><div class="stat-label">Lines</div></div>
-      <div class="stat"><div class="stat-value">13</div><div class="stat-label">Files</div></div>
-      <div class="stat"><div class="stat-value">2</div><div class="stat-label">Days</div></div>
-      <div class="stat"><div class="stat-value">639</div><div class="stat-label">Msgs/Day</div></div>
+      <div class="stat"><div class="stat-value">1,981</div><div class="stat-label">Messages</div></div>
+      <div class="stat"><div class="stat-value">+1,188/-62</div><div class="stat-label">Lines</div></div>
+      <div class="stat"><div class="stat-value">9</div><div class="stat-label">Files</div></div>
+      <div class="stat"><div class="stat-value">3</div><div class="stat-label">Days</div></div>
+      <div class="stat"><div class="stat-value">660.3</div><div class="stat-label">Msgs/Day</div></div>
     </div>
 
     
@@ -158,42 +158,42 @@
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">oh-my-customcode Release Management &amp; Issue Resolution</span>
-            <span class="area-count">~25 sessions</span>
+            <span class="area-name">oh-my-customcode Release Management &amp; Git Operations</span>
+            <span class="area-count">~28 sessions</span>
           </div>
-          <div class="area-desc">Extensive work on the oh-my-customcode project including triaging in-progress issues, implementing fixes (path traversal, code extraction, secrets consolidation), managing releases (v0.10.0 through v0.10.3), and handling the full release pipeline of version bumps, changelogs, PR merges, tagging, and GitHub releases. Claude Code was used heavily for git operations, spawning parallel agent teams to work on multiple issues simultaneously via worktrees, and recovering from various failures including git index corruption and API encoding errors.</div>
+          <div class="area-desc">Extensive release engineering for the oh-my-customcode CLI tool, including version bumps (v0.10.2, v0.10.3, v0.11.0, v0.12.2), changelog updates, git tagging, GitHub release creation, branch merging (git-flow), PR management, and branch/worktree cleanup. Claude automated full release pipelines and recovered from issues like missing changelog entries, git index corruption, and failed workflows. Sessions also covered stash analysis, branch organization, and issue management (reopening archived issues, closing completed ones).</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Agent Teams Workflow &amp; Infrastructure</span>
+            <span class="area-name">TextSwift Chrome Extension Development</span>
+            <span class="area-count">~18 sessions</span>
+          </div>
+          <div class="area-desc">Feature development and bug fixing for TextSwift, a Chrome browser extension for inline text translation. Work included implementing translation panel reopen/toggle behavior, adding asset-based icons for trigger buttons, enlarging the translation panel with font size controls, removing original text display from the UI, and fixing CSS visibility/specificity bugs where icons and panels were incorrectly always visible. Claude made multi-file changes across TypeScript, CSS, and manifest files.</div>
+        </div>
+      
+        <div class="project-area">
+          <div class="area-header">
+            <span class="area-name">TextSwift npm Package Publishing &amp; CI/CD</span>
             <span class="area-count">~15 sessions</span>
           </div>
-          <div class="area-desc">Building and debugging a parallel agent teams workflow using iTerm2 split panes and tmux teammate mode across multiple Claude config directories (baekenough/baekgomiyo). Work included diagnosing CLAUDE_CONFIG_DIR propagation issues, setting up shared plugin symlinks across accounts, investigating upstream bugs (filing and finding duplicate GitHub issues), and recovering from repeated API JSON encoding errors and worker agent failures. Claude Code was used for architecture analysis, configuration management, and coordinating multi-agent task execution.</div>
+          <div class="area-desc">Setting up and troubleshooting the npm publishing pipeline for the TextSwift package. This involved scoping the package name for npm organization publishing, fixing bin path bugs found during dry-run, configuring GitHub Actions release workflows with NPM_TOKEN secrets, and repeatedly debugging persistent 403 Forbidden errors during npm publish. Claude also handled README redesigns with GitHub raw URL image paths for npm compatibility, repo setup (README, LICENSE, making repo public), and Chrome extension deployment preparation.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Insights Automation &amp; Deploy Pipeline</span>
-            <span class="area-count">~10 sessions</span>
+            <span class="area-name">Codex Deprecation &amp; oh-my-customcode Refactoring</span>
+            <span class="area-count">~14 sessions</span>
           </div>
-          <div class="area-desc">Developing an automated pipeline for extracting Claude Code usage insights across multiple accounts, generating report.html files per account directory, aggregating them via deploy-insights, and updating READMEs with the results. Claude Code was used to diagnose why deploy-insights wasn't updating (stale git diff check), plan and implement the automation script, migrate data between accounts, and set up scheduling for the pipeline.</div>
+          <div class="area-desc">Auditing and planning the removal of Codex-related code from the oh-my-customcode project. Claude systematically catalogued ~159 Codex files across source, tests, docs, CI, and templates, analyzed claude-native references across repositories, and created a comprehensive 5-phase deprecation/migration plan. Work also included removing the AI PR analyzer workflow, conducting thorough code reviews that caught stale test parameters, and fixing documentation discrepancies.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">TextSwift Package Publishing &amp; CI</span>
-            <span class="area-count">~8 sessions</span>
+            <span class="area-name">baekgom-agents &amp; Ontology-RAG Development</span>
+            <span class="area-count">~16 sessions</span>
           </div>
-          <div class="area-desc">Scoping and publishing the TextSwift npm package including updating package.json for organization publishing, fixing bin path bugs, configuring GitHub Actions release workflows, and troubleshooting persistent 403 Forbidden npm publish errors related to token permissions. Claude Code was used for dry-run verification, GitHub Actions workflow debugging, secret management, and iterating through token reissuance and workflow reruns.</div>
-        </div>
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">README Redesign &amp; Brand Asset Integration</span>
-            <span class="area-count">~8 sessions</span>
-          </div>
-          <div class="area-desc">Enhancing project READMEs with promotional banner images and brand assets, restructuring dist/README.md, converting image paths to GitHub raw URLs for npm compatibility, updating Korean README translations, and processing Documentation Validator review feedback on PR completeness and component accuracy. Claude Code was used for multi-file content restructuring, asset exploration, automated commits across README redesign changes, and verifying documentation coverage thresholds.</div>
+          <div class="area-desc">Development and review of the baekgom-agents multi-agent system and its ontology-RAG package. Claude audited the project (42 agents, ontology-rag package), conducted graph database research for Phase 3 fixes, initiated Phase 4 optimization/monitoring design, and verified milestone progress. Sessions also included observer/memory agent patterns that recorded structured observations for cross-session memory, and deploy-insights pipeline debugging where Claude traced stale data issues to git diff early-exit logic.</div>
         </div>
       
     </div>
@@ -203,34 +203,34 @@
       <div class="chart-card">
         <div class="chart-title">What You Wanted</div>
         <div class="bar-row">
+        <div class="bar-label">Bug Fix</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
+        <div class="bar-value">13</div>
+      </div>
+<div class="bar-row">
         <div class="bar-label">Git Operations</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
-        <div class="bar-value">12</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Bug Fix</div>
-        <div class="bar-track"><div class="bar-fill" style="width:75%;background:#2563eb"></div></div>
-        <div class="bar-value">9</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Release Management</div>
-        <div class="bar-track"><div class="bar-fill" style="width:58.333333333333336%;background:#2563eb"></div></div>
-        <div class="bar-value">7</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Observation Recording</div>
-        <div class="bar-track"><div class="bar-fill" style="width:41.66666666666667%;background:#2563eb"></div></div>
-        <div class="bar-value">5</div>
+        <div class="bar-value">13</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Debugging</div>
-        <div class="bar-track"><div class="bar-fill" style="width:33.33333333333333%;background:#2563eb"></div></div>
-        <div class="bar-value">4</div>
+        <div class="bar-track"><div class="bar-fill" style="width:76.92307692307693%;background:#2563eb"></div></div>
+        <div class="bar-value">10</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Commit And Push</div>
-        <div class="bar-track"><div class="bar-fill" style="width:33.33333333333333%;background:#2563eb"></div></div>
-        <div class="bar-value">4</div>
+        <div class="bar-label">Release Management</div>
+        <div class="bar-track"><div class="bar-fill" style="width:53.84615384615385%;background:#2563eb"></div></div>
+        <div class="bar-value">7</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Deployment</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38.46153846153847%;background:#2563eb"></div></div>
+        <div class="bar-value">5</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Feature Implementation</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38.46153846153847%;background:#2563eb"></div></div>
+        <div class="bar-value">5</div>
       </div>
       </div>
       <div class="chart-card">
@@ -238,32 +238,32 @@
         <div class="bar-row">
         <div class="bar-label">Bash</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#0891b2"></div></div>
-        <div class="bar-value">528</div>
+        <div class="bar-value">515</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:32.196969696969695%;background:#0891b2"></div></div>
-        <div class="bar-value">170</div>
+        <div class="bar-track"><div class="bar-fill" style="width:33.20388349514563%;background:#0891b2"></div></div>
+        <div class="bar-value">171</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Read</div>
-        <div class="bar-track"><div class="bar-fill" style="width:29.35606060606061%;background:#0891b2"></div></div>
-        <div class="bar-value">155</div>
+        <div class="bar-track"><div class="bar-fill" style="width:25.04854368932039%;background:#0891b2"></div></div>
+        <div class="bar-value">129</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Glob</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.659090909090908%;background:#0891b2"></div></div>
-        <div class="bar-value">51</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.155339805825243%;background:#0891b2"></div></div>
+        <div class="bar-value">42</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Grep</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4.466019417475728%;background:#0891b2"></div></div>
+        <div class="bar-value">23</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">SendMessage</div>
-        <div class="bar-track"><div class="bar-fill" style="width:3.4090909090909087%;background:#0891b2"></div></div>
-        <div class="bar-value">18</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">AskUserQuestion</div>
-        <div class="bar-track"><div class="bar-fill" style="width:3.2196969696969697%;background:#0891b2"></div></div>
-        <div class="bar-value">17</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4.271844660194175%;background:#0891b2"></div></div>
+        <div class="bar-value">22</div>
       </div>
       </div>
     </div>
@@ -274,32 +274,32 @@
         <div class="bar-row">
         <div class="bar-label">Markdown</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
-        <div class="bar-value">40</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Python</div>
-        <div class="bar-track"><div class="bar-fill" style="width:95%;background:#10b981"></div></div>
-        <div class="bar-value">38</div>
+        <div class="bar-value">42</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">TypeScript</div>
-        <div class="bar-track"><div class="bar-fill" style="width:72.5%;background:#10b981"></div></div>
-        <div class="bar-value">29</div>
+        <div class="bar-track"><div class="bar-fill" style="width:71.42857142857143%;background:#10b981"></div></div>
+        <div class="bar-value">30</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">JSON</div>
-        <div class="bar-track"><div class="bar-fill" style="width:67.5%;background:#10b981"></div></div>
-        <div class="bar-value">27</div>
+        <div class="bar-track"><div class="bar-fill" style="width:52.38095238095239%;background:#10b981"></div></div>
+        <div class="bar-value">22</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Python</div>
+        <div class="bar-track"><div class="bar-fill" style="width:28.57142857142857%;background:#10b981"></div></div>
+        <div class="bar-value">12</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Shell</div>
-        <div class="bar-track"><div class="bar-fill" style="width:27.500000000000004%;background:#10b981"></div></div>
-        <div class="bar-value">11</div>
+        <div class="bar-track"><div class="bar-fill" style="width:21.428571428571427%;background:#10b981"></div></div>
+        <div class="bar-value">9</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">YAML</div>
-        <div class="bar-track"><div class="bar-fill" style="width:12.5%;background:#10b981"></div></div>
-        <div class="bar-value">5</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.523809523809524%;background:#10b981"></div></div>
+        <div class="bar-value">4</div>
       </div>
       </div>
       <div class="chart-card">
@@ -307,22 +307,22 @@
         <div class="bar-row">
         <div class="bar-label">Single Task</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">30</div>
+        <div class="bar-value">44</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Multi Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:83.33333333333334%;background:#8b5cf6"></div></div>
-        <div class="bar-value">25</div>
+        <div class="bar-track"><div class="bar-fill" style="width:70.45454545454545%;background:#8b5cf6"></div></div>
+        <div class="bar-value">31</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Iterative Refinement</div>
-        <div class="bar-track"><div class="bar-fill" style="width:36.666666666666664%;background:#8b5cf6"></div></div>
-        <div class="bar-value">11</div>
+        <div class="bar-track"><div class="bar-fill" style="width:43.18181818181818%;background:#8b5cf6"></div></div>
+        <div class="bar-value">19</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Exploration</div>
-        <div class="bar-track"><div class="bar-fill" style="width:23.333333333333332%;background:#8b5cf6"></div></div>
-        <div class="bar-value">7</div>
+        <div class="bar-track"><div class="bar-fill" style="width:20.454545454545457%;background:#8b5cf6"></div></div>
+        <div class="bar-value">9</div>
       </div>
       </div>
     </div>
@@ -330,9 +330,9 @@
     
     <h2 id="section-usage">How You Use Claude Code</h2>
     <div class="narrative">
-      <p>You are an <strong>intensely high-velocity operator</strong> who treats Claude Code as a full-stack DevOps co-pilot, cramming 73 sessions and 1,278 messages into just 17 hours across a mere two-day span. Your workflow centers on <strong>orchestrating complex, multi-step release and infrastructure pipelines</strong> — version bumps, PR merges, changelog updates, GitHub releases, npm publishing, branch cleanup, and CI fixes — often chaining these into marathon sessions where one task flows directly into the next. You lean heavily on Bash (528 invocations) and the Task tool (170 invocations), revealing a strong preference for <strong>parallel execution via agent teams</strong>, even when those teams hit persistent failures (API encoding errors, bare repo worktree issues, idle workers). Notably, you push back when Claude falls short: you corrected Claude's misunderstanding of the /insights pipeline direction, insisted on agent teams when Claude tried to fall back to manual work, and caught Claude going off-track implementing git workflow detection instead of analyzing issues as requested. You are not afraid to interrupt and redirect.</p>
-<p>Your interaction style is best described as <strong>iterative command-and-correct</strong>: you issue terse, high-level directives (sometimes as short as '커밋해' — just 'commit'), let Claude execute autonomously through multi-file changes and complex git operations, but step in decisively when things go wrong. The friction data tells the story — 15 instances of buggy code and 14 wrong approaches, yet you maintained a remarkably high satisfaction rate (126 likely satisfied out of 146 rated interactions). This suggests you <strong>expect Claude to fail sometimes and treat recovery as part of the workflow</strong> rather than a dealbreaker. You run dual Claude Code accounts (baekenough/baekgomiyo) with shared symlinked configs, use tmux teammate mode, and deploy observer/memory agents alongside primary sessions — an advanced setup that shows you're pushing the boundaries of what Claude Code's multi-agent architecture can do. Your 4 commits relative to the enormous volume of activity suggest you batch work aggressively, preferring to verify and polish before committing rather than making frequent small commits.</p>
-      <div class="key-insight"><strong>Key pattern:</strong> You operate as a high-tempo release engineer who issues brief, authoritative commands, runs parallel agent teams aggressively, and course-corrects Claude decisively when it drifts off-track — treating the tool as an autonomous executor that you supervise rather than a collaborator you consult.</div>
+      <p>You are an <strong>extremely high-velocity operator</strong> who treats Claude Code as a full-stack DevOps co-pilot. Across 103 sessions in just 5 days (averaging ~20 sessions per day), you drove an intense mix of bug fixes, release management, git operations, and deployment pipelines — often issuing terse commands in Korean like '커밋해' and expecting Claude to autonomously handle the entire workflow end-to-end. Your dominant pattern is <strong>delegation with minimal specification</strong>: you state a high-level goal (merge PR, release version, fix npm publish, redesign READMs) and let Claude figure out the multi-step execution, intervening only when things go sideways. With 515 Bash invocations and 171 Task tool calls, you clearly prefer Claude to <strong>do the work rather than explain it</strong>, leveraging sub-agents and parallel task execution aggressively — including experimental use of agent teams that sometimes broke down with API errors and idle workers.</p>
+<p>Your friction profile reveals a telling pattern: <strong>rate limits were your single biggest obstacle</strong> (61 combined rate-limit events), which makes sense given the sheer volume of sessions crammed into a short window. Beyond that, buggy code (33 events) and wrong approaches (19 events) were common — Claude archived your repo when you didn't want it to, spent 10+ redundant searches looking for files that didn't exist, and ran commands from wrong directories. Yet your satisfaction remained overwhelmingly positive (154 'likely_satisfied' vs only 14 frustrated/dissatisfied), suggesting you have a <strong>high tolerance for iterative failure as long as forward progress continues</strong>. You corrected Claude directly when it misunderstood (e.g., the /insights workflow, the archive misinterpretation) and moved on quickly. The 12 commits across these sessions underscore that you batch work into large, meaningful changesets rather than committing incrementally. Your project landscape — spanning a Chrome extension (TextSwift), a CLI tool (oh-my-customcode), an ontology-RAG system, and agent infrastructure (baekgom-agents) — shows you're managing a <strong>complex multi-project ecosystem</strong> and using Claude as the connective tissue for release pipelines, cross-repo audits, and operational recovery.</p>
+      <div class="key-insight"><strong>Key pattern:</strong> You issue brief, high-level commands and expect Claude to autonomously execute complex multi-step workflows (releases, merges, deployments), intervening with corrections only when Claude takes a wrong approach.</div>
     </div>
     
 
@@ -341,41 +341,41 @@
       <div class="chart-title">User Response Time Distribution</div>
       <div class="bar-row">
         <div class="bar-label">2-10s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:80.28169014084507%;background:#6366f1"></div></div>
-        <div class="bar-value">57</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
+        <div class="bar-value">212</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">10-30s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
-        <div class="bar-value">71</div>
+        <div class="bar-track"><div class="bar-fill" style="width:58.9622641509434%;background:#6366f1"></div></div>
+        <div class="bar-value">125</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">30s-1m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:92.95774647887323%;background:#6366f1"></div></div>
-        <div class="bar-value">66</div>
+        <div class="bar-track"><div class="bar-fill" style="width:42.45283018867924%;background:#6366f1"></div></div>
+        <div class="bar-value">90</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">1-2m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:87.32394366197182%;background:#6366f1"></div></div>
-        <div class="bar-value">62</div>
+        <div class="bar-track"><div class="bar-fill" style="width:33.490566037735846%;background:#6366f1"></div></div>
+        <div class="bar-value">71</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">2-5m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:73.23943661971832%;background:#6366f1"></div></div>
-        <div class="bar-value">52</div>
+        <div class="bar-track"><div class="bar-fill" style="width:26.88679245283019%;background:#6366f1"></div></div>
+        <div class="bar-value">57</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">5-15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:11.267605633802818%;background:#6366f1"></div></div>
-        <div class="bar-value">8</div>
+        <div class="bar-track"><div class="bar-fill" style="width:2.8301886792452833%;background:#6366f1"></div></div>
+        <div class="bar-value">6</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">>15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:2.8169014084507045%;background:#6366f1"></div></div>
-        <div class="bar-value">2</div>
+        <div class="bar-track"><div class="bar-fill" style="width:0.4716981132075472%;background:#6366f1"></div></div>
+        <div class="bar-value">1</div>
       </div>
       <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
-        Median: 42.8s &bull; Average: 78.8s
+        Median: 17.0s &bull; Average: 48.1s
       </div>
     </div>
 
@@ -385,15 +385,15 @@
       
         <div style="display: flex; gap: 24px; margin: 12px 0;">
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">66</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">74</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Overlap Events</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">62</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">78</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Sessions Involved</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">28%</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">23%</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Of Messages</div>
           </div>
         </div>
@@ -422,26 +422,26 @@
         <div id="hour-histogram">
       <div class="bar-row">
         <div class="bar-label">Morning (6-12)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:71.64750957854406%;background:#8b5cf6"></div></div>
-        <div class="bar-value">374</div>
+        <div class="bar-track"><div class="bar-fill" style="width:40.022805017103764%;background:#8b5cf6"></div></div>
+        <div class="bar-value">351</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Afternoon (12-18)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">522</div>
+        <div class="bar-track"><div class="bar-fill" style="width:58.15279361459521%;background:#8b5cf6"></div></div>
+        <div class="bar-value">510</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Evening (18-24)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:25.67049808429119%;background:#8b5cf6"></div></div>
-        <div class="bar-value">134</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
+        <div class="bar-value">877</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Night (0-6)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:47.509578544061306%;background:#8b5cf6"></div></div>
-        <div class="bar-value">248</div>
+        <div class="bar-track"><div class="bar-fill" style="width:27.708095781071833%;background:#8b5cf6"></div></div>
+        <div class="bar-value">243</div>
       </div></div>
       </div>
       <div class="chart-card">
@@ -449,21 +449,21 @@
         <div class="bar-row">
         <div class="bar-label">Command Failed</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">27</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Other</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.66666666666666%;background:#dc2626"></div></div>
-        <div class="bar-value">18</div>
+        <div class="bar-value">17</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">User Rejected</div>
-        <div class="bar-track"><div class="bar-fill" style="width:44.44444444444444%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:88.23529411764706%;background:#dc2626"></div></div>
+        <div class="bar-value">15</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Other</div>
+        <div class="bar-track"><div class="bar-fill" style="width:70.58823529411765%;background:#dc2626"></div></div>
         <div class="bar-value">12</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Not Found</div>
-        <div class="bar-track"><div class="bar-fill" style="width:7.4074074074074066%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:11.76470588235294%;background:#dc2626"></div></div>
         <div class="bar-value">2</div>
       </div>
       </div>
@@ -471,22 +471,22 @@
 
     
     <h2 id="section-wins">Impressive Things You Did</h2>
-    <p class="section-intro">Over 73 sessions in just two days, you've been running an impressively sophisticated multi-agent workflow with parallel task execution, release management, and cross-account tooling — pushing Claude Code to its limits.</p>
+    <p class="section-intro">Over just 5 days, you ran 103 sessions with an impressive 70% full/mostly achieved rate, driving a TypeScript/Python project through releases, Chrome extension development, and complex repository management.</p>
     <div class="big-wins">
       
         <div class="big-win">
-          <div class="big-win-title">Orchestrating Parallel Agent Teams</div>
-          <div class="big-win-desc">You're leveraging Claude's Task tool to spawn parallel worker agents for processing multiple GitHub issues simultaneously, creating git worktrees for isolated workstreams, and coordinating team-based execution pipelines. Even when agent workers hit API encoding errors or went idle in bare repo environments, you adapted by falling back to direct execution and manual recovery — showing real mastery of the agent teams paradigm.</div>
+          <div class="big-win-title">End-to-End Release Pipeline Mastery</div>
+          <div class="big-win-desc">You've built a remarkably smooth release workflow where Claude handles the entire pipeline — squash merges, version bumps, changelog updates, git tags, and GitHub release creation. Across multiple releases (v0.10.2, v0.10.3, v0.11.0, v0.12.2), you consistently delegate the full git-flow process and recover gracefully from failures like missing changelog entries or git index corruption, treating Claude as a reliable release engineer.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">End-to-End Release Pipeline Execution</div>
-          <div class="big-win-desc">You've built a remarkably complete release workflow where Claude handles squash merges, version bumps, changelog updates, git tagging, GitHub release creation, and npm publishing in single sessions. Your v0.10.0 through v0.12.2 releases demonstrate a repeatable, high-confidence pipeline that you've refined across multiple iterations, recovering gracefully from CI failures and credential issues along the way.</div>
+          <div class="big-win-title">Multi-Agent Observer Memory Pattern</div>
+          <div class="big-win-desc">You've developed a sophisticated multi-agent workflow where observer/memory agents run alongside primary sessions, recording structured observations for future context. This creative use of the Task and SendMessage tools (187 combined invocations) gives you persistent cross-session memory, essentially building institutional knowledge that carries forward across your 103 sessions.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">Multi-Account Memory and Observability</div>
-          <div class="big-win-desc">You've architected a dual-account setup (baekenough/baekgomiyo) with shared symlinked plugins and settings, and you run dedicated memory observer agents alongside primary sessions to capture structured observations for cross-session continuity. This layered observability approach — pairing a working agent with a monitoring agent that records progress — is a uniquely advanced pattern for maintaining context across your high-volume session count.</div>
+          <div class="big-win-title">Fearless Multi-Repository Orchestration</div>
+          <div class="big-win-desc">You manage multiple interconnected projects simultaneously — oh-my-customcode, TextSwift Chrome extension, baekgom-agents, and ontology-rag — using Claude for cross-cutting concerns like Codex deprecation audits, brand asset integration, and CI/CD setup. Your 515 Bash invocations show you trust Claude to operate deeply across repos, handling everything from worktree management to npm scoping to GitHub issue lifecycle in a single sitting.</div>
         </div>
       
     </div>
@@ -498,80 +498,85 @@
         <div class="bar-row">
         <div class="bar-label">Multi-file Changes</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#16a34a"></div></div>
-        <div class="bar-value">32</div>
+        <div class="bar-value">39</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Good Debugging</div>
-        <div class="bar-track"><div class="bar-fill" style="width:34.375%;background:#16a34a"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:64.1025641025641%;background:#16a34a"></div></div>
+        <div class="bar-value">25</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Proactive Help</div>
+        <div class="bar-track"><div class="bar-fill" style="width:28.205128205128204%;background:#16a34a"></div></div>
         <div class="bar-value">11</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Fast/Accurate Search</div>
-        <div class="bar-track"><div class="bar-fill" style="width:31.25%;background:#16a34a"></div></div>
-        <div class="bar-value">10</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Proactive Help</div>
-        <div class="bar-track"><div class="bar-fill" style="width:31.25%;background:#16a34a"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:25.64102564102564%;background:#16a34a"></div></div>
         <div class="bar-value">10</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Correct Code Edits</div>
-        <div class="bar-track"><div class="bar-fill" style="width:15.625%;background:#16a34a"></div></div>
-        <div class="bar-value">5</div>
+        <div class="bar-track"><div class="bar-fill" style="width:17.94871794871795%;background:#16a34a"></div></div>
+        <div class="bar-value">7</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Good Explanations</div>
-        <div class="bar-track"><div class="bar-fill" style="width:12.5%;background:#16a34a"></div></div>
-        <div class="bar-value">4</div>
+        <div class="bar-track"><div class="bar-fill" style="width:12.82051282051282%;background:#16a34a"></div></div>
+        <div class="bar-value">5</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Outcomes</div>
         <div class="bar-row">
         <div class="bar-label">Not Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:3.7037037037037033%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:16.216216216216218%;background:#8b5cf6"></div></div>
+        <div class="bar-value">6</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Partially Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:77.77777777777779%;background:#8b5cf6"></div></div>
-        <div class="bar-value">21</div>
+        <div class="bar-track"><div class="bar-fill" style="width:62.16216216216216%;background:#8b5cf6"></div></div>
+        <div class="bar-value">23</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Mostly Achieved</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">27</div>
+        <div class="bar-value">37</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Fully Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:88.88888888888889%;background:#8b5cf6"></div></div>
-        <div class="bar-value">24</div>
+        <div class="bar-track"><div class="bar-fill" style="width:94.5945945945946%;background:#8b5cf6"></div></div>
+        <div class="bar-value">35</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Unclear</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.405405405405405%;background:#8b5cf6"></div></div>
+        <div class="bar-value">2</div>
       </div>
       </div>
     </div>
 
     
     <h2 id="section-friction">Where Things Go Wrong</h2>
-    <p class="section-intro">Your sessions reveal a pattern of Claude frequently misunderstanding your workflows, going off-track with autonomous decisions, and struggling with your multi-agent infrastructure, leading to repeated corrections and wasted cycles.</p>
+    <p class="section-intro">Your sessions are heavily impacted by repeated environment/configuration mishaps, over-exploration before acting, and misinterpreted intent — all of which burn significant time across your 103 sessions.</p>
     <div class="friction-categories">
       
         <div class="friction-category">
-          <div class="friction-title">Misunderstood Custom Workflows and Pipelines</div>
-          <div class="friction-desc">Claude repeatedly misunderstands the direction or mechanics of your custom tooling—like /insights, deploy-insights, and project board filtering—forcing you to manually correct its assumptions. Providing upfront context about your pipeline architecture (e.g., in CLAUDE.md or session preambles) could reduce these back-and-forth corrections.</div>
-          <ul class="friction-examples"><li>Claude investigated the wrong data pipeline direction for deploy-insights and explored unrelated filesystem paths instead of recognizing /insights as a Claude Code built-in, requiring you to correct it multiple times before the actual issue was identified.</li><li>When fetching in-progress issues, Claude pulled the wrong statuses from your project board and used incorrect milestone versioning, and you had to manually correct the filtering criteria before any useful analysis could begin.</li></ul>
+          <div class="friction-title">Environment &amp; Configuration Errors Derailing Sessions</div>
+          <div class="friction-desc">You repeatedly hit preventable infrastructure issues — wrong working directories, missing git-tracked assets, broken npm auth, and corrupted git indexes — that turn simple tasks into multi-attempt debugging marathons. Pre-validating your environment state (correct directory, token permissions, file paths) before kicking off a workflow would save substantial time.</div>
+          <ul class="friction-examples"><li>The npm publish 403 error persisted across multiple sessions despite token reissuance, directory fixes, and config changes — burning at least 3 separate sessions before resolution, largely because the root cause (scoping/permissions) wasn't systematically isolated upfront.</li><li>A git index corruption in a worktree caused a catastrophic 447-file deletion that required a hard reset and re-application of work, and asset images used relative paths instead of raw GitHub URLs, requiring extra fix rounds — both avoidable with pre-commit validation.</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Agent Teams Infrastructure Failures</div>
-          <div class="friction-desc">Your parallel agent teams workflow is repeatedly derailed by API JSON encoding errors, worker agents going idle in worktree environments, and tool availability issues—costing significant time on recovery instead of actual work. Consider adding pre-flight validation for agent team payloads and ensuring worktree environments are fully initialized before spawning workers.</div>
-          <ul class="friction-examples"><li>API 400 errors caused by invalid high surrogate characters in JSON bodies halted agent team processing across multiple sessions, each time requiring you to shut down workers and have Claude fall back to direct execution.</li><li>Agent Teams workers repeatedly went idle and failed to execute bash commands in bare repo worktree environments, and background task spawning failed three times due to 'command not found: task' errors, forcing you to abandon the parallel approach entirely.</li></ul>
+          <div class="friction-title">Excessive Exploration and Redundant Tool Invocations</div>
+          <div class="friction-desc">You let Claude spend too long searching for things that don't exist or re-doing work that's already been completed. Setting clearer boundaries on exploration depth and confirming completed state before spawning subtasks would cut wasted cycles significantly.</div>
+          <ul class="friction-examples"><li>Claude ran 10+ repeated file searches looking for Python source files that simply didn't exist in the working directory (only in git history), wasting significant session time before confirming the obvious — you could have short-circuited this by stating the known state upfront.</li><li>Claude spawned subtasks to re-apply edits to logger.ts i18n keys and updater tests that had already been completed, and also used failed glob patterns repeatedly before switching to find commands — redundant work that could be avoided by checking completion status first.</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Autonomous Actions Diverging From Your Intent</div>
-          <div class="friction-desc">Claude sometimes takes initiative in the wrong direction—implementing unrequested features or making overly broad changes—which then creates secondary debugging work. Being more explicit about scope boundaries in your prompts, or using Claude's permission controls, could prevent these detours.</div>
-          <ul class="friction-examples"><li>You asked Claude to analyze project issues, but it autonomously implemented a git workflow detection feature instead, which then introduced environment variable pollution that caused test failures requiring a separate debugging effort.</li><li>A git index corruption in a worktree caused Claude's initial commit to catastrophically delete 447 files, requiring a hard reset and careful re-application of changes—a consequence of proceeding without sufficient validation in a complex worktree setup.</li></ul>
+          <div class="friction-title">Misinterpreted User Intent Leading to Harmful or Wrong Actions</div>
+          <div class="friction-desc">Claude sometimes over-interprets or misunderstands your requests, taking drastic actions you didn't authorize — like archiving a repo or exploring the wrong pipeline direction. Being more explicit about scope and constraints in your initial prompt, especially for destructive operations, would prevent costly rollbacks.</div>
+          <ul class="friction-examples"><li>When you said 'archive' oh-my-customcode, Claude made the GitHub repo private and archived it, closed issues, and committed unwanted files — requiring a full rollback of repo state, issue re-opening, and a complete plan pivot that wasted the session.</li><li>You had to manually correct Claude's understanding of the /insights pipeline twice across sessions — it kept investigating the wrong data flow direction instead of the correct 'generate report.html per account, then aggregate' workflow, burning exploratory effort on unrelated projects.</li></ul>
         </div>
       
     </div>
@@ -581,57 +586,57 @@
       <div class="chart-card">
         <div class="chart-title">Primary Friction Types</div>
         <div class="bar-row">
-        <div class="bar-label">Buggy Code</div>
+        <div class="bar-label">Rate Limit Hit</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">15</div>
+        <div class="bar-value">39</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Buggy Code</div>
+        <div class="bar-track"><div class="bar-fill" style="width:84.61538461538461%;background:#dc2626"></div></div>
+        <div class="bar-value">33</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Rate Limited</div>
+        <div class="bar-track"><div class="bar-fill" style="width:56.41025641025641%;background:#dc2626"></div></div>
+        <div class="bar-value">22</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Wrong Approach</div>
-        <div class="bar-track"><div class="bar-fill" style="width:93.33333333333333%;background:#dc2626"></div></div>
-        <div class="bar-value">14</div>
+        <div class="bar-track"><div class="bar-fill" style="width:48.717948717948715%;background:#dc2626"></div></div>
+        <div class="bar-value">19</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Misunderstood Request</div>
-        <div class="bar-track"><div class="bar-fill" style="width:53.333333333333336%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20.51282051282051%;background:#dc2626"></div></div>
         <div class="bar-value">8</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Excessive Changes</div>
-        <div class="bar-track"><div class="bar-fill" style="width:13.333333333333334%;background:#dc2626"></div></div>
-        <div class="bar-value">2</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Redundant Tasks</div>
-        <div class="bar-track"><div class="bar-fill" style="width:13.333333333333334%;background:#dc2626"></div></div>
-        <div class="bar-value">2</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Excessive Exploration</div>
-        <div class="bar-track"><div class="bar-fill" style="width:6.666666666666667%;background:#dc2626"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.6923076923076925%;background:#dc2626"></div></div>
+        <div class="bar-value">3</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Inferred Satisfaction (model-estimated)</div>
         <div class="bar-row">
         <div class="bar-label">Frustrated</div>
-        <div class="bar-track"><div class="bar-fill" style="width:0.7936507936507936%;background:#eab308"></div></div>
-        <div class="bar-value">1</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.2467532467532463%;background:#eab308"></div></div>
+        <div class="bar-value">5</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Dissatisfied</div>
-        <div class="bar-track"><div class="bar-fill" style="width:4.761904761904762%;background:#eab308"></div></div>
-        <div class="bar-value">6</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.844155844155844%;background:#eab308"></div></div>
+        <div class="bar-value">9</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Likely Satisfied</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#eab308"></div></div>
-        <div class="bar-value">126</div>
+        <div class="bar-value">154</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Satisfied</div>
-        <div class="bar-track"><div class="bar-fill" style="width:6.349206349206349%;background:#eab308"></div></div>
-        <div class="bar-value">8</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.844155844155844%;background:#eab308"></div></div>
+        <div class="bar-value">9</div>
       </div>
       </div>
     </div>
@@ -647,57 +652,75 @@
       </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a ## Workflows or ## Custom Commands section near the top of CLAUDE.md\n\nWhen user says /insights, this refers to Claude Code's built-in insights feature that generates report.html per account workspace directory. It is NOT a filesystem search task. The pipeline is: generate report.html per account → deploy-insights aggregates them.">
+          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a ## Publishing / Release section\n\nWhen working with npm packages, always use `npm publish --dry-run` before actual publishing to catch path issues (e.g., missing './' prefix in bin fields) and permission errors early.">
           <label for="cmd-0">
-            <code class="cmd-code">When user says /insights, this refers to Claude Code's built-in insights feature that generates report.html per account workspace directory. It is NOT a filesystem search task. The pipeline is: generate report.html per account → deploy-insights aggregates them.</code>
+            <code class="cmd-code">When working with npm packages, always use `npm publish --dry-run` before actual publishing to catch path issues (e.g., missing './' prefix in bin fields) and permission errors early.</code>
             <button class="copy-btn" onclick="copyCmdItem(0)">Copy</button>
           </label>
-          <div class="cmd-why">Claude repeatedly misunderstood the /insights workflow across multiple sessions, trying to search the filesystem or investigating the wrong pipeline direction, requiring user correction each time.</div>
+          <div class="cmd-why">Multiple sessions hit npm publish failures (403 errors, wrong bin paths) that consumed significant debugging time across several sessions.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under a ## Agent Teams section in CLAUDE.md\n\nWhen working with agent teams and worktrees, always pass CLAUDE_CONFIG_DIR to child processes. Bare repo worktree environments require special handling — avoid spawning bash commands directly in them; prefer Task tool execution as a fallback.">
+          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under a ## Git Operations section\n\nFor git operations: always use `git rm` to delete tracked files (not `rm` + `git add`). When working with worktrees, verify the git index is healthy before committing to avoid catastrophic file deletions.">
           <label for="cmd-1">
-            <code class="cmd-code">When working with agent teams and worktrees, always pass CLAUDE_CONFIG_DIR to child processes. Bare repo worktree environments require special handling — avoid spawning bash commands directly in them; prefer Task tool execution as a fallback.</code>
+            <code class="cmd-code">For git operations: always use `git rm` to delete tracked files (not `rm` + `git add`). When working with worktrees, verify the git index is healthy before committing to avoid catastrophic file deletions.</code>
             <button class="copy-btn" onclick="copyCmdItem(1)">Copy</button>
           </label>
-          <div class="cmd-why">Multiple sessions hit agent team failures due to CLAUDE_CONFIG_DIR not propagating and workers going idle in worktree environments, requiring repeated manual recovery.</div>
+          <div class="cmd-why">Multiple sessions had friction with file deletion (ARCHIVE_NOTICE.md required git rm) and a worktree git index corruption caused 447 files to be deleted, requiring hard reset.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under a ## GitHub Operations section in CLAUDE.md\n\nWhen fetching GitHub issues, always verify milestone versioning and use correct status filters (e.g., 'In Progress' not 'Open'). Double-check milestone numbers before bulk operations.">
+          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under a ## Release Process section\n\nBefore releasing a new version, always verify that CHANGELOG.md contains an entry for the version being released. The release workflow will fail without it.">
           <label for="cmd-2">
-            <code class="cmd-code">When fetching GitHub issues, always verify milestone versioning and use correct status filters (e.g., 'In Progress' not 'Open'). Double-check milestone numbers before bulk operations.</code>
+            <code class="cmd-code">Before releasing a new version, always verify that CHANGELOG.md contains an entry for the version being released. The release workflow will fail without it.</code>
             <button class="copy-btn" onclick="copyCmdItem(2)">Copy</button>
           </label>
-          <div class="cmd-why">Multiple sessions had friction from fetching wrong issue statuses, incorrect milestone versioning, and needing user corrections on filtering criteria.</div>
+          <div class="cmd-why">The v0.11.0 release failed because CHANGELOG.md was missing the entry, requiring tag deletion/recreation — this pattern recurred across release sessions.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-3" class="cmd-checkbox" checked data-text="Add under a ## General Rules or ## Behavior section at the top of CLAUDE.md\n\nDo NOT autonomously implement features or refactors unless explicitly asked. When the user asks to 'analyze issues' or 'review', provide analysis only — do not start coding solutions without confirmation.">
+          <input type="checkbox" id="cmd-3" class="cmd-checkbox" checked data-text="Add under a ## General Rules section at the top\n\nAlways run commands from the project root directory, not from subdirectories like `dist/`. Verify `pwd` before running build, publish, or test commands.">
           <label for="cmd-3">
-            <code class="cmd-code">Do NOT autonomously implement features or refactors unless explicitly asked. When the user asks to 'analyze issues' or 'review', provide analysis only — do not start coding solutions without confirmation.</code>
+            <code class="cmd-code">Always run commands from the project root directory, not from subdirectories like `dist/`. Verify `pwd` before running build, publish, or test commands.</code>
             <button class="copy-btn" onclick="copyCmdItem(3)">Copy</button>
           </label>
-          <div class="cmd-why">Claude went off-track implementing git workflow detection features instead of analyzing issues as requested, causing test failures and wasted time.</div>
+          <div class="cmd-why">Claude ran commands from the wrong directory (dist/) causing build failures in at least one session, wasting debugging time.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-4" class="cmd-checkbox" checked data-text="Add under a ## Project Architecture or ## Environment section in CLAUDE.md\n\nThis project uses two Claude config directories (baekenough and baekgomiyo) with shared symlinked settings. When modifying settings.json or plugins, ensure changes propagate correctly across both accounts via the shared-plugins symlink structure.">
+          <input type="checkbox" id="cmd-4" class="cmd-checkbox" checked data-text="Add under a ## Efficiency Rules section\n\nWhen searching for files in the codebase, if 2-3 glob/grep attempts return empty results, confirm the files don't exist and move on. Do not repeat the same search pattern more than 3 times.">
           <label for="cmd-4">
-            <code class="cmd-code">This project uses two Claude config directories (baekenough and baekgomiyo) with shared symlinked settings. When modifying settings.json or plugins, ensure changes propagate correctly across both accounts via the shared-plugins symlink structure.</code>
+            <code class="cmd-code">When searching for files in the codebase, if 2-3 glob/grep attempts return empty results, confirm the files don't exist and move on. Do not repeat the same search pattern more than 3 times.</code>
             <button class="copy-btn" onclick="copyCmdItem(4)">Copy</button>
           </label>
-          <div class="cmd-why">Multiple sessions dealt with cross-account configuration, symlink setup, and plugin sharing — Claude needs this context to avoid re-discovering the architecture each time.</div>
+          <div class="cmd-why">Claude spent 10+ repeated searches looking for Python source files that simply didn't exist, and similar excessive exploration appeared in other sessions.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-5" class="cmd-checkbox" checked data-text="Add under a ## Release Process section in CLAUDE.md\n\nFor oh-my-customcode releases, follow this exact pipeline: squash merge PR → version bump in package.json → update CHANGELOG.md → git tag vX.Y.Z → create GitHub release. Always verify CI passes before merging.">
+          <input type="checkbox" id="cmd-5" class="cmd-checkbox" checked data-text="Add under a ## Documentation section\n\nFor image/asset references in README files destined for npm or external registries, always use absolute GitHub raw URLs (https://raw.githubusercontent.com/...) instead of relative paths.">
           <label for="cmd-5">
-            <code class="cmd-code">For oh-my-customcode releases, follow this exact pipeline: squash merge PR → version bump in package.json → update CHANGELOG.md → git tag vX.Y.Z → create GitHub release. Always verify CI passes before merging.</code>
+            <code class="cmd-code">For image/asset references in README files destined for npm or external registries, always use absolute GitHub raw URLs (https://raw.githubusercontent.com/...) instead of relative paths.</code>
             <button class="copy-btn" onclick="copyCmdItem(5)">Copy</button>
           </label>
-          <div class="cmd-why">Release management was one of the top goals across sessions, and the pipeline was executed successfully multiple times — codifying it prevents drift and speeds up future releases.</div>
+          <div class="cmd-why">Asset images using relative paths broke on npm, requiring an extra round of fixes to convert to raw GitHub URLs.</div>
+        </div>
+      
+        <div class="claude-md-item">
+          <input type="checkbox" id="cmd-6" class="cmd-checkbox" checked data-text="Add under a ## General Rules section at the top\n\nWhen the user says 'archive' a project, clarify what they mean before taking action. Do NOT make repos private, close issues, or change GitHub repo settings unless explicitly asked. 'Archive' may just mean removing legacy code.">
+          <label for="cmd-6">
+            <code class="cmd-code">When the user says 'archive' a project, clarify what they mean before taking action. Do NOT make repos private, close issues, or change GitHub repo settings unless explicitly asked. 'Archive' may just mean removing legacy code.</code>
+            <button class="copy-btn" onclick="copyCmdItem(6)">Copy</button>
+          </label>
+          <div class="cmd-why">Claude over-interpreted 'archive' and made a repo private/archived on GitHub, closing issues — requiring a full rollback.</div>
+        </div>
+      
+        <div class="claude-md-item">
+          <input type="checkbox" id="cmd-7" class="cmd-checkbox" checked data-text="Add under a ## Efficiency Rules section\n\nDo not re-run or re-spawn subtasks for edits that have already been completed in the current session. Before creating a Task, verify the target file hasn't already been modified for that purpose.">
+          <label for="cmd-7">
+            <code class="cmd-code">Do not re-run or re-spawn subtasks for edits that have already been completed in the current session. Before creating a Task, verify the target file hasn't already been modified for that purpose.</code>
+            <button class="copy-btn" onclick="copyCmdItem(7)">Copy</button>
+          </label>
+          <div class="cmd-why">Claude spawned redundant subtasks to re-apply edits already completed (logger.ts, updater tests), wasting time and tokens.</div>
         </div>
       
     </div>
@@ -708,22 +731,23 @@
       
         <div class="feature-card">
           <div class="feature-title">Custom Skills</div>
-          <div class="feature-oneliner">Reusable prompt workflows triggered by a single /command</div>
-          <div class="feature-why"><strong>Why for you:</strong> You have highly repetitive workflows — release management (7 sessions), git operations (12 sessions), commit-and-push (4 sessions). A /release skill would encode your exact pipeline and eliminate the repeated manual orchestration that sometimes goes wrong.</div>
+          <div class="feature-oneliner">Reusable markdown-based commands for repetitive workflows like releases, commits, and PR creation.</div>
+          <div class="feature-why"><strong>Why for you:</strong> You have 13 git_operations sessions and 7 release_management sessions following the same patterns (version bump, changelog update, tag, push, GitHub release). A /release skill would eliminate repeated instructions and prevent the changelog-missing-entry failures.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
                 <code class="example-code">mkdir -p .claude/skills/release &amp;&amp; cat &gt; .claude/skills/release/SKILL.md &lt;&lt; 'EOF'
 # Release Skill
-1. Verify all CI checks pass on the target PR
-2. Squash merge the PR
-3. Bump version in package.json (ask user for semver level)
-4. Update CHANGELOG.md with PR descriptions
-5. Commit with message &quot;chore: release vX.Y.Z&quot;
-6. Create git tag vX.Y.Z
-7. Push with tags
-8. Create GitHub release with changelog entry
+1. Verify CHANGELOG.md has entry for the new version
+2. Bump version in package.json
+3. Update CHANGELOG.md if needed
+4. Commit with message &quot;chore: release vX.Y.Z&quot;
+5. Create git tag vX.Y.Z
+6. Push commits and tags
+7. Create GitHub release with changelog excerpt
+
+Always run `npm publish --dry-run` before actual publish.
 EOF</code>
                 <button class="copy-btn" onclick="copyText(this)">Copy</button>
               </div>
@@ -734,25 +758,24 @@ EOF</code>
       
         <div class="feature-card">
           <div class="feature-title">Hooks</div>
-          <div class="feature-oneliner">Shell commands that auto-run at specific lifecycle events</div>
-          <div class="feature-why"><strong>Why for you:</strong> You hit friction from pre-commit hook false positives, buggy code (15 instances), and wrong approaches (14 instances). A post-edit hook running typecheck and lint would catch issues before they compound — especially since you work across TypeScript (29 files) and Python (38 files).</div>
+          <div class="feature-oneliner">Auto-run shell commands at specific lifecycle events like before committing.</div>
+          <div class="feature-why"><strong>Why for you:</strong> With 33 buggy_code friction events and frequent multi-file TypeScript changes (30 TS sessions), auto-running typecheck and lint after edits would catch errors before they compound. Your top success is multi_file_changes (39) but buggy_code is your top friction (33) — hooks bridge that gap.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code"># Add to .claude/settings.json:
+                <code class="example-code">Add to .claude/settings.json:
 {
   &quot;hooks&quot;: {
     &quot;postToolUse&quot;: [
       {
-        &quot;tool&quot;: &quot;Edit&quot;,
-        &quot;match&quot;: &quot;*.ts&quot;,
-        &quot;command&quot;: &quot;npx tsc --noEmit --pretty 2&gt;&amp;1 | head -20&quot;
-      },
-      {
-        &quot;tool&quot;: &quot;Edit&quot;,
-        &quot;match&quot;: &quot;*.py&quot;,
-        &quot;command&quot;: &quot;python -m py_compile $CLAUDE_FILE_PATH 2&gt;&amp;1&quot;
+        &quot;matcher&quot;: &quot;Edit|Write&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;npx tsc --noEmit 2&gt;&amp;1 | head -20&quot;
+          }
+        ]
       }
     ]
   }
@@ -765,23 +788,22 @@ EOF</code>
         </div>
       
         <div class="feature-card">
-          <div class="feature-title">Headless Mode</div>
-          <div class="feature-oneliner">Run Claude non-interactively from scripts and CI/CD</div>
-          <div class="feature-why"><strong>Why for you:</strong> Your insights automation pipeline (generate per account → aggregate → deploy) spans multiple sessions and keeps getting interrupted. A headless script could run the entire pipeline unattended, and your CI npm publish debugging would benefit from scripted retry logic.</div>
+          <div class="feature-title">Custom Skills</div>
+          <div class="feature-oneliner">A /commit skill to standardize the staging, committing, and pushing workflow.</div>
+          <div class="feature-why"><strong>Why for you:</strong> You have 13 git_operations sessions and multiple commits per release cycle. A /commit skill would ensure Claude always runs from the project root, uses proper git rm for deletions, and follows your conventions without re-instruction.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code">#!/bin/bash
-# insights-pipeline.sh
-for account_dir in baekenough baekgomiyo; do
-  claude -p &quot;Generate insights report.html for $account_dir workspace&quot; \
-    --allowedTools &quot;Bash,Read,Write&quot; \
-    --max-turns 10
-done
-claude -p &quot;Run deploy-insights to aggregate all report.html files and push&quot; \
-  --allowedTools &quot;Bash,Read,Write,Glob&quot; \
-  --max-turns 15</code>
+                <code class="example-code">mkdir -p .claude/skills/commit &amp;&amp; cat &gt; .claude/skills/commit/SKILL.md &lt;&lt; 'EOF'
+# Commit Skill
+1. Run `pwd` and ensure we're in the project root (not dist/ or subdirs)
+2. Run `git status` to review changes
+3. Use `git rm` for any tracked file deletions (never `rm` + `git add`)
+4. Stage changes with `git add`
+5. Commit with conventional commit message format
+6. Push to current branch
+EOF</code>
                 <button class="copy-btn" onclick="copyText(this)">Copy</button>
               </div>
             </div>
@@ -797,14 +819,14 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
     <div class="patterns-section">
       
         <div class="pattern-card">
-          <div class="pattern-title">Reduce API Error Recovery Overhead</div>
-          <div class="pattern-summary">Pre-validate JSON payloads and add retry logic for agent team coordination to avoid the repeated API 400/encoding errors.</div>
-          <div class="pattern-detail">At least 4 sessions were derailed by API JSON encoding errors (invalid high surrogates) during agent team workflows. Each time, Claude had to shut down workers and manually take over. Adding a CLAUDE.md instruction to sanitize large payloads and prefer smaller, focused agent tasks would reduce the blast radius. Consider breaking agent team work into smaller batches of 2 issues instead of 4-6.</div>
+          <div class="pattern-title">Release pipeline keeps failing on preventable issues</div>
+          <div class="pattern-summary">Codify your full release checklist into CLAUDE.md and a /release skill to prevent recurring changelog/tag/publish failures.</div>
+          <div class="pattern-detail">Across your 7 release_management sessions, you hit the same failure modes: missing CHANGELOG entries, npm 403 errors, wrong bin paths, and tag recreation loops. These are all preventable with a pre-release checklist. Your release process (merge → version bump → changelog → tag → push → GitHub release → npm publish dry-run → publish) should be documented once and never improvised again. This alone would have saved 3-4 sessions of friction.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">When using agent teams, limit each team to 2 tasks maximum. Before sending large payloads to APIs, validate JSON encoding. If an agent worker fails, immediately fall back to direct Task tool execution instead of retrying the worker.</code>
+              <code class="copyable-prompt">Create a comprehensive release checklist for this project. Include: 1) verify CHANGELOG.md has the new version entry, 2) npm publish --dry-run passes, 3) all CI checks pass, 4) version bump in package.json matches the tag. Save it to .claude/skills/release/SKILL.md</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -812,14 +834,14 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Front-load Context to Reduce Misunderstandings</div>
-          <div class="pattern-summary">Start sessions with a brief context dump referencing your CLAUDE.md to avoid repeated corrections about your project architecture.</div>
-          <div class="pattern-detail">8 sessions had 'misunderstood_request' friction and 14 had 'wrong_approach'. Many of these stem from Claude not knowing your dual-account setup, the /insights pipeline, or the oh-my-customcode release process. A strong CLAUDE.md with the additions above would eliminate most of these, but you can also front-load context in your opening prompt. Your satisfaction is already high (126 likely_satisfied) but your fully_achieved rate is only 33% — better initial context would push more 'mostly' and 'partially' outcomes to 'fully'.</div>
+          <div class="pattern-title">Excessive exploration wastes session time</div>
+          <div class="pattern-summary">Set explicit search limits and ask Claude to confirm assumptions early instead of exhaustive searching.</div>
+          <div class="pattern-detail">Your friction data shows 19 'wrong_approach' events and repeated patterns of Claude searching for files that don't exist (10+ redundant searches in one session) or exploring broadly before understanding the task. Combined with 61 rate_limit events, every wasted tool call is expensive. Telling Claude upfront about your project structure and setting a '3 strikes' rule for empty searches would significantly reduce wasted effort.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Before starting: review CLAUDE.md for project context. I'm working in the oh-my-customcode ecosystem with two Claude accounts (baekenough/baekgomiyo) sharing settings via symlinks. Ask me to clarify anything unclear before beginning work.</code>
+              <code class="copyable-prompt">Before exploring this codebase, here's the structure: [describe key dirs]. If you search for something 3 times with no results, assume it doesn't exist and ask me. Don't explore broadly — start with the specific files relevant to the task.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -827,14 +849,14 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Consolidate Git Operations into Scripted Workflows</div>
-          <div class="pattern-summary">Your top goal is git_operations (12 sessions) — automate the repetitive parts with skills or shell scripts.</div>
-          <div class="pattern-detail">Between git_operations (12), commit_and_push (4), and release_management (7), roughly 32% of your sessions involve repetitive git workflows. You had a git index corruption incident, worktree management issues, and branch cleanup tasks that could all be templated. Creating a /pr skill, a /cleanup skill, and a /release skill would turn these multi-step error-prone flows into single commands. Your Task tool usage (170 calls) suggests Claude is already spawning sub-agents for these — give them better instructions.</div>
+          <div class="pattern-title">Rate limits are your biggest friction — reduce tool call volume</div>
+          <div class="pattern-summary">Combine Bash commands and use Task agents more strategically to reduce total tool invocations.</div>
+          <div class="pattern-detail">You hit rate limits 61 times across 103 sessions (rate_limit_hit: 39, rate_limited: 22) — that's your #1 friction source. With 515 Bash calls, many could be combined (e.g., `git status &amp;&amp; git log --oneline -5 &amp;&amp; cat package.json | jq .version` in one call). You're already using Task agents well (171 calls), but some spawned redundant subtasks. Consolidating commands and being explicit about 'do this in one step' would help stay under limits.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Create three custom skills: 1) /pr - stages changes, creates descriptive commit, pushes branch, opens PR with template. 2) /cleanup - lists merged branches, deletes stale ones, prunes worktrees. 3) /release - runs the full release pipeline from PR merge to GitHub release creation.</code>
+              <code class="copyable-prompt">Combine related shell commands into single bash calls where possible (e.g., use &amp;&amp; to chain git status, log, and diff). Minimize total tool invocations. Do not spawn subtasks for simple single-file edits.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -847,28 +869,61 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
 
     
     <h2 id="section-horizon">On the Horizon</h2>
-    <p class="section-intro">Your usage reveals a power user orchestrating complex multi-agent release pipelines, where the biggest gains now lie in hardening autonomous workflows to eliminate the recurring friction from API errors, agent coordination failures, and environment misconfigurations.</p>
+    <p class="section-intro">Your 103 sessions over 5 days reveal a power user driving releases, bug fixes, and multi-repo management at high velocity — but rate limits, redundant exploration, and buggy code friction suggest massive gains from more autonomous, parallelized workflows.</p>
     <div class="horizon-section">
       
         <div class="horizon-card">
-          <div class="horizon-title">Self-Healing Agent Teams with Retry Logic</div>
-          <div class="horizon-possible">Your sessions show repeated API JSON encoding errors, agent worker failures in worktree environments, and manual recovery interventions that consumed significant time across your 73 sessions. An autonomous orchestration layer could detect these failure modes, automatically retry with sanitized payloads, fall back to direct Task execution when workers go idle, and resume from the last successful checkpoint—turning your current 33% partial-achievement rate into near-full completion without human intervention.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Build a resilient agent orchestration wrapper using Claude Code's Task tool with structured error handling, combining it with your existing tmux teammate mode and CLAUDE.md rules to define retry policies and fallback strategies.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I want to build a resilient agent teams orchestration system. Analyze my current workflow: I spawn parallel worker agents via TaskCreate for GitHub issues, but they frequently fail due to API JSON encoding errors (invalid high surrogates), bare repo worktree bash failures, and idle workers. Design a wrapper script and CLAUDE.md rules that: 1) Sanitize all API payloads before sending (strip invalid Unicode), 2) Detect worker idle/failure states and automatically retry or fall back to direct Task tool execution, 3) Implement checkpoint-based resumption so interrupted sessions can pick up exactly where they left off, 4) Log all failure events as structured observations for the memory agent. Output the implementation as a TypeScript module plus updated CLAUDE.md orchestration rules.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Autonomous Release Pipeline with Pre-Flight Validation</div>
+          <div class="horizon-possible">Your data shows 7 release management sessions and 13 git operations sessions, with recurring friction from missing changelog entries, broken tags, and npm publish 403 errors. An autonomous release agent could run the entire pipeline — changelog validation, version bump, dry-run publish, tag creation, CI verification, and GitHub release — as a single unattended workflow that halts only on genuine blockers. This eliminates the multi-session iteration loops you experienced across v0.10.2, v0.10.3, v0.11.0, and v0.12.2 releases.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code with Task tool to spawn parallel sub-agents: one validates changelogs and version consistency, another runs npm publish --dry-run, and a coordinator merges results before executing the release. Structure it as a CLAUDE.md command.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I want you to act as an autonomous release manager for this repository. Before doing anything destructive, run all pre-flight checks in parallel using sub-tasks:
+
+1. CHANGELOG VALIDATOR: Verify the target version has a changelog entry with correct date and format. If missing, draft one from recent commits.
+2. BUILD VALIDATOR: Run clean build, full test suite, and npm publish --dry-run. Report any bin path issues, missing files, or auth errors.
+3. GIT STATE VALIDATOR: Confirm we're on the correct branch, no uncommitted changes, no conflicting tags, and remote is up to date.
+
+Only after ALL three sub-tasks report green, execute the release pipeline: version bump → changelog finalize → commit → tag → push → GitHub release creation → npm publish. If any step fails, diagnose the root cause and propose a fix without proceeding. Show me the pre-flight report before executing.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Autonomous Release Pipeline with Verification Gates</div>
-          <div class="horizon-possible">You executed at least 4 full release cycles (v0.10.0-v0.12.2) manually coordinating version bumps, changelog updates, PR merges, tagging, npm publish, and GitHub releases—with friction from CI race conditions, npm 403 errors, and pre-commit hook false positives. A fully autonomous release agent could run the entire pipeline end-to-end, iterating against CI checks and npm dry-runs, automatically diagnosing and fixing publish failures, and only asking for human approval at a single gate before the final tag.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Create a Claude Code skill or slash command that chains your release steps as a single autonomous workflow, using Bash tool for verification gates (test suite, typecheck, lint, npm pack --dry-run) and conditional branching on failure.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Build me an autonomous release pipeline skill for oh-my-customcode. The pipeline should: 1) Accept a semver bump type (patch/minor/major), 2) Create a release branch, bump version in package.json, update CHANGELOG.md from merged PRs since last tag, 3) Run full validation: bun test, typecheck, lint, npm pack --dry-run, 4) If any step fails, autonomously diagnose and fix (e.g., update stale test snapshots, fix lint errors, retry with corrected config), iterating up to 3 times per gate, 5) Create PR, wait for CI to pass (poll every 30s, max 10min), 6) Squash merge, create git tag, create GitHub release with generated notes, 7) Trigger npm publish workflow and verify package appears on registry, 8) If npm publish fails with 403, automatically check: token validity, package scope, org permissions, and report specific fix needed. Output this as a reusable skill file with the full implementation.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Parallel Agent Teams for Multi-Repo Audits</div>
+          <div class="horizon-possible">You ran extensive cross-repo audits (baekgom-agents, ontology-rag, oh-my-customcode) that suffered from excessive exploration — one session spent 10+ redundant searches for files that didn't exist, and agent team workers went idle in bare repo environments. Parallel agents with scoped responsibilities could audit documentation accuracy, dead code, dependency health, and test coverage simultaneously across repositories, completing in minutes what took multiple sessions. Each agent writes structured findings to a shared report rather than exploring blindly.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code's Task/TaskCreate tools to spawn focused audit agents with strict scope boundaries and file-existence checks before deep exploration. Define exit conditions so agents don't spiral into redundant searches.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Run a parallel multi-repo audit using sub-tasks. For each repository in [repo1, repo2], spawn these focused agents:
+
+AGENT 1 - DOC ACCURACY: Check all README files for stale counts, broken links, outdated version references, and missing features. Use `find` and `grep` first — if a file doesn't exist after 2 attempts, mark it as missing and move on. Never search more than 3 times for the same pattern.
+
+AGENT 2 - DEAD CODE &amp; LEGACY: Search for deprecated references (e.g., 'codex', 'claude-native', stale imports). Catalog file paths and line counts. Propose removal priority.
+
+AGENT 3 - CI/CD HEALTH: Review all workflow YAML files for hardcoded secrets, missing env vars, race conditions in publish steps, and permission issues.
+
+AGENT 4 - TEST COVERAGE GAPS: Run existing tests, identify files with zero coverage, and flag any test files referencing stale parameters or removed features.
+
+Each agent must output a structured JSON summary: {agent, repo, findings: [{file, issue, severity, fix}]}. Compile all results into a single audit report at the end.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Parallel Issue Processing with Environment Isolation</div>
-          <div class="horizon-possible">Your most ambitious sessions spawned 4+ parallel agents working on separate GitHub issues via git worktrees, but environment variable pollution (CLAUDE_CONFIG_DIR, GIT_DIR leaking across worktrees) and agent coordination failures repeatedly derailed execution. A properly isolated parallel processing system could autonomously pick up batches of issues, spin up sandboxed worktree environments with verified clean state, process them in parallel with independent test runs, and converge results into a unified PR status dashboard—turning your current multi-hour multi-session issue sprints into single autonomous runs.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Leverage Claude Code's Task tool for parallel agent spawning combined with a shell script that provisions each worktree with sanitized environment variables and validates git state before handing off to the worker agent.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Design and implement a parallel issue processing system for my oh-my-customcode workflow. Requirements: 1) Accept a list of GitHub issue numbers or a milestone label, 2) For each issue, create an isolated git worktree with a clean environment (unset GIT_DIR, GIT_WORK_TREE, CLAUDE_CONFIG_DIR; set only the worktree-specific paths), 3) Spawn parallel Task agents—one per issue—each with a structured prompt that includes: issue description, relevant file paths from codebase analysis, test commands to validate against, and branch naming convention, 4) Each worker must: implement the fix, run tests in isolation, commit with conventional commit format referencing the issue, push and create a PR, 5) An orchestrator agent monitors all workers: if a worker is idle &gt;60s or errors &gt;2 times, kill it and retry with direct execution, 6) After all workers complete, produce a summary table: issue number, PR link, test results, merge readiness, 7) Handle the known failure modes: API JSON encoding errors (sanitize), worktree git index corruption (detect via git status, hard reset and retry), pre-commit hook false positives (parse output and skip known false patterns). Output as a shell bootstrap script plus a TypeScript orchestrator module.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Self-Healing Bug Fix Loop Against Tests</div>
+          <div class="horizon-possible">With 17 bug fix sessions and 33 instances of buggy code friction, your workflow would benefit enormously from an autonomous fix-iterate-verify loop. Instead of manually re-prompting when a fix introduces regressions or CSS specificity conflicts (like your hidden class override issue), Claude can run the full test suite after each edit, analyze failures, apply corrections, and iterate until green — all without human intervention. This turns your 688-test suite into a continuous validation harness that catches stale parameters, path bugs, and display regressions automatically.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code with a structured iteration prompt that caps retries, runs tests after every change, and uses git stash as a safety net. Combine with the Bash tool for test execution and automatic rollback on catastrophic failures.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Fix the following bug: [DESCRIBE BUG HERE]
+
+Follow this autonomous fix-iterate-verify protocol:
+
+1. SAFETY: Create a git stash save point before any edits. If at any point more than 10 files are modified or deleted, STOP and ask me.
+
+2. DIAGNOSE: Read the relevant source files and test files. Form a hypothesis about the root cause. Check for CSS specificity conflicts, incorrect file paths, stale references, and environment-specific issues.
+
+3. FIX: Apply the minimal targeted fix. Do not refactor unrelated code or make excessive changes.
+
+4. VERIFY: Run the full test suite (`npm test` or equivalent). Parse the output.
+   - If ALL tests pass: Run lint and typecheck. If clean, commit with a descriptive message and show me the diff.
+   - If tests FAIL: Analyze which tests broke and why. Apply a corrective fix. Return to step 4.
+   - Maximum 5 iteration cycles. If not resolved after 5 attempts, show me your findings, what you tried, and your best hypothesis.
+
+5. REGRESSION CHECK: After green tests, verify the fix doesn't break the specific UI/behavior described in the bug by tracing the code path end-to-end.
+
+Never skip the test run. Never commit with failing tests. Show iteration count at each cycle.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
     </div>
@@ -876,8 +931,8 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
 
     
     <div class="fun-ending">
-      <div class="fun-headline">"Git index corruption catastrophically deleted 447 files during what was supposed to be a simple version bump"</div>
-      <div class="fun-detail">While resuming work on merging PRs and preparing a 0.10.2 release, a git index corruption in a worktree caused an initial commit to obliterate 447 files from the project — requiring a hard reset and careful re-application of changes. Claude recovered, but that must have been a heart-stopping moment.</div>
+      <div class="fun-headline">"Claude went rogue and archived an entire GitHub repo when the user just wanted to remove some old code"</div>
+      <div class="fun-detail">When asked to 'remove Codex support and archive oh-my-customcode,' Claude took 'archive' literally — making the repo private and archived on GitHub, closing issues, and committing changes the user never wanted. The user had to roll everything back while Claude sheepishly pivoted to drafting a new plan for what they actually meant.</div>
     </div>
     
 
@@ -923,7 +978,7 @@ claude -p &quot;Run deploy-insights to aggregate all report.html files and push&
       }
     }
     // Timezone selector for time of day chart (data is from our own analytics, not user input)
-    const rawHourCounts = {"3":1,"4":115,"5":132,"8":3,"9":68,"10":43,"11":260,"12":166,"13":2,"14":22,"15":19,"16":39,"17":274,"18":134};
+    const rawHourCounts = {"4":113,"5":130,"8":2,"9":67,"10":42,"11":240,"12":154,"13":2,"14":22,"15":19,"16":39,"17":274,"18":264,"19":140,"20":185,"21":256,"22":32};
     function updateHourHistogram(offsetFromPT) {
       const periods = [
         { label: "Morning (6-12)", range: [6,7,8,9,10,11] },

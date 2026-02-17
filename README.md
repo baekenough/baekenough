@@ -50,10 +50,10 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>21,629</b><br/><sub>처리 메시지 (5일)</sub></td>
-<td align="center"><b>631</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>91%</b><br/><sub>만족도 (485/530)</sub></td>
-<td align="center"><b>198</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>26,994</b><br/><sub>처리 메시지 (6일)</sub></td>
+<td align="center"><b>879</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>89%</b><br/><sub>만족도 (529/590)</sub></td>
+<td align="center"><b>248</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
