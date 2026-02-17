@@ -77,6 +77,18 @@ I aim to achieve team-level throughput as an individual.
 <tr>
 <td width="50%">
 
+### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
+
+**Self-Evolving Multi-Agent Financial Fraud Detection System**
+
+7 specialized agents collaborate with cross-validation, Red Team adversarial testing,
+and Post-Mortem auto-SOP evolution
+
+`Python` `LangGraph` `FastAPI` `Multi-Agent`
+
+</td>
+<td width="50%">
+
 ### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
 
 **oh-my-zsh style customization framework for Claude Code**
@@ -87,6 +99,8 @@ and release pipelines in a comprehensive harness
 `TypeScript` `Claude Code` `npm` `Multi-Agent`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### ⚡ [textswift](https://github.com/baekenough/textswift)
@@ -99,8 +113,6 @@ with local Codex CLI via Native Messaging
 `TypeScript` `Chrome Extension` `Codex` `Native Messaging`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
@@ -113,6 +125,8 @@ including MKV, AVI, HEVC. Web & Desktop (Tauri)
 `TypeScript` `WebAssembly` `FFmpeg` `Tauri`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
@@ -124,6 +138,8 @@ No real-time LLM calls during gameplay
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
+</td>
+<td width="50%">
 </td>
 </tr>
 </table>
@@ -217,6 +233,7 @@ UBcare                  2018.09 ~ 2021.01
 
 | 📌 Pinned Repositories | |
 |:---|:---|
+| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |

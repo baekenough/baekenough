@@ -76,6 +76,18 @@
 <tr>
 <td width="50%">
 
+### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
+
+**자기진화형 멀티에이전트 금융 사기 탐지 시스템**
+
+7개 전문 에이전트 협업, 교차 검증, Red Team 적대적 시나리오 생성,
+Post-Mortem 자동 SOP 업데이트로 자율 진화
+
+`Python` `LangGraph` `FastAPI` `Multi-Agent`
+
+</td>
+<td width="50%">
+
 ### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
 
 **oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크**
@@ -86,6 +98,8 @@
 `TypeScript` `Claude Code` `npm` `Multi-Agent`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### ⚡ [textswift](https://github.com/baekenough/textswift)
@@ -98,8 +112,6 @@
 `TypeScript` `Chrome Extension` `Codex` `Native Messaging`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
@@ -112,6 +124,8 @@ FFmpeg.wasm + WebCodecs 하드웨어 가속. MKV, AVI, HEVC 등
 `TypeScript` `WebAssembly` `FFmpeg` `Tauri`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
@@ -123,6 +137,8 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
+</td>
+<td width="50%">
 </td>
 </tr>
 </table>
@@ -216,6 +232,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 | 📌 Pinned Repositories | |
 |:---|:---|
+| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
