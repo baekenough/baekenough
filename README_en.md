@@ -51,10 +51,10 @@ I aim to achieve team-level throughput as an individual.
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>26,994</b><br/><sub>Messages (6 days)</sub></td>
-<td align="center"><b>879</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>89%</b><br/><sub>Satisfaction (529/590)</sub></td>
-<td align="center"><b>248</b><br/><sub>Parallel Session Events</sub></td>
+<td align="center"><b>31,177</b><br/><sub>Messages (9 days)</sub></td>
+<td align="center"><b>1,095</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>91%</b><br/><sub>Satisfaction (671/735)</sub></td>
+<td align="center"><b>315</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
