@@ -52,7 +52,6 @@
 <tr>
 <td align="center"><b>31,177</b><br/><sub>처리 메시지 (9일)</sub></td>
 <td align="center"><b>1,095</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>91%</b><br/><sub>만족도 (671/735)</sub></td>
 <td align="center"><b>315</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
@@ -102,6 +101,18 @@ Post-Mortem 자동 SOP 업데이트로 자율 진화
 <tr>
 <td width="50%">
 
+### 💬 SayCraft (비공개)
+
+**실시간 협업 개발 플랫폼**
+
+채팅, 코드 에디터, 프리뷰를 하나의 워크스페이스에 통합.
+AI 에이전트 연동, Socket.IO 릴레이, Electron 데스크톱 앱 지원
+
+`Next.js` `React` `Supabase` `Socket.IO` `Electron`
+
+</td>
+<td width="50%">
+
 ### ⚡ [textswift](https://github.com/baekenough/textswift)
 
 **Codex 기반 인페이지 번역 Chrome 확장 프로그램**
@@ -112,6 +123,8 @@ Post-Mortem 자동 SOP 업데이트로 자율 진화
 `TypeScript` `Chrome Extension` `Codex` `Native Messaging`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
@@ -124,8 +137,6 @@ FFmpeg.wasm + WebCodecs 하드웨어 가속. MKV, AVI, HEVC 등
 `TypeScript` `WebAssembly` `FFmpeg` `Tauri`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
@@ -137,8 +148,6 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
-</td>
-<td width="50%">
 </td>
 </tr>
 </table>
@@ -171,55 +180,6 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 ---
 
-## 🛠 Tech Stack
-
-<div align="center">
-
-**Backend**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-
-**Database & ORM**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logoColor=white)
-
-**Infra & DevOps**
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-
-**AI & Agent**
-
-![Claude Code](https://img.shields.io/badge/Claude_Code-191919?style=flat-square&logo=anthropic&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Multi Agent](https://img.shields.io/badge/Multi--Agent-22d3ee?style=flat-square)
-![LLM Orchestration](https://img.shields.io/badge/LLM_Orchestration-a78bfa?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-fb923c?style=flat-square)
-![MCP](https://img.shields.io/badge/MCP-34d399?style=flat-square)
-
-**Medical & Desktop**
-
-![PyQt](https://img.shields.io/badge/PyQt-41CD52?style=flat-square&logo=qt&logoColor=white)
-![DICOM](https://img.shields.io/badge/DICOM%2FPACS-006400?style=flat-square)
-![SaMD](https://img.shields.io/badge/SaMD-FF6B6B?style=flat-square)
-
-</div>
-
----
-
 ## 📈 GitHub Activity
 
 <div align="center">
@@ -234,6 +194,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 |:---|:---|
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
+| 💬 **SayCraft** (비공개) | 실시간 협업 개발 플랫폼 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |

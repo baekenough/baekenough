@@ -53,7 +53,6 @@ I aim to achieve team-level throughput as an individual.
 <tr>
 <td align="center"><b>31,177</b><br/><sub>Messages (9 days)</sub></td>
 <td align="center"><b>1,095</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>91%</b><br/><sub>Satisfaction (671/735)</sub></td>
 <td align="center"><b>315</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
@@ -103,6 +102,18 @@ and release pipelines in a comprehensive harness
 <tr>
 <td width="50%">
 
+### 💬 SayCraft (Private)
+
+**Real-time collaborative development platform**
+
+Chat, code editor, and preview unified in one workspace.
+AI agent integration, Socket.IO relay, and Electron desktop app
+
+`Next.js` `React` `Supabase` `Socket.IO` `Electron`
+
+</td>
+<td width="50%">
+
 ### ⚡ [textswift](https://github.com/baekenough/textswift)
 
 **Instant in-page translation Chrome extension powered by Codex**
@@ -113,6 +124,8 @@ with local Codex CLI via Native Messaging
 `TypeScript` `Chrome Extension` `Codex` `Native Messaging`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
@@ -125,8 +138,6 @@ including MKV, AVI, HEVC. Web & Desktop (Tauri)
 `TypeScript` `WebAssembly` `FFmpeg` `Tauri`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
@@ -138,8 +149,6 @@ No real-time LLM calls during gameplay
 
 `Go` `Python` `gRPC` `LLM Orchestration`
 
-</td>
-<td width="50%">
 </td>
 </tr>
 </table>
@@ -172,55 +181,6 @@ UBcare                  2018.09 ~ 2021.01
 
 ---
 
-## 🛠 Tech Stack
-
-<div align="center">
-
-**Backend**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-
-**Database & ORM**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logoColor=white)
-
-**Infra & DevOps**
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-
-**AI & Agent**
-
-![Claude Code](https://img.shields.io/badge/Claude_Code-191919?style=flat-square&logo=anthropic&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Multi Agent](https://img.shields.io/badge/Multi--Agent-22d3ee?style=flat-square)
-![LLM Orchestration](https://img.shields.io/badge/LLM_Orchestration-a78bfa?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-fb923c?style=flat-square)
-![MCP](https://img.shields.io/badge/MCP-34d399?style=flat-square)
-
-**Medical & Desktop**
-
-![PyQt](https://img.shields.io/badge/PyQt-41CD52?style=flat-square&logo=qt&logoColor=white)
-![DICOM](https://img.shields.io/badge/DICOM%2FPACS-006400?style=flat-square)
-![SaMD](https://img.shields.io/badge/SaMD-FF6B6B?style=flat-square)
-
-</div>
-
----
-
 ## 📈 GitHub Activity
 
 <div align="center">
@@ -235,6 +195,7 @@ UBcare                  2018.09 ~ 2021.01
 |:---|:---|
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
+| 💬 **SayCraft** (Private) | Real-time collaborative development platform |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
