@@ -2,7 +2,7 @@
 """
 Claude Code Insights Extractor and README Updater.
 
-Aggregates session metadata and satisfaction facets from multiple accounts,
+Aggregates session metadata from multiple accounts,
 copies HTML reports, and updates GitHub profile README with metrics.
 """
 
@@ -94,52 +94,6 @@ def aggregate_session_meta(accounts):
     return stats
 
 
-def aggregate_facets(accounts):
-    """
-    Aggregate satisfaction facets from all accounts.
-
-    Returns:
-        dict: Satisfaction statistics including satisfied count, total count,
-              and satisfaction rate as percentage.
-    """
-    facets = {
-        "satisfied": 0,
-        "total": 0,
-        "rate": 0,
-    }
-
-    for account, usage_dir in accounts.items():
-        facets_dir = usage_dir / "facets"
-        if not facets_dir.exists():
-            print(f"Warning: {facets_dir} not found, skipping {account}")
-            continue
-
-        for facet_file in facets_dir.glob("*.json"):
-            try:
-                with facet_file.open() as f:
-                    data = json.load(f)
-
-                satisfaction = data.get("user_satisfaction_counts", {})
-
-                # Count satisfied (likely_satisfied + satisfied)
-                facets["satisfied"] += satisfaction.get("likely_satisfied", 0)
-                facets["satisfied"] += satisfaction.get("satisfied", 0)
-
-                # Count total
-                for count in satisfaction.values():
-                    facets["total"] += count
-
-            except (json.JSONDecodeError, KeyError) as e:
-                print(f"Warning: Failed to parse {facet_file}: {e}")
-                continue
-
-    # Calculate satisfaction rate
-    if facets["total"] > 0:
-        facets["rate"] = int((facets["satisfied"] / facets["total"]) * 100)
-
-    return facets
-
-
 def copy_reports(accounts, insights_dir):
     """
     Copy HTML reports from each account to insights directory.
@@ -164,13 +118,12 @@ def copy_reports(accounts, insights_dir):
             print(f"Warning: Failed to copy {report_file}: {e}")
 
 
-def generate_metrics_section_ko(stats, facets):
+def generate_metrics_section_ko(stats):
     """
     Generate metrics table section in Korean.
 
     Args:
         stats: Aggregated session statistics.
-        facets: Aggregated satisfaction facets.
 
     Returns:
         str: HTML table with metrics.
@@ -179,19 +132,17 @@ def generate_metrics_section_ko(stats, facets):
 <tr>
 <td align="center"><b>{stats['total_messages']:,}</b><br/><sub>처리 메시지 ({stats['unique_days']}일)</sub></td>
 <td align="center"><b>{stats['total_sessions']:,}</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>{facets['rate']}%</b><br/><sub>만족도 ({facets['satisfied']}/{facets['total']})</sub></td>
 <td align="center"><b>{stats['total_task_events']:,}</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>"""
 
 
-def generate_metrics_section_en(stats, facets):
+def generate_metrics_section_en(stats):
     """
     Generate metrics table section in English.
 
     Args:
         stats: Aggregated session statistics.
-        facets: Aggregated satisfaction facets.
 
     Returns:
         str: HTML table with metrics.
@@ -200,7 +151,6 @@ def generate_metrics_section_en(stats, facets):
 <tr>
 <td align="center"><b>{stats['total_messages']:,}</b><br/><sub>Messages ({stats['unique_days']} days)</sub></td>
 <td align="center"><b>{stats['total_sessions']:,}</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>{facets['rate']}%</b><br/><sub>Satisfaction ({facets['satisfied']}/{facets['total']})</sub></td>
 <td align="center"><b>{stats['total_task_events']:,}</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>"""
@@ -281,9 +231,6 @@ def main():
     print("Aggregating session metadata...")
     stats = aggregate_session_meta(ACCOUNTS)
 
-    print("Aggregating satisfaction facets...")
-    facets = aggregate_facets(ACCOUNTS)
-
     # Print summary
     print("\n=== Stats Summary ===")
     print(f"Total Messages: {stats['total_messages']:,}")
@@ -292,7 +239,6 @@ def main():
     print(f"Total Commits: {stats['total_commits']:,}")
     print(f"Total Tokens: {stats['total_tokens']:,}")
     print(f"Total Task Events: {stats['total_task_events']:,}")
-    print(f"Satisfaction Rate: {facets['rate']}% ({facets['satisfied']}/{facets['total']})")
     print(f"\nTop Tools:")
     for tool, count in sorted(
         stats['tool_counts'].items(),
@@ -317,7 +263,7 @@ def main():
     if readme_ko.exists():
         print(f"\nUpdating {readme_ko}...")
         content_ko = readme_ko.read_text()
-        metrics_ko = generate_metrics_section_ko(stats, facets)
+        metrics_ko = generate_metrics_section_ko(stats)
         tools_ko = generate_tools_section(stats, 'ko')
 
         content_ko = replace_between_markers(content_ko, "metrics", metrics_ko)
@@ -335,7 +281,7 @@ def main():
     if readme_en.exists():
         print(f"\nUpdating {readme_en}...")
         content_en = readme_en.read_text()
-        metrics_en = generate_metrics_section_en(stats, facets)
+        metrics_en = generate_metrics_section_en(stats)
         tools_en = generate_tools_section(stats, 'en')
 
         content_en = replace_between_markers(content_en, "metrics", metrics_en)
