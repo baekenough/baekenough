@@ -50,9 +50,9 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>37,981</b><br/><sub>처리 메시지 (13일)</sub></td>
-<td align="center"><b>1,423</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>435</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>41,833</b><br/><sub>처리 메시지 (15일)</sub></td>
+<td align="center"><b>1,611</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>553</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
@@ -181,12 +181,6 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 ---
 
 ## 📈 GitHub Activity
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=baekenough&theme=tokyonight&hide_border=true&background=0a0a0b&ring=22d3ee&fire=a78bfa&currStreakLabel=22d3ee&sideLabels=94a3b8&dates=5a5a63&currStreakNum=e4e4e7&sideNums=e4e4e7" width="60%"/>
-
-</div>
 
 <div align="center">
 
