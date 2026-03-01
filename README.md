@@ -50,9 +50,9 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>41,833</b><br/><sub>처리 메시지 (15일)</sub></td>
-<td align="center"><b>1,611</b><br/><sub>세션 수</sub></td>
-<td align="center"><b>553</b><br/><sub>병렬 세션 이벤트</sub></td>
+<td align="center"><b>52,198</b><br/><sub>처리 메시지 (16일)</sub></td>
+<td align="center"><b>2,008</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>581</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
