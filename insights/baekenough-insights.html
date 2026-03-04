@@ -119,16 +119,16 @@
 <body>
   <div class="container">
     <h1>Claude Code Insights</h1>
-    <p class="subtitle">11,897 messages across 366 sessions (4,038 total) | 2026-02-09 to 2026-02-28</p>
+    <p class="subtitle">13,580 messages across 414 sessions (4,537 total) | 2026-02-09 to 2026-03-04</p>
 
     
     <div class="at-a-glance">
       <div class="glance-title">At a Glance</div>
       <div class="glance-sections">
-        <div class="glance-section"><strong>What's working:</strong> You've built a genuinely impressive multi-agent memory system where observer agents track and checkpoint your primary sessions — that's a sophisticated pattern most users never attempt. You're also trusting Claude with end-to-end release management and rapid full-stack prototyping (like building TermSwift from scratch), which shows you understand how to decompose complex work across sessions. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
-        <div class="glance-section"><strong>What's hindering you:</strong> On Claude's side, sub-agents frequently report success when their edits didn't actually apply or they modified the wrong files, and first-attempt fixes often address symptoms instead of root causes, leading to frustrating multi-round rework cascades. On your side, sessions regularly get stuck in extended exploration or research phases without producing code — tighter scoping upfront (e.g., &quot;investigate for 2 minutes then start implementing&quot;) would help, and your memory/checkpoint goal naming has fragmented across many variants, making it harder to maintain a clean workflow. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
-        <div class="glance-section"><strong>Quick wins to try:</strong> Try using <strong>hooks</strong> to auto-verify sub-agent outputs after Task completions — a post-task hook that checks actual file diffs would catch the &quot;reported success but nothing changed&quot; problem that's burned you repeatedly. You could also convert your memory observation and progress checkpoint workflows into <strong>headless mode</strong> scripts so they run automatically in the background instead of requiring dedicated interactive sessions. <a href="#section-features" class="see-more">Features to Try →</a></div>
-        <div class="glance-section"><strong>Ambitious workflows:</strong> As models get more reliable, your release pipeline can become fully autonomous — Claude validates credentials upfront, gates each phase (merge → test → build → publish) with verification, and only proceeds when each step is confirmed, eliminating the retry loops that derailed your v0.16 and v0.17 releases. Your observer-agent memory system is also perfectly positioned for an upgrade: a unified background checkpointing agent that continuously captures structured snapshots and produces coherent handoff documents, so every new session picks up exactly where the last one left off without manual checkpoint sessions. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
+        
+        
+        
+        
       </div>
     </div>
     
@@ -145,58 +145,13 @@
     </nav>
 
     <div class="stats-row">
-      <div class="stat"><div class="stat-value">11,897</div><div class="stat-label">Messages</div></div>
-      <div class="stat"><div class="stat-value">+1,323/-122</div><div class="stat-label">Lines</div></div>
-      <div class="stat"><div class="stat-value">26</div><div class="stat-label">Files</div></div>
-      <div class="stat"><div class="stat-value">12</div><div class="stat-label">Days</div></div>
-      <div class="stat"><div class="stat-value">991.4</div><div class="stat-label">Msgs/Day</div></div>
+      <div class="stat"><div class="stat-value">13,580</div><div class="stat-label">Messages</div></div>
+      <div class="stat"><div class="stat-value">+983/-89</div><div class="stat-label">Lines</div></div>
+      <div class="stat"><div class="stat-value">17</div><div class="stat-label">Files</div></div>
+      <div class="stat"><div class="stat-value">16</div><div class="stat-label">Days</div></div>
+      <div class="stat"><div class="stat-value">848.8</div><div class="stat-label">Msgs/Day</div></div>
     </div>
 
-    
-    <h2 id="section-work">What You Work On</h2>
-    <div class="project-areas">
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">TermSwift / Electrobun Desktop App Development</span>
-            <span class="area-count">~14 sessions</span>
-          </div>
-          <div class="area-desc">Development of a desktop IDE/terminal application called TermSwift built on Electrobun, involving terminal spawning (node-pty to bun-pty migration), file explorer, web viewer, multi-tab terminals, syntax highlighting with CodeMirror, and various UI fixes. Claude Code was used heavily for debugging native process spawning issues, implementing features across frontend/backend boundaries, and refactoring async patterns. The project encountered significant friction with Bun/node-pty incompatibility, ultimately leading the user to scrap and restart parts of the project.</div>
-        </div>
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">Claude Code Plugin/Tool Release Management</span>
-            <span class="area-count">~12 sessions</span>
-          </div>
-          <div class="area-desc">Managing releases (v0.16.4, v0.17.0) of a Claude Code plugin ecosystem, including merging PRs, implementing features like session-end auto-save and statusline formatting, fixing security vulnerabilities, and publishing to npm. Claude Code handled multi-file changes across 7+ files, GitHub issue creation, PR workflows, and release orchestration, though npm publish repeatedly failed due to expired tokens requiring manual intervention.</div>
-        </div>
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">Memory/Observer Agent System</span>
-            <span class="area-count">~30 sessions</span>
-          </div>
-          <div class="area-desc">Operating a multi-agent architecture where observer/memory agents monitor primary Claude Code sessions to record structured observations, create progress summaries, and analyze whether autonomous work should continue. Claude Code was used to classify conversation states, generate structured JSON outputs, and maintain persistent memory across sessions. This represented the highest volume of sessions, with many being short classification or checkpoint tasks.</div>
-        </div>
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">Heimdex/ClawWork Infrastructure &amp; Deployment</span>
-            <span class="area-count">~8 sessions</span>
-          </div>
-          <div class="area-desc">Deploying web applications locally via Docker Compose and to remote servers via SSH, including the Heimdex fork and ClawWork projects. Claude Code built Docker images, configured environment files, debugged health checks on Alpine/slim images lacking curl, resolved SSL and networking issues, and handled remote server setup with dependency installation. Docker Hub network timeouts and missing host key verification caused notable friction.</div>
-        </div>
-      
-        <div class="project-area">
-          <div class="area-header">
-            <span class="area-name">Project Planning &amp; Repository Management</span>
-            <span class="area-count">~6 sessions</span>
-          </div>
-          <div class="area-desc">Creating and managing GitHub repositories, generating feature issue backlists for a multi-LLM IDE app concept, cleaning up tracked config files, removing obsolete CI workflows, and investigating .claude folder issues. Claude Code was used for repo initialization, bulk issue creation, git operations, and codebase exploration, though some sessions spent excessive time on research without producing actionable code changes.</div>
-        </div>
-      
-    </div>
     
 
     <div class="charts-row">
@@ -241,29 +196,29 @@
         <div class="bar-value">512</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Read</div>
-        <div class="bar-track"><div class="bar-fill" style="width:49.4140625%;background:#0891b2"></div></div>
-        <div class="bar-value">253</div>
-      </div>
-<div class="bar-row">
         <div class="bar-label">Task</div>
         <div class="bar-track"><div class="bar-fill" style="width:47.8515625%;background:#0891b2"></div></div>
         <div class="bar-value">245</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Glob</div>
-        <div class="bar-track"><div class="bar-fill" style="width:11.1328125%;background:#0891b2"></div></div>
-        <div class="bar-value">57</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">TaskUpdate</div>
-        <div class="bar-track"><div class="bar-fill" style="width:11.1328125%;background:#0891b2"></div></div>
-        <div class="bar-value">57</div>
+        <div class="bar-label">Read</div>
+        <div class="bar-track"><div class="bar-fill" style="width:45.5078125%;background:#0891b2"></div></div>
+        <div class="bar-value">233</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Grep</div>
-        <div class="bar-track"><div class="bar-fill" style="width:10.7421875%;background:#0891b2"></div></div>
-        <div class="bar-value">55</div>
+        <div class="bar-track"><div class="bar-fill" style="width:14.453125%;background:#0891b2"></div></div>
+        <div class="bar-value">74</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">SendMessage</div>
+        <div class="bar-track"><div class="bar-fill" style="width:12.3046875%;background:#0891b2"></div></div>
+        <div class="bar-value">63</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">TaskUpdate</div>
+        <div class="bar-track"><div class="bar-fill" style="width:11.5234375%;background:#0891b2"></div></div>
+        <div class="bar-value">59</div>
       </div>
       </div>
     </div>
@@ -272,22 +227,22 @@
       <div class="chart-card">
         <div class="chart-title">Languages</div>
         <div class="bar-row">
+        <div class="bar-label">Markdown</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
+        <div class="bar-value">49</div>
+      </div>
+<div class="bar-row">
         <div class="bar-label">TypeScript</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
         <div class="bar-value">49</div>
       </div>
 <div class="bar-row">
-        <div class="bar-label">Markdown</div>
-        <div class="bar-track"><div class="bar-fill" style="width:89.79591836734694%;background:#10b981"></div></div>
-        <div class="bar-value">44</div>
+        <div class="bar-label">Python</div>
+        <div class="bar-track"><div class="bar-fill" style="width:53.06122448979592%;background:#10b981"></div></div>
+        <div class="bar-value">26</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">YAML</div>
-        <div class="bar-track"><div class="bar-fill" style="width:57.14285714285714%;background:#10b981"></div></div>
-        <div class="bar-value">28</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Python</div>
         <div class="bar-track"><div class="bar-fill" style="width:53.06122448979592%;background:#10b981"></div></div>
         <div class="bar-value">26</div>
       </div>
@@ -298,8 +253,8 @@
       </div>
 <div class="bar-row">
         <div class="bar-label">JSON</div>
-        <div class="bar-track"><div class="bar-fill" style="width:32.6530612244898%;background:#10b981"></div></div>
-        <div class="bar-value">16</div>
+        <div class="bar-track"><div class="bar-fill" style="width:28.57142857142857%;background:#10b981"></div></div>
+        <div class="bar-value">14</div>
       </div>
       </div>
       <div class="chart-card">
@@ -307,39 +262,31 @@
         <div class="bar-row">
         <div class="bar-label">Single Task</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">87</div>
+        <div class="bar-value">86</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Iterative Refinement</div>
-        <div class="bar-track"><div class="bar-fill" style="width:74.71264367816092%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:75.5813953488372%;background:#8b5cf6"></div></div>
         <div class="bar-value">65</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Multi Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:67.81609195402298%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:68.6046511627907%;background:#8b5cf6"></div></div>
         <div class="bar-value">59</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Exploration</div>
-        <div class="bar-track"><div class="bar-fill" style="width:24.137931034482758%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:24.418604651162788%;background:#8b5cf6"></div></div>
         <div class="bar-value">21</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Quick Question</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.195402298850574%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.30232558139535%;background:#8b5cf6"></div></div>
         <div class="bar-value">8</div>
       </div>
       </div>
     </div>
 
-    
-    <h2 id="section-usage">How You Use Claude Code</h2>
-    <div class="narrative">
-      <p>You are an <strong>extraordinarily high-volume, multi-project operator</strong> who drives Claude Code like an orchestration engine rather than a simple coding assistant. With 366 sessions and nearly 12,000 messages packed into just 20 days, you average over 18 sessions per day — many of which involve spawning sub-agents (Task is your 3rd most-used tool) and running complex multi-step workflows spanning PR merges, releases, Docker deployments, and full project lifecycles. Your most distinctive pattern is your <strong>heavy use of memory and observation infrastructure</strong>: your top goals are dominated by memory observation recording/creation and progress checkpoints, suggesting you've built or rely on an elaborate system of observer agents that monitor primary sessions and produce structured summaries. You essentially treat Claude Code as part of a larger autonomous agent architecture, not just a chat-based coding tool.</p>
-<p>Your interaction style is <strong>fast-moving and interrupt-driven</strong>. You don't provide detailed upfront specifications — instead, you issue high-level directives like &quot;continue the project and check issues,&quot; &quot;push and continue work,&quot; or &quot;deploy to the remote NUC server,&quot; and let Claude figure out the details. When things go wrong, you don't patiently debug — you pivot aggressively. When node-pty proved incompatible with Bun, you tried bun-pty; when that failed too, you <strong>deleted the entire project and repository</strong>. When Claude spent too long exploring without producing code, you expressed frustration directly. You have a notably low tolerance for excessive exploration or planning without tangible output, as evidenced by sessions where Claude researched for 8 minutes without writing code and you moved on. Your friction data tells the story: <strong>&quot;wrong_approach&quot; (51 instances) is by far your biggest pain point</strong>, followed by buggy code (31), reflecting a style where you'd rather Claude attempt something quickly and course-correct than deliberate endlessly.</p>
-<p>Despite the friction, you achieve strong results — 90 sessions fully achieved, 62 mostly achieved — across an impressive breadth of work: TypeScript and Go applications, Python tooling, YAML/Docker infrastructure, Markdown documentation, and even native macOS/Electrobun desktop apps. You work across <strong>at least 4-5 concurrent projects</strong> (claude-quest releases, TermSwift IDE, ClawWork, Heimdex deployment, memory agent systems) and use Claude for the full DevOps lifecycle from issue creation to PR merge to npm publish to remote server deployment. Your 0 commits suggest you've configured Claude or your workflow to handle git operations directly through Bash rather than through Claude's built-in commit tooling, reinforcing that you treat Claude as an <strong>automation layer in a custom agent pipeline</strong> rather than an interactive pair programmer.</p>
-      <div class="key-insight"><strong>Key pattern:</strong> You operate Claude Code as an orchestration node in a multi-agent autonomous system, issuing terse high-level directives across many concurrent projects and pivoting or abandoning approaches rapidly when Claude takes a wrong path.</div>
-    </div>
     
 
     <!-- Response Time Distribution -->
@@ -347,41 +294,41 @@
       <div class="chart-title">User Response Time Distribution</div>
       <div class="bar-row">
         <div class="bar-label">2-10s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:81.3953488372093%;background:#6366f1"></div></div>
-        <div class="bar-value">140</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
+        <div class="bar-value">499</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">10-30s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
-        <div class="bar-value">172</div>
+        <div class="bar-track"><div class="bar-fill" style="width:50.70140280561122%;background:#6366f1"></div></div>
+        <div class="bar-value">253</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">30s-1m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:55.81395348837209%;background:#6366f1"></div></div>
-        <div class="bar-value">96</div>
+        <div class="bar-track"><div class="bar-fill" style="width:24.448897795591183%;background:#6366f1"></div></div>
+        <div class="bar-value">122</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">1-2m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:50.58139534883721%;background:#6366f1"></div></div>
-        <div class="bar-value">87</div>
+        <div class="bar-track"><div class="bar-fill" style="width:19.639278557114228%;background:#6366f1"></div></div>
+        <div class="bar-value">98</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">2-5m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:30.23255813953488%;background:#6366f1"></div></div>
-        <div class="bar-value">52</div>
+        <div class="bar-track"><div class="bar-fill" style="width:12.625250501002002%;background:#6366f1"></div></div>
+        <div class="bar-value">63</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">5-15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.883720930232558%;background:#6366f1"></div></div>
-        <div class="bar-value">17</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4.008016032064128%;background:#6366f1"></div></div>
+        <div class="bar-value">20</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">>15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:5.232558139534884%;background:#6366f1"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.8036072144288577%;background:#6366f1"></div></div>
         <div class="bar-value">9</div>
       </div>
       <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
-        Median: 25.6s &bull; Average: 84.1s
+        Median: 11.8s &bull; Average: 52.8s
       </div>
     </div>
 
@@ -391,15 +338,15 @@
       
         <div style="display: flex; gap: 24px; margin: 12px 0;">
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">246</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">256</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Overlap Events</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">220</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">233</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Sessions Involved</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">26%</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">23%</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Of Messages</div>
           </div>
         </div>
@@ -428,25 +375,25 @@
         <div id="hour-histogram">
       <div class="bar-row">
         <div class="bar-label">Morning (6-12)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:7.410401509027216%;background:#8b5cf6"></div></div>
-        <div class="bar-value">550</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.520062942564909%;background:#8b5cf6"></div></div>
+        <div class="bar-value">726</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Afternoon (12-18)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:41.956345998383185%;background:#8b5cf6"></div></div>
-        <div class="bar-value">3114</div>
+        <div class="bar-track"><div class="bar-fill" style="width:57.92027275111461%;background:#8b5cf6"></div></div>
+        <div class="bar-value">4417</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Evening (18-24)</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">7422</div>
+        <div class="bar-value">7626</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Night (0-6)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:10.926973861492858%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:10.63467086283766%;background:#8b5cf6"></div></div>
         <div class="bar-value">811</div>
       </div></div>
       </div>
@@ -455,52 +402,31 @@
         <div class="bar-row">
         <div class="bar-label">Command Failed</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">37</div>
+        <div class="bar-value">31</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Other</div>
-        <div class="bar-track"><div class="bar-fill" style="width:78.37837837837837%;background:#dc2626"></div></div>
-        <div class="bar-value">29</div>
+        <div class="bar-track"><div class="bar-fill" style="width:64.51612903225806%;background:#dc2626"></div></div>
+        <div class="bar-value">20</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">User Rejected</div>
-        <div class="bar-track"><div class="bar-fill" style="width:32.432432432432435%;background:#dc2626"></div></div>
-        <div class="bar-value">12</div>
+        <div class="bar-track"><div class="bar-fill" style="width:32.25806451612903%;background:#dc2626"></div></div>
+        <div class="bar-value">10</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Not Found</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.108108108108109%;background:#dc2626"></div></div>
-        <div class="bar-value">3</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.225806451612903%;background:#dc2626"></div></div>
+        <div class="bar-value">1</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Too Large</div>
-        <div class="bar-track"><div class="bar-fill" style="width:2.7027027027027026%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.225806451612903%;background:#dc2626"></div></div>
         <div class="bar-value">1</div>
       </div>
       </div>
     </div>
 
-    
-    <h2 id="section-wins">Impressive Things You Did</h2>
-    <p class="section-intro">Over 366 sessions in just 20 days, you've built an impressively intensive Claude Code workflow centered around multi-project development, automated memory systems, and full release management.</p>
-    <div class="big-wins">
-      
-        <div class="big-win">
-          <div class="big-win-title">Observer-Agent Memory Architecture</div>
-          <div class="big-win-desc">You've built a sophisticated dual-agent system where a primary Claude Code session does the work while a parallel observer agent records structured memory observations and progress summaries. With memory observation recording and creation as your top two goals (108 combined sessions), you've essentially created a persistent knowledge layer that lets Claude maintain context across your hundreds of sessions.</div>
-        </div>
-      
-        <div class="big-win">
-          <div class="big-win-title">End-to-End Release Management</div>
-          <div class="big-win-desc">You're using Claude Code to handle complete release cycles — merging PRs, fixing security vulnerabilities, creating GitHub issues, and publishing releases like v0.16.4 and v0.17.0. You trust Claude with the full pipeline from issue creation through PR merge to npm publish, turning what would be a multi-hour manual process into a single guided session.</div>
-        </div>
-      
-        <div class="big-win">
-          <div class="big-win-title">Rapid Full-Stack Prototyping</div>
-          <div class="big-win-desc">You built an entire Electrobun desktop IDE (TermSwift) from scratch across multiple sessions, implementing terminal emulation, file explorers, CodeMirror editors, web viewers, and multi-tab interfaces. Your heavy use of the Task tool (245 calls) shows you're effectively decomposing complex features into parallel sub-agent work, and your 52 successful multi-file changes confirm you're shipping real cross-cutting features rather than isolated edits.</div>
-        </div>
-      
-    </div>
     
 
     <div class="charts-row">
@@ -561,36 +487,12 @@
       </div>
 <div class="bar-row">
         <div class="bar-label">Unclear</div>
-        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#8b5cf6"></div></div>
-        <div class="bar-value">18</div>
+        <div class="bar-track"><div class="bar-fill" style="width:18.88888888888889%;background:#8b5cf6"></div></div>
+        <div class="bar-value">17</div>
       </div>
       </div>
     </div>
 
-    
-    <h2 id="section-friction">Where Things Go Wrong</h2>
-    <p class="section-intro">Your workflow suffers from excessive exploration without action, repeated failed fix attempts due to incomplete root-cause analysis, and sub-agent reliability issues that force manual rework.</p>
-    <div class="friction-categories">
-      
-        <div class="friction-category">
-          <div class="friction-title">Excessive Exploration Without Implementation</div>
-          <div class="friction-desc">You frequently end up in sessions where Claude spends the entire time reading files, researching documentation, or spawning subtasks without producing any actual code changes. Consider providing tighter scoping and time-boxing exploration phases, or explicitly instruct Claude to start implementing after a brief investigation.</div>
-          <ul class="friction-examples"><li>An entire session was spent researching Electrobun documentation and writing planning docs without initializing any project code, wasting 8 minutes with no deliverable output</li><li>Claude spent a full session repeatedly reading the same index.ts file in sequential chunks without ever reaching a diagnosis or producing a fix for reported bugs</li></ul>
-        </div>
-      
-        <div class="friction-category">
-          <div class="friction-title">Incomplete Debugging Leading to Fix Cascades</div>
-          <div class="friction-desc">You frequently hit situations where Claude's first fix attempt addresses a symptom rather than the root cause, triggering multiple rounds of rework that sometimes culminate in abandoning the approach entirely. Asking Claude to explicitly state its root-cause hypothesis before implementing a fix could reduce these cascading failures.</div>
-          <ul class="friction-examples"><li>Terminal spawn errors went through chmod fixes, shell path validation, spawn-helper bundling, and a full node-pty-to-bun-pty migration before discovering a fundamental Bun incompatibility — ultimately leading you to delete the entire project in frustration</li><li>Claude misdiagnosed a .claude/ontology folder issue as a real bug when files were simply hidden by your ll alias, wasting investigation time on a non-existent problem</li></ul>
-        </div>
-      
-        <div class="friction-category">
-          <div class="friction-title">Sub-Agent and Tooling Reliability Failures</div>
-          <div class="friction-desc">Your heavy use of Task sub-agents (245 spawns) introduces reliability problems where sub-agents report success but their changes don't actually apply, or they modify wrong files. You may benefit from adding verification steps after sub-agent completions or reducing parallelism for critical edits.</div>
-          <ul class="friction-examples"><li>Sub-agents reported successful file deletions and README edits during the v0.17.0 release, but the changes didn't actually apply, requiring multiple retry rounds before the release could proceed</li><li>A sub-agent modified a template file instead of the main source file and added unnecessary PR features with incorrect spacing, forcing a full revert and redo of the statusline fix</li></ul>
-        </div>
-      
-    </div>
     
 
     <div class="charts-row">
@@ -654,243 +556,12 @@
 
     
     
-    <h2 id="section-features">Existing CC Features to Try</h2>
-    <div class="claude-md-section">
-      <h3>Suggested CLAUDE.md Additions</h3>
-      <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">Just copy this into Claude Code to add it to your CLAUDE.md.</p>
-      <div class="claude-md-actions">
-        <button class="copy-all-btn" onclick="copyAllCheckedClaudeMd()">Copy All Checked</button>
-      </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a ## Code Changes section at the top level of CLAUDE.md\n\nWhen fixing bugs, verify the fix in the correct file before reporting success. Always confirm edits were applied to the intended file, not templates or similarly-named files.">
-          <label for="cmd-0">
-            <code class="cmd-code">When fixing bugs, verify the fix in the correct file before reporting success. Always confirm edits were applied to the intended file, not templates or similarly-named files.</code>
-            <button class="copy-btn" onclick="copyCmdItem(0)">Copy</button>
-          </label>
-          <div class="cmd-why">Multiple sessions showed sub-agents editing wrong files (templates instead of main files), reporting success when changes didn't actually apply, requiring costly reverts and redos.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under a ## Workflow Rules section near the top of CLAUDE.md\n\nDo NOT spend more than 2-3 minutes on research/exploration before beginning implementation. If a task requires code changes, start writing code early and iterate. Avoid analysis paralysis.">
-          <label for="cmd-1">
-            <code class="cmd-code">Do NOT spend more than 2-3 minutes on research/exploration before beginning implementation. If a task requires code changes, start writing code early and iterate. Avoid analysis paralysis.</code>
-            <button class="copy-btn" onclick="copyCmdItem(1)">Copy</button>
-          </label>
-          <div class="cmd-why">Several sessions were entirely consumed by exploration, documentation fetching, and planning with zero code output, causing user frustration — this happened at least 4 times across sessions.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under a ## Debugging section in CLAUDE.md\n\nWhen reading files for debugging, do NOT re-read the same file multiple times. Read it once fully, then act on the information. If the file is large, use Grep to find relevant sections.">
-          <label for="cmd-2">
-            <code class="cmd-code">When reading files for debugging, do NOT re-read the same file multiple times. Read it once fully, then act on the information. If the file is large, use Grep to find relevant sections.</code>
-            <button class="copy-btn" onclick="copyCmdItem(2)">Copy</button>
-          </label>
-          <div class="cmd-why">At least one session was spent repeatedly reading the same file (index.ts) in sequential chunks without making progress or producing a fix.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-3" class="cmd-checkbox" checked data-text="Add under a ## Project Context section at the top of CLAUDE.md\n\nPrimary languages for this workspace: TypeScript, Go, Python, YAML, Markdown. When generating code, default to TypeScript for frontend/Node projects, Go or Python for backend services unless otherwise specified.">
-          <label for="cmd-3">
-            <code class="cmd-code">Primary languages for this workspace: TypeScript, Go, Python, YAML, Markdown. When generating code, default to TypeScript for frontend/Node projects, Go or Python for backend services unless otherwise specified.</code>
-            <button class="copy-btn" onclick="copyCmdItem(3)">Copy</button>
-          </label>
-          <div class="cmd-why">These five languages appeared consistently across 240 analyzed sessions and Claude should default to the right language without being told each time.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-4" class="cmd-checkbox" checked data-text="Add under a ## Publishing / Release section in CLAUDE.md\n\nBefore attempting npm publish or any credential-dependent operation, verify the token/credential is valid FIRST (e.g., `npm whoami`). Do not retry the same failing credential multiple times.">
-          <label for="cmd-4">
-            <code class="cmd-code">Before attempting npm publish or any credential-dependent operation, verify the token/credential is valid FIRST (e.g., `npm whoami`). Do not retry the same failing credential multiple times.</code>
-            <button class="copy-btn" onclick="copyCmdItem(4)">Copy</button>
-          </label>
-          <div class="cmd-why">Multiple release sessions failed repeatedly on expired NPM_TOKEN, wasting time retrying the same invalid credential before the user had to manually intervene.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-5" class="cmd-checkbox" checked data-text="Add under a ## Sub-agents / Task Tool section in CLAUDE.md\n\nWhen spawning sub-agents (Task tool), verify their output by checking the actual filesystem state after they complete. Do not trust sub-agent success reports without confirmation.">
-          <label for="cmd-5">
-            <code class="cmd-code">When spawning sub-agents (Task tool), verify their output by checking the actual filesystem state after they complete. Do not trust sub-agent success reports without confirmation.</code>
-            <button class="copy-btn" onclick="copyCmdItem(5)">Copy</button>
-          </label>
-          <div class="cmd-why">Sub-agents reported success but file deletions and edits didn't actually apply in multiple sessions, requiring manual verification and retry rounds.</div>
-        </div>
-      
-    </div>
     
-    
-    <p style="font-size: 13px; color: #64748b; margin-bottom: 12px;">Just copy this into Claude Code and it'll set it up for you.</p>
-    <div class="features-section">
-      
-        <div class="feature-card">
-          <div class="feature-title">Hooks</div>
-          <div class="feature-oneliner">Shell commands that auto-run at specific lifecycle events to enforce quality checks.</div>
-          <div class="feature-why"><strong>Why for you:</strong> Your top friction point is 'wrong_approach' (51 occurrences) followed by 'buggy_code' (31). A post-edit hook that runs type checks or linters would catch many of these before they compound. You also had issues with sub-agents editing wrong files — a hook could verify file paths.</div>
-          
-          <div class="feature-examples">
-            <div class="feature-example">
-              <div class="example-code-row">
-                <code class="example-code">// .claude/settings.json
-{
-  &quot;hooks&quot;: {
-    &quot;postEdit&quot;: {
-      &quot;command&quot;: &quot;npx tsc --noEmit 2&gt;&amp;1 | head -20&quot;,
-      &quot;description&quot;: &quot;Type-check after every edit to catch errors early&quot;
-    },
-    &quot;prePush&quot;: {
-      &quot;command&quot;: &quot;echo 'Running pre-push verification...' &amp;&amp; npm test&quot;,
-      &quot;description&quot;: &quot;Run tests before any git push to prevent broken pushes&quot;
-    }
-  }
-}</code>
-                <button class="copy-btn" onclick="copyText(this)">Copy</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="feature-card">
-          <div class="feature-title">Custom Skills</div>
-          <div class="feature-oneliner">Reusable prompt workflows you trigger with a single /command.</div>
-          <div class="feature-why"><strong>Why for you:</strong> Your top goals are memory/observation recording and progress summaries (58+50+49 sessions). You're clearly running a memory/observer agent pattern repeatedly. A /memory skill and /progress skill would standardize these workflows instead of re-explaining them each session.</div>
-          
-          <div class="feature-examples">
-            <div class="feature-example">
-              <div class="example-code-row">
-                <code class="example-code"># .claude/skills/memory/SKILL.md
-## Memory Observation Recording
-1. Read the provided conversation or event data
-2. Extract key observations: files changed, decisions made, issues encountered
-3. Output structured JSON with fields: timestamp, category, observation, files_involved
-4. Use the StructuredOutput tool (not raw JSON) for the final output
-5. Keep observations atomic — one fact per observation
-
-# .claude/skills/release/SKILL.md  
-## Release Workflow
-1. Verify all PRs are merged to develop
-2. Run `npm whoami` to verify NPM credentials are valid
-3. Run full test suite
-4. Bump version, create git tag
-5. Build and publish
-6. Create GitHub release</code>
-                <button class="copy-btn" onclick="copyText(this)">Copy</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="feature-card">
-          <div class="feature-title">Headless Mode</div>
-          <div class="feature-oneliner">Run Claude non-interactively from scripts and CI/CD pipelines.</div>
-          <div class="feature-why"><strong>Why for you:</strong> You have a huge number of sessions (108+) dedicated to memory observation, progress checkpoints, and conversation analysis — highly repetitive structured tasks. These could run as automated headless scripts triggered by your primary session ending, instead of requiring you to manually manage observer agent sessions.</div>
-          
-          <div class="feature-examples">
-            <div class="feature-example">
-              <div class="example-code-row">
-                <code class="example-code"># Auto-generate progress summary after each work session
-claude -p &quot;Read the git log from today and generate a structured progress summary with: commits, files changed, issues addressed, blockers encountered. Output as JSON.&quot; --allowedTools &quot;Bash,Read,Glob,Grep&quot; &gt; daily_progress.json
-
-# Batch analyze conversation for continuation needs
-claude -p &quot;Analyze this conversation transcript and determine if autonomous work should continue. Output structured JSON with fields: should_continue (bool), reason, pending_tasks.&quot; --allowedTools &quot;Read&quot; &lt; transcript.txt</code>
-                <button class="copy-btn" onclick="copyText(this)">Copy</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      
-    </div>
-    
-    
-    <h2 id="section-patterns">New Ways to Use Claude Code</h2>
-    <p style="font-size: 13px; color: #64748b; margin-bottom: 12px;">Just copy this into Claude Code and it'll walk you through it.</p>
-    <div class="patterns-section">
-      
-        <div class="pattern-card">
-          <div class="pattern-title">Observer/Memory Agent Overhead</div>
-          <div class="pattern-summary">Automate your memory observation and progress checkpoint workflows instead of running them as separate interactive sessions.</div>
-          <div class="pattern-detail">Over 40% of your top goals (memory_observation_recording: 58, memory_observation_creation: 50, progress_summary_checkpoint: 49) are meta-tasks about recording what happened rather than doing new work. These sessions are consuming significant time and API calls. By using headless mode or custom skills, you can trigger these automatically at session end, reducing your 366 sessions to focus on actual development work.</div>
-          
-          <div class="copyable-prompt-section">
-            <div class="prompt-label">Paste into Claude Code:</div>
-            <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Create a shell script that runs after each Claude Code session ends. It should use claude headless mode to read the last session transcript from ~/.claude/sessions/ and generate structured memory observations as JSON, saving them to .claude/memory/observations/</code>
-              <button class="copy-btn" onclick="copyText(this)">Copy</button>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="pattern-card">
-          <div class="pattern-title">Sub-agent Verification Gap</div>
-          <div class="pattern-summary">Always verify sub-agent (Task tool) outputs by checking actual file state, not trusting reported success.</div>
-          <div class="pattern-detail">You use the Task tool heavily (245 invocations, 3rd most used tool) but multiple friction events show sub-agents reporting success when edits didn't apply or were made to wrong files. Your 'wrong_approach' friction count of 51 is your highest category. Adding an explicit verification step after Task completions — such as reading the modified files or running a diff — would catch these failures before they cascade into multi-round debugging sessions.</div>
-          
-          <div class="copyable-prompt-section">
-            <div class="prompt-label">Paste into Claude Code:</div>
-            <div class="copyable-prompt-row">
-              <code class="copyable-prompt">After any sub-agent task completes, verify the changes by running: git diff --name-only to confirm the right files were modified, then read the key changed sections to verify correctness. Do not proceed to the next task until verification passes.</code>
-              <button class="copy-btn" onclick="copyText(this)">Copy</button>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="pattern-card">
-          <div class="pattern-title">Exploration Rabbit Holes</div>
-          <div class="pattern-summary">Set a time-box for research phases and force early implementation to iterate on real code.</div>
-          <div class="pattern-detail">Multiple sessions (Electrobun planning, folder picker research, repeated file reading) consumed entire sessions in exploration without producing any code. Your 'excessive_exploration' and 'excessive_changes' friction entries, combined with 26 'not_achieved' outcomes, suggest that when Claude explores too long, sessions fail. The pattern is clear: sessions that start coding early (TermSwift feature implementations, Docker deployments) achieve 'fully_achieved' far more often than research-heavy ones.</div>
-          
-          <div class="copyable-prompt-section">
-            <div class="prompt-label">Paste into Claude Code:</div>
-            <div class="copyable-prompt-row">
-              <code class="copyable-prompt">I need you to implement [feature]. Spend no more than 2 minutes understanding the codebase structure, then start writing code. Create a minimal working version first, then iterate. Do not write planning documents — go straight to implementation.</code>
-              <button class="copy-btn" onclick="copyText(this)">Copy</button>
-            </div>
-          </div>
-          
-        </div>
-      
-    </div>
     
     
 
     
-    <h2 id="section-horizon">On the Horizon</h2>
-    <p class="section-intro">Your usage reveals a sophisticated multi-agent architecture with memory observers and sub-agents, but friction around wrong approaches, buggy code, and excessive exploration shows clear opportunities to let Claude operate more autonomously with better guardrails.</p>
-    <div class="horizon-section">
-      
-        <div class="horizon-card">
-          <div class="horizon-title">Autonomous Multi-PR Release Pipeline with Verification</div>
-          <div class="horizon-possible">Your release workflows (v0.16.4, v0.17.0) involve merging PRs, running tests, bumping versions, and publishing — but they keep hitting credential failures and sub-agent file edit errors mid-flow. Claude Code can orchestrate an end-to-end release pipeline that validates credentials upfront, runs parallel sub-agents for PR validation, and gates each phase (merge → test → build → publish) with automated verification checks before proceeding. This eliminates the costly retry loops that consumed your sessions.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code's Task tool to spawn parallel validation agents, combined with Bash for pre-flight checks. Structure the workflow so each phase confirms success before the next begins.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I need to release v0.18.0. Before doing anything, run these pre-flight checks in parallel: (1) verify NPM_TOKEN is valid with `npm whoami`, (2) verify GitHub token can push with `gh auth status`, (3) list all open PRs targeting develop with `gh pr list --base develop`. Report results. Then for each mergeable PR: spawn a sub-task to review the diff, run the test suite against it, and report pass/fail. Only after ALL checks pass, merge them sequentially, bump the version, create a git tag, build, publish to npm, and create a GitHub release. If any step fails, stop immediately and report what failed and why — do not retry automatically.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
-        </div>
-      
-        <div class="horizon-card">
-          <div class="horizon-title">Test-Driven Bug Fix Agents with Guardrails</div>
-          <div class="horizon-possible">51 sessions hit 'wrong approach' friction and 31 had buggy code — often because Claude explored endlessly or edited wrong files before understanding the problem. By forcing a test-first workflow, Claude can write a failing test that reproduces the bug, then iterate code changes against that test in a tight loop, ensuring fixes are verified before being proposed. This transforms debugging from open-ended exploration into a bounded, measurable process.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Provide Claude with the bug report and instruct it to write a reproduction test first using your existing test framework, then iterate edits until the test passes while ensuring existing tests don't regress.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Bug: [describe the bug]. Before writing any fix, do the following in order: (1) Read the relevant source files and identify the root cause — spend no more than 5 minutes exploring. (2) Write a minimal failing test that reproduces this exact bug. Run it and confirm it fails. (3) Now fix the code. After each edit, run BOTH the new test and the full existing test suite. (4) Only stop when the new test passes AND all existing tests pass. (5) Show me the diff and explain the root cause. Do NOT edit any file outside the module where the bug lives without asking me first.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
-        </div>
-      
-        <div class="horizon-card">
-          <div class="horizon-title">Parallel Memory Observers with Structured Checkpointing</div>
-          <div class="horizon-possible">You've built an impressive memory/observer pattern (58 memory_observation_recording sessions, 245 Task spawns), but your checkpointing goals are fragmented across 5+ naming variants and observer agents sometimes miss data or record incomplete observations. A unified autonomous checkpointing system can run a background observer agent that continuously captures structured progress snapshots, tags them by phase, and produces a coherent session handoff document — so any future session can pick up exactly where you left off without context loss.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Use the Task tool to spawn a dedicated observer sub-agent at session start that periodically writes structured checkpoints to a known file, and define a clear schema for what each checkpoint captures.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>At the start of this session, spawn a background Task agent called 'memory-observer' with these instructions: Every time I complete a meaningful unit of work (file created, test passed, PR merged, bug fixed), write a structured checkpoint to .claude/session-checkpoints.jsonl with fields: {timestamp, phase, action, files_changed, outcome, next_steps, blockers}. Use a consistent taxonomy for 'phase' values: planning, implementation, testing, debugging, deployment, release. At the end of our session, the observer should compile all checkpoints into a HANDOFF.md with: what was accomplished, what's in progress, what blocked us, and exact next steps with file paths. For the main work: [describe your actual task here]. Periodically ask the observer to summarize current progress so we stay aligned.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
-        </div>
-      
-    </div>
-    
 
-    
-    <div class="fun-ending">
-      <div class="fun-headline">"User got so frustrated debugging a terminal app that they rage-deleted the entire project and GitHub repo"</div>
-      <div class="fun-detail">After multiple failed attempts to fix a fundamental Bun/node-pty incompatibility in their Electrobun desktop app (TermSwift), with Claude cycling through chmod fixes, spawn-helper bundling, and a full migration to bun-pty — none of which worked — the user gave up entirely and decided to nuke the whole project and repository from existence.</div>
-    </div>
     
 
     
@@ -935,7 +606,7 @@ claude -p &quot;Analyze this conversation transcript and determine if autonomous
       }
     }
     // Timezone selector for time of day chart (data is from our own analytics, not user input)
-    const rawHourCounts = {"0":37,"2":774,"9":44,"10":443,"11":63,"12":956,"13":1011,"14":161,"15":223,"16":201,"17":562,"18":1119,"19":1965,"20":3361,"21":684,"22":293};
+    const rawHourCounts = {"0":37,"2":774,"9":44,"10":443,"11":239,"12":967,"13":1353,"14":158,"15":238,"16":518,"17":1183,"18":1189,"19":2099,"20":3361,"21":684,"22":293};
     function updateHourHistogram(offsetFromPT) {
       const periods = [
         { label: "Morning (6-12)", range: [6,7,8,9,10,11] },
