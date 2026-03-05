@@ -74,18 +74,22 @@ I aim to achieve team-level throughput as an individual.
 
 <table>
 <tr>
-<td width="50%">
+<td colspan="2">
 
 ### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
 
-**Self-Evolving Multi-Agent Financial Fraud Detection System**
+**Auto-learning Threat-detection Linked Agent System**
 
-7 specialized agents collaborate with cross-validation, Red Team adversarial testing,
-and Post-Mortem auto-SOP evolution
+Self-evolving multi-agent financial fraud detection platform. 7 specialized AI agents
+collaborate to analyze real-time financial transactions with cross-validation consensus.
+Red Team agents generate adversarial attack scenarios, while Post-Mortem agents
+automatically update SOPs on detection failures for autonomous evolution.
 
-`Python` `LangGraph` `FastAPI` `Multi-Agent`
+`Python` `LangGraph` `FastAPI` `Multi-Agent` `RAG`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
@@ -98,18 +102,30 @@ and release pipelines in a comprehensive harness
 `TypeScript` `Claude Code` `npm` `Multi-Agent`
 
 </td>
+<td width="50%">
+
+### 🤝 [oh-my-teammates](https://github.com/baekenough/oh-my-teammates)
+
+**Team collaboration addon for oh-my-customcode**
+
+Share session knowledge via selective symlinks, auto-verify PRs with Guardian CI,
+and visualize agents/skills/rules through SvelteKit dashboard
+
+`TypeScript` `SvelteKit` `bun:sqlite` `npm`
+
+</td>
 </tr>
 <tr>
 <td width="50%">
 
-### 💬 SayCraft (Private)
+### 💜 NuTalk (Private) · [Demo](https://nutalk-one.vercel.app/)
 
-**Real-time collaborative development platform**
+**Modern UI/UX dating app**
 
-Chat, code editor, and preview unified in one workspace.
-AI agent integration, Socket.IO relay, and Electron desktop app
+Flutter + Go microservices (5 services) full-stack.
+PostgreSQL+PostGIS, Redis, NATS JetStream location services
 
-`Next.js` `React` `Supabase` `Socket.IO` `Electron`
+`Flutter` `Go` `PostgreSQL` `gRPC` `NATS`
 
 </td>
 <td width="50%">
@@ -185,17 +201,12 @@ UBcare                  2018.09 ~ 2021.01
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=baekenough&theme=tokyonight&hide_border=true&background=0a0a0b&ring=22d3ee&fire=a78bfa&currStreakLabel=22d3ee&sideLabels=94a3b8&dates=5a5a63&currStreakNum=e4e4e7&sideNums=e4e4e7" width="60%"/>
-
-</div>
-
-<div align="center">
-
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
-| 💬 **SayCraft** (Private) | Real-time collaborative development platform |
+| [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | Team collaboration addon for oh-my-customcode |
+| 💜 **NuTalk** (Private) · [Demo](https://nutalk-one.vercel.app/) | Modern UI/UX dating app · Flutter + Go microservices |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |

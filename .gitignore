@@ -1,1 +1,8 @@
 logs/
+
+# oh-my-customcode (omcustom)
+.claude/
+guides/
+CLAUDE.md
+.omcustomrc.json
+.mcp.json

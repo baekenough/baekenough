@@ -30,8 +30,9 @@ echo -e "${GREEN}[2/8] Changing to repository directory...${NC}"
 cd "$REPO_DIR"
 
 echo -e "${GREEN}[3/8] Checking for changes...${NC}"
-# Check if there are any changes in the relevant files
-if git diff --quiet README.md README_en.md insights/ scripts/ 2>/dev/null; then
+# Check if there are any changes (tracked modifications + untracked files)
+CHANGES=$(git status --porcelain README.md README_en.md insights/ scripts/ 2>/dev/null)
+if [ -z "$CHANGES" ]; then
     echo -e "${YELLOW}No changes to commit${NC}"
     exit 0
 fi

@@ -73,18 +73,22 @@
 
 <table>
 <tr>
-<td width="50%">
+<td colspan="2">
 
 ### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
 
-**자기진화형 멀티에이전트 금융 사기 탐지 시스템**
+**Auto-learning Threat-detection Linked Agent System**
 
-7개 전문 에이전트 협업, 교차 검증, Red Team 적대적 시나리오 생성,
-Post-Mortem 자동 SOP 업데이트로 자율 진화
+자기진화형 멀티에이전트 금융 사기 탐지 플랫폼. 7개 전문 AI 에이전트가 협업하여
+실시간 금융 거래를 분석하고, 교차 검증으로 합의를 도출합니다.
+Red Team 에이전트가 적대적 공격 시나리오를 생성하고,
+Post-Mortem 에이전트가 탐지 실패 시 SOP를 자동 업데이트하여 자율 진화합니다.
 
-`Python` `LangGraph` `FastAPI` `Multi-Agent`
+`Python` `LangGraph` `FastAPI` `Multi-Agent` `RAG`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
@@ -97,20 +101,20 @@ Post-Mortem 자동 SOP 업데이트로 자율 진화
 `TypeScript` `Claude Code` `npm` `Multi-Agent`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
-### 💬 SayCraft (비공개)
+### 🤝 [oh-my-teammates](https://github.com/baekenough/oh-my-teammates)
 
-**실시간 협업 개발 플랫폼**
+**oh-my-customcode를 위한 팀 협업 애드온**
 
-채팅, 코드 에디터, 프리뷰를 하나의 워크스페이스에 통합.
-AI 에이전트 연동, Socket.IO 릴레이, Electron 데스크톱 앱 지원
+선택적 심링크로 팀 세션 지식 공유, Guardian CI로 PR 자동 검증,
+SvelteKit 대시보드로 에이전트/스킬/규칙 시각화
 
-`Next.js` `React` `Supabase` `Socket.IO` `Electron`
+`TypeScript` `SvelteKit` `bun:sqlite` `npm`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 💜 NuTalk (비공개) · [데모](https://nutalk-one.vercel.app/)
@@ -123,8 +127,6 @@ PostgreSQL+PostGIS, Redis, NATS JetStream 기반 위치 서비스
 `Flutter` `Go` `PostgreSQL` `gRPC` `NATS`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### ⚡ [textswift](https://github.com/baekenough/textswift)
@@ -137,6 +139,8 @@ PostgreSQL+PostGIS, Redis, NATS JetStream 기반 위치 서비스
 `TypeScript` `Chrome Extension` `Codex` `Native Messaging`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
@@ -149,8 +153,6 @@ FFmpeg.wasm + WebCodecs 하드웨어 가속. MKV, AVI, HEVC 등
 `TypeScript` `WebAssembly` `FFmpeg` `Tauri`
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
@@ -161,13 +163,6 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 게임플레이 중 실시간 LLM 호출 없이 동작
 
 `Go` `Python` `gRPC` `LLM Orchestration`
-
-</td>
-<td width="50%">
-
-### 📋 [cocone-portfolio](https://github.com/baekenough/cocone_ai-powered-engineer_portpolio)
-
-**AI Powered Engineer 포트폴리오**
 
 </td>
 </tr>
@@ -209,12 +204,11 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 |:---|:---|
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
-| 💬 **SayCraft** (비공개) | 실시간 협업 개발 플랫폼 |
+| [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | oh-my-customcode를 위한 팀 협업 애드온 |
 | 💜 **NuTalk** (비공개) · [데모](https://nutalk-one.vercel.app/) | 현대적 UI/UX 감성 데이팅 앱 · Flutter + Go 마이크로서비스 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
-| 📋 [**cocone-portfolio**](https://github.com/baekenough/cocone_ai-powered-engineer_portpolio) | AI Powered Engineer 포트폴리오 |
 
 </div>
 
