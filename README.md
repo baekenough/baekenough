@@ -75,7 +75,7 @@
 <tr>
 <td colspan="2">
 
-### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
+### 🛡️ [ATLAS](https://github.com/baekenough/atlas) · [데모](https://atlas.baekenough.com/)
 
 **Auto-learning Threat-detection Linked Agent System**
 
@@ -202,7 +202,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 | 📌 Pinned Repositories | |
 |:---|:---|
-| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
+| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [데모](https://atlas.baekenough.com/) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | oh-my-customcode를 위한 팀 협업 애드온 |
 | 💜 **NuTalk** (비공개) · [데모](https://nutalk-one.vercel.app/) | 현대적 UI/UX 감성 데이팅 앱 · Flutter + Go 마이크로서비스 |

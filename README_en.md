@@ -76,7 +76,7 @@ I aim to achieve team-level throughput as an individual.
 <tr>
 <td colspan="2">
 
-### 🛡️ [ATLAS](https://github.com/baekenough/atlas)
+### 🛡️ [ATLAS](https://github.com/baekenough/atlas) · [Demo](https://atlas.baekenough.com/)
 
 **Auto-learning Threat-detection Linked Agent System**
 
@@ -203,7 +203,7 @@ UBcare                  2018.09 ~ 2021.01
 
 | 📌 Pinned Repositories | |
 |:---|:---|
-| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) | Self-evolving multi-agent financial fraud detection system |
+| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [Demo](https://atlas.baekenough.com/) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | Team collaboration addon for oh-my-customcode |
 | 💜 **NuTalk** (Private) · [Demo](https://nutalk-one.vercel.app/) | Modern UI/UX dating app · Flutter + Go microservices |
