@@ -56,6 +56,8 @@
 </tr>
 </table>
 <!-- insights:metrics:end -->
+<!-- insights:tools:start -->
+<!-- insights:tools:end -->
 
 </div>
 

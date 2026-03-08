@@ -57,6 +57,8 @@ I aim to achieve team-level throughput as an individual.
 </tr>
 </table>
 <!-- insights:metrics:end -->
+<!-- insights:tools:start -->
+<!-- insights:tools:end -->
 
 </div>
 
