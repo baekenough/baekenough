@@ -50,8 +50,8 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>61,410</b><br/><sub>처리 메시지 (21일)</sub></td>
-<td align="center"><b>2,527</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>69,904</b><br/><sub>처리 메시지 (24일)</sub></td>
+<td align="center"><b>2,814</b><br/><sub>세션 수</sub></td>
 <td align="center"><b>581</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
