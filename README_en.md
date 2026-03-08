@@ -118,14 +118,14 @@ and visualize agents/skills/rules through SvelteKit dashboard
 <tr>
 <td width="50%">
 
-### 💜 NuTalk (Private) · [Demo](https://nutalk-one.vercel.app/)
+### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/)
 
-**Modern UI/UX dating app**
+**`agents.txt` open spec & reference implementation**
 
-Flutter + Go microservices (5 services) full-stack.
-PostgreSQL+PostGIS, Redis, NATS JetStream location services
+Like robots.txt guides crawlers, agents.txt structures documentation
+navigation for LLM agents. Up to 93% token reduction, 97.7/100 multi-LLM eval
 
-`Flutter` `Go` `PostgreSQL` `gRPC` `NATS`
+`agents.txt` `Open Spec` `Docker` `Context Optimization`
 
 </td>
 <td width="50%">
@@ -206,7 +206,7 @@ UBcare                  2018.09 ~ 2021.01
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [Demo](https://atlas.baekenough.com/) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | Team collaboration addon for oh-my-customcode |
-| 💜 **NuTalk** (Private) · [Demo](https://nutalk-one.vercel.app/) | Modern UI/UX dating app · Flutter + Go microservices |
+| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |

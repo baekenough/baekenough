@@ -117,14 +117,14 @@ SvelteKit 대시보드로 에이전트/스킬/규칙 시각화
 <tr>
 <td width="50%">
 
-### 💜 NuTalk (비공개) · [데모](https://nutalk-one.vercel.app/)
+### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/)
 
-**현대적 UI/UX 감성 데이팅 앱**
+**`agents.txt` 오픈 스펙 및 레퍼런스 구현**
 
-Flutter + Go 마이크로서비스(5개) 풀스택.
-PostgreSQL+PostGIS, Redis, NATS JetStream 기반 위치 서비스
+robots.txt가 크롤러를 안내하듯, agents.txt는 LLM 에이전트의
+문서 탐색을 구조화합니다. 최대 93% 토큰 절감, 다중 LLM 평가 97.7/100
 
-`Flutter` `Go` `PostgreSQL` `gRPC` `NATS`
+`agents.txt` `Open Spec` `Docker` `Context Optimization`
 
 </td>
 <td width="50%">
@@ -205,7 +205,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 | [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [데모](https://atlas.baekenough.com/) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | oh-my-customcode를 위한 팀 협업 애드온 |
-| 💜 **NuTalk** (비공개) · [데모](https://nutalk-one.vercel.app/) | 현대적 UI/UX 감성 데이팅 앱 · Flutter + Go 마이크로서비스 |
+| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
