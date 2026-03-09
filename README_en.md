@@ -58,10 +58,10 @@ I aim to achieve team-level throughput as an individual.
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-![Bash](https://img.shields.io/badge/Bash-1771_calls-22d3ee?style=flat-square)
-![Read](https://img.shields.io/badge/Read-779_calls-a78bfa?style=flat-square)
-![Task](https://img.shields.io/badge/Task-581_calls-34d399?style=flat-square)
-![Agent](https://img.shields.io/badge/Agent-242_calls-fb923c?style=flat-square)
+<img src="https://img.shields.io/badge/Bash-1771_calls-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-779_calls-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Task-581_calls-34d399?style=flat-square" alt="Task"/>
+<img src="https://img.shields.io/badge/Agent-242_calls-fb923c?style=flat-square" alt="Agent"/>
 <!-- insights:tools:end -->
 
 </div>

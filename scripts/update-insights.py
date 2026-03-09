@@ -184,13 +184,13 @@ def generate_tools_section(stats, lang):
 
         if lang == 'ko':
             badge = (
-                f"![{tool}](https://img.shields.io/badge/"
-                f"{tool_urlenc}-{count}회-{color}?style=flat-square)"
+                f'<img src="https://img.shields.io/badge/'
+                f'{tool_urlenc}-{count}회-{color}?style=flat-square" alt="{tool}"/>'
             )
         else:
             badge = (
-                f"![{tool}](https://img.shields.io/badge/"
-                f"{tool_urlenc}-{count}_calls-{color}?style=flat-square)"
+                f'<img src="https://img.shields.io/badge/'
+                f'{tool_urlenc}-{count}_calls-{color}?style=flat-square" alt="{tool}"/>'
             )
 
         badges.append(badge)

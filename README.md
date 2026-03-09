@@ -57,10 +57,10 @@
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-![Bash](https://img.shields.io/badge/Bash-1771회-22d3ee?style=flat-square)
-![Read](https://img.shields.io/badge/Read-779회-a78bfa?style=flat-square)
-![Task](https://img.shields.io/badge/Task-581회-34d399?style=flat-square)
-![Agent](https://img.shields.io/badge/Agent-242회-fb923c?style=flat-square)
+<img src="https://img.shields.io/badge/Bash-1771회-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-779회-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Task-581회-34d399?style=flat-square" alt="Task"/>
+<img src="https://img.shields.io/badge/Agent-242회-fb923c?style=flat-square" alt="Agent"/>
 <!-- insights:tools:end -->
 
 </div>
