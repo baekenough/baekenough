@@ -70,31 +70,15 @@ I aim to achieve team-level throughput as an individual.
 > browser-integrated research → issue creation, autonomous orchestration & agent handoffs.
 
 **Key Achievements**
-- 🧠 **Multi-Agent Memory Observer** — Built a dedicated observer agent that auto-captures structured knowledge across sessions
-- ⚡ **Autonomous Orchestration** — Auto work analysis, handoffs, and delegation patterns across 162 sessions
-- 🚀 **E2E Release Pipeline** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues in a single session
+- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.31.1 (394 commits) + oh-my-teammates. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
+- 🧭 **Agent Navigation Standard** — Proposed agents.txt open spec. Cross-LLM validation 97.7/100, up to 93% token reduction
+- 🚀 **Single-Session E2E Release** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues via autonomous orchestration
 
 ---
 
 ## 🚀 Featured Projects
 
 <table>
-<tr>
-<td colspan="2">
-
-### 🛡️ [ATLAS](https://github.com/baekenough/atlas) · [Demo](https://atlas.baekenough.com/)
-
-**Auto-learning Threat-detection Linked Agent System**
-
-Self-evolving multi-agent financial fraud detection platform. 7 specialized AI agents
-collaborate to analyze real-time financial transactions with cross-validation consensus.
-Red Team agents generate adversarial attack scenarios, while Post-Mortem agents
-automatically update SOPs on detection failures for autonomous evolution.
-
-`Python` `LangGraph` `FastAPI` `Multi-Agent` `RAG`
-
-</td>
-</tr>
 <tr>
 <td width="50%">
 
@@ -209,7 +193,6 @@ UBcare                  2018.09 ~ 2021.01
 
 | 📌 Pinned Repositories | |
 |:---|:---|
-| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [Demo](https://atlas.baekenough.com/) | Self-evolving multi-agent financial fraud detection system |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | Team collaboration addon for oh-my-customcode |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |

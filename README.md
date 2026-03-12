@@ -69,31 +69,15 @@
 > 브라우저 연동 리서치 → 이슈 생성, 자율 오케스트레이션 & 에이전트 핸드오프를 수행합니다.
 
 **주요 성과**
-- 🧠 **멀티 에이전트 메모리 옵저버** — 세션 간 구조화된 지식을 자동 캡처하는 전용 옵저버 에이전트 구축
-- ⚡ **자율 오케스트레이션** — 162개 세션에서 자동 작업 분석, 핸드오프, 위임 패턴 운영
-- 🚀 **E2E 릴리스 파이프라인** — PR fix → merge → npm publish → sauron 검증 → 후속 이슈 6건 등록을 단일 세션에서 완료
+- 🔧 **에이전트 프레임워크 생태계** — oh-my-customcode v0.31.1 (394 커밋) + oh-my-teammates. 41개 에이전트, 63개 스킬, 18개 규칙의 멀티 에이전트 시스템 운영
+- 🧭 **에이전트 문서 탐색 표준** — agents.txt 오픈 스펙 제안. 크로스-LLM 검증 97.7/100, 최대 93% 토큰 절감
+- 🚀 **단일 세션 E2E 릴리스** — PR fix → merge → npm publish → sauron 검증 → 후속 이슈 6건 등록을 자율 오케스트레이션으로 완료
 
 ---
 
 ## 🚀 Featured Projects
 
 <table>
-<tr>
-<td colspan="2">
-
-### 🛡️ [ATLAS](https://github.com/baekenough/atlas) · [데모](https://atlas.baekenough.com/)
-
-**Auto-learning Threat-detection Linked Agent System**
-
-자기진화형 멀티에이전트 금융 사기 탐지 플랫폼. 7개 전문 AI 에이전트가 협업하여
-실시간 금융 거래를 분석하고, 교차 검증으로 합의를 도출합니다.
-Red Team 에이전트가 적대적 공격 시나리오를 생성하고,
-Post-Mortem 에이전트가 탐지 실패 시 SOP를 자동 업데이트하여 자율 진화합니다.
-
-`Python` `LangGraph` `FastAPI` `Multi-Agent` `RAG`
-
-</td>
-</tr>
 <tr>
 <td width="50%">
 
@@ -208,7 +192,6 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 | 📌 Pinned Repositories | |
 |:---|:---|
-| [🛡️ **ATLAS**](https://github.com/baekenough/atlas) · [데모](https://atlas.baekenough.com/) | 자기진화형 멀티에이전트 금융 사기 탐지 시스템 |
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | oh-my-customcode를 위한 팀 협업 애드온 |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
