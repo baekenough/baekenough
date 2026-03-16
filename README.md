@@ -50,17 +50,17 @@
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>103,798</b><br/><sub>처리 메시지 (32일)</sub></td>
-<td align="center"><b>3,758</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>110,169</b><br/><sub>처리 메시지 (32일)</sub></td>
+<td align="center"><b>3,897</b><br/><sub>세션 수</sub></td>
 <td align="center"><b>581</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-<img src="https://img.shields.io/badge/Bash-2442회-22d3ee?style=flat-square" alt="Bash"/>
-<img src="https://img.shields.io/badge/Read-1014회-a78bfa?style=flat-square" alt="Read"/>
-<img src="https://img.shields.io/badge/Task-581회-34d399?style=flat-square" alt="Task"/>
-<img src="https://img.shields.io/badge/Agent-579회-fb923c?style=flat-square" alt="Agent"/>
+<img src="https://img.shields.io/badge/Bash-2484회-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-1043회-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Agent-604회-34d399?style=flat-square" alt="Agent"/>
+<img src="https://img.shields.io/badge/Task-581회-fb923c?style=flat-square" alt="Task"/>
 <!-- insights:tools:end -->
 
 </div>
