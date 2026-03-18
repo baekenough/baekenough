@@ -51,17 +51,17 @@ I aim to achieve team-level throughput as an individual.
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>24,937</b><br/><sub>Messages (24 days)</sub></td>
-<td align="center"><b>1,328</b><br/><sub>Sessions</sub></td>
-<td align="center"><b>331</b><br/><sub>Parallel Session Events</sub></td>
+<td align="center"><b>110,782</b><br/><sub>Messages (33 days)</sub></td>
+<td align="center"><b>3,907</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>581</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-<img src="https://img.shields.io/badge/Bash-1180_calls-22d3ee?style=flat-square" alt="Bash"/>
-<img src="https://img.shields.io/badge/Read-541_calls-a78bfa?style=flat-square" alt="Read"/>
-<img src="https://img.shields.io/badge/Task-331_calls-34d399?style=flat-square" alt="Task"/>
-<img src="https://img.shields.io/badge/Agent-199_calls-fb923c?style=flat-square" alt="Agent"/>
+<img src="https://img.shields.io/badge/Bash-2604_calls-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-1090_calls-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Agent-659_calls-34d399?style=flat-square" alt="Agent"/>
+<img src="https://img.shields.io/badge/Task-581_calls-fb923c?style=flat-square" alt="Task"/>
 <!-- insights:tools:end -->
 
 </div>

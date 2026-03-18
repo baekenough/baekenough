@@ -19,6 +19,7 @@ from urllib.parse import quote
 ACCOUNTS = {
     "baekenough": Path.home() / "workspace/claude/baekenough/usage-data",
     "baekgomiyo": Path.home() / "workspace/claude/baekgomiyo/usage-data",
+    "claude-global": Path.home() / ".claude/usage-data",
 }
 PROFILE_REPO = Path.home() / "workspace/baekenough"
 
@@ -26,6 +27,9 @@ PROFILE_REPO = Path.home() / "workspace/baekenough"
 def aggregate_session_meta(accounts):
     """
     Aggregate session metadata from all accounts.
+
+    Deduplicates sessions across accounts using the ``session_id`` field,
+    so the same session appearing in multiple paths is counted only once.
 
     Returns:
         dict: Aggregated statistics including total messages, sessions,
@@ -40,6 +44,7 @@ def aggregate_session_meta(accounts):
         "total_commits": 0,
         "total_tokens": 0,
     }
+    seen_session_ids = set()
 
     for account, usage_dir in accounts.items():
         session_meta_dir = usage_dir / "session-meta"
@@ -51,6 +56,13 @@ def aggregate_session_meta(accounts):
             try:
                 with meta_file.open() as f:
                     data = json.load(f)
+
+                # Deduplicate by session_id when present
+                session_id = data.get("session_id")
+                if session_id is not None:
+                    if session_id in seen_session_ids:
+                        continue
+                    seen_session_ids.add(session_id)
 
                 # Aggregate messages
                 stats["total_messages"] += data.get("user_message_count", 0)
