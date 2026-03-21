@@ -71,7 +71,7 @@ to achieve higher personal and business goals.
 > autonomous AI Slack bot operation, release pipeline automation & agent handoffs.
 
 **Key Achievements**
-- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.31.1 (394 commits) + customclaw. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
+- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.51.0 (631 commits) + customclaw. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
 - 🧭 **Agent Navigation Standard** — Proposed agents.txt open spec. Cross-LLM validation 97.7/100, up to 93% token reduction
 - 🚀 **Single-Session E2E Release** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues via autonomous orchestration
 
