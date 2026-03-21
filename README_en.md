@@ -13,10 +13,11 @@
 <div align="center">
 
 ```
-I define the design and guardrails myself.
-Execution, parallelism, and automation are orchestrated
-through a self-built multi-LLM agent system.
-I aim to achieve team-level throughput as an individual.
+An engineer oriented toward human-centered engineering.
+I dream of enhancing productivity for individuals and organizations,
+and building safe, refined products and society through AI.
+I want everyone to leverage LLM services easily and fearlessly
+to achieve higher personal and business goals.
 ```
 
 </div>
@@ -35,12 +36,12 @@ I aim to achieve team-level throughput as an individual.
 
 ## 🧠 About Me
 
-> An **AI-Agent Native** software engineer with 8+ years of experience, building development workflows around multi-agent orchestration.
+> A software engineer with 8+ years of experience, oriented toward human-centered engineering.
 
 - 🏥 Maximized productivity in complex environments: **Medical (SaMD)**, On-Premise, per-client customization
-- 🤖 Orchestrates design → execution → validation through a **self-built multi-LLM agent system**
-- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) — a Claude Code customization harness
-- 📈 Shared a **claude-native philosophy** that reached **18,000+ views** on LinkedIn
+- 🤖 Orchestrates design → execution → validation through a **multi-LLM agent system**
+- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) harness, developing AI Slack bot platform [customclaw](https://github.com/baekenough/customclaw)
+- 📈 Building tools and environments so everyone can leverage LLM easily and fearlessly
 
 ---
 
@@ -66,11 +67,11 @@ I aim to achieve team-level throughput as an individual.
 
 </div>
 
-> Real usage data from my custom harness. Multi-agent memory observer, release pipeline automation,
-> browser-integrated research → issue creation, autonomous orchestration & agent handoffs.
+> Real usage data from my custom harness. Multi-agent orchestration, RAG-based memory,
+> autonomous AI Slack bot operation, release pipeline automation & agent handoffs.
 
 **Key Achievements**
-- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.31.1 (394 commits) + oh-my-teammates. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
+- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.31.1 (394 commits) + customclaw. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
 - 🧭 **Agent Navigation Standard** — Proposed agents.txt open spec. Cross-LLM validation 97.7/100, up to 93% token reduction
 - 🚀 **Single-Session E2E Release** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues via autonomous orchestration
 
@@ -94,14 +95,14 @@ and release pipelines in a comprehensive harness
 </td>
 <td width="50%">
 
-### 🤝 [oh-my-teammates](https://github.com/baekenough/oh-my-teammates)
+### 🤖 [customclaw](https://github.com/baekenough/customclaw)
 
-**Team collaboration addon for oh-my-customcode**
+**AI Slack Bot Management Platform**
 
-Share session knowledge via selective symlinks, auto-verify PRs with Guardian CI,
-and visualize agents/skills/rules through SvelteKit dashboard
+Multi-bot YAML definitions, Claude/Codex CLI multi-provider,
+pgvector + OpenSearch RAG memory, Next.js dashboard
 
-`TypeScript` `SvelteKit` `bun:sqlite` `npm`
+`Python` `TypeScript` `PostgreSQL` `Docker`
 
 </td>
 </tr>
@@ -194,7 +195,7 @@ UBcare                  2018.09 ~ 2021.01
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
-| [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | Team collaboration addon for oh-my-customcode |
+| [🤖 **customclaw**](https://github.com/baekenough/customclaw) | AI Slack Bot Management Platform — multi-provider, RAG memory, Next.js dashboard |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |

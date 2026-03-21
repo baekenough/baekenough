@@ -13,9 +13,10 @@
 <div align="center">
 
 ```
-설계와 가드레일은 직접 정의하고,
-실행·병렬 처리·자동화는 멀티 LLM 에이전트 시스템으로 오케스트레이션합니다.
-개인 단위에서 팀 수준의 처리량을 달성하는 것을 지향합니다.
+사람을 향하는 엔지니어링을 지향하는 엔지니어입니다.
+AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 제품, 사회를 꿈꿉니다.
+모두가 쉽고 공포감 없이 LLM Service를 활용하며
+더 높은 개인적, 비즈니스적 목표를 달성하게끔 하고 싶습니다.
 ```
 
 </div>
@@ -34,12 +35,12 @@
 
 ## 🧠 About Me
 
-> **AI-Agent Native** 방식의 개발 워크플로우를 전제로 업무를 수행하는 8년차 소프트웨어 엔지니어입니다.
+> 사람을 향하는 엔지니어링을 지향하는 8년차 소프트웨어 엔지니어입니다.
 
 - 🏥 의료(SaMD), On-Premise, 고객사별 커스터마이징 등 **복잡한 환경**에서 생산성을 극대화해왔습니다
-- 🤖 자체 구축한 **멀티 LLM 에이전트 시스템**으로 설계 → 실행 → 검증을 오케스트레이션합니다
-- 🔥 자체 개발한 하네스 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)를 오픈소스로 배포
-- 📈 LinkedIn에서 **조회수 18,000+** 기록한 claude-native 철학을 공유하고 있습니다
+- 🤖 **멀티 LLM 에이전트 시스템**으로 설계 → 실행 → 검증을 오케스트레이션합니다
+- 🔥 하네스 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) 오픈소스 배포, AI Slack 봇 플랫폼 [customclaw](https://github.com/baekenough/customclaw) 개발
+- 📈 모두가 쉽고 공포감 없이 LLM을 활용할 수 있는 도구와 환경을 만들고 있습니다
 
 ---
 
@@ -65,11 +66,11 @@
 
 </div>
 
-> 자체 하네스를 통한 실사용 데이터입니다. 멀티 에이전트 메모리 옵저버, 릴리스 파이프라인 자동화,
-> 브라우저 연동 리서치 → 이슈 생성, 자율 오케스트레이션 & 에이전트 핸드오프를 수행합니다.
+> 자체 하네스를 통한 실사용 데이터입니다. 멀티 에이전트 오케스트레이션, RAG 기반 메모리,
+> AI Slack 봇 자율 운영, 릴리스 파이프라인 자동화 & 에이전트 핸드오프를 수행합니다.
 
 **주요 성과**
-- 🔧 **에이전트 프레임워크 생태계** — oh-my-customcode v0.31.1 (394 커밋) + oh-my-teammates. 41개 에이전트, 63개 스킬, 18개 규칙의 멀티 에이전트 시스템 운영
+- 🔧 **에이전트 프레임워크 생태계** — oh-my-customcode v0.31.1 (394 커밋) + customclaw. 41개 에이전트, 63개 스킬, 18개 규칙의 멀티 에이전트 시스템 운영
 - 🧭 **에이전트 문서 탐색 표준** — agents.txt 오픈 스펙 제안. 크로스-LLM 검증 97.7/100, 최대 93% 토큰 절감
 - 🚀 **단일 세션 E2E 릴리스** — PR fix → merge → npm publish → sauron 검증 → 후속 이슈 6건 등록을 자율 오케스트레이션으로 완료
 
@@ -93,14 +94,14 @@
 </td>
 <td width="50%">
 
-### 🤝 [oh-my-teammates](https://github.com/baekenough/oh-my-teammates)
+### 🤖 [customclaw](https://github.com/baekenough/customclaw)
 
-**oh-my-customcode를 위한 팀 협업 애드온**
+**AI Slack 봇 관리 플랫폼**
 
-선택적 심링크로 팀 세션 지식 공유, Guardian CI로 PR 자동 검증,
-SvelteKit 대시보드로 에이전트/스킬/규칙 시각화
+멀티 봇 YAML 정의, Claude/Codex CLI 멀티 프로바이더,
+pgvector + OpenSearch RAG 메모리, Next.js 대시보드
 
-`TypeScript` `SvelteKit` `bun:sqlite` `npm`
+`Python` `TypeScript` `PostgreSQL` `Docker`
 
 </td>
 </tr>
@@ -193,7 +194,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
-| [🤝 **oh-my-teammates**](https://github.com/baekenough/oh-my-teammates) | oh-my-customcode를 위한 팀 협업 애드온 |
+| [🤖 **customclaw**](https://github.com/baekenough/customclaw) | AI Slack 봇 관리 플랫폼 — 멀티 프로바이더, RAG 메모리, Next.js 대시보드 |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
