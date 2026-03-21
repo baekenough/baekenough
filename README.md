@@ -51,16 +51,16 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>124,135</b><br/><sub>처리 메시지 (36일)</sub></td>
-<td align="center"><b>4,488</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>140,410</b><br/><sub>처리 메시지 (37일)</sub></td>
+<td align="center"><b>5,069</b><br/><sub>세션 수</sub></td>
 <td align="center"><b>582</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-<img src="https://img.shields.io/badge/Bash-2814회-22d3ee?style=flat-square" alt="Bash"/>
-<img src="https://img.shields.io/badge/Read-1196회-a78bfa?style=flat-square" alt="Read"/>
-<img src="https://img.shields.io/badge/Agent-704회-34d399?style=flat-square" alt="Agent"/>
+<img src="https://img.shields.io/badge/Bash-3289회-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-1328회-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Agent-812회-34d399?style=flat-square" alt="Agent"/>
 <img src="https://img.shields.io/badge/Task-582회-fb923c?style=flat-square" alt="Task"/>
 <!-- insights:tools:end -->
 
