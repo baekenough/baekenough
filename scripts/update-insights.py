@@ -7,7 +7,9 @@ copies HTML reports, and updates GitHub profile README with metrics.
 """
 
 import json
+import re
 import shutil
+import subprocess
 import sys
 from collections import defaultdict
 from datetime import datetime
@@ -130,6 +132,89 @@ def copy_reports(accounts, insights_dir):
             print(f"Warning: Failed to copy {report_file}: {e}")
 
 
+def fetch_omc_info():
+    """
+    Fetch the latest oh-my-customcode version and commit count from GitHub.
+
+    Uses the GitHub CLI (gh) to query release and commit data.
+
+    Returns:
+        tuple[str | None, int | None]: (version_tag, commit_count).
+            version_tag includes the 'v' prefix (e.g., 'v0.51.0').
+            Either value is None if the corresponding fetch fails.
+    """
+    version = None
+    commit_count = None
+
+    try:
+        result = subprocess.run(
+            [
+                "gh", "api",
+                "repos/baekenough/oh-my-customcode/releases/latest",
+                "--jq", ".tag_name",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode == 0:
+            version = result.stdout.strip()
+        else:
+            print(f"Warning: Failed to fetch omc version: {result.stderr.strip()}")
+    except Exception as e:
+        print(f"Warning: Failed to fetch omc version: {e}")
+
+    try:
+        result = subprocess.run(
+            [
+                "gh", "api",
+                "repos/baekenough/oh-my-customcode/commits?per_page=1",
+                "-i",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode == 0:
+            match = re.search(r'page=(\d+)>;\s*rel="last"', result.stdout)
+            if match:
+                commit_count = int(match.group(1))
+            else:
+                print("Warning: Could not parse commit count from Link header")
+        else:
+            print(f"Warning: Failed to fetch omc commit count: {result.stderr.strip()}")
+    except Exception as e:
+        print(f"Warning: Failed to fetch omc commit count: {e}")
+
+    return version, commit_count
+
+
+def update_omc_version(content, version, commits, lang):
+    """
+    Replace the oh-my-customcode version and commit count in README content.
+
+    Args:
+        content: Original README content string.
+        version: Version tag string including 'v' prefix (e.g., 'v0.51.0').
+        commits: Total commit count as an integer.
+        lang: Language code ('ko' or 'en').
+
+    Returns:
+        str: Content with the oh-my-customcode version line updated.
+    """
+    if lang == 'ko':
+        pattern = r'oh-my-customcode v[\d.]+\s*\(\d[\d,]*\s*커밋\)'
+        replacement = f'oh-my-customcode {version} ({commits:,} 커밋)'
+    else:
+        pattern = r'oh-my-customcode v[\d.]+\s*\(\d[\d,]*\s*commits\)'
+        replacement = f'oh-my-customcode {version} ({commits:,} commits)'
+
+    updated, sub_count = re.subn(pattern, replacement, content)
+    if sub_count == 0:
+        print(f"Warning: oh-my-customcode version pattern not found in {lang} README")
+    return updated
+
+
 def generate_metrics_section_ko(stats):
     """
     Generate metrics table section in Korean.
@@ -243,6 +328,10 @@ def main():
     print("Aggregating session metadata...")
     stats = aggregate_session_meta(ACCOUNTS)
 
+    # Fetch oh-my-customcode info
+    print("Fetching oh-my-customcode info from GitHub...")
+    omc_version, omc_commits = fetch_omc_info()
+
     # Print summary
     print("\n=== Stats Summary ===")
     print(f"Total Messages: {stats['total_messages']:,}")
@@ -251,6 +340,7 @@ def main():
     print(f"Total Commits: {stats['total_commits']:,}")
     print(f"Total Tokens: {stats['total_tokens']:,}")
     print(f"Total Task Events: {stats['total_task_events']:,}")
+    print(f"oh-my-customcode: {omc_version} ({omc_commits} commits)")
     print(f"\nTop Tools:")
     for tool, count in sorted(
         stats['tool_counts'].items(),
@@ -280,6 +370,8 @@ def main():
 
         content_ko = replace_between_markers(content_ko, "metrics", metrics_ko)
         content_ko = replace_between_markers(content_ko, "tools", tools_ko)
+        if omc_version and omc_commits:
+            content_ko = update_omc_version(content_ko, omc_version, omc_commits, 'ko')
 
         if dry_run:
             print("(dry run: would update metrics and tools)")
@@ -298,6 +390,8 @@ def main():
 
         content_en = replace_between_markers(content_en, "metrics", metrics_en)
         content_en = replace_between_markers(content_en, "tools", tools_en)
+        if omc_version and omc_commits:
+            content_en = update_omc_version(content_en, omc_version, omc_commits, 'en')
 
         if dry_run:
             print("(dry run: would update metrics and tools)")
