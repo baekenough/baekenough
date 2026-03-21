@@ -157,6 +157,22 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+### 📖 [An-Con](https://github.com/baekenough/An-Con) · [사이트](https://ancon.baekenough.com)
+
+**AI 코딩 도구 커뮤니티 가이드 사이트**
+
+PyCon에서 영감을 받은 AI 네이티브 가이드.
+Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
+
+`Next.js` `TypeScript` `MDX` `i18n`
+
+</td>
+<td width="50%">
+</td>
+</tr>
 </table>
 
 ---
@@ -198,6 +214,7 @@ RAG 경험 축적 + DOE 최적화 + 세대별 진화.
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
+| [📖 **An-Con**](https://github.com/baekenough/An-Con) · [사이트](https://ancon.baekenough.com) | AI 코딩 도구 커뮤니티 가이드 — Claude Code, GPT Codex, Gemini CLI 실전 팁 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
 
 </div>

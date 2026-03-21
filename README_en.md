@@ -158,6 +158,22 @@ No real-time LLM calls during gameplay
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+### 📖 [An-Con](https://github.com/baekenough/An-Con) · [Live](https://ancon.baekenough.com)
+
+**Community guide site for AI coding tools**
+
+Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
+15 guides across 3 languages (ko/en/es) with cross-tool linking
+
+`Next.js` `TypeScript` `MDX` `i18n`
+
+</td>
+<td width="50%">
+</td>
+</tr>
 </table>
 
 ---
@@ -199,6 +215,7 @@ UBcare                  2018.09 ~ 2021.01
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
 | [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
 | [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
+| [📖 **An-Con**](https://github.com/baekenough/An-Con) · [Live](https://ancon.baekenough.com) | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
 
 </div>
