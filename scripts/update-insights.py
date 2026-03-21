@@ -23,6 +23,12 @@ ACCOUNTS = {
     "baekgomiyo": Path.home() / "workspace/claude/baekgomiyo/usage-data",
     "claude-global": Path.home() / ".claude/usage-data",
 }
+REMOTE_ACCOUNTS = {
+    "ubuntu-server": {
+        "ssh_host": "ubuntu24_home_server-ext",
+        "data_path": "~/.claude/projects",
+    },
+}
 PROFILE_REPO = Path.home() / "workspace/baekenough"
 
 
@@ -106,6 +112,219 @@ def aggregate_session_meta(accounts):
     stats["tool_counts"] = dict(stats["tool_counts"])
 
     return stats
+
+
+_REMOTE_PARSE_SCRIPT = r"""
+import glob
+import json
+import sys
+from collections import defaultdict
+
+stats = {
+    "total_messages": 0,
+    "total_sessions": 0,
+    "unique_days": set(),
+    "tool_counts": defaultdict(int),
+    "total_task_events": 0,
+    "total_commits": 0,
+    "total_tokens": 0,
+}
+seen_session_ids = set()
+
+for path in glob.glob(sys.argv[1] + "/*/*.jsonl"):
+    session_id = None
+    session_messages = 0
+    session_date = None
+    session_tool_counts = defaultdict(int)
+
+    try:
+        with open(path) as f:
+            for raw_line in f:
+                raw_line = raw_line.strip()
+                if not raw_line:
+                    continue
+                try:
+                    entry = json.loads(raw_line)
+                except json.JSONDecodeError:
+                    continue
+
+                entry_type = entry.get("type", "")
+
+                # Extract session ID from queue-operation entries
+                if entry_type == "queue-operation" and session_id is None:
+                    session_id = entry.get("sessionId")
+
+                # Count user and assistant messages
+                if entry_type in ("user", "assistant"):
+                    msg = entry.get("message", {})
+                    role = msg.get("role", "")
+                    if role in ("user", "assistant"):
+                        session_messages += 1
+
+                        # Extract timestamp for unique day tracking
+                        if session_date is None:
+                            ts = entry.get("timestamp")
+                            if ts:
+                                try:
+                                    from datetime import datetime, timezone
+                                    dt = datetime.fromisoformat(
+                                        ts.replace("Z", "+00:00")
+                                    )
+                                    session_date = dt.date().isoformat()
+                                except (ValueError, AttributeError):
+                                    pass
+
+                        # Count tool_use blocks in assistant messages
+                        if role == "assistant":
+                            content = msg.get("content", [])
+                            if isinstance(content, list):
+                                for block in content:
+                                    if (
+                                        isinstance(block, dict)
+                                        and block.get("type") == "tool_use"
+                                    ):
+                                        tool_name = block.get("name", "")
+                                        if tool_name and tool_name != "StructuredOutput":
+                                            session_tool_counts[tool_name] += 1
+    except OSError:
+        continue
+
+    # Deduplicate sessions by ID
+    if session_id is not None:
+        if session_id in seen_session_ids:
+            continue
+        seen_session_ids.add(session_id)
+
+    stats["total_sessions"] += 1
+    stats["total_messages"] += session_messages
+    if session_date:
+        stats["unique_days"].add(session_date)
+    for tool, count in session_tool_counts.items():
+        stats["tool_counts"][tool] += count
+
+stats["total_task_events"] = stats["tool_counts"].get("Task", 0)
+stats["unique_days"] = len(stats["unique_days"])
+stats["tool_counts"] = dict(stats["tool_counts"])
+
+print(json.dumps(stats))
+"""
+
+
+def aggregate_remote_sessions(remote_accounts):
+    """
+    Aggregate session data from remote SSH servers.
+
+    Connects to each remote server via SSH and runs a self-contained Python
+    script that parses JSONL conversation files. The remote files use a
+    different format from local session-meta JSON files: each JSONL line is
+    a conversation entry with ``type``, ``message``, and ``timestamp`` fields.
+
+    Commits and tokens are reported as 0 for remote sessions since JSONL
+    conversation files do not contain git or token billing information.
+
+    Args:
+        remote_accounts: Dictionary mapping account names to SSH connection
+            configs, each with ``ssh_host`` and ``data_path`` keys.
+
+    Returns:
+        dict: Aggregated statistics in the same format as
+            ``aggregate_session_meta``, or an empty stats dict if all
+            remote connections fail.
+    """
+    combined = {
+        "total_messages": 0,
+        "total_sessions": 0,
+        "unique_days": 0,
+        "tool_counts": defaultdict(int),
+        "total_task_events": 0,
+        "total_commits": 0,
+        "total_tokens": 0,
+    }
+
+    for account, config in remote_accounts.items():
+        ssh_host = config["ssh_host"]
+        data_path = config["data_path"]
+        print(f"Fetching remote session data from {account} ({ssh_host})...")
+
+        try:
+            result = subprocess.run(
+                [
+                    "ssh",
+                    ssh_host,
+                    f"python3 - {data_path}",
+                ],
+                input=_REMOTE_PARSE_SCRIPT,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+        except subprocess.TimeoutExpired:
+            print(f"Warning: SSH timeout connecting to {account} ({ssh_host}), skipping")
+            continue
+        except Exception as e:
+            print(f"Warning: SSH failed for {account} ({ssh_host}): {e}, skipping")
+            continue
+
+        if result.returncode != 0:
+            stderr_preview = result.stderr.strip()[:200]
+            print(
+                f"Warning: Remote script failed for {account} ({ssh_host}): "
+                f"{stderr_preview}, skipping"
+            )
+            continue
+
+        try:
+            remote_stats = json.loads(result.stdout.strip())
+        except json.JSONDecodeError as e:
+            print(
+                f"Warning: Failed to parse remote output from {account} ({ssh_host}): "
+                f"{e}, skipping"
+            )
+            continue
+
+        # Merge remote stats into combined
+        combined["total_messages"] += remote_stats.get("total_messages", 0)
+        combined["total_sessions"] += remote_stats.get("total_sessions", 0)
+        combined["unique_days"] += remote_stats.get("unique_days", 0)
+        combined["total_task_events"] += remote_stats.get("total_task_events", 0)
+        combined["total_commits"] += remote_stats.get("total_commits", 0)
+        combined["total_tokens"] += remote_stats.get("total_tokens", 0)
+
+        for tool, count in remote_stats.get("tool_counts", {}).items():
+            combined["tool_counts"][tool] += count
+
+        print(
+            f"  {account}: {remote_stats.get('total_sessions', 0):,} sessions, "
+            f"{remote_stats.get('total_messages', 0):,} messages"
+        )
+
+    combined["tool_counts"] = dict(combined["tool_counts"])
+    return combined
+
+
+def merge_stats(base, remote):
+    """
+    Merge remote stats into base stats in-place.
+
+    Adds numeric totals together and merges tool_counts dicts by summing
+    values for matching keys. ``unique_days`` from separate machines are
+    added directly since the days come from independent environments.
+
+    Args:
+        base: Base stats dict (modified in-place).
+        remote: Remote stats dict to merge into base.
+    """
+    base["total_messages"] += remote["total_messages"]
+    base["total_sessions"] += remote["total_sessions"]
+    base["unique_days"] += remote["unique_days"]
+    base["total_task_events"] += remote["total_task_events"]
+    base["total_commits"] += remote["total_commits"]
+    base["total_tokens"] += remote["total_tokens"]
+
+    merged_tools = defaultdict(int, base["tool_counts"])
+    for tool, count in remote["tool_counts"].items():
+        merged_tools[tool] += count
+    base["tool_counts"] = dict(merged_tools)
 
 
 def copy_reports(accounts, insights_dir):
@@ -324,9 +543,14 @@ def main():
     """Main execution function."""
     dry_run = "--dry-run" in sys.argv
 
-    # Aggregate data
+    # Aggregate local data
     print("Aggregating session metadata...")
     stats = aggregate_session_meta(ACCOUNTS)
+
+    # Aggregate remote data and merge
+    print("Aggregating remote session data...")
+    remote_stats = aggregate_remote_sessions(REMOTE_ACCOUNTS)
+    merge_stats(stats, remote_stats)
 
     # Fetch oh-my-customcode info
     print("Fetching oh-my-customcode info from GitHub...")
