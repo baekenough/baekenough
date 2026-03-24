@@ -79,11 +79,13 @@ to achieve higher personal and business goals.
 
 ## 🚀 Featured Projects
 
+### 🛠️ Products
+
 <table>
 <tr>
 <td width="50%">
 
-### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
+#### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
 
 **oh-my-zsh style customization framework for Claude Code**
 
@@ -95,7 +97,7 @@ and release pipelines in a comprehensive harness
 </td>
 <td width="50%">
 
-### 🤖 [customclaw](https://github.com/baekenough/customclaw)
+#### 🤖 [customclaw](https://github.com/baekenough/customclaw)
 
 **AI Slack Bot Management Platform**
 
@@ -109,7 +111,7 @@ pgvector + OpenSearch RAG memory, Next.js dashboard
 <tr>
 <td width="50%">
 
-### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/)
+#### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/)
 
 **`agents.txt` open spec & reference implementation**
 
@@ -121,47 +123,7 @@ navigation for LLM agents. Up to 93% token reduction, 97.7/100 multi-LLM eval
 </td>
 <td width="50%">
 
-### ⚡ [textswift](https://github.com/baekenough/textswift)
-
-**Instant in-page translation Chrome extension powered by Codex**
-
-Select text on any webpage → instant translation. Securely communicates
-with local Codex CLI via Native Messaging
-
-`TypeScript` `Chrome Extension` `Codex` `Native Messaging`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
-
-**High-performance web video player powered by WebAssembly**
-
-FFmpeg.wasm + WebCodecs hardware acceleration. Universal format support
-including MKV, AVI, HEVC. Web & Desktop (Tauri)
-
-`TypeScript` `WebAssembly` `FFmpeg` `Tauri`
-
-</td>
-<td width="50%">
-
-### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
-
-**LLM-orchestrated Multi-Agent DOOM AI**
-
-RAG experience accumulation + DOE optimization + generational evolution.
-No real-time LLM calls during gameplay
-
-`Go` `Python` `gRPC` `LLM Orchestration`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📖 [An-Con](https://github.com/baekenough/An-Con) · [Live](https://ancon.baekenough.com)
+#### 📖 [AN-notes](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com)
 
 **Community guide site for AI coding tools**
 
@@ -169,6 +131,25 @@ Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
 15 guides across 3 languages (ko/en/es) with cross-tool linking
 
 `Next.js` `TypeScript` `MDX` `i18n`
+
+</td>
+</tr>
+</table>
+
+### 🔬 Research
+
+<table>
+<tr>
+<td width="50%">
+
+#### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
+
+**LLM-orchestrated Multi-Agent DOOM AI**
+
+RAG experience accumulation + DOE optimization + generational evolution.
+No real-time LLM calls during gameplay
+
+`Go` `Python` `gRPC` `LLM Orchestration`
 
 </td>
 <td width="50%">
@@ -213,9 +194,7 @@ UBcare                  2018.09 ~ 2021.01
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
 | [🤖 **customclaw**](https://github.com/baekenough/customclaw) | AI Slack Bot Management Platform — multi-provider, RAG memory, Next.js dashboard |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
-| [⚡ **textswift**](https://github.com/baekenough/textswift) | Instant in-page translation Chrome extension powered by Codex |
-| [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | High-performance web video player powered by WebAssembly |
-| [📖 **An-Con**](https://github.com/baekenough/An-Con) · [Live](https://ancon.baekenough.com) | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
+| [📖 **AN-notes**](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com) | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
 
 </div>

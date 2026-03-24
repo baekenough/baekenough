@@ -78,11 +78,13 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 
 ## 🚀 Featured Projects
 
+### 🛠️ Products
+
 <table>
 <tr>
 <td width="50%">
 
-### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
+#### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
 
 **oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크**
 
@@ -94,7 +96,7 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 </td>
 <td width="50%">
 
-### 🤖 [customclaw](https://github.com/baekenough/customclaw)
+#### 🤖 [customclaw](https://github.com/baekenough/customclaw)
 
 **AI Slack 봇 관리 플랫폼**
 
@@ -108,7 +110,7 @@ pgvector + OpenSearch RAG 메모리, Next.js 대시보드
 <tr>
 <td width="50%">
 
-### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/)
+#### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/)
 
 **`agents.txt` 오픈 스펙 및 레퍼런스 구현**
 
@@ -120,47 +122,7 @@ robots.txt가 크롤러를 안내하듯, agents.txt는 LLM 에이전트의
 </td>
 <td width="50%">
 
-### ⚡ [textswift](https://github.com/baekenough/textswift)
-
-**Codex 기반 인페이지 번역 Chrome 확장 프로그램**
-
-웹페이지에서 텍스트 선택 → 즉시 번역. Native Messaging으로
-로컬 Codex CLI와 안전하게 통신
-
-`TypeScript` `Chrome Extension` `Codex` `Native Messaging`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🎬 [wasm-video-player](https://github.com/baekenough/wasm-video-player)
-
-**WebAssembly 기반 고성능 웹 비디오 플레이어**
-
-FFmpeg.wasm + WebCodecs 하드웨어 가속. MKV, AVI, HEVC 등
-범용 포맷 지원. Web & Desktop(Tauri)
-
-`TypeScript` `WebAssembly` `FFmpeg` `Tauri`
-
-</td>
-<td width="50%">
-
-### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
-
-**LLM 오케스트레이션 기반 멀티에이전트 DOOM AI**
-
-RAG 경험 축적 + DOE 최적화 + 세대별 진화.
-게임플레이 중 실시간 LLM 호출 없이 동작
-
-`Go` `Python` `gRPC` `LLM Orchestration`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📖 [An-Con](https://github.com/baekenough/An-Con) · [사이트](https://ancon.baekenough.com)
+#### 📖 [AN-notes](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com)
 
 **AI 코딩 도구 커뮤니티 가이드 사이트**
 
@@ -168,6 +130,25 @@ PyCon에서 영감을 받은 AI 네이티브 가이드.
 Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 
 `Next.js` `TypeScript` `MDX` `i18n`
+
+</td>
+</tr>
+</table>
+
+### 🔬 Research
+
+<table>
+<tr>
+<td width="50%">
+
+#### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `연구 종료`
+
+**LLM 오케스트레이션 기반 멀티에이전트 DOOM AI**
+
+RAG 경험 축적 + DOE 최적화 + 세대별 진화.
+게임플레이 중 실시간 LLM 호출 없이 동작
+
+`Go` `Python` `gRPC` `LLM Orchestration`
 
 </td>
 <td width="50%">
@@ -212,9 +193,7 @@ Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [🤖 **customclaw**](https://github.com/baekenough/customclaw) | AI Slack 봇 관리 플랫폼 — 멀티 프로바이더, RAG 메모리, Next.js 대시보드 |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
-| [⚡ **textswift**](https://github.com/baekenough/textswift) | Codex 기반 인페이지 번역 Chrome 확장 프로그램 |
-| [🎬 **wasm-video-player**](https://github.com/baekenough/wasm-video-player) | WebAssembly 기반 고성능 웹 비디오 플레이어 |
-| [📖 **An-Con**](https://github.com/baekenough/An-Con) · [사이트](https://ancon.baekenough.com) | AI 코딩 도구 커뮤니티 가이드 — Claude Code, GPT Codex, Gemini CLI 실전 팁 |
+| [📖 **AN-notes**](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com) | AI 코딩 도구 커뮤니티 가이드 — Claude Code, GPT Codex, Gemini CLI 실전 팁 |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
 
 </div>
