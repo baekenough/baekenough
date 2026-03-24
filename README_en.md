@@ -138,7 +138,9 @@ Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
 
 ### 🔬 Research
 
-- 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `Research Concluded` — LLM-orchestrated Multi-Agent DOOM AI. RAG experience accumulation + DOE optimization + generational evolution
+| Project | Description |
+|:---|:---|
+| 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `Research Concluded` | LLM-orchestrated Multi-Agent DOOM AI — RAG experience accumulation + DOE optimization + generational evolution |
 
 ---
 

@@ -137,7 +137,9 @@ Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 
 ### 🔬 Research
 
-- 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `연구 종료` — LLM 오케스트레이션 기반 멀티에이전트 DOOM AI. RAG 경험 축적 + DOE 최적화 + 세대별 진화
+| Project | Description |
+|:---|:---|
+| 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `연구 종료` | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI — RAG 경험 축적 + DOE 최적화 + 세대별 진화 |
 
 ---
 
