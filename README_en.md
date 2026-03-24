@@ -138,24 +138,7 @@ Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
 
 ### 🔬 Research
 
-<table>
-<tr>
-<td width="50%">
-
-#### 🎮 [clau-doom](https://github.com/baekenough/clau-doom) · `Research Concluded`
-
-**LLM-orchestrated Multi-Agent DOOM AI**
-
-RAG experience accumulation + DOE optimization + generational evolution.
-No real-time LLM calls during gameplay
-
-`Go` `Python` `gRPC` `LLM Orchestration`
-
-</td>
-<td width="50%">
-</td>
-</tr>
-</table>
+- 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `Research Concluded` — LLM-orchestrated Multi-Agent DOOM AI. RAG experience accumulation + DOE optimization + generational evolution
 
 ---
 
