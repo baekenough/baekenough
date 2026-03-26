@@ -52,8 +52,8 @@ to achieve higher personal and business goals.
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>188,795</b><br/><sub>Messages (50 days)</sub></td>
-<td align="center"><b>6,712</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>188,948</b><br/><sub>Messages (51 days)</sub></td>
+<td align="center"><b>6,770</b><br/><sub>Sessions</sub></td>
 <td align="center"><b>582</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>

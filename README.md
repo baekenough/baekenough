@@ -51,8 +51,8 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>188,795</b><br/><sub>처리 메시지 (50일)</sub></td>
-<td align="center"><b>6,712</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>188,948</b><br/><sub>처리 메시지 (51일)</sub></td>
+<td align="center"><b>6,770</b><br/><sub>세션 수</sub></td>
 <td align="center"><b>582</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
