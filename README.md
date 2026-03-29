@@ -51,17 +51,17 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>198,845</b><br/><sub>처리 메시지 (55일)</sub></td>
-<td align="center"><b>7,043</b><br/><sub>세션 수</sub></td>
+<td align="center"><b>214,991</b><br/><sub>처리 메시지 (57일)</sub></td>
+<td align="center"><b>7,532</b><br/><sub>세션 수</sub></td>
 <td align="center"><b>582</b><br/><sub>병렬 세션 이벤트</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-<img src="https://img.shields.io/badge/Bash-7367회-22d3ee?style=flat-square" alt="Bash"/>
-<img src="https://img.shields.io/badge/Read-5396회-a78bfa?style=flat-square" alt="Read"/>
-<img src="https://img.shields.io/badge/Grep-3231회-34d399?style=flat-square" alt="Grep"/>
-<img src="https://img.shields.io/badge/Glob-2325회-fb923c?style=flat-square" alt="Glob"/>
+<img src="https://img.shields.io/badge/Bash-8230회-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-6685회-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Grep-4181회-34d399?style=flat-square" alt="Grep"/>
+<img src="https://img.shields.io/badge/Glob-3031회-fb923c?style=flat-square" alt="Glob"/>
 <!-- insights:tools:end -->
 
 </div>
@@ -70,7 +70,7 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 > AI Slack 봇 자율 운영, 릴리스 파이프라인 자동화 & 에이전트 핸드오프를 수행합니다.
 
 **주요 성과**
-- 🔧 **에이전트 프레임워크 생태계** — oh-my-customcode v0.62.2 (691 커밋) + customclaw. 41개 에이전트, 63개 스킬, 18개 규칙의 멀티 에이전트 시스템 운영
+- 🔧 **에이전트 프레임워크 생태계** — oh-my-customcode v0.65.0 (714 커밋) + customclaw. 41개 에이전트, 63개 스킬, 18개 규칙의 멀티 에이전트 시스템 운영
 - 🧭 **에이전트 문서 탐색 표준** — agents.txt 오픈 스펙 제안. 크로스-LLM 검증 97.7/100, 최대 93% 토큰 절감
 - 🚀 **단일 세션 E2E 릴리스** — PR fix → merge → npm publish → sauron 검증 → 후속 이슈 6건 등록을 자율 오케스트레이션으로 완료
 
