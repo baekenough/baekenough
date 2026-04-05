@@ -40,7 +40,7 @@ to achieve higher personal and business goals.
 
 - 🏥 Maximized productivity in complex environments: **Medical (SaMD)**, On-Premise, per-client customization
 - 🤖 Orchestrates design → execution → validation through a **multi-LLM agent system**
-- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) harness, developing AI Slack bot platform [customclaw](https://github.com/baekenough/customclaw)
+- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) harness, developing AI agent skill marketplace [baekenough-skills](https://github.com/baekenough/baekenough-skills)
 - 📈 Building tools and environments so everyone can leverage LLM easily and fearlessly
 
 ---
@@ -52,17 +52,17 @@ to achieve higher personal and business goals.
 <!-- insights:metrics:start -->
 <table>
 <tr>
-<td align="center"><b>224,295</b><br/><sub>Messages (61 days)</sub></td>
-<td align="center"><b>7,877</b><br/><sub>Sessions</sub></td>
+<td align="center"><b>228,592</b><br/><sub>Messages (65 days)</sub></td>
+<td align="center"><b>8,068</b><br/><sub>Sessions</sub></td>
 <td align="center"><b>582</b><br/><sub>Parallel Session Events</sub></td>
 </tr>
 </table>
 <!-- insights:metrics:end -->
 <!-- insights:tools:start -->
-<img src="https://img.shields.io/badge/Bash-8828_calls-22d3ee?style=flat-square" alt="Bash"/>
-<img src="https://img.shields.io/badge/Read-7172_calls-a78bfa?style=flat-square" alt="Read"/>
-<img src="https://img.shields.io/badge/Grep-4603_calls-34d399?style=flat-square" alt="Grep"/>
-<img src="https://img.shields.io/badge/Glob-3232_calls-fb923c?style=flat-square" alt="Glob"/>
+<img src="https://img.shields.io/badge/Bash-8888_calls-22d3ee?style=flat-square" alt="Bash"/>
+<img src="https://img.shields.io/badge/Read-7221_calls-a78bfa?style=flat-square" alt="Read"/>
+<img src="https://img.shields.io/badge/Grep-4610_calls-34d399?style=flat-square" alt="Grep"/>
+<img src="https://img.shields.io/badge/Glob-3244_calls-fb923c?style=flat-square" alt="Glob"/>
 <!-- insights:tools:end -->
 
 </div>
@@ -71,7 +71,7 @@ to achieve higher personal and business goals.
 > autonomous AI Slack bot operation, release pipeline automation & agent handoffs.
 
 **Key Achievements**
-- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.68.2 (735 commits) + customclaw. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
+- 🔧 **Agent Framework Ecosystem** — oh-my-customcode v0.76.0 (760 commits) + baekenough-skills. Operating 41 agents, 63 skills, 18 rules in a multi-agent system
 - 🧭 **Agent Navigation Standard** — Proposed agents.txt open spec. Cross-LLM validation 97.7/100, up to 93% token reduction
 - 🚀 **Single-Session E2E Release** — PR fix → merge → npm publish → sauron verification → 6 follow-up issues via autonomous orchestration
 
@@ -97,14 +97,14 @@ and release pipelines in a comprehensive harness
 </td>
 <td width="50%">
 
-#### 🤖 [customclaw](https://github.com/baekenough/customclaw)
+#### 🧩 [baekenough-skills](https://github.com/baekenough/baekenough-skills)
 
-**AI Slack Bot Management Platform**
+**AI Agent Skills for skills.sh Marketplace**
 
-Multi-bot YAML definitions, Claude/Codex CLI multi-provider,
-pgvector + OpenSearch RAG memory, Next.js dashboard
+Battle-tested agent skills from oh-my-customcode,
+published as a public skill registry on skills.sh marketplace
 
-`Python` `TypeScript` `PostgreSQL` `Docker`
+`JavaScript` `Claude Code` `skills.sh` `AI Agent`
 
 </td>
 </tr>
@@ -177,7 +177,7 @@ UBcare                  2018.09 ~ 2021.01
 | 📌 Pinned Repositories | |
 |:---|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
-| [🤖 **customclaw**](https://github.com/baekenough/customclaw) | AI Slack Bot Management Platform — multi-provider, RAG memory, Next.js dashboard |
+| [🧩 **baekenough-skills**](https://github.com/baekenough/baekenough-skills) | AI agent skill registry for skills.sh marketplace |
 | [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
 | [📖 **AN-notes**](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com) | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
 | [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |

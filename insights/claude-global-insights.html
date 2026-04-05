@@ -119,16 +119,16 @@
 <body>
   <div class="container">
     <h1>Claude Code Insights</h1>
-    <p class="subtitle">35,593 messages across 1871 sessions (5,813 total) | 2026-03-01 to 2026-03-31</p>
+    <p class="subtitle">35,062 messages across 1878 sessions (3,968 total) | 2026-03-06 to 2026-04-05</p>
 
     
     <div class="at-a-glance">
       <div class="glance-title">At a Glance</div>
       <div class="glance-sections">
-        <div class="glance-section"><strong>What's working:</strong> You&apos;ve built an impressively mature delegation workflow — handing off full deploy pipelines overnight and running a multi-agent observer architecture that maintains project memory across nearly 1,900 sessions in a single month. Your auto-dev pipeline from issue triage through npm publish (like the gemini-exec skill and RTK integration shipping v0.66.0–v0.68.2) is a genuinely sophisticated use of Claude Code that most users haven&apos;t attempted. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
-        <div class="glance-section"><strong>What's hindering you:</strong> On Claude&apos;s side, it frequently targets the wrong repo or component before you redirect it, and it takes wrong approaches that cascade into multiple CI fix-amend-push cycles — especially around coverage thresholds, lint, and test count mismatches. On your side, authentication and credential issues on your production server are a persistent drag — file ownership mismatches and volume mount problems stall deployments repeatedly, and these seem like infrastructure patterns worth standardizing once rather than debugging each time. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
-        <div class="glance-section"><strong>Quick wins to try:</strong> Try setting up <strong>custom slash commands</strong> for your most common workflows (session cleanup, release pipeline, issue triage) so Claude starts with the right repo context and steps baked in — this directly addresses the wrong-repo exploration problem. Also consider adding <strong>hooks</strong> to automatically run your full CI gate locally before any git push, which would eliminate most of those serial fix-amend-push cycles. <a href="#section-features" class="see-more">Features to Try →</a></div>
-        <div class="glance-section"><strong>Ambitious workflows:</strong> Your overnight autonomous deployments are already ahead of the curve — as models improve, expect to run a persistent release pipeline agent that handles version bump through production deploy with built-in rollback, no babysitting required. Even more compelling: your existing multi-agent orchestration patterns are perfectly positioned for parallel CI repair (spawn agents for coverage, lint, and type errors simultaneously) and continuous auto-implementation where a scheduler agent monitors issues across both repos and ships P0 fixes end-to-end without you initiating anything. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
+        <div class="glance-section"><strong>What's working:</strong> You&apos;ve built a remarkably high-trust workflow with Claude, including handing off full deploy pipelines overnight and running complex multi-release cycles like the RTK integration across four versions. Your systematic approach to infrastructure work — like the CustomClaw decommissioning across multiple cloud providers — shows you know how to break big operations into Claude-sized tasks effectively. <a href="#section-wins" class="see-more">Impressive Things You Did →</a></div>
+        <div class="glance-section"><strong>What's hindering you:</strong> On Claude&apos;s side, it frequently starts working in the wrong repo or picks incorrect fix strategies, burning cycles before you course-correct — this happened with DAG debugging, CI fixes, and more. On your side, the observer/memory agent sessions you run alongside primary work rarely capture anything useful, and many CI failures could be caught locally before pushing rather than going through multiple fix-amend-push rounds remotely. <a href="#section-friction" class="see-more">Where Things Go Wrong →</a></div>
+        <div class="glance-section"><strong>Quick wins to try:</strong> Try setting up <strong>hooks</strong> to auto-run your lint and test suite before every commit — this alone would eliminate a big chunk of your CI fix cycles. You could also convert your deployment and release workflows into <strong>custom slash commands</strong> so Claude starts with the right repo context and constraints baked in, reducing those wrong-repo misfires. <a href="#section-features" class="see-more">Features to Try →</a></div>
+        <div class="glance-section"><strong>Ambitious workflows:</strong> Your overnight autonomous deployment already works — as models get better at maintaining context and self-correcting, you&apos;ll be able to chain full scout-evaluate-integrate-release pipelines that run unattended across multiple repos. Prepare by standardizing your credential management and CI smoke tests so that future agents can run tight fix-test-rerun loops against real CI output without needing you to intervene on auth blockers. <a href="#section-horizon" class="see-more">On the Horizon →</a></div>
       </div>
     </div>
     
@@ -145,11 +145,11 @@
     </nav>
 
     <div class="stats-row">
-      <div class="stat"><div class="stat-value">35,593</div><div class="stat-label">Messages</div></div>
-      <div class="stat"><div class="stat-value">+2,707/-267</div><div class="stat-label">Lines</div></div>
-      <div class="stat"><div class="stat-value">84</div><div class="stat-label">Files</div></div>
-      <div class="stat"><div class="stat-value">31</div><div class="stat-label">Days</div></div>
-      <div class="stat"><div class="stat-value">1148.2</div><div class="stat-label">Msgs/Day</div></div>
+      <div class="stat"><div class="stat-value">35,062</div><div class="stat-label">Messages</div></div>
+      <div class="stat"><div class="stat-value">+3,676/-241</div><div class="stat-label">Lines</div></div>
+      <div class="stat"><div class="stat-value">97</div><div class="stat-label">Files</div></div>
+      <div class="stat"><div class="stat-value">30</div><div class="stat-label">Days</div></div>
+      <div class="stat"><div class="stat-value">1168.7</div><div class="stat-label">Msgs/Day</div></div>
     </div>
 
     
@@ -158,42 +158,42 @@
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">oh-my-customcode Release &amp; Feature Development</span>
-            <span class="area-count">~18 sessions</span>
+            <span class="area-name">oh-my-customcode Development &amp; Releases</span>
+            <span class="area-count">~380 sessions</span>
           </div>
-          <div class="area-desc">Core development on the oh-my-customcode project including RTK integration across 21 files, gemini-exec skill creation, and multiple releases from v0.65.0 through v0.68.2. Claude Code drove the full auto-dev pipeline — from issue triage and implementation to CI fixes, PR creation, merging, and npm publishing. Significant friction came from CI coverage thresholds, lint errors, and test count mismatches requiring multiple fix-amend-push cycles.</div>
+          <div class="area-desc">Core development on the oh-my-customcode project including RTK integration across 21 files, feature implementation, bug fixes (self-update cache, phantom version), and multiple releases from v0.67.0 through v0.68.2. Claude Code was heavily used for multi-file refactoring, test fixes, PR creation, CI debugging, and merge workflows.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">CI/CD Pipeline &amp; Deployment Operations</span>
-            <span class="area-count">~12 sessions</span>
+            <span class="area-name">CI/CD Pipeline &amp; Deployment</span>
+            <span class="area-count">~220 sessions</span>
           </div>
-          <div class="area-desc">Fixing CI failures (TypeScript type errors, missing ECR repos, Docker build issues, Prisma generation), resolving deployment problems on production servers, and handling autonomous overnight deployments including DB migrations. Claude Code was used to diagnose build failures, push workflow fixes, pull/restart containers, and resolve git conflicts on remote servers.</div>
+          <div class="area-desc">Fixing CI failures (lint, coverage, TypeScript errors, missing Prisma generation, Docker build issues), managing GitHub Actions workflows, and handling production deployments including Docker container management and ECR repository setup. Claude Code executed bash commands for CI debugging, pushed fixes, and managed autonomous overnight deployments.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Airflow DAG &amp; Infrastructure Maintenance</span>
-            <span class="area-count">~10 sessions</span>
+            <span class="area-name">CustomClaw Project Decommissioning</span>
+            <span class="area-count">~180 sessions</span>
           </div>
-          <div class="area-desc">Debugging and refactoring the claude_code_release_monitor Airflow DAG, including replacing hardcoded CLI paths with docker exec patterns, fixing credential ownership issues, implementing DAG status-based sorting, and creating a CLI keeper sidecar container for token auto-renewal. Multiple sessions dealt with duplicate DAG files across repos and volume mount propagation issues.</div>
+          <div class="area-desc">Systematic archival and infrastructure teardown of the customclaw project including Cloudflare tunnel deletion, AWS cleanup (ECR repos, IAM users), Docker cleanup, GitHub repository archival, secret deletion, branch pruning, and documentation updates with architecture diagram regeneration. Claude Code handled infrastructure commands and multi-step cleanup workflows.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Repository Hygiene &amp; Project Management</span>
-            <span class="area-count">~12 sessions</span>
+            <span class="area-name">Airflow DAG Management &amp; Monitoring</span>
+            <span class="area-count">~90 sessions</span>
           </div>
-          <div class="area-desc">Session cleanup and memory documentation (updating MEMORY.md, CLAUDE.md), deleting merged remote branches, scouting and evaluating external repos (agent-lightning, harness, rtk-ai/rtk), creating GitHub issues for follow-up work, and professor-style triage of architectural issues with priority labeling. Claude Code handled git operations, gh CLI issue management, and systematic documentation updates.</div>
+          <div class="area-desc">Fixing and refactoring the claude_code_release_monitor DAG, resolving credential ownership issues, replacing hardcoded CLI paths with docker exec patterns, and deploying DAG changes to production. Claude Code was used for debugging DAG execution, pushing fixes to git, and verifying end-to-end workflow operation.</div>
         </div>
       
         <div class="project-area">
           <div class="area-header">
-            <span class="area-name">Observer &amp; Memory Agent Sessions</span>
-            <span class="area-count">~10 sessions</span>
+            <span class="area-name">External Tool Scouting &amp; Integration</span>
+            <span class="area-count">~58 sessions</span>
           </div>
-          <div class="area-desc">Parallel observer agents monitored primary coding sessions in real-time, capturing progress on DAG fixes, CI debugging, release workflows, and skill integrations. These sessions passively recorded events and updated memory files, though many had minimal substantive content and occasionally hit prompt-too-long errors.</div>
+          <div class="area-desc">Evaluating external tools and repositories (rtk-ai/rtk, agent-lightning, harness) for integration into the project, creating GitHub issues to track decisions, and planning RTK internalization as a skill dependency. Claude Code performed repository analysis, documented rationale for adoption or rejection, and managed issue tracking via gh CLI.</div>
         </div>
       
     </div>
@@ -203,34 +203,34 @@
       <div class="chart-card">
         <div class="chart-title">What You Wanted</div>
         <div class="bar-row">
-        <div class="bar-label">Session Cleanup</div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
-        <div class="bar-value">68</div>
-      </div>
-<div class="bar-row">
         <div class="bar-label">Deployment</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#2563eb"></div></div>
+        <div class="bar-value">75</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Session Cleanup</div>
+        <div class="bar-track"><div class="bar-fill" style="width:90.66666666666666%;background:#2563eb"></div></div>
         <div class="bar-value">68</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Feature Implementation</div>
-        <div class="bar-track"><div class="bar-fill" style="width:80.88235294117648%;background:#2563eb"></div></div>
-        <div class="bar-value">55</div>
+        <div class="bar-track"><div class="bar-fill" style="width:74.66666666666667%;background:#2563eb"></div></div>
+        <div class="bar-value">56</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Session Management</div>
-        <div class="bar-track"><div class="bar-fill" style="width:80.88235294117648%;background:#2563eb"></div></div>
-        <div class="bar-value">55</div>
+        <div class="bar-track"><div class="bar-fill" style="width:72%;background:#2563eb"></div></div>
+        <div class="bar-value">54</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Bug Fix</div>
-        <div class="bar-track"><div class="bar-fill" style="width:77.94117647058823%;background:#2563eb"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:70.66666666666667%;background:#2563eb"></div></div>
         <div class="bar-value">53</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Debugging</div>
-        <div class="bar-track"><div class="bar-fill" style="width:77.94117647058823%;background:#2563eb"></div></div>
-        <div class="bar-value">53</div>
+        <div class="bar-track"><div class="bar-fill" style="width:69.33333333333334%;background:#2563eb"></div></div>
+        <div class="bar-value">52</div>
       </div>
       </div>
       <div class="chart-card">
@@ -238,32 +238,32 @@
         <div class="bar-row">
         <div class="bar-label">Bash</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#0891b2"></div></div>
-        <div class="bar-value">3752</div>
-      </div>
-<div class="bar-row">
-        <div class="bar-label">Agent</div>
-        <div class="bar-track"><div class="bar-fill" style="width:32.32942430703625%;background:#0891b2"></div></div>
-        <div class="bar-value">1213</div>
+        <div class="bar-value">3608</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Read</div>
-        <div class="bar-track"><div class="bar-fill" style="width:32.2228144989339%;background:#0891b2"></div></div>
-        <div class="bar-value">1209</div>
+        <div class="bar-track"><div class="bar-fill" style="width:35.393569844789354%;background:#0891b2"></div></div>
+        <div class="bar-value">1277</div>
+      </div>
+<div class="bar-row">
+        <div class="bar-label">Agent</div>
+        <div class="bar-track"><div class="bar-fill" style="width:32.26164079822617%;background:#0891b2"></div></div>
+        <div class="bar-value">1164</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Grep</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.061833688699359%;background:#0891b2"></div></div>
-        <div class="bar-value">340</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.174057649667406%;background:#0891b2"></div></div>
+        <div class="bar-value">331</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Glob</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.47547974413646%;background:#0891b2"></div></div>
-        <div class="bar-value">318</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.118625277161863%;background:#0891b2"></div></div>
+        <div class="bar-value">329</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">ToolSearch</div>
-        <div class="bar-track"><div class="bar-fill" style="width:7.595948827292111%;background:#0891b2"></div></div>
-        <div class="bar-value">285</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8.841463414634147%;background:#0891b2"></div></div>
+        <div class="bar-value">319</div>
       </div>
       </div>
     </div>
@@ -274,32 +274,32 @@
         <div class="bar-row">
         <div class="bar-label">Markdown</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#10b981"></div></div>
-        <div class="bar-value">317</div>
+        <div class="bar-value">349</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">TypeScript</div>
-        <div class="bar-track"><div class="bar-fill" style="width:81.38801261829653%;background:#10b981"></div></div>
-        <div class="bar-value">258</div>
+        <div class="bar-track"><div class="bar-fill" style="width:81.9484240687679%;background:#10b981"></div></div>
+        <div class="bar-value">286</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Python</div>
-        <div class="bar-track"><div class="bar-fill" style="width:80.7570977917981%;background:#10b981"></div></div>
-        <div class="bar-value">256</div>
+        <div class="bar-track"><div class="bar-fill" style="width:71.91977077363897%;background:#10b981"></div></div>
+        <div class="bar-value">251</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">YAML</div>
-        <div class="bar-track"><div class="bar-fill" style="width:43.53312302839117%;background:#10b981"></div></div>
-        <div class="bar-value">138</div>
+        <div class="bar-track"><div class="bar-fill" style="width:41.54727793696275%;background:#10b981"></div></div>
+        <div class="bar-value">145</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">JSON</div>
-        <div class="bar-track"><div class="bar-fill" style="width:31.861198738170348%;background:#10b981"></div></div>
-        <div class="bar-value">101</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34.95702005730659%;background:#10b981"></div></div>
+        <div class="bar-value">122</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Go</div>
-        <div class="bar-track"><div class="bar-fill" style="width:24.9211356466877%;background:#10b981"></div></div>
-        <div class="bar-value">79</div>
+        <div class="bar-track"><div class="bar-fill" style="width:20.34383954154728%;background:#10b981"></div></div>
+        <div class="bar-value">71</div>
       </div>
       </div>
       <div class="chart-card">
@@ -307,27 +307,27 @@
         <div class="bar-row">
         <div class="bar-label">Single Task</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">458</div>
+        <div class="bar-value">484</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Multi Task</div>
-        <div class="bar-track"><div class="bar-fill" style="width:48.68995633187773%;background:#8b5cf6"></div></div>
-        <div class="bar-value">223</div>
+        <div class="bar-track"><div class="bar-fill" style="width:47.93388429752066%;background:#8b5cf6"></div></div>
+        <div class="bar-value">232</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Exploration</div>
-        <div class="bar-track"><div class="bar-fill" style="width:24.67248908296943%;background:#8b5cf6"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:23.34710743801653%;background:#8b5cf6"></div></div>
         <div class="bar-value">113</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Iterative Refinement</div>
-        <div class="bar-track"><div class="bar-fill" style="width:20.305676855895197%;background:#8b5cf6"></div></div>
-        <div class="bar-value">93</div>
+        <div class="bar-track"><div class="bar-fill" style="width:19.00826446280992%;background:#8b5cf6"></div></div>
+        <div class="bar-value">92</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Quick Question</div>
-        <div class="bar-track"><div class="bar-fill" style="width:1.7467248908296942%;background:#8b5cf6"></div></div>
-        <div class="bar-value">8</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.4462809917355373%;background:#8b5cf6"></div></div>
+        <div class="bar-value">7</div>
       </div>
       </div>
     </div>
@@ -335,10 +335,10 @@
     
     <h2 id="section-usage">How You Use Claude Code</h2>
     <div class="narrative">
-      <p>You are a <strong>power user running Claude Code at extraordinary scale</strong> — 1,871 sessions and over 35,000 messages in a single month, averaging roughly 60 sessions per day. Your interaction style is that of an <strong>autonomous operations commander</strong>: you delegate aggressively, often telling Claude to handle everything (deployment, CI fixes, releases) while you step away, sometimes literally saying &quot;handle everything while I sleep.&quot; You rely heavily on Bash (3,752 calls), sub-agents (1,213 calls), and file reads to orchestrate complex multi-step workflows like RTK integration across 21 files, full auto-dev pipelines from issue triage through PR merge and npm publish, and multi-version releases (v0.67.0→v0.68.2) in continuous succession. Your Korean-language session cleanup requests (세션 정리) and minimal acknowledgments like &apos;ㅇㅇ&apos; show you treat Claude as a <strong>persistent team member</strong> that maintains project memory across sessions.</p>
-<p>Your workflow is distinctly <strong>iterative and correction-driven</strong> rather than spec-heavy upfront. You let Claude run autonomously but course-correct firmly when it goes wrong — and you&apos;re not shy about it (noted: &quot;user had to curse to correct it&quot;). Friction data shows 227 instances of wrong approach and 128 of buggy code, yet your satisfaction remains remarkably high (94%+ likely satisfied or satisfied), suggesting you <strong>expect and tolerate missteps as part of a fast iteration loop</strong>. You frequently use observer/memory agents running in parallel to monitor primary sessions, creating a layered supervision architecture. Your top goals — session cleanup, deployment, feature implementation, and release management — reveal someone managing an <strong>entire software product lifecycle</strong> through Claude, from scouting external tools and triaging issues to fixing CI, merging PRs, and verifying production deployments on remote servers.</p>
-<p>You work across a polyglot stack (TypeScript, Python, YAML, Go, Markdown) and maintain multiple repositories simultaneously (oh-my-customcode, customclaw, Airflow DAGs). Your 54 commits against 895 analyzed sessions indicates Claude does significant exploratory and operational work beyond just code commits — debugging OAuth tokens, cleaning branches, restarting Docker containers, and running Airflow DAGs. You&apos;ve essentially built a <strong>semi-autonomous DevOps pipeline</strong> where Claude is both the developer and the operator, and you function as the strategic director who intervenes only when things derail.</p>
-      <div class="key-insight"><strong>Key pattern:</strong> You operate Claude as an autonomous DevOps agent at massive scale, delegating entire workflows end-to-end and intervening only with sharp corrections when it goes off track.</div>
+      <p>You are a <strong>power user running Claude Code at an extraordinary scale</strong> — nearly 1,900 sessions and 35,000+ messages in a single month, averaging ~38 messages per session across 320 hours of usage. Your interaction style is heavily <strong>delegation-oriented and autonomous</strong>: you frequently hand off complex, multi-step tasks (deployments, releases, infrastructure teardowns, CI fixes) and let Claude run through them end-to-end. A striking example is telling Claude to &quot;handle everything including deployment autonomously while they slept,&quot; resulting in lint fixes, PR merges, Docker builds, DB migrations, and production verification — all without your intervention. You also run <strong>observer/memory agent sessions in parallel</strong> to monitor and document primary sessions, showing a sophisticated multi-agent workflow.</p>
+<p>Your dominant pattern is <strong>operational infrastructure management</strong> — deployment, release management, session cleanup, and bug fixes dominate your goals. You work across a polyglot stack (TypeScript, Python, YAML, Go, Markdown) managing projects like oh-my-customcode and customclaw, with heavy use of Bash (3,608 invocations) and sub-Agent delegation (1,164 calls). You tend to <strong>give high-level directives in short bursts</strong> (sometimes even single characters like &quot;ㅇㅇ&quot;) rather than detailed specifications, trusting Claude to figure out the approach. When things go wrong — and your 230 &quot;wrong_approach&quot; friction events show this happens regularly — you <strong>redirect quickly</strong> rather than providing upfront guardrails. For instance, you interrupted Claude when it analyzed the wrong repository or attempted premature deletions, course-correcting on the fly rather than preventing errors with detailed instructions.</p>
+<p>Despite significant friction (wrong approaches, buggy code, auth failures, tool failures), your satisfaction remains remarkably high at <strong>~95% likely satisfied or better</strong>, suggesting you have a <strong>high tolerance for iteration cycles</strong> and value speed of correction over perfection on first attempt. Your 53 commits over the month with multiple version bumps (v0.67.0→v0.68.2) confirm a rapid release cadence where you treat Claude as a junior DevOps engineer you supervise loosely but trust to execute.</p>
+      <div class="key-insight"><strong>Key pattern:</strong> You operate as a high-velocity delegator who issues terse, high-level commands and lets Claude execute autonomously across infrastructure, deployment, and release tasks — intervening only when it goes off-track.</div>
     </div>
     
 
@@ -348,40 +348,40 @@
       <div class="bar-row">
         <div class="bar-label">2-10s</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#6366f1"></div></div>
-        <div class="bar-value">3770</div>
+        <div class="bar-value">3584</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">10-30s</div>
-        <div class="bar-track"><div class="bar-fill" style="width:53.84615384615385%;background:#6366f1"></div></div>
-        <div class="bar-value">2030</div>
+        <div class="bar-track"><div class="bar-fill" style="width:57.58928571428571%;background:#6366f1"></div></div>
+        <div class="bar-value">2064</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">30s-1m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:23.952254641909814%;background:#6366f1"></div></div>
-        <div class="bar-value">903</div>
+        <div class="bar-track"><div class="bar-fill" style="width:27.20424107142857%;background:#6366f1"></div></div>
+        <div class="bar-value">975</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">1-2m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:12.46684350132626%;background:#6366f1"></div></div>
-        <div class="bar-value">470</div>
+        <div class="bar-track"><div class="bar-fill" style="width:13.560267857142858%;background:#6366f1"></div></div>
+        <div class="bar-value">486</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">2-5m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:6.021220159151194%;background:#6366f1"></div></div>
-        <div class="bar-value">227</div>
+        <div class="bar-track"><div class="bar-fill" style="width:5.887276785714286%;background:#6366f1"></div></div>
+        <div class="bar-value">211</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">5-15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:3.2891246684350133%;background:#6366f1"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.459821428571429%;background:#6366f1"></div></div>
         <div class="bar-value">124</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">>15m</div>
-        <div class="bar-track"><div class="bar-fill" style="width:0.7161803713527852%;background:#6366f1"></div></div>
-        <div class="bar-value">27</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.0044642857142858%;background:#6366f1"></div></div>
+        <div class="bar-value">36</div>
       </div>
       <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
-        Median: 10.0s &bull; Average: 38.3s
+        Median: 10.6s &bull; Average: 41.1s
       </div>
     </div>
 
@@ -391,15 +391,15 @@
       
         <div style="display: flex; gap: 24px; margin: 12px 0;">
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">1533</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">1550</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Overlap Events</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">1325</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">1332</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Sessions Involved</div>
           </div>
           <div style="text-align: center;">
-            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">36%</div>
+            <div style="font-size: 24px; font-weight: 700; color: #7c3aed;">38%</div>
             <div style="font-size: 11px; color: #64748b; text-transform: uppercase;">Of Messages</div>
           </div>
         </div>
@@ -428,26 +428,26 @@
         <div id="hour-histogram">
       <div class="bar-row">
         <div class="bar-label">Morning (6-12)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:26.29161882893226%;background:#8b5cf6"></div></div>
-        <div class="bar-value">4580</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34.679554269531494%;background:#8b5cf6"></div></div>
+        <div class="bar-value">5633</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Afternoon (12-18)</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">17420</div>
+        <div class="bar-value">16243</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Evening (18-24)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:68.94374282433984%;background:#8b5cf6"></div></div>
-        <div class="bar-value">12010</div>
+        <div class="bar-track"><div class="bar-fill" style="width:71.45847441975005%;background:#8b5cf6"></div></div>
+        <div class="bar-value">11607</div>
       </div>
 
       <div class="bar-row">
         <div class="bar-label">Night (0-6)</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.518943742824339%;background:#8b5cf6"></div></div>
-        <div class="bar-value">1484</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.111617312072893%;background:#8b5cf6"></div></div>
+        <div class="bar-value">1480</div>
       </div></div>
       </div>
       <div class="chart-card">
@@ -455,54 +455,54 @@
         <div class="bar-row">
         <div class="bar-label">Command Failed</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">254</div>
+        <div class="bar-value">239</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Other</div>
-        <div class="bar-track"><div class="bar-fill" style="width:38.582677165354326%;background:#dc2626"></div></div>
-        <div class="bar-value">98</div>
+        <div class="bar-track"><div class="bar-fill" style="width:40.58577405857741%;background:#dc2626"></div></div>
+        <div class="bar-value">97</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">User Rejected</div>
-        <div class="bar-track"><div class="bar-fill" style="width:22.83464566929134%;background:#dc2626"></div></div>
-        <div class="bar-value">58</div>
+        <div class="bar-track"><div class="bar-fill" style="width:24.686192468619247%;background:#dc2626"></div></div>
+        <div class="bar-value">59</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Not Found</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.661417322834646%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.205020920502092%;background:#dc2626"></div></div>
         <div class="bar-value">22</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Too Large</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.267716535433072%;background:#dc2626"></div></div>
-        <div class="bar-value">21</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.949790794979079%;background:#dc2626"></div></div>
+        <div class="bar-value">19</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">File Changed</div>
-        <div class="bar-track"><div class="bar-fill" style="width:1.1811023622047243%;background:#dc2626"></div></div>
-        <div class="bar-value">3</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.6736401673640167%;background:#dc2626"></div></div>
+        <div class="bar-value">4</div>
       </div>
       </div>
     </div>
 
     
     <h2 id="section-wins">Impressive Things You Did</h2>
-    <p class="section-intro">You&apos;re a power user running nearly 1,900 sessions in a single month, leveraging Claude Code extensively for autonomous development, deployment, and release management across multiple projects.</p>
+    <p class="section-intro">You&apos;re a power user running nearly 1,900 sessions over a month, leveraging Claude Code extensively for deployment, release management, and infrastructure operations across multiple projects.</p>
     <div class="big-wins">
       
         <div class="big-win">
-          <div class="big-win-title">Autonomous Overnight Deployments</div>
-          <div class="big-win-desc">You trust Claude enough to hand off full deployment pipelines while you sleep — fixing lint errors, merging PRs, resolving Docker build issues, running DB migrations, and verifying production. This level of delegation shows you&apos;ve built a mature workflow where Claude can operate end-to-end without supervision.</div>
+          <div class="big-win-title">Autonomous Overnight Deployment Pipeline</div>
+          <div class="big-win-desc">You trust Claude enough to hand off full deployment workflows while you sleep — fixing lint errors, merging PRs, resolving Docker build issues, running DB migrations, and verifying production. This level of delegation shows you&apos;ve built a reliable workflow where Claude can operate end-to-end on critical infrastructure.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">Multi-Agent Observer Architecture</div>
-          <div class="big-win-desc">You&apos;ve set up a sophisticated observer/primary agent pattern where memory observer agents monitor primary sessions in real-time, capturing progress notes and maintaining persistent project memory. This creative use of parallel agents gives you continuity across your massive volume of sessions and ensures nothing falls through the cracks.</div>
+          <div class="big-win-title">Systematic Project Decommissioning</div>
+          <div class="big-win-desc">You orchestrated a thorough multi-session teardown of the CustomClaw project, covering Docker cleanup, AWS ECR/IAM removal, Cloudflare tunnel reconfiguration, GitHub archival, and memory file consolidation. Your methodical approach to infrastructure decommissioning ensured nothing was left dangling across cloud providers.</div>
         </div>
       
         <div class="big-win">
-          <div class="big-win-title">Full Auto-Dev Issue-to-Release Pipeline</div>
-          <div class="big-win-desc">You&apos;ve built an automated workflow that goes from issue triage all the way through implementation, CI, PR merge, npm publish, and issue closure — as demonstrated with your gemini-exec skill and RTK integration work shipping multiple versioned releases (v0.66.0 through v0.68.2) in rapid succession. Your systematic approach of scouting, triaging, implementing, and releasing is remarkably efficient.</div>
+          <div class="big-win-title">Multi-Release Feature Integration Cycles</div>
+          <div class="big-win-desc">You drove RTK integration from scouting through full implementation across 21 files, 1,534 passing tests, and four sequential releases (v0.67.0 through v0.68.2) — including catching and hotfixing a self-update cache bug mid-cycle. Your ability to maintain momentum across complex multi-release workflows with CI validation at each step is highly effective.</div>
         </div>
       
     </div>
@@ -514,85 +514,85 @@
         <div class="bar-row">
         <div class="bar-label">Multi-file Changes</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#16a34a"></div></div>
-        <div class="bar-value">355</div>
+        <div class="bar-value">380</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Good Debugging</div>
-        <div class="bar-track"><div class="bar-fill" style="width:36.901408450704224%;background:#16a34a"></div></div>
-        <div class="bar-value">131</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34.73684210526316%;background:#16a34a"></div></div>
+        <div class="bar-value">132</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Proactive Help</div>
-        <div class="bar-track"><div class="bar-fill" style="width:27.605633802816904%;background:#16a34a"></div></div>
-        <div class="bar-value">98</div>
+        <div class="bar-track"><div class="bar-fill" style="width:27.105263157894736%;background:#16a34a"></div></div>
+        <div class="bar-value">103</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Correct Code Edits</div>
-        <div class="bar-track"><div class="bar-fill" style="width:24.225352112676056%;background:#16a34a"></div></div>
-        <div class="bar-value">86</div>
+        <div class="bar-track"><div class="bar-fill" style="width:23.157894736842106%;background:#16a34a"></div></div>
+        <div class="bar-value">88</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Good Explanations</div>
-        <div class="bar-track"><div class="bar-fill" style="width:19.718309859154928%;background:#16a34a"></div></div>
-        <div class="bar-value">70</div>
+        <div class="bar-track"><div class="bar-fill" style="width:18.684210526315788%;background:#16a34a"></div></div>
+        <div class="bar-value">71</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Fast/Accurate Search</div>
-        <div class="bar-track"><div class="bar-fill" style="width:16.056338028169016%;background:#16a34a"></div></div>
-        <div class="bar-value">57</div>
+        <div class="bar-track"><div class="bar-fill" style="width:15.789473684210526%;background:#16a34a"></div></div>
+        <div class="bar-value">60</div>
       </div>
       </div>
       <div class="chart-card">
         <div class="chart-title">Outcomes</div>
         <div class="bar-row">
         <div class="bar-label">Not Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:8.955223880597014%;background:#8b5cf6"></div></div>
-        <div class="bar-value">36</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.943925233644859%;background:#8b5cf6"></div></div>
+        <div class="bar-value">34</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Partially Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:43.78109452736319%;background:#8b5cf6"></div></div>
-        <div class="bar-value">176</div>
+        <div class="bar-track"><div class="bar-fill" style="width:41.58878504672897%;background:#8b5cf6"></div></div>
+        <div class="bar-value">178</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Mostly Achieved</div>
-        <div class="bar-track"><div class="bar-fill" style="width:52.23880597014925%;background:#8b5cf6"></div></div>
-        <div class="bar-value">210</div>
+        <div class="bar-track"><div class="bar-fill" style="width:51.16822429906542%;background:#8b5cf6"></div></div>
+        <div class="bar-value">219</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Fully Achieved</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b5cf6"></div></div>
-        <div class="bar-value">402</div>
+        <div class="bar-value">428</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Unclear</div>
-        <div class="bar-track"><div class="bar-fill" style="width:17.66169154228856%;background:#8b5cf6"></div></div>
-        <div class="bar-value">71</div>
+        <div class="bar-track"><div class="bar-fill" style="width:16.121495327102803%;background:#8b5cf6"></div></div>
+        <div class="bar-value">69</div>
       </div>
       </div>
     </div>
 
     
     <h2 id="section-friction">Where Things Go Wrong</h2>
-    <p class="section-intro">Your workflow is heavily impacted by wrong-target mistakes, repeated CI trial-and-error cycles, and tooling/environment misconfigurations that compound into significant time sinks.</p>
+    <p class="section-intro">Your workflows suffer from frequent wrong-approach iterations, authentication/infrastructure debugging spirals, and overhead from excessive observer sessions that capture little value.</p>
     <div class="friction-categories">
       
         <div class="friction-category">
-          <div class="friction-title">Wrong Repository or Context Targeting</div>
-          <div class="friction-desc">Claude frequently starts work in the wrong repo or misidentifies the source of a problem, wasting cycles before you redirect it. Being more explicit about which repo or component to target upfront—or adding repo context to your CLAUDE.md—could prevent these misfires.</div>
-          <ul class="friction-examples"><li>Claude searched in oh-my-customcode before realizing the DAG was actually in the customclaw repository, delaying the fix</li><li>Claude analyzed the wrong repo (customclaw instead of oh-my-customcode) during a DAG fix, then introduced a broken docker exec pattern and corrupted .claude credentials, requiring multiple corrections from you</li></ul>
+          <div class="friction-title">Wrong Repository or Wrong Approach Before Course-Correcting</div>
+          <div class="friction-desc">You frequently end up with Claude exploring the wrong codebase or applying incorrect fix strategies, requiring multiple correction cycles before reaching a solution. Providing more explicit context upfront about which repo/project to target and known constraints could reduce these spirals.</div>
+          <ul class="friction-examples"><li>Claude analyzed the customclaw repo instead of oh-my-customcode for a DAG fix, then introduced a broken docker exec pattern and damaged .claude credentials, requiring multiple user corrections</li><li>Coverage fix attempts used v8/c8 ignore directives incompatible with Bun&apos;s tooling and mock-based tests caused cross-file pollution, burning several fix-amend-push cycles before simply lowering the threshold</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Repeated CI Fix-and-Push Cycles</div>
-          <div class="friction-desc">You&apos;re hitting multiple rounds of CI failures—coverage thresholds, lint errors, test pollution, skill count mismatches—that could be caught locally before pushing. Running the full lint and test suite locally as a standard pre-push step, or configuring pre-commit hooks earlier, would reduce these costly round-trips.</div>
-          <ul class="friction-examples"><li>Claude tried v8 ignore and c8 ignore directives that don&apos;t work with Bun&apos;s coverage, then mock pollution caused cross-file interference, burning several push cycles before simply lowering the threshold</li><li>Skill count mismatches (98→99) caused test failures twice across CLAUDE.md and README.md, each requiring another amend-and-push cycle</li></ul>
+          <div class="friction-title">Authentication and Infrastructure Debugging Spirals</div>
+          <div class="friction-desc">A significant portion of your friction comes from credential ownership issues, CI pipeline misconfigurations, and environment mismatches that cascade into long debugging sessions. Setting up pre-validated infrastructure checklists or smoke tests could catch these earlier.</div>
+          <ul class="friction-examples"><li>DAG fix succeeded code-wise but missed that .claude credential files had wrong uid ownership, requiring additional rounds of debugging beyond the original task</li><li>Platform-neutralization refactoring silently broke bot configs by removing default platform fields, compounded by missing prisma generate and a missing ECR repo — all surfacing only at CI/deploy time</li></ul>
         </div>
       
         <div class="friction-category">
-          <div class="friction-title">Environment and Credential Misconfiguration</div>
-          <div class="friction-desc">Authentication failures and environment issues (85 auth failures, 24 auth blockers) are your third-largest friction source. Credential ownership problems and volume mount issues on your production server repeatedly stall deployments—standardizing container credential management and documenting expected file ownership would save significant debugging time.</div>
-          <ul class="friction-examples"><li>The DAG fix was delayed because .claude credential files had wrong ownership (uid 50000/root instead of your user), requiring additional debugging after the initial code fix was correct</li><li>Permission mode kept falling back from bypassPermissions to acceptEdits during sub-agent execution, interrupting your autonomous overnight workflow and causing frustration</li></ul>
+          <div class="friction-title">Low-Value Observer and Memory Sessions</div>
+          <div class="friction-desc">You run many observer/memory agent sessions that capture minimal or no substantive work, consuming session overhead without meaningful output. Consider triggering observer sessions only for complex multi-step operations rather than routine tasks.</div>
+          <ul class="friction-examples"><li>Multiple observer sessions recorded outcomes like &apos;very little substantive work was captured&apos; or &apos;minimal input, no substantive work to record,&apos; contributing nothing actionable</li><li>An observer session was started for project cleanup but the primary session only performed preliminary file reads, resulting in a not_achieved outcome with slight helpfulness</li></ul>
         </div>
       
     </div>
@@ -604,31 +604,31 @@
         <div class="bar-row">
         <div class="bar-label">Wrong Approach</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#dc2626"></div></div>
-        <div class="bar-value">227</div>
+        <div class="bar-value">230</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Buggy Code</div>
-        <div class="bar-track"><div class="bar-fill" style="width:56.38766519823789%;background:#dc2626"></div></div>
-        <div class="bar-value">128</div>
+        <div class="bar-track"><div class="bar-fill" style="width:56.52173913043478%;background:#dc2626"></div></div>
+        <div class="bar-value">130</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Authentication Failure</div>
-        <div class="bar-track"><div class="bar-fill" style="width:37.44493392070485%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:36.95652173913043%;background:#dc2626"></div></div>
         <div class="bar-value">85</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Tool Failure</div>
-        <div class="bar-track"><div class="bar-fill" style="width:36.56387665198238%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:36.08695652173913%;background:#dc2626"></div></div>
         <div class="bar-value">83</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Excessive Changes</div>
-        <div class="bar-track"><div class="bar-fill" style="width:11.013215859030836%;background:#dc2626"></div></div>
-        <div class="bar-value">25</div>
+        <div class="bar-track"><div class="bar-fill" style="width:11.304347826086957%;background:#dc2626"></div></div>
+        <div class="bar-value">26</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Authentication Blocker</div>
-        <div class="bar-track"><div class="bar-fill" style="width:10.572687224669604%;background:#dc2626"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:10.434782608695652%;background:#dc2626"></div></div>
         <div class="bar-value">24</div>
       </div>
       </div>
@@ -636,27 +636,27 @@
         <div class="chart-title">Inferred Satisfaction (model-estimated)</div>
         <div class="bar-row">
         <div class="bar-label">Frustrated</div>
-        <div class="bar-track"><div class="bar-fill" style="width:1.5254237288135595%;background:#eab308"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.4705882352941175%;background:#eab308"></div></div>
         <div class="bar-value">18</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Dissatisfied</div>
-        <div class="bar-track"><div class="bar-fill" style="width:4.067796610169491%;background:#eab308"></div></div>
-        <div class="bar-value">48</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.8398692810457518%;background:#eab308"></div></div>
+        <div class="bar-value">47</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Likely Satisfied</div>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#eab308"></div></div>
-        <div class="bar-value">1180</div>
+        <div class="bar-value">1224</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Satisfied</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.661016949152543%;background:#eab308"></div></div>
-        <div class="bar-value">114</div>
+        <div class="bar-track"><div class="bar-fill" style="width:9.722222222222223%;background:#eab308"></div></div>
+        <div class="bar-value">119</div>
       </div>
 <div class="bar-row">
         <div class="bar-label">Happy</div>
-        <div class="bar-track"><div class="bar-fill" style="width:0.0847457627118644%;background:#eab308"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0.08169934640522876%;background:#eab308"></div></div>
         <div class="bar-value">1</div>
       </div>
       </div>
@@ -673,48 +673,44 @@
       </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add under a ## Infrastructure / Airflow section\n\nWhen working with Airflow DAGs, always check which repository contains the DAG file before making changes. DAGs may exist in customclaw, not oh-my-customcode.">
+          <input type="checkbox" id="cmd-0" class="cmd-checkbox" checked data-text="Add as a top-level ## section in CLAUDE.md since this is one of the most frequent workflows\n\n## Session Cleanup (세션 정리)
+When asked for 세션 정리 or session cleanup: 1) Update MEMORY.md with current session details 2) Archive completed work 3) Clean up obsolete memory files 4) Do NOT make premature deletions - wait for explicit confirmation before removing any files or resources.">
           <label for="cmd-0">
-            <code class="cmd-code">When working with Airflow DAGs, always check which repository contains the DAG file before making changes. DAGs may exist in customclaw, not oh-my-customcode.</code>
+            <code class="cmd-code">## Session Cleanup (세션 정리)
+When asked for 세션 정리 or session cleanup: 1) Update MEMORY.md with current session details 2) Archive completed work 3) Clean up obsolete memory files 4) Do NOT make premature deletions - wait for explicit confirmation before removing any files or resources.</code>
             <button class="copy-btn" onclick="copyCmdItem(0)">Copy</button>
           </label>
-          <div class="cmd-why">Claude repeatedly searched the wrong repository for DAG files across multiple sessions, wasting time and requiring user correction.</div>
+          <div class="cmd-why">Session cleanup appears in 68+ sessions and is a top goal - standardizing the process prevents the observed friction of premature deletions and incomplete cleanups.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add under ## Pre-commit Checklist section\n\nAfter modifying CLAUDE.md inventory counts (skills, agents, guides), always run the test suite to verify counts match before committing.">
+          <input type="checkbox" id="cmd-1" class="cmd-checkbox" checked data-text="Add as a top-level ## section in CLAUDE.md, before any project-specific sections\n\n## Deployment Checklist
+Before deploying: 1) Run all tests and lint checks locally 2) Verify Docker build succeeds 3) Check ECR repository exists 4) Verify file ownership/permissions on credential files 5) Confirm correct project context (don&apos;t mix up customclaw vs oh-my-customcode repos)">
           <label for="cmd-1">
-            <code class="cmd-code">After modifying CLAUDE.md inventory counts (skills, agents, guides), always run the test suite to verify counts match before committing.</code>
+            <code class="cmd-code">## Deployment Checklist
+Before deploying: 1) Run all tests and lint checks locally 2) Verify Docker build succeeds 3) Check ECR repository exists 4) Verify file ownership/permissions on credential files 5) Confirm correct project context (don&apos;t mix up customclaw vs oh-my-customcode repos)</code>
             <button class="copy-btn" onclick="copyCmdItem(1)">Copy</button>
           </label>
-          <div class="cmd-why">Skill/agent count mismatches caused test failures in multiple sessions (98→99, incorrect R021 removal), requiring reverts and fix cycles.</div>
+          <div class="cmd-why">Deployment is the #1 goal (75 sessions) with recurring friction from Docker build failures, wrong repo context, broken credentials, and missing ECR repos.</div>
         </div>
       
         <div class="claude-md-item">
-          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add under ## Testing / CI section\n\nFor CI coverage failures, do NOT try v8/c8 ignore directives — they don&apos;t work with Bun&apos;s coverage tool. Instead adjust thresholds or restructure tests.">
+          <input type="checkbox" id="cmd-2" class="cmd-checkbox" checked data-text="Add as a ## section in CLAUDE.md near the top, after project overview\n\n## Common Mistakes to Avoid
+- ALWAYS verify you are working in the correct repository before making changes (customclaw vs oh-my-customcode vs other repos)
+- Never change file ownership of .claude credential files
+- When fixing CI, check coverage tool compatibility (Bun coverage ≠ c8/v8)
+- Verify inventory counts and claims in CLAUDE.md/README.md before committing
+- Run prisma generate in CI before TypeScript compilation">
           <label for="cmd-2">
-            <code class="cmd-code">For CI coverage failures, do NOT try v8/c8 ignore directives — they don&apos;t work with Bun&apos;s coverage tool. Instead adjust thresholds or restructure tests.</code>
+            <code class="cmd-code">## Common Mistakes to Avoid
+- ALWAYS verify you are working in the correct repository before making changes (customclaw vs oh-my-customcode vs other repos)
+- Never change file ownership of .claude credential files
+- When fixing CI, check coverage tool compatibility (Bun coverage ≠ c8/v8)
+- Verify inventory counts and claims in CLAUDE.md/README.md before committing
+- Run prisma generate in CI before TypeScript compilation</code>
             <button class="copy-btn" onclick="copyCmdItem(2)">Copy</button>
           </label>
-          <div class="cmd-why">Multiple failed coverage fix approaches were attempted before discovering Bun incompatibility, wasting CI cycles.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-3" class="cmd-checkbox" checked data-text="Add under ## Deployment / Production Server section\n\nWhen working on the production server, never change ownership of .claude credential files. They must remain owned by baekenough, not root or uid 50000.">
-          <label for="cmd-3">
-            <code class="cmd-code">When working on the production server, never change ownership of .claude credential files. They must remain owned by baekenough, not root or uid 50000.</code>
-            <button class="copy-btn" onclick="copyCmdItem(3)">Copy</button>
-          </label>
-          <div class="cmd-why">Claude accidentally broke .claude credential ownership during debugging, requiring manual user intervention to fix.</div>
-        </div>
-      
-        <div class="claude-md-item">
-          <input type="checkbox" id="cmd-4" class="cmd-checkbox" checked data-text="Add under ## Workflows section\n\n세션 정리 (session cleanup) means: update MEMORY.md with session details, persist any pending progress notes, and verify all memory files are current.">
-          <label for="cmd-4">
-            <code class="cmd-code">세션 정리 (session cleanup) means: update MEMORY.md with session details, persist any pending progress notes, and verify all memory files are current.</code>
-            <button class="copy-btn" onclick="copyCmdItem(4)">Copy</button>
-          </label>
-          <div class="cmd-why">Session cleanup is one of the most frequent task types (68+ sessions) and having a clear definition prevents ambiguity.</div>
+          <div class="cmd-why">Wrong-repo confusion and credential ownership breakage appeared in multiple sessions causing significant user frustration and wasted cycles.</div>
         </div>
       
     </div>
@@ -724,43 +720,21 @@
     <div class="features-section">
       
         <div class="feature-card">
-          <div class="feature-title">Custom Skills</div>
-          <div class="feature-oneliner">Define reusable prompt workflows as markdown files triggered by /command</div>
-          <div class="feature-why"><strong>Why for you:</strong> You run session cleanup (세션 정리) in 68+ sessions and release management in 46+ sessions — these are perfect candidates for /cleanup and /release skills that encode your exact workflow steps.</div>
-          
-          <div class="feature-examples">
-            <div class="feature-example">
-              <div class="example-code-row">
-                <code class="example-code">mkdir -p .claude/skills/cleanup &amp;&amp; cat &gt; .claude/skills/cleanup/SKILL.md &lt;&lt; &apos;EOF&apos;
-# Session Cleanup
-1. Read current MEMORY.md
-2. Summarize what was accomplished this session
-3. Update MEMORY.md with session number, key changes, version bumps
-4. Verify all memory files are current
-5. Commit with message &quot;docs: session cleanup - [summary]&quot;
-EOF</code>
-                <button class="copy-btn" onclick="copyText(this)">Copy</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      
-        <div class="feature-card">
           <div class="feature-title">Hooks</div>
-          <div class="feature-oneliner">Auto-run shell commands at lifecycle events like pre-commit</div>
-          <div class="feature-why"><strong>Why for you:</strong> You had repeated CI failures from lint errors, skill count mismatches, and TypeScript type errors that could be caught locally. A pre-push hook running lint + type-check would have prevented multiple fix-amend-push cycles.</div>
+          <div class="feature-oneliner">Auto-run shell commands at specific lifecycle events like pre-commit or post-edit</div>
+          <div class="feature-why"><strong>Why for you:</strong> You have 230 &apos;wrong_approach&apos; frictions and recurring CI failures from lint/type/coverage issues. Pre-commit hooks could catch these before they reach CI, saving multiple fix-amend-push cycles.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code">// Add to .claude/settings.json
+                <code class="example-code">// .claude/settings.json
 {
   &quot;hooks&quot;: {
-    &quot;pre-commit&quot;: [
-      &quot;bun run lint --fix&quot;,
-      &quot;bun run typecheck&quot;,
-      &quot;bun test --bail 1&quot;
+    &quot;postEdit&quot;: [
+      { &quot;matcher&quot;: &quot;**/*.ts&quot;, &quot;command&quot;: &quot;npx biome check --apply ${file}&quot; }
+    ],
+    &quot;preCommit&quot;: [
+      { &quot;command&quot;: &quot;bun run lint &amp;&amp; bun run typecheck&quot; }
     ]
   }
 }</code>
@@ -772,14 +746,43 @@ EOF</code>
         </div>
       
         <div class="feature-card">
-          <div class="feature-title">Headless Mode</div>
-          <div class="feature-oneliner">Run Claude non-interactively from scripts and CI/CD</div>
-          <div class="feature-why"><strong>Why for you:</strong> You already do autonomous overnight deployments and auto-dev triage workflows. Headless mode would let you script these as reliable pipelines instead of relying on interactive sessions that can hit context limits.</div>
+          <div class="feature-title">Custom Skills</div>
+          <div class="feature-oneliner">Reusable prompts as markdown files triggered with /command</div>
+          <div class="feature-why"><strong>Why for you:</strong> You already use 175 Skill invocations and have highly repetitive workflows like session cleanup (68 sessions), deployment (75 sessions), and release management (49 sessions). Codifying these as skills eliminates the repeated instructions and wrong-approach friction.</div>
           
           <div class="feature-examples">
             <div class="feature-example">
               <div class="example-code-row">
-                <code class="example-code">claude -p &quot;Triage all open issues with label &apos;needs-triage&apos;, post analysis comments, and apply priority labels&quot; --allowedTools &quot;Bash,Read,Grep,Agent&quot; --output-format json &gt; triage-results.json</code>
+                <code class="example-code"># .claude/skills/deploy/SKILL.md
+## Deploy to Production
+1. Verify correct repo context (check git remote -v)
+2. Run full test suite: `bun test`
+3. Run lint: `bun run lint`
+4. Check Docker build: `docker build .`
+5. Verify ECR repo exists: `aws ecr describe-repositories --repository-names $REPO`
+6. Push and verify CI passes
+7. SSH to server, pull latest, restart services
+8. Verify healthcheck</code>
+                <button class="copy-btn" onclick="copyText(this)">Copy</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      
+        <div class="feature-card">
+          <div class="feature-title">Headless Mode</div>
+          <div class="feature-oneliner">Run Claude non-interactively from scripts and CI/CD</div>
+          <div class="feature-why"><strong>Why for you:</strong> You already ask Claude to &apos;handle everything while I sleep&apos; and have 75 deployment sessions. Headless mode can automate your release pipeline - lint fixes, PR creation, and deployment verification without interactive babysitting.</div>
+          
+          <div class="feature-examples">
+            <div class="feature-example">
+              <div class="example-code-row">
+                <code class="example-code"># In your CI/CD or a shell script:
+claude -p &quot;Fix all lint errors and type check failures, then run tests&quot; --allowedTools &quot;Edit,Read,Bash,Grep&quot; --max-turns 20
+
+# Nightly release check:
+claude -p &quot;Check for new Claude Code releases, run the monitor DAG, and report status&quot; --allowedTools &quot;Bash,Read&quot;</code>
                 <button class="copy-btn" onclick="copyText(this)">Copy</button>
               </div>
             </div>
@@ -795,14 +798,14 @@ EOF</code>
     <div class="patterns-section">
       
         <div class="pattern-card">
-          <div class="pattern-title">Wrong-repo exploration is your #1 time sink</div>
-          <div class="pattern-summary">Front-load file location context in your prompts to avoid Claude searching the wrong codebase.</div>
-          <div class="pattern-detail">In multiple sessions, Claude wasted significant time analyzing the wrong repository (oh-my-customcode vs customclaw) before finding the right files. This was especially costly for Airflow DAG work and release monitor fixes. Adding repo context to your initial prompt eliminates this entire class of friction.</div>
+          <div class="pattern-title">Wrong Repo Context is Your Top Friction</div>
+          <div class="pattern-summary">Add repo-identification guards to your workflow to prevent Claude from operating on the wrong project.</div>
+          <div class="pattern-detail">With 230 &apos;wrong_approach&apos; friction events, the most damaging pattern is Claude working in the wrong repository (customclaw vs oh-my-customcode). This caused cascading failures in DAG fixes and deployment sessions. A simple repo-check prompt prefix or CLAUDE.md instruction would eliminate this entire class of errors across your 1878 sessions.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Fix the claude_code_release_monitor DAG. The DAG file is in the customclaw repository under dags/. Do NOT search oh-my-customcode for it.</code>
+              <code class="copyable-prompt">Before making any changes, run `git remote -v` and confirm which repository we&apos;re in. If this is about oh-my-customcode, verify we&apos;re NOT in the customclaw repo. State the confirmed repo before proceeding.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -810,14 +813,14 @@ EOF</code>
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Batch your CI fix cycles</div>
-          <div class="pattern-summary">Ask Claude to run the full CI gate locally before pushing, not after.</div>
-          <div class="pattern-detail">128 buggy_code and 83 tool_failure friction events show a pattern of push-fail-fix-push cycles. Many sessions needed 3-4 amend-push iterations for lint, type checks, and test failures. Having Claude run the complete CI check suite locally before any git push would cut these cycles dramatically.</div>
+          <div class="pattern-title">CI Fix Cycles Are Eating Your Time</div>
+          <div class="pattern-summary">Run the full CI gate locally before pushing, every time.</div>
+          <div class="pattern-detail">Multiple sessions show a pattern of push → CI fail → fix → push → CI fail again, especially around lint, coverage thresholds, prisma generation, and TypeScript types. Your 130 &apos;buggy_code&apos; and 83 &apos;tool_failure&apos; frictions are heavily concentrated in these CI iteration loops. Running the full check suite locally before any push would cut your session count significantly.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">Before pushing, run the full CI gate locally: lint, typecheck, and all tests. Only push if everything passes. If anything fails, fix it and re-run until clean.</code>
+              <code class="copyable-prompt">Before pushing any changes, run the full CI gate locally: `bun run lint &amp;&amp; bun run typecheck &amp;&amp; bunx prisma generate &amp;&amp; bun test --coverage`. Only push after all pass. If any fail, fix and re-run all checks.</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -825,14 +828,14 @@ EOF</code>
         </div>
       
         <div class="pattern-card">
-          <div class="pattern-title">Leverage your observer agent pattern more strategically</div>
-          <div class="pattern-summary">Reserve observer agents for sessions with complex debugging, not routine cleanup.</div>
-          <div class="pattern-detail">Many observer sessions recorded minimal or no substantive content (rated slightly_helpful, unclear_from_transcript). Meanwhile, your most valuable observer sessions were during complex debugging like the phantom version bug. Focus observer agents on high-uncertainty sessions to avoid wasting context on routine work.</div>
+          <div class="pattern-title">Observer/Memory Agent Sessions Have Low ROI</div>
+          <div class="pattern-summary">Reduce observer agent usage - most sessions produce minimal value.</div>
+          <div class="pattern-detail">Many observer/memory agent sessions ended with &apos;unclear_from_transcript&apos; or &apos;slightly_helpful&apos; outcomes, capturing only file reads or minimal activity. These sessions consume quota but frequently record nothing actionable. Consider consolidating observation into the primary session&apos;s MEMORY.md updates during session cleanup instead of spawning parallel observers.</div>
           
           <div class="copyable-prompt-section">
             <div class="prompt-label">Paste into Claude Code:</div>
             <div class="copyable-prompt-row">
-              <code class="copyable-prompt">This is a complex debugging session — spawn an observer agent to track my investigation steps, key findings, and dead ends so we don&apos;t lose context if the session gets long.</code>
+              <code class="copyable-prompt">Instead of spawning a memory observer agent, add this to your session end routine: &apos;Before ending, update MEMORY.md with: what was done, key decisions made, files changed, and any unresolved items.&apos;</code>
               <button class="copy-btn" onclick="copyText(this)">Copy</button>
             </div>
           </div>
@@ -845,28 +848,28 @@ EOF</code>
 
     
     <h2 id="section-horizon">On the Horizon</h2>
-    <p class="section-intro">With 1,871 sessions and heavy use of Agent spawning and Task orchestration, this workflow is ready to evolve from interactive assistance to fully autonomous development pipelines.</p>
+    <p class="section-intro">With 1,878 sessions and 320 hours of AI-assisted development over one month, your workflow is primed to shift from interactive assistance to fully autonomous pipelines.</p>
     <div class="horizon-section">
       
         <div class="horizon-card">
           <div class="horizon-title">Autonomous Deploy-While-You-Sleep Pipelines</div>
-          <div class="horizon-possible">Your data already shows successful overnight autonomous deployments — Claude fixing lint, merging PRs, running migrations, and verifying production. This can become a repeatable pattern: kick off a release pipeline agent that handles the full cycle from version bump through CI green to production deploy, with rollback logic built in. Parallel sub-agents can handle test fixes, changelog generation, and deployment verification simultaneously.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code&apos;s Agent tool with TaskCreate to spawn parallel sub-agents for each release phase, gated by CI status checks via Bash.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>I&apos;m going to sleep. Autonomously complete this release: 1) Run all tests and fix any failures, 2) Bump version to v0.69.0, update CHANGELOG.md, 3) Create PR, wait for all CI checks to pass (retry up to 3 times if flaky), 4) Merge to develop, then merge develop to main, 5) Run `npm publish` and verify the package is live, 6) SSH to production server, pull latest image, run migrations, restart services, 7) Verify health endpoints return 200, 8) If ANY step fails after 3 retries, revert all changes and leave me a detailed report in DEPLOY_REPORT.md. Use sub-agents for independent tasks like changelog generation and test fixing.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-possible">Your most impactful session was literally &apos;handle everything while I sleep&apos;—and it worked. You can systematize this into a repeatable pattern: Claude agents that run full CI-fix-merge-deploy cycles autonomously, escalating only on authentication blockers (your #1 friction at 109 incidents). With proper credential management and pre-authorized workflows, overnight deployments become routine.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code&apos;s headless mode with `--allowedTools` to pre-authorize Bash, Read, and Write operations. Combine with GitHub Actions dispatch to trigger autonomous fix-deploy loops.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>You are an autonomous release agent. Your job: 1) Pull latest develop branch 2) Run full test suite 3) If tests fail, diagnose and fix—try up to 3 fix cycles 4) If lint fails, auto-fix with biome/prettier 5) If coverage drops, identify uncovered lines and add minimal tests 6) Once all CI passes, create a PR with a changelog summary 7) If any step fails 3 times, write a detailed blocker report to ESCALATION.md instead of continuing. Never lower thresholds or skip tests. Start now.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Self-Healing CI with Parallel Fix Agents</div>
-          <div class="horizon-possible">Wrong-approach friction (227 instances) and buggy code (128) are your top pain points, often manifesting as CI fix-amend-push loops. Instead of serial debugging, Claude can spawn parallel agents — one analyzing coverage failures, one fixing lint, one resolving type errors — then converge results into a single commit. Combined with your existing pre-commit hooks, this creates a self-healing loop where CI failures trigger automatic diagnosis and repair.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Leverage TaskCreate to spawn specialized fix agents per failure category, with the parent agent coordinating merges and re-running CI via Bash gh commands.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>CI is failing on PR #XXX. Diagnose and fix ALL failures autonomously: 1) Fetch the CI logs with `gh run view --log-failed`, 2) Categorize failures into: lint, type errors, test failures, coverage threshold, build errors, 3) Spawn a separate sub-agent for EACH category to work on fixes in parallel, 4) Each sub-agent should: identify root cause, apply minimal fix, verify locally, 5) Merge all fixes into a single commit with detailed message explaining each fix, 6) Push and monitor CI — if new failures appear, repeat the cycle (max 3 iterations), 7) Report final status. Do NOT lower coverage thresholds unless all other approaches fail.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Parallel Scout Agents for Dependency Evaluation</div>
+          <div class="horizon-possible">You already run parallel scouting (agent-lightning + harness evaluated simultaneously, RTK assessed and integrated). With 1,164 Agent sub-invocations, you&apos;re a power user of multi-agent patterns. Scale this to continuous dependency intelligence: spawn parallel agents that evaluate new releases, assess breaking changes against your codebase, and auto-generate integration PRs with test coverage.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Use Claude Code&apos;s Agent tool to spawn parallel sub-agents, each with a focused scope. Combine with your existing release monitor DAG pattern to trigger evaluations automatically on new upstream releases.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Spawn 3 parallel evaluation agents for the following packages: [PACKAGE_1], [PACKAGE_2], [PACKAGE_3]. Each agent should: 1) Clone/read the package repo and latest changelog 2) Check our codebase for all import/usage sites with Grep 3) Identify breaking changes affecting us 4) Score integration effort as LOW/MEDIUM/HIGH with justification 5) If LOW, draft a branch with the upgrade and run tests. Compile all 3 reports into a single SCOUT-REPORT.md with a prioritized recommendation table.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
         <div class="horizon-card">
-          <div class="horizon-title">Multi-Repo Issue Triage and Auto-Implementation</div>
-          <div class="horizon-possible">Your professor-triage and auto-dev workflows already chain issue analysis → prioritization → implementation → PR → merge → publish. This can scale to continuous autonomous development: a scheduler agent monitors GitHub issues across repos, triages new ones, and auto-implements P0/P1 issues end-to-end with test coverage. Your 161 TaskCreate calls show the orchestration patterns are already in place for multi-agent coordination across oh-my-customcode and customclaw simultaneously.</div>
-          <div class="horizon-tip"><strong>Getting started:</strong> Combine Agent sub-spawning with Bash-based GitHub CLI to poll issues, triage, and implement across repositories, using iterative test runs to validate each change.</div>
-          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Run an autonomous dev cycle across my repositories: 1) List all open GitHub issues labeled &apos;auto-dev&apos; or &apos;scout&apos; in oh-my-customcode and customclaw using `gh issue list`, 2) For each issue, spawn a sub-agent to: analyze requirements, check related code with Grep/Read, estimate complexity, 3) Generate a prioritized implementation plan sorted by impact/effort ratio, 4) For the top 3 issues: implement each in a separate feature branch, write or update tests to cover changes, run full test suite and fix failures iteratively until green, create a PR with structured description linking the issue, 5) For each PR, verify CI passes before moving to the next issue, 6) Produce a summary report in AUTO_DEV_REPORT.md with: issues addressed, PRs created, test coverage delta, any issues deferred with reasons.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+          <div class="horizon-title">Self-Healing CI with Test-Driven Fix Loops</div>
+          <div class="horizon-possible">Your top friction is &apos;wrong_approach&apos; (230 instances), often manifesting as multiple CI fix-amend-push cycles—coverage tools that don&apos;t work with Bun, mock pollution across files, Dockerfile path mismatches. An autonomous agent that iterates against actual test output can eliminate these spirals by treating each CI failure as a feedback signal, not a conversation topic. Instead of guessing, it runs, reads stderr, fixes, and re-runs in a tight loop.</div>
+          <div class="horizon-tip"><strong>Getting started:</strong> Structure prompts to enforce a strict red-green loop: run tests first, read only the failing output, make minimal targeted fixes, re-run. Use Claude Code&apos;s Bash tool with `set -e` pipelines to enforce fail-fast behavior.</div>
+          <div class="pattern-prompt"><div class="prompt-label">Paste into Claude Code:</div><code>Fix all failing tests using a strict loop. Rules: 1) Run the full test suite with `bun test 2&gt;&amp;1 | tail -100` 2) Read ONLY the failure output—do not re-read source files you haven&apos;t identified as failing 3) Make the MINIMAL change to fix each failure—never lower thresholds, never skip tests, never add broad ignores 4) Re-run tests after each change 5) If the same test fails 3 times with different fixes, stop and document the root cause instead of trying more approaches 6) Once green, run lint and type-check with the same discipline 7) Commit with a message listing each fix applied. Begin now—run the test suite first.</code><button class="copy-btn" onclick="copyText(this)">Copy</button></div>
         </div>
       
     </div>
@@ -875,7 +878,7 @@ EOF</code>
     
     <div class="fun-ending">
       <div class="fun-headline">"User told Claude to handle everything while they slept — woke up to a fully deployed production release"</div>
-      <div class="fun-detail">In one session, the user asked Claude to autonomously fix lint errors, merge PRs, resolve a Docker build issue, run DB migrations, and verify production deployment — all while the user was sleeping. Claude delivered it all successfully, rated &apos;essential&apos;.</div>
+      <div class="fun-detail">In one session, the user literally asked Claude to autonomously fix lint errors, merge PRs, resolve Docker build issues, run DB migrations, and verify production deployment while they went to bed. Claude pulled it all off successfully, earning an &apos;essential&apos; rating.</div>
     </div>
     
 
@@ -921,7 +924,7 @@ EOF</code>
       }
     }
     // Timezone selector for time of day chart (data is from our own analytics, not user input)
-    const rawHourCounts = {"0":515,"1":569,"2":353,"3":47,"6":11,"7":33,"8":122,"9":734,"10":1480,"11":2200,"12":1888,"13":3498,"14":3021,"15":2548,"16":2628,"17":3837,"18":2822,"19":2500,"20":1996,"21":1915,"22":2039,"23":738};
+    const rawHourCounts = {"0":515,"1":569,"2":351,"3":45,"6":107,"7":153,"8":540,"9":944,"10":1658,"11":2231,"12":1940,"13":3243,"14":3062,"15":2422,"16":2318,"17":3258,"18":2738,"19":2307,"20":1974,"21":1919,"22":1955,"23":714};
     function updateHourHistogram(offsetFromPT) {
       const periods = [
         { label: "Morning (6-12)", range: [6,7,8,9,10,11] },
@@ -974,8 +977,9 @@ EOF</code>
       }
     });
     document.getElementById('custom-offset').addEventListener('change', function() {
-      const offset = parseInt(this.value) + 8;
-      updateHourHistogram(offset);
+      const parsed = parseInt(this.value, 10);
+      if (isNaN(parsed)) return;
+      updateHourHistogram(parsed + 8);
     });
   </script>
 </body>
