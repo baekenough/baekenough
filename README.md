@@ -64,14 +64,40 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 </td>
 <td width="50%">
 
-#### 🧩 [baekenough-skills](https://github.com/baekenough/baekenough-skills)
+#### 🤖 [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex)
 
-**skills.sh 마켓플레이스용 AI 에이전트 스킬**
+**oh-my-customcode의 Codex 네이티브 포트**
 
-oh-my-customcode에서 검증된 에이전트 스킬을
-skills.sh 마켓플레이스에 배포하는 공개 스킬 레지스트리
+에이전트 스택을 Codex 중심으로 컴파일하는 프레임워크.
+48개 에이전트, 112개 스킬, 22개 룰을 하나의 흐름으로 구성
 
-`JavaScript` `Claude Code` `skills.sh` `AI Agent`
+`TypeScript` `Codex CLI` `npm` `Agent Stack`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+#### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
+
+**AI Agent Management System**
+
+멀티테넌트 AI 에이전트 생성, 배포, 오케스트레이션 플랫폼.
+MSA, 이벤트 드리븐 아키텍처, Memory API 중심으로 설계
+
+`Go` `Next.js` `Kafka` `Archived`
+
+</td>
+<td width="50%">
+
+#### 🐾 [customclaw](https://github.com/baekenough/customclaw) · `Archived`
+
+**멀티 AI 봇 운영 플랫폼**
+
+여러 AI 봇을 한 곳에서 생성·운영하는 플랫폼.
+Claude CLI 또는 Codex CLI를 프로바이더로 선택 가능
+
+`Python` `Go` `Next.js` `Archived`
 
 </td>
 </tr>
@@ -90,7 +116,7 @@ robots.txt가 크롤러를 안내하듯, agents.txt는 LLM 에이전트의
 </td>
 <td width="50%">
 
-#### 📖 [AN-notes](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com)
+#### 📖 [AN-Notes](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com)
 
 **AI 코딩 도구 커뮤니티 가이드 사이트**
 
@@ -141,13 +167,14 @@ Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 
 <div align="center">
 
-| 📌 Pinned Repositories | |
-|:---|:---|
-| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
-| [🧩 **baekenough-skills**](https://github.com/baekenough/baekenough-skills) | skills.sh 마켓플레이스용 AI 에이전트 스킬 레지스트리 |
-| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
-| [📖 **AN-notes**](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com) | AI 코딩 도구 커뮤니티 가이드 — Claude Code, GPT Codex, Gemini CLI 실전 팁 |
-| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI · `연구 종료` |
+| Repository | Status | Snapshot |
+|:---|:---:|:---|
+| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
+| [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | oh-my-customcode의 Codex 네이티브 포트 |
+| [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | 멀티테넌트 AI 에이전트 생성·배포·오케스트레이션 플랫폼 |
+| [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Claude CLI / Codex CLI 기반 멀티 AI 봇 운영 플랫폼 |
+| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | Active | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
+| [📖 **AN-Notes**](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com) | Active | AI 코딩 도구 커뮤니티 가이드 · Claude Code, GPT Codex, Gemini CLI 실전 팁 |
 
 </div>
 

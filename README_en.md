@@ -65,14 +65,40 @@ and release pipelines in a comprehensive harness
 </td>
 <td width="50%">
 
-#### 🧩 [baekenough-skills](https://github.com/baekenough/baekenough-skills)
+#### 🤖 [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex)
 
-**AI Agent Skills for skills.sh Marketplace**
+**Codex-native port of oh-my-customcode**
 
-Battle-tested agent skills from oh-my-customcode,
-published as a public skill registry on skills.sh marketplace
+Framework for compiling an AI agent stack around Codex.
+48 agents, 112 skills, and 22 rules assembled into one workflow
 
-`JavaScript` `Claude Code` `skills.sh` `AI Agent`
+`TypeScript` `Codex CLI` `npm` `Agent Stack`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+#### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
+
+**AI Agent Management System**
+
+Multi-tenant platform for creating, deploying, and orchestrating AI agents.
+Built around MSA, event-driven architecture, and a Memory API
+
+`Go` `Next.js` `Kafka` `Archived`
+
+</td>
+<td width="50%">
+
+#### 🐾 [customclaw](https://github.com/baekenough/customclaw) · `Archived`
+
+**Multi-AI bot operations platform**
+
+Platform for creating and operating multiple AI bots in one place.
+Supports Claude CLI or Codex CLI as the provider per bot
+
+`Python` `Go` `Next.js` `Archived`
 
 </td>
 </tr>
@@ -91,7 +117,7 @@ navigation for LLM agents. Up to 93% token reduction, 97.7/100 multi-LLM eval
 </td>
 <td width="50%">
 
-#### 📖 [AN-notes](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com)
+#### 📖 [AN-Notes](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com)
 
 **Community guide site for AI coding tools**
 
@@ -142,13 +168,14 @@ UBcare                  2018.09 ~ 2021.01
 
 <div align="center">
 
-| 📌 Pinned Repositories | |
-|:---|:---|
-| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | oh-my-zsh style customization framework for Claude Code |
-| [🧩 **baekenough-skills**](https://github.com/baekenough/baekenough-skills) | AI agent skill registry for skills.sh marketplace |
-| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | agents.txt open spec & reference implementation for LLM agent navigation |
-| [📖 **AN-notes**](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com) | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
-| [🎮 **clau-doom**](https://github.com/baekenough/clau-doom) | LLM-orchestrated multi-agent DOOM AI · `Research Concluded` |
+| Repository | Status | Snapshot |
+|:---|:---:|:---|
+| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh style customization framework for Claude Code |
+| [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | Codex-native port of oh-my-customcode |
+| [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | Multi-tenant platform for AI agent creation, deployment, and orchestration |
+| [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Multi-AI bot operations platform using Claude CLI or Codex CLI |
+| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | Active | agents.txt open spec & reference implementation for LLM agent navigation |
+| [📖 **AN-Notes**](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com) | Active | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
 
 </div>
 
