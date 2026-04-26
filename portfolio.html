@@ -3399,7 +3399,7 @@ SangYi Baek`,
                         })
                         .join("\n");
                     return dedented
-                        .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+                        .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")
                         .replace(/\n/g, "<br>");
                 };
                 document.querySelectorAll("[data-copy]").forEach(function (el) {
