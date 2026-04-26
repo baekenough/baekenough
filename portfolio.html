@@ -1,0 +1,3174 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>백상이 (SangYi Baek) — Software Engineer</title>
+        <meta
+            name="description"
+            content="Software Engineer. 사람을 향하는 엔지니어. AX/AI Agent, Multi-Agent Ochestration Systems."
+        />
+        <meta name="author" content="백상이 (SangYi Baek)" />
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="백상이 (SangYi Baek) — Software Engineer"
+        />
+        <meta
+            property="og:description"
+            content="Software Engineer. 사람을 향하는 엔지니어. AX/AI Agent, Multi-Agent Ochestration Systems."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://baekenough.github.io" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="백상이 (SangYi Baek) — Software Engineer"
+        />
+        <meta
+            name="twitter:description"
+            content="Software Engineer. 사람을 향하는 엔지니어. AX/AI Agent, Multi-Agent Ochestration Systems."
+        />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* =====================================================
+       CSS CUSTOM PROPERTIES — DARK / LIGHT THEMES
+    ===================================================== */
+            :root {
+                --bg-primary: #0a0a0f;
+                --bg-secondary: #0f0f18;
+                --bg-card: #12121a;
+                --bg-card-hover: #16161f;
+                --border: rgba(99, 102, 241, 0.12);
+                --border-hover: rgba(99, 102, 241, 0.45);
+                --border-subtle: rgba(255, 255, 255, 0.06);
+
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --text-tertiary: #64748b;
+                --text-on-accent: #ffffff;
+
+                --accent-indigo: #6366f1;
+                --accent-cyan: #22d3ee;
+                --accent-green: #10b981;
+                --accent-violet: #8b5cf6;
+
+                --gradient-primary: linear-gradient(
+                    135deg,
+                    #6366f1 0%,
+                    #22d3ee 100%
+                );
+                --gradient-text: linear-gradient(
+                    135deg,
+                    #6366f1 0%,
+                    #8b5cf6 40%,
+                    #22d3ee 100%
+                );
+                --gradient-subtle: linear-gradient(
+                    135deg,
+                    rgba(99, 102, 241, 0.08) 0%,
+                    rgba(34, 211, 238, 0.08) 100%
+                );
+
+                --shadow-card:
+                    0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.3);
+                --shadow-glow: 0 0 32px rgba(99, 102, 241, 0.2);
+                --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.5);
+
+                --nav-bg: rgba(10, 10, 15, 0.72);
+                --nav-border: rgba(255, 255, 255, 0.06);
+
+                --radius-sm: 8px;
+                --radius-md: 12px;
+                --radius-lg: 20px;
+                --radius-xl: 28px;
+
+                --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+                --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            [data-theme="light"] {
+                --bg-primary: #f8faff;
+                --bg-secondary: #f1f4fd;
+                --bg-card: #ffffff;
+                --bg-card-hover: #f6f8ff;
+                --border: rgba(99, 102, 241, 0.14);
+                --border-hover: rgba(99, 102, 241, 0.5);
+                --border-subtle: rgba(0, 0, 0, 0.06);
+
+                --text-primary: #0f172a;
+                --text-secondary: #475569;
+                --text-tertiary: #94a3b8;
+                --text-on-accent: #ffffff;
+
+                --shadow-card:
+                    0 2px 16px rgba(0, 0, 0, 0.07),
+                    0 1px 3px rgba(0, 0, 0, 0.05);
+                --shadow-glow: 0 0 32px rgba(99, 102, 241, 0.14);
+                --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.12);
+
+                --nav-bg: rgba(248, 250, 255, 0.8);
+                --nav-border: rgba(0, 0, 0, 0.07);
+            }
+
+            /* =====================================================
+       RESET & BASE
+    ===================================================== */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                font-size: 16px;
+            }
+
+            body {
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;
+                background-color: var(--bg-primary);
+                color: var(--text-primary);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                overflow-x: hidden;
+                transition:
+                    background-color var(--transition-base),
+                    color var(--transition-base);
+                word-break: keep-all; /* 한국어 단어 중간 줄바꿈 방지 */
+                overflow-wrap: break-word;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            img {
+                display: block;
+                max-width: 100%;
+            }
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 0 16px;
+                }
+            }
+
+            /* =====================================================
+       SCROLL ANIMATIONS
+    ===================================================== */
+            .fade-up {
+                opacity: 0;
+                transform: translateY(32px);
+                transition:
+                    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+
+            .fade-up.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .fade-up-delay-1 {
+                transition-delay: 0.1s;
+            }
+            .fade-up-delay-2 {
+                transition-delay: 0.2s;
+            }
+            .fade-up-delay-3 {
+                transition-delay: 0.3s;
+            }
+            .fade-up-delay-4 {
+                transition-delay: 0.4s;
+            }
+            .fade-up-delay-5 {
+                transition-delay: 0.5s;
+            }
+
+            /* =====================================================
+       NAVIGATION
+    ===================================================== */
+            .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                padding: 0;
+                transition: all var(--transition-base);
+            }
+
+            .nav.scrolled {
+                background: var(--nav-bg);
+                backdrop-filter: blur(20px) saturate(180%);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                border-bottom: 1px solid var(--nav-border);
+            }
+
+            .nav-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 64px;
+            }
+
+            .nav-logo {
+                font-weight: 700;
+                font-size: 1.1rem;
+                letter-spacing: -0.02em;
+                background: var(--gradient-text);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            .nav-links a {
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: var(--text-secondary);
+                padding: 6px 12px;
+                border-radius: var(--radius-sm);
+                transition:
+                    color var(--transition-fast),
+                    background var(--transition-fast);
+            }
+
+            .nav-links a:hover {
+                color: var(--text-primary);
+                background: var(--border);
+            }
+
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .theme-toggle {
+                width: 40px;
+                height: 40px;
+                border-radius: var(--radius-md);
+                border: 1px solid var(--border);
+                background: transparent;
+                color: var(--text-secondary);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all var(--transition-fast);
+                font-size: 1.1rem;
+            }
+
+            .theme-toggle:hover {
+                background: var(--border);
+                color: var(--text-primary);
+                border-color: var(--border-hover);
+            }
+
+            .nav-mobile-menu {
+                display: none;
+                width: 40px;
+                height: 40px;
+                border-radius: var(--radius-md);
+                border: 1px solid var(--border);
+                background: transparent;
+                color: var(--text-secondary);
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+                .nav-mobile-menu {
+                    display: flex;
+                }
+            }
+
+            /* =====================================================
+       HERO SECTION
+    ===================================================== */
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                padding-top: 80px;
+            }
+
+            /* Particle canvas background */
+            #particle-canvas {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                opacity: 0.6;
+            }
+
+            /* Subtle radial gradient overlay */
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        ellipse 80% 60% at 60% 40%,
+                        rgba(99, 102, 241, 0.08) 0%,
+                        transparent 70%
+                    ),
+                    radial-gradient(
+                        ellipse 60% 40% at 20% 80%,
+                        rgba(34, 211, 238, 0.06) 0%,
+                        transparent 60%
+                    );
+                pointer-events: none;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                max-width: 760px;
+            }
+
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 14px;
+                border-radius: 100px;
+                border: 1px solid var(--border);
+                background: rgba(99, 102, 241, 0.06);
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: var(--text-secondary);
+                margin-bottom: 32px;
+                font-family: "JetBrains Mono", monospace;
+                letter-spacing: -0.01em;
+            }
+
+            .hero-badge::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--accent-green);
+                box-shadow: 0 0 8px var(--accent-green);
+                animation: pulse-dot 2s ease-in-out infinite;
+            }
+
+            @keyframes pulse-dot {
+                0%,
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.5;
+                    transform: scale(0.8);
+                }
+            }
+
+            .hero-name {
+                font-size: clamp(2.8rem, 6vw, 4.5rem);
+                font-weight: 900;
+                letter-spacing: -0.04em;
+                line-height: 1.05;
+                margin-bottom: 16px;
+                background: var(--gradient-text);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .hero-title {
+                font-size: 0.875rem; /* clamp 중복 제거 — 고정값이 의도한 크기 */
+                font-weight: 500;
+                color: var(--text-secondary);
+                margin-bottom: 24px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            .hero-tagline {
+                font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+                font-weight: 500;
+                color: var(--text-primary);
+                margin-bottom: 48px;
+                line-height: 1.5;
+                min-height: 2.2em;
+            }
+
+            .cursor {
+                display: inline-block;
+                width: 2px;
+                height: 1.1em;
+                background: var(--accent-indigo);
+                margin-left: 2px;
+                vertical-align: text-bottom;
+                animation: blink 1s step-end infinite;
+            }
+
+            @keyframes blink {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            .hero-cta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-bottom: 64px;
+            }
+
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 24px;
+                border-radius: var(--radius-md);
+                font-size: 0.9rem;
+                font-weight: 600;
+                cursor: pointer;
+                border: none;
+                transition: all var(--transition-base);
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+            .btn-primary {
+                background: var(--gradient-primary);
+                color: white;
+                box-shadow: 0 0 24px rgba(99, 102, 241, 0.3);
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 32px rgba(99, 102, 241, 0.45);
+            }
+
+            .btn-secondary {
+                background: var(--bg-card);
+                color: var(--text-primary);
+                border: 1px solid var(--border);
+            }
+
+            .btn-secondary:hover {
+                background: var(--bg-card-hover);
+                border-color: var(--border-hover);
+                transform: translateY(-2px);
+            }
+
+            .hero-scroll-hint {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--text-tertiary);
+                font-size: 0.8rem;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+
+            .scroll-arrow {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .scroll-arrow span {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-right: 1.5px solid var(--text-tertiary);
+                border-bottom: 1.5px solid var(--text-tertiary);
+                transform: rotate(45deg);
+                animation: scroll-bounce 1.5s ease-in-out infinite;
+            }
+
+            .scroll-arrow span:nth-child(2) {
+                animation-delay: 0.15s;
+            }
+            .scroll-arrow span:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+
+            @keyframes scroll-bounce {
+                0%,
+                100% {
+                    opacity: 0.3;
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            /* =====================================================
+       SECTION SHARED STYLES
+    ===================================================== */
+            section {
+                padding: 100px 0;
+            }
+
+            .section-label {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--accent-indigo);
+                margin-bottom: 16px;
+                font-family: "JetBrains Mono", monospace;
+            }
+
+            .section-label::before {
+                content: "";
+                width: 24px;
+                height: 1.5px;
+                background: var(--gradient-primary);
+                border-radius: 2px;
+            }
+
+            .section-title {
+                font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                line-height: 1.15;
+                margin-bottom: 16px;
+                color: var(--text-primary);
+            }
+
+            .section-desc {
+                font-size: 1.05rem;
+                color: var(--text-secondary);
+                max-width: 580px;
+                line-height: 1.7;
+                word-break: keep-all;
+            }
+
+            .section-header {
+                margin-bottom: 64px;
+            }
+
+            /* =====================================================
+       ABOUT SECTION
+    ===================================================== */
+            #about {
+                background: var(--bg-secondary);
+                position: relative;
+            }
+
+            #about::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                    ellipse 60% 50% at 80% 50%,
+                    rgba(34, 211, 238, 0.04) 0%,
+                    transparent 70%
+                );
+                pointer-events: none;
+            }
+
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+
+            @media (max-width: 900px) {
+                .about-grid {
+                    grid-template-columns: 1fr;
+                    gap: 48px;
+                }
+            }
+
+            .about-quote {
+                font-size: 1.1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 32px;
+                padding-left: 20px;
+                border-left: 2px solid var(--accent-indigo);
+                word-break: keep-all;
+            }
+
+            .about-quote strong {
+                color: var(--text-primary);
+                font-weight: 600;
+            }
+
+            .about-highlights {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .highlight-item {
+                display: flex;
+                align-items: flex-start; /* 줄바꿈 시 dot이 상단에 고정되도록 */
+                gap: 12px;
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                word-break: keep-all;
+            }
+
+            .highlight-item .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--accent-indigo);
+                flex-shrink: 0;
+            }
+
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .stat-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-lg);
+                padding: 28px 24px;
+                transition: all var(--transition-base);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .stat-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity var(--transition-base);
+            }
+
+            .stat-card:hover {
+                border-color: var(--border-hover);
+                box-shadow: var(--shadow-glow);
+                transform: translateY(-3px);
+            }
+
+            .stat-card:hover::before {
+                opacity: 1;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+                font-weight: 800;
+                letter-spacing: -0.04em;
+                background: var(--gradient-text);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1;
+                margin-bottom: 6px;
+            }
+
+            .stat-label {
+                font-size: 0.825rem;
+                color: var(--text-tertiary);
+                font-weight: 500;
+            }
+
+            /* =====================================================
+       CAREER TIMELINE
+    ===================================================== */
+            #career {
+                position: relative;
+            }
+
+            .timeline {
+                position: relative;
+                padding: 0;
+            }
+
+            .timeline::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--accent-indigo) 10%,
+                    var(--accent-cyan) 90%,
+                    transparent
+                );
+                opacity: 0.3;
+            }
+
+            @media (max-width: 900px) {
+                .timeline::before {
+                    left: 24px;
+                }
+            }
+
+            .timeline-item {
+                display: grid;
+                grid-template-columns: 1fr 48px 1fr;
+                gap: 0 16px;
+                margin-bottom: 48px;
+                align-items: start;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-card {
+                grid-column: 1;
+                text-align: right;
+            }
+
+            /* odd 카드의 inline-flex 요소들을 오른쪽 정렬 */
+            .timeline-item:nth-child(odd) .timeline-card .timeline-industry,
+            .timeline-item:nth-child(odd) .timeline-card .timeline-duration {
+                justify-content: flex-end;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-spacer {
+                grid-column: 2;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-empty {
+                grid-column: 3;
+            }
+
+            .timeline-item:nth-child(even) .timeline-empty {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .timeline-spacer {
+                grid-column: 2;
+            }
+
+            .timeline-item:nth-child(even) .timeline-card {
+                grid-column: 3;
+            }
+
+            .timeline-dot {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: var(--bg-card);
+                border: 2px solid var(--accent-indigo);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+                position: relative;
+                z-index: 1;
+                flex-shrink: 0;
+            }
+
+            .timeline-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-lg);
+                padding: 28px;
+                transition: all var(--transition-base);
+                position: relative;
+            }
+
+            .timeline-card:hover {
+                border-color: var(--border-hover);
+                box-shadow: var(--shadow-glow);
+                transform: translateY(-3px);
+            }
+
+            .timeline-period {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.75rem;
+                color: var(--accent-cyan);
+                font-weight: 500;
+                margin-bottom: 8px;
+                letter-spacing: 0.04em;
+            }
+
+            .timeline-company {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-bottom: 4px;
+                letter-spacing: -0.02em;
+            }
+
+            .timeline-role {
+                font-size: 0.85rem;
+                color: var(--accent-indigo);
+                font-weight: 600;
+                margin-bottom: 12px;
+                letter-spacing: 0.02em;
+            }
+
+            .timeline-desc {
+                font-size: 0.875rem;
+                color: var(--text-secondary);
+                line-height: 1.65;
+                margin-bottom: 12px;
+                word-break: keep-all;
+            }
+
+            .timeline-industry {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 0.75rem;
+                color: var(--text-tertiary);
+                background: var(--border);
+                padding: 3px 10px;
+                border-radius: 100px;
+            }
+
+            .timeline-duration {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.7rem;
+                color: var(--text-tertiary);
+                margin-top: 10px;
+            }
+
+            @media (max-width: 900px) {
+                .timeline-item {
+                    grid-template-columns: 48px 1fr;
+                    margin-bottom: 32px;
+                }
+
+                .timeline-item:nth-child(odd) .timeline-card,
+                .timeline-item:nth-child(even) .timeline-card {
+                    grid-column: 2;
+                    text-align: left;
+                }
+
+                .timeline-item:nth-child(odd) .timeline-spacer,
+                .timeline-item:nth-child(even) .timeline-spacer {
+                    grid-column: 1;
+                }
+
+                .timeline-item .timeline-empty {
+                    display: none;
+                }
+            }
+
+            /* =====================================================
+       PROJECTS SECTION
+    ===================================================== */
+            #projects {
+                background: var(--bg-secondary);
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            @media (max-width: 1024px) {
+                .projects-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 640px) {
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .project-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: 28px;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                transition: all var(--transition-base);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .project-card::before {
+                content: "";
+                position: absolute;
+                inset: -1px;
+                border-radius: var(--radius-xl);
+                padding: 1px;
+                background: var(--gradient-primary);
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                opacity: 0;
+                transition: opacity var(--transition-base);
+            }
+
+            .project-card:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-elevated);
+                background: var(--bg-card-hover);
+            }
+
+            .project-card:hover::before {
+                opacity: 1;
+            }
+
+            .project-header {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-bottom: 14px;
+            }
+
+            .project-icon {
+                font-size: 1.6rem;
+                line-height: 1;
+            }
+
+            .project-links {
+                display: flex;
+                gap: 8px;
+            }
+
+            .project-link {
+                width: 34px;
+                height: 34px;
+                border-radius: var(--radius-sm);
+                background: var(--border);
+                border: 1px solid var(--border-subtle);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--text-secondary);
+                font-size: 0.9rem;
+                transition: all var(--transition-fast);
+            }
+
+            .project-link:hover {
+                background: var(--border-hover);
+                color: var(--text-primary);
+                border-color: var(--accent-indigo);
+            }
+
+            .project-name {
+                font-size: 1.05rem;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                color: var(--text-primary);
+                margin-bottom: 4px;
+            }
+
+            .project-tagline {
+                font-size: 0.8rem;
+                color: var(--accent-cyan);
+                font-weight: 500;
+                font-style: italic;
+                margin-bottom: 12px;
+            }
+
+            .project-desc {
+                font-size: 0.875rem;
+                color: var(--text-secondary);
+                line-height: 1.65;
+                flex: 1;
+                margin-bottom: 20px;
+                word-break: keep-all;
+            }
+
+            .project-highlights {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-bottom: 16px;
+            }
+
+            .highlight-badge {
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: var(--accent-green);
+                background: rgba(16, 185, 129, 0.08);
+                border: 1px solid rgba(16, 185, 129, 0.18);
+                padding: 3px 9px;
+                border-radius: 100px;
+                font-family: "JetBrains Mono", monospace;
+            }
+
+            .project-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: auto;
+            }
+
+            .tech-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .tech-tag {
+                font-size: 0.72rem;
+                font-weight: 500;
+                color: var(--text-tertiary);
+                background: var(--border);
+                border: 1px solid var(--border-subtle);
+                padding: 3px 9px;
+                border-radius: 6px;
+                font-family: "JetBrains Mono", monospace;
+                transition: all var(--transition-fast);
+            }
+
+            .project-card:hover .tech-tag {
+                border-color: rgba(99, 102, 241, 0.2);
+                color: var(--text-secondary);
+            }
+
+            .project-stars {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.8rem;
+                color: var(--text-tertiary);
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            /* =====================================================
+       TECH STACK SECTION
+    ===================================================== */
+            #tech {
+                position: relative;
+            }
+
+            .tech-categories {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .tech-category-label {
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--text-tertiary);
+                margin-bottom: 14px;
+                font-family: "JetBrains Mono", monospace;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .tech-category-label::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background: var(--border-subtle);
+            }
+
+            .tech-pills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .tech-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                padding: 8px 16px;
+                border-radius: 100px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+                transition: all var(--transition-base);
+                cursor: default;
+            }
+
+            .tech-pill:hover {
+                background: var(--gradient-subtle);
+                border-color: var(--accent-indigo);
+                color: var(--text-primary);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+            }
+
+            .tech-pill-icon {
+                font-size: 1rem;
+                line-height: 1;
+            }
+
+            /* =====================================================
+       GITHUB STATS / ACHIEVEMENTS
+    ===================================================== */
+            #github {
+                background: var(--bg-secondary);
+                position: relative;
+                overflow: hidden;
+            }
+
+            #github::after {
+                content: "";
+                position: absolute;
+                top: -100px;
+                right: -100px;
+                width: 400px;
+                height: 400px;
+                border-radius: 50%;
+                background: radial-gradient(
+                    circle,
+                    rgba(99, 102, 241, 0.06) 0%,
+                    transparent 70%
+                );
+                pointer-events: none;
+            }
+
+            .github-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+
+            @media (max-width: 768px) {
+                .github-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .github-stats-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: 32px;
+            }
+
+            .github-stat-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--border-subtle);
+            }
+
+            .github-stat-row:last-child {
+                border-bottom: none;
+            }
+
+            .github-stat-label {
+                font-size: 0.875rem;
+                color: var(--text-secondary);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .github-stat-value {
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                font-family: "JetBrains Mono", monospace;
+            }
+
+            .achievements-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: 32px;
+            }
+
+            .achievements-title {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-bottom: 24px;
+                letter-spacing: -0.02em;
+            }
+
+            .achievement-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .achievement-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px 16px;
+                background: var(--bg-secondary);
+                border-radius: var(--radius-md);
+                border: 1px solid var(--border-subtle);
+                transition: all var(--transition-fast);
+            }
+
+            .achievement-item:hover {
+                border-color: var(--border-hover);
+                background: var(--gradient-subtle);
+            }
+
+            .achievement-icon {
+                font-size: 1.3rem;
+                width: 36px;
+                text-align: center;
+                flex-shrink: 0;
+            }
+
+            .achievement-name {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-primary);
+            }
+
+            .achievement-desc {
+                font-size: 0.775rem;
+                color: var(--text-tertiary);
+            }
+
+            /* Contribution graph placeholder */
+            .contrib-graph {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: 28px;
+                grid-column: 1 / -1;
+            }
+
+            .contrib-title {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: var(--text-secondary);
+                margin-bottom: 20px;
+            }
+
+            .contrib-grid {
+                display: grid;
+                grid-template-columns: repeat(53, 1fr);
+                gap: 3px;
+                overflow: hidden;
+            }
+
+            .contrib-cell {
+                aspect-ratio: 1;
+                border-radius: 2px;
+                background: var(--border-subtle);
+            }
+
+            .contrib-cell.level-1 {
+                background: rgba(99, 102, 241, 0.2);
+            }
+            .contrib-cell.level-2 {
+                background: rgba(99, 102, 241, 0.45);
+            }
+            .contrib-cell.level-3 {
+                background: rgba(99, 102, 241, 0.7);
+            }
+            .contrib-cell.level-4 {
+                background: rgba(99, 102, 241, 1);
+            }
+
+            /* =====================================================
+       CONTACT / FOOTER
+    ===================================================== */
+            #contact {
+                padding: 100px 0 60px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            #contact::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                    ellipse 70% 60% at 50% 30%,
+                    rgba(99, 102, 241, 0.07) 0%,
+                    transparent 70%
+                );
+                pointer-events: none;
+            }
+
+            .contact-content {
+                position: relative;
+                z-index: 2;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .contact-title {
+                font-size: clamp(1.8rem, 4vw, 2.75rem);
+                font-weight: 800;
+                letter-spacing: -0.04em;
+                margin-bottom: 16px;
+            }
+
+            .contact-desc {
+                font-size: 1.05rem;
+                color: var(--text-secondary);
+                margin-bottom: 48px;
+                line-height: 1.7;
+                word-break: keep-all;
+            }
+
+            .contact-cta {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-bottom: 64px;
+            }
+
+            .footer {
+                border-top: 1px solid var(--border-subtle);
+                padding-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .footer-copy {
+                font-size: 0.85rem;
+                color: var(--text-tertiary);
+            }
+
+            .footer-links {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .footer-links a {
+                font-size: 0.85rem;
+                color: var(--text-tertiary);
+                transition: color var(--transition-fast);
+            }
+
+            .footer-links a:hover {
+                color: var(--accent-indigo);
+            }
+
+            /* =====================================================
+       PRINT STYLES
+    ===================================================== */
+            @media print {
+                .nav,
+                #particle-canvas,
+                .theme-toggle {
+                    display: none;
+                }
+                body {
+                    background: white;
+                    color: black;
+                }
+                .hero {
+                    min-height: auto;
+                    padding: 40px 0;
+                }
+                section {
+                    padding: 40px 0;
+                    break-inside: avoid;
+                }
+                .fade-up {
+                    opacity: 1;
+                    transform: none;
+                }
+                * {
+                    animation: none !important;
+                    transition: none !important;
+                }
+                .hero-name,
+                .section-title,
+                .stat-number {
+                    color: #6366f1 !important;
+                    -webkit-text-fill-color: #6366f1 !important;
+                }
+                .project-card,
+                .timeline-card,
+                .stat-card {
+                    border: 1px solid #e2e8f0;
+                }
+                .btn-primary {
+                    background: #6366f1;
+                }
+            }
+
+            /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+            @media (prefers-reduced-motion: reduce) {
+                .fade-up {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                }
+                .cursor {
+                    animation: none;
+                    opacity: 1;
+                }
+                * {
+                    animation-duration: 0.01ms !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+
+            /* =====================================================
+       MOBILE MENU OVERLAY
+    ===================================================== */
+            .mobile-menu {
+                position: fixed;
+                inset: 0;
+                z-index: 99;
+                background: var(--bg-primary);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity var(--transition-base);
+            }
+
+            .mobile-menu.open {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .mobile-menu a {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                letter-spacing: -0.02em;
+                transition: color var(--transition-fast);
+            }
+
+            .mobile-menu a:hover {
+                color: var(--accent-indigo);
+            }
+
+            .mobile-menu-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                border-radius: var(--radius-md);
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+                font-size: 1.2rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* =====================================================
+       UTILITY
+    ===================================================== */
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            .gradient-text {
+                background: var(--gradient-text);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            /* Timeline mobile */
+            .timeline-spacer {
+                display: flex;
+                justify-content: center;
+                padding-top: 8px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <script id="content">
+/* =====================================
+   카피 편집 가이드
+   - 텍스트: 백틱으로 감싸져 있음
+   - 줄바꿈: 엔터 -> <br> 자동 변환
+   - 굵게: **텍스트** -> <strong>
+   - 키 이름 변경 금지
+   ===================================== */
+const CONTENT = {
+  meta: {
+    title: `백상이 (SangYi Baek) — Software Engineer`,
+    description: `Software Engineer. 사람을 향하는 엔지니어. AX/AI Agent, Multi-Agent Ochestration Systems.`,
+  },
+  nav: {
+    logo: `백상이`,
+    about: `About`,
+    career: `Career`,
+    projects: `Projects`,
+    tech: `Tech`,
+    github: `GitHub`,
+    contact: `Contact`,
+  },
+  hero: {
+    badge: `Open to opportunities`,
+    name: `백상이
+SangYi Baek`,
+    title: `Software Engineer · 8 Years`,
+    taglines: [
+      `사람을 향하는 엔지니어`,
+      `AX/AI Agent, Multi-Agent Ochestration Systems`,
+      `복잡한 것을 단순하게, 불가능을 가능하게`,
+    ],
+    ctaGithub: `GitHub`,
+    ctaEmail: `이메일 보내기`,
+    scrollHint: `Scroll to explore`,
+  },
+  about: {
+    label: `About`,
+    heading: `사람을 향하는
+엔지니어링`,
+    quote: `"기술은 목적이 아니라 수단입니다. 저는 **실제 문제를 해결하고, 더 나은 경험을 만드는** 엔지니어링을 추구합니다. Healthcare AI 분야에서 쌓아온 8년의 경험을 바탕으로, 복잡한 시스템을 단순하고 신뢰할 수 있게 만드는 일을 합니다."`,
+    highlights: [
+      `Healthcare IT / AI 도메인 전문성 (의료기기 소프트웨어, SaMD)`,
+      `Multi-Agent 오케스트레이션 시스템 설계 및 구현`,
+      `On-premise 솔루션 최적화 및 엔터프라이즈 배포 경험`,
+      `Go, TypeScript, Python, Rust 풀스택 개발`,
+      `오픈소스 기여 및 커뮤니티 빌딩 (oh-my-customcode)`,
+    ],
+    stats: [
+      { value: 8,  label: `Years Experience` },
+      { value: 15, label: `Public Repos` },
+      { value: 30, label: `GitHub Stars` },
+      { value: 4,  label: `Companies` },
+    ],
+  },
+  career: {
+    label: `Career`,
+    heading: `경력 타임라인`,
+    desc: `Healthcare IT/AI 분야를 중심으로 기술 지원, 개발, 솔루션 엔지니어링까지 다양한 역할을 경험했습니다.`,
+    items: [
+      { period: `2025.02 — 2026.02`, company: `Mediwhale`, role: `System Engineer`, desc: `SaMD(의료기기 소프트웨어) 백엔드 개발, PACS 시스템 연동 및 PyQt 기반 데스크톱 애플리케이션 개발.`, industry: `🏥 Healthcare AI / 의료 영상 분석`, duration: `// 1년 1개월` },
+      { period: `2022.07 — 2025.01`, company: `Vuno`, role: `Solutions Engineer`, desc: `EMR 시스템 연동, On-Premise 솔루션 최적화, 의료기관별 맞춤 배포 및 기술 지원. AI 의료 영상 진단 솔루션의 현장 구현을 담당.`, industry: `🏥 Healthcare AI / 의료 영상 진단`, duration: `// 2년 7개월` },
+      { period: `2021.02 — 2022.07`, company: `HD Junction`, role: `Technical Support Engineer`, desc: `웹 애플리케이션 개발, 데이터베이스 마이그레이션, 자동화 시스템 구축. FHIR 표준 기반 Healthcare IT 솔루션 개발.`, industry: `🏥 Healthcare IT / FHIR 표준`, duration: `// 1년 6개월` },
+      { period: `2018.09 — 2021.01`, company: `UBcare`, role: `Technical Product Manager`, desc: `TCP/IP 프린트 솔루션 PM, 의료 인프라 관리 및 기술 지원. EMR 시스템 전반의 운영 및 유지보수 담당.`, industry: `🏥 Healthcare IT / EMR`, duration: `// 2년 5개월` },
+    ],
+  },
+  projects: {
+    label: `Projects`,
+    heading: `Featured Projects`,
+    desc: `사이드 프로젝트를 통해 탐구한 아이디어들. 실제 문제를 해결하고, 새로운 기술을 검증합니다.`,
+    items: [
+      { name: `oh-my-customcode`, tagline: `"Your AI Agent Stack. Compiled, Not Configured."`, desc: `Claude Code를 위한 oh-my-zsh 스타일 커스터마이징 프레임워크. 48개 전문 에이전트, 112개 스킬, 22개 거버넌스 규칙으로 구성된 멀티 에이전트 오케스트레이션 시스템.`, highlights: [`220+ releases`, `906 commits`, `4 contributors`], techs: [`TypeScript`, `Multi-Agent`, `Claude Code`], stars: 20 },
+      { name: `AgentNav`, tagline: `"agents.txt — Machine-readable docs for AI agents"`, desc: `robots.txt가 크롤러를 안내하듯, AI 에이전트를 위한 문서 사이트맵 표준 구현체. 651페이지 문서를 3,200 토큰으로 색인하여 93% 토큰 절감 달성.`, highlights: [`93% token savings`, `Grade A (Claude & GPT)`], techs: [`HTML`, `Python`, `Cloudflare`], stars: 2 },
+      { name: `clau-doom`, tagline: `"LLM-orchestrated Multi-Agent DOOM AI"`, desc: `LLM이 게임플레이 중 호출 없이 DOOM AI를 최적화할 수 있는지 연구. Rust 실시간 결정 + Claude 비동기 분석. 45개 실험, 8,850 에피소드 완료.`, highlights: [`116 formal findings`, `8,850 episodes`], techs: [`Rust`, `Go`, `DuckDB`], stars: 2 },
+      { name: `AN-notes`, tagline: `"AI Native Notes — AI 코딩 도구 실전 가이드"`, desc: `Claude Code, GPT Codex, Gemini CLI 3대 AI 코딩 도구의 실전 팁 49개를 한국어/영어/스페인어로 제공하는 커뮤니티 가이드 사이트.`, highlights: [`49 practical tips`, `3 languages`], techs: [`Next.js`, `TypeScript`, `Tailwind`], stars: 1 },
+      { name: `second-brain`, tagline: `"LLM 큐레이션 프라이빗 검색 엔진"`, desc: `Slack, GitHub, Google Drive, 파일시스템을 하이브리드 검색(BM25 + pgvector)하고 LLM이 결과를 큐레이션하는 프라이빗 검색 엔진.`, highlights: [`34.5MB binary`, `Korean NLP`], techs: [`Go`, `pgvector`, `Kubernetes`], stars: 2 },
+      { name: `TextSwift`, tagline: `"Instant in-page translation Chrome extension"`, desc: `웹페이지 텍스트를 선택하면 즉시 번역하는 Chrome 확장 프로그램. 로컬 Codex CLI 인증으로 API 키 노출 없는 보안 설계.`, highlights: [`Chrome Web Store`, `6 languages`], techs: [`TypeScript`, `Chrome Ext`, `Native Msg`], stars: 4 },
+    ],
+  },
+  tech: {
+    label: `Tech Stack`,
+    heading: `기술 스택`,
+    desc: `다양한 도메인에서 검증한 기술들. 도구에 집착하지 않고, 문제에 맞는 최선을 선택합니다.`,
+    categories: {
+      languages: `Languages`, frontend: `Frontend`, backend: `Backend`,
+      database: `Database`, infrastructure: `Infrastructure`, aiml: `AI / ML`, tools: `Tools`,
+    },
+  },
+  github: {
+    label: `GitHub`,
+    heading: `GitHub Activity`,
+    desc: `오픈소스 기여와 지속적인 코드 작성을 통해 성장합니다.`,
+    statsTitle: `GitHub Stats`,
+    achievementsTitle: `GitHub Achievements`,
+    achievements: [
+      { name: `Starstruck`, desc: `Created a repository with significant stars` },
+      { name: `Pair Extraordinaire ×4`, desc: `Co-authored commits with collaborators` },
+      { name: `Pull Shark ×3`, desc: `Opened pull requests that were merged` },
+      { name: `YOLO`, desc: `Merged a pull request without review` },
+      { name: `Quickdraw`, desc: `Closed an issue or PR within 5 minutes` },
+    ],
+    contribTitle: `Contribution Activity — 2025`,
+  },
+  contact: {
+    label: `Contact`,
+    headingPart1: `함께 만들어 갈`,
+    headingPart2: `다음 프로젝트`,
+    desc: `새로운 기회, 협업 제안, 또는 그냥 기술 이야기를 나누고 싶으시다면 언제든지 연락해 주세요.`,
+    footerCopy: `© 2026 백상이. Built with passion.`,
+  },
+};
+    </script>
+        <!-- ===== MOBILE MENU ===== -->
+        <nav
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="모바일 메뉴"
+            role="dialog"
+            aria-modal="true"
+        >
+            <button
+                class="mobile-menu-close"
+                id="mobileMenuClose"
+                aria-label="메뉴 닫기"
+            >
+                ✕
+            </button>
+            <a href="#about" onclick="closeMobileMenu()" data-copy="nav.about">About</a>
+            <a href="#career" onclick="closeMobileMenu()" data-copy="nav.career">Career</a>
+            <a href="#projects" onclick="closeMobileMenu()" data-copy="nav.projects">Projects</a>
+            <a href="#tech" onclick="closeMobileMenu()" data-copy="nav.tech">Tech</a>
+            <a href="#github" onclick="closeMobileMenu()" data-copy="nav.github">GitHub</a>
+            <a href="#contact" onclick="closeMobileMenu()" data-copy="nav.contact">Contact</a>
+        </nav>
+
+        <!-- ===== NAVBAR ===== -->
+        <header class="nav" id="navbar" role="banner">
+            <div class="container">
+                <div class="nav-inner">
+                    <a
+                        href="#"
+                        class="nav-logo"
+                        aria-label="백상이 포트폴리오 홈"
+                         data-copy="nav.logo"></a
+                    >
+                    <nav class="nav-links" aria-label="주요 네비게이션">
+                        <a href="#about" data-copy="nav.about">About</a>
+                        <a href="#career" data-copy="nav.career">Career</a>
+                        <a href="#projects" data-copy="nav.projects">Projects</a>
+                        <a href="#tech" data-copy="nav.tech">Tech</a>
+                        <a href="#github" data-copy="nav.github">GitHub</a>
+                        <a href="#contact" data-copy="nav.contact">Contact</a>
+                    </nav>
+                    <div class="nav-right">
+                        <button
+                            class="theme-toggle"
+                            id="themeToggle"
+                            aria-label="테마 전환"
+                            title="라이트/다크 모드 전환"
+                        >
+                            🌙
+                        </button>
+                        <button
+                            class="nav-mobile-menu"
+                            id="mobileMenuBtn"
+                            aria-label="메뉴 열기"
+                            aria-expanded="false"
+                        >
+                            ☰
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== HERO ===== -->
+        <main>
+            <section class="hero" id="home" aria-label="소개">
+                <canvas id="particle-canvas" aria-hidden="true"></canvas>
+                <div class="container">
+                    <div class="hero-content">
+                        <div
+                            class="hero-badge"
+                            aria-label="현재 상태: 새로운 기회 모색 중"
+                        >
+                            <span data-copy="hero.badge">Open to opportunities</span>
+                        </div>
+                        <h1 class="hero-name" data-copy="hero.name"></h1>
+                        <p class="hero-title" data-copy="hero.title"></p>
+                        <p class="hero-tagline" id="tagline" aria-live="polite">
+                            <span id="typed-text"></span
+                            ><span class="cursor" aria-hidden="true"></span>
+                        </p>
+                        <div class="hero-cta">
+                            <a
+                                href="https://github.com/baekenough"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-primary"
+                                aria-label="GitHub 프로필 열기"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                    />
+                                </svg>
+                                <span data-copy="hero.ctaGithub">GitHub</span>
+                            </a>
+                            <a
+                                href="mailto:baekenough@gmail.com"
+                                class="btn btn-secondary"
+                                aria-label="이메일 보내기"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span data-copy="hero.ctaEmail">이메일 보내기</span>
+                            </a>
+                        </div>
+                        <div class="hero-scroll-hint" aria-hidden="true">
+                            <div class="scroll-arrow">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span data-copy="hero.scrollHint">Scroll to explore</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== ABOUT ===== -->
+            <section id="about" aria-labelledby="about-heading">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="fade-up">
+                            <p class="section-label" data-copy="about.label">About</p>
+                            <h2 class="section-title" id="about-heading" data-copy="about.heading"></h2>
+                            <blockquote class="about-quote" data-copy="about.quote"></blockquote>
+                            <div class="about-highlights">
+                                <div class="highlight-item"><span class="dot"></span><span data-copy="about.highlights[0]"></span></div>
+                                <div class="highlight-item"><span class="dot"></span><span data-copy="about.highlights[1]"></span></div>
+                                <div class="highlight-item"><span class="dot"></span><span data-copy="about.highlights[2]"></span></div>
+                                <div class="highlight-item"><span class="dot"></span><span data-copy="about.highlights[3]"></span></div>
+                                <div class="highlight-item"><span class="dot"></span><span data-copy="about.highlights[4]"></span></div>
+                            </div>
+                        </div>
+                        <div class="stats-grid fade-up fade-up-delay-2">
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="8">0</div>
+                                <div class="stat-label" data-copy="about.stats[0].label">Years Experience</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="15">
+                                    0
+                                </div>
+                                <div class="stat-label" data-copy="about.stats[1].label">Public Repos</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="30">
+                                    0
+                                </div>
+                                <div class="stat-label" data-copy="about.stats[2].label">GitHub Stars</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="4">0</div>
+                                <div class="stat-label" data-copy="about.stats[3].label">Companies</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== CAREER ===== -->
+            <section id="career" aria-labelledby="career-heading">
+                <div class="container">
+                    <div class="section-header fade-up">
+                        <p class="section-label" data-copy="career.label">Career</p>
+                        <h2 class="section-title" id="career-heading" data-copy="career.heading"></h2>
+                        <p class="section-desc" data-copy="career.desc"></p>
+                    </div>
+                    <div class="timeline" role="list">
+                        <!-- Mediwhale -->
+                        <div class="timeline-item fade-up" role="listitem">
+                            <div class="timeline-card">
+                                <p class="timeline-period" data-copy="career.items[0].period">2025.02 — 2026.02</p>
+                                <h3 class="timeline-company" data-copy="career.items[0].company">Mediwhale</h3>
+                                <p class="timeline-role" data-copy="career.items[0].role">System Engineer</p>
+                                <p class="timeline-desc" data-copy="career.items[0].desc"></p>
+                                <span class="timeline-industry"
+                                    >🏥 Healthcare AI / 의료 영상 분석</span
+                                >
+                                <p class="timeline-duration" data-copy="career.items[0].duration">// 1년 1개월</p>
+                            </div>
+                            <div class="timeline-spacer">
+                                <div class="timeline-dot" aria-hidden="true">
+                                    🔬
+                                </div>
+                            </div>
+                            <div class="timeline-empty"></div>
+                        </div>
+
+                        <!-- Vuno -->
+                        <div
+                            class="timeline-item fade-up fade-up-delay-1"
+                            role="listitem"
+                        >
+                            <div class="timeline-empty"></div>
+                            <div class="timeline-spacer">
+                                <div class="timeline-dot" aria-hidden="true">
+                                    🤖
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <p class="timeline-period" data-copy="career.items[1].period">2022.07 — 2025.01</p>
+                                <h3 class="timeline-company" data-copy="career.items[1].company">Vuno</h3>
+                                <p class="timeline-role" data-copy="career.items[1].role">Solutions Engineer</p>
+                                <p class="timeline-desc" data-copy="career.items[1].desc"></p>
+                                <span class="timeline-industry"
+                                    >🏥 Healthcare AI / 의료 영상 진단</span
+                                >
+                                <p class="timeline-duration" data-copy="career.items[1].duration">// 2년 7개월</p>
+                            </div>
+                        </div>
+
+                        <!-- HD Junction -->
+                        <div
+                            class="timeline-item fade-up fade-up-delay-2"
+                            role="listitem"
+                        >
+                            <div class="timeline-card">
+                                <p class="timeline-period" data-copy="career.items[2].period">2021.02 — 2022.07</p>
+                                <h3 class="timeline-company" data-copy="career.items[2].company">HD Junction</h3>
+                                <p class="timeline-role" data-copy="career.items[2].role">Technical Support Engineer</p>
+                                <p class="timeline-desc" data-copy="career.items[2].desc"></p>
+                                <span class="timeline-industry"
+                                    >🏥 Healthcare IT / FHIR 표준</span
+                                >
+                                <p class="timeline-duration" data-copy="career.items[2].duration">// 1년 6개월</p>
+                            </div>
+                            <div class="timeline-spacer">
+                                <div class="timeline-dot" aria-hidden="true">
+                                    💻
+                                </div>
+                            </div>
+                            <div class="timeline-empty"></div>
+                        </div>
+
+                        <!-- UBcare -->
+                        <div
+                            class="timeline-item fade-up fade-up-delay-3"
+                            role="listitem"
+                        >
+                            <div class="timeline-empty"></div>
+                            <div class="timeline-spacer">
+                                <div class="timeline-dot" aria-hidden="true">
+                                    📋
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <p class="timeline-period" data-copy="career.items[3].period">2018.09 — 2021.01</p>
+                                <h3 class="timeline-company" data-copy="career.items[3].company">UBcare</h3>
+                                <p class="timeline-role" data-copy="career.items[3].role">Technical Product Manager</p>
+                                <p class="timeline-desc" data-copy="career.items[3].desc"></p>
+                                <span class="timeline-industry"
+                                    >🏥 Healthcare IT / EMR</span
+                                >
+                                <p class="timeline-duration" data-copy="career.items[3].duration">// 2년 5개월</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== PROJECTS ===== -->
+            <section id="projects" aria-labelledby="projects-heading">
+                <div class="container">
+                    <div class="section-header fade-up">
+                        <p class="section-label" data-copy="projects.label">Projects</p>
+                        <h2 class="section-title" id="projects-heading" data-copy="projects.heading"></h2>
+                        <p class="section-desc" data-copy="projects.desc"></p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- oh-my-customcode -->
+                        <article
+                            class="project-card fade-up"
+                            aria-label="oh-my-customcode 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🤖
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/oh-my-customcode"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="oh-my-customcode GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[0].name">oh-my-customcode</h3>
+                            <p class="project-tagline" data-copy="projects.items[0].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[0].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[0].highlights[0]">220+ releases</span>
+                                <span class="highlight-badge" data-copy="projects.items[0].highlights[1]">906 commits</span>
+                                <span class="highlight-badge" data-copy="projects.items[0].highlights[2]">4 contributors</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Multi-Agent</span>
+                                    <span class="tech-tag">Claude Code</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 20개"
+                                >
+                                    ⭐ 20
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- AgentNav -->
+                        <article
+                            class="project-card fade-up fade-up-delay-1"
+                            aria-label="AgentNav 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🗺️
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/AgentNav"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="AgentNav GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[1].name">AgentNav</h3>
+                            <p class="project-tagline" data-copy="projects.items[1].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[1].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[1].highlights[0]">93% token savings</span>
+                                <span class="highlight-badge"
+                                    >Grade A (Claude & GPT)</span
+                                >
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Cloudflare</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 2개"
+                                >
+                                    ⭐ 2
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- clau-doom -->
+                        <article
+                            class="project-card fade-up fade-up-delay-2"
+                            aria-label="clau-doom 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🎮
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/clau-doom"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="clau-doom GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[2].name">clau-doom</h3>
+                            <p class="project-tagline" data-copy="projects.items[2].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[2].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[2].highlights[0]">116 formal findings</span>
+                                <span class="highlight-badge" data-copy="projects.items[2].highlights[1]">8,850 episodes</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Rust</span>
+                                    <span class="tech-tag">Go</span>
+                                    <span class="tech-tag">DuckDB</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 2개"
+                                >
+                                    ⭐ 2
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- AN-notes -->
+                        <article
+                            class="project-card fade-up fade-up-delay-1"
+                            aria-label="AN-notes 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    📚
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/AN-notes"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="AN-notes GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://annotes.baekenough.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="AN-notes 라이브 사이트 열기"
+                                        title="Live Site"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[3].name">AN-notes</h3>
+                            <p class="project-tagline" data-copy="projects.items[3].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[3].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[3].highlights[0]">49 practical tips</span>
+                                <span class="highlight-badge" data-copy="projects.items[3].highlights[1]">3 languages</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Tailwind</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 1개"
+                                >
+                                    ⭐ 1
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- second-brain -->
+                        <article
+                            class="project-card fade-up fade-up-delay-2"
+                            aria-label="second-brain 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🧠
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/second-brain"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="second-brain GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[4].name">second-brain</h3>
+                            <p class="project-tagline" data-copy="projects.items[4].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[4].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[4].highlights[0]">34.5MB binary</span>
+                                <span class="highlight-badge" data-copy="projects.items[4].highlights[1]">Korean NLP</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Go</span>
+                                    <span class="tech-tag">pgvector</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 2개"
+                                >
+                                    ⭐ 2
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- TextSwift -->
+                        <article
+                            class="project-card fade-up fade-up-delay-3"
+                            aria-label="TextSwift 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    ⚡
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/textswift"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="TextSwift GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-name" data-copy="projects.items[5].name">TextSwift</h3>
+                            <p class="project-tagline" data-copy="projects.items[5].tagline"></p>
+                            <p class="project-desc" data-copy="projects.items[5].desc"></p>
+                            <div class="project-highlights">
+                                <span class="highlight-badge" data-copy="projects.items[5].highlights[0]">Chrome Web Store</span>
+                                <span class="highlight-badge" data-copy="projects.items[5].highlights[1]">6 languages</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Chrome Ext</span>
+                                    <span class="tech-tag">Native Msg</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 4개"
+                                >
+                                    ⭐ 4
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== TECH STACK ===== -->
+            <section id="tech" aria-labelledby="tech-heading">
+                <div class="container">
+                    <div class="section-header fade-up">
+                        <p class="section-label" data-copy="tech.label">Tech Stack</p>
+                        <h2 class="section-title" id="tech-heading" data-copy="tech.heading"></h2>
+                        <p class="section-desc" data-copy="tech.desc"></p>
+                    </div>
+                    <div class="tech-categories">
+                        <div class="fade-up">
+                            <p class="tech-category-label" data-copy="tech.categories.languages">Languages</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="프로그래밍 언어"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🔷</span
+                                    >TypeScript
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🐹</span
+                                    >Go
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🐍</span
+                                    >Python
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🦀</span
+                                    >Rust
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🌐</span
+                                    >HTML/CSS
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >📝</span
+                                    >MDX
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-1">
+                            <p class="tech-category-label" data-copy="tech.categories.frontend">Frontend</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="프론트엔드 기술"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >▲</span
+                                    >Next.js
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >⚛️</span
+                                    >React
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🎨</span
+                                    >Tailwind CSS
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🧩</span
+                                    >Chrome Extensions
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🖥️</span
+                                    >PyQt
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-2">
+                            <p class="tech-category-label" data-copy="tech.categories.backend">Backend</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="백엔드 기술"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >⚡</span
+                                    >FastAPI
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🔗</span
+                                    >gRPC / Tonic
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🌐</span
+                                    >REST API
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🔌</span
+                                    >TCP/IP
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >💊</span
+                                    >FHIR / HL7
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-1">
+                            <p class="tech-category-label" data-copy="tech.categories.database">Database</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="데이터베이스 기술"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🐘</span
+                                    >PostgreSQL
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🦆</span
+                                    >DuckDB
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🔍</span
+                                    >OpenSearch
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >📐</span
+                                    >pgvector
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-2">
+                            <p class="tech-category-label" data-copy="tech.categories.infrastructure">Infrastructure</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="인프라 기술"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🐳</span
+                                    >Docker
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >☸️</span
+                                    >Kubernetes
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🌤️</span
+                                    >Cloudflare
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >📡</span
+                                    >Nginx
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-3">
+                            <p class="tech-category-label" data-copy="tech.categories.aiml">AI / ML</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="AI/ML 기술"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🤖</span
+                                    >Claude API
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🧠</span
+                                    >OpenAI API
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🕸️</span
+                                    >Multi-Agent Systems
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🔎</span
+                                    >RAG
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🎮</span
+                                    >VizDoom
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-up fade-up-delay-1">
+                            <p class="tech-category-label" data-copy="tech.categories.tools">Tools</p>
+                            <div
+                                class="tech-pills"
+                                role="list"
+                                aria-label="개발 도구"
+                            >
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >🌿</span
+                                    >Git
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >✨</span
+                                    >Claude Code
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >💡</span
+                                    >Codex CLI
+                                </div>
+                                <div class="tech-pill" role="listitem">
+                                    <span
+                                        class="tech-pill-icon"
+                                        aria-hidden="true"
+                                        >💎</span
+                                    >Gemini CLI
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== GITHUB ACTIVITY ===== -->
+            <section id="github" aria-labelledby="github-heading">
+                <div class="container">
+                    <div class="section-header fade-up">
+                        <p class="section-label" data-copy="github.label">GitHub</p>
+                        <h2 class="section-title" id="github-heading" data-copy="github.heading"></h2>
+                        <p class="section-desc" data-copy="github.desc"></p>
+                    </div>
+
+                    <div class="github-grid">
+                        <!-- Stats -->
+                        <div class="github-stats-card fade-up">
+                            <h3
+                                style="
+                                    font-size: 1rem;
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    margin-bottom: 20px;
+                                    letter-spacing: -0.02em;
+                                "
+                            ><span data-copy="github.statsTitle">GitHub Stats</span></h3>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >📦 Public Repos</span
+                                >
+                                <span class="github-stat-value">15</span>
+                            </div>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >⭐ Total Stars</span
+                                >
+                                <span class="github-stat-value">30</span>
+                            </div>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >👥 Followers</span
+                                >
+                                <span class="github-stat-value">11</span>
+                            </div>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >🔀 Forks Received</span
+                                >
+                                <span class="github-stat-value">4+</span>
+                            </div>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >📝 Total Commits</span
+                                >
+                                <span class="github-stat-value">1,200+</span>
+                            </div>
+                            <div class="github-stat-row">
+                                <span class="github-stat-label"
+                                    >🚀 Releases</span
+                                >
+                                <span class="github-stat-value">220+</span>
+                            </div>
+                        </div>
+
+                        <!-- Achievements -->
+                        <div class="achievements-card fade-up fade-up-delay-1">
+                            <h3 class="achievements-title" data-copy="github.achievementsTitle">GitHub Achievements</h3>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">⭐</div>
+                                    <div>
+                                        <div class="achievement-name" data-copy="github.achievements[0].name">Starstruck</div>
+                                        <div class="achievement-desc" data-copy="github.achievements[0].desc">Created a repository with
+                                            significant stars</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🦅</div>
+                                    <div>
+                                        <div class="achievement-name" data-copy="github.achievements[1].name">Pair Extraordinaire ×4</div>
+                                        <div class="achievement-desc" data-copy="github.achievements[1].desc">Co-authored commits with
+                                            collaborators</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🦈</div>
+                                    <div>
+                                        <div class="achievement-name" data-copy="github.achievements[2].name">Pull Shark ×3</div>
+                                        <div class="achievement-desc" data-copy="github.achievements[2].desc">Opened pull requests that were
+                                            merged</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🎯</div>
+                                    <div>
+                                        <div class="achievement-name" data-copy="github.achievements[3].name">YOLO</div>
+                                        <div class="achievement-desc" data-copy="github.achievements[3].desc">Merged a pull request without review</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">⚡</div>
+                                    <div>
+                                        <div class="achievement-name" data-copy="github.achievements[4].name">Quickdraw</div>
+                                        <div class="achievement-desc" data-copy="github.achievements[4].desc">Closed an issue or PR within 5
+                                            minutes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contribution Graph -->
+                        <div
+                            class="contrib-graph fade-up"
+                            aria-label="GitHub 기여 그래프 (시각화)"
+                        >
+                            <p class="contrib-title" data-copy="github.contribTitle">Contribution Activity — 2025</p>
+                            <div
+                                class="contrib-grid"
+                                aria-hidden="true"
+                                id="contribGrid"
+                            ></div>
+                            <p
+                                style="
+                                    font-size: 0.75rem;
+                                    color: var(--text-tertiary);
+                                    margin-top: 12px;
+                                    text-align: right;
+                                    font-family:
+                                        &quot;JetBrains Mono&quot;, monospace;
+                                "
+                            >
+                                github.com/baekenough
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== CONTACT / FOOTER ===== -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <div class="container">
+                    <div class="contact-content fade-up">
+                        <p class="section-label" style="justify-content: center" data-copy="contact.label">Contact</p>
+                        <h2 class="contact-title" id="contact-heading"><span data-copy="contact.headingPart1">함께 만들어 갈</span><br><span class="gradient-text" data-copy="contact.headingPart2">다음 프로젝트</span></h2>
+                        <p class="contact-desc" data-copy="contact.desc"></p>
+                        <div class="contact-cta">
+                            <a
+                                href="mailto:baekenough@gmail.com"
+                                class="btn btn-primary"
+                                aria-label="이메일 보내기"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                baekenough@gmail.com
+                            </a>
+                            <a
+                                href="https://github.com/baekenough"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary"
+                                aria-label="GitHub 프로필"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                    />
+                                </svg>
+                                github.com/baekenough
+                            </a>
+                        </div>
+                        <footer class="footer" role="contentinfo">
+                            <p class="footer-copy" data-copy="contact.footerCopy">© 2026 백상이. Built with passion.</p>
+                            <div class="footer-links">
+                                <a
+                                    href="https://github.com/baekenough"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="GitHub"
+                                    >GitHub</a
+                                >
+                                <a
+                                    href="mailto:baekenough@gmail.com"
+                                    aria-label="이메일"
+                                    >Email</a
+                                >
+                                <a href="#home" aria-label="맨 위로 이동"
+                                    >Back to top ↑</a
+                                >
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+
+            // =====================================================
+            // CONTENT RENDERER
+            // =====================================================
+            function renderContent() {
+                var get = function(path) {
+                    return path.split(/[.\[\]]+/).filter(Boolean).reduce(function(o,k){ return o!=null?o[k]:undefined; }, CONTENT);
+                };
+                var transform = function(s) {
+                    if (typeof s !== 'string') return String(s==null?'':s);
+                    var esc = s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+                               .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+                    return esc.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+                };
+                document.querySelectorAll('[data-copy]').forEach(function(el) {
+                    var val = get(el.dataset.copy);
+                    if (val==null){ console.warn('[CONTENT] missing key:',el.dataset.copy); return; }
+                    el.innerHTML = transform(String(val));
+                });
+                document.title = CONTENT.meta.title;
+                document.querySelectorAll('meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]')
+                    .forEach(function(m){ m.setAttribute('content',CONTENT.meta.description); });
+                document.querySelectorAll('meta[property="og:title"],meta[name="twitter:title"]')
+                    .forEach(function(m){ m.setAttribute('content',CONTENT.meta.title); });
+            }
+            renderContent();
+
+            // =====================================================
+            // THEME TOGGLE
+            // =====================================================
+            const themeToggle = document.getElementById("themeToggle");
+            const html = document.documentElement;
+
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            html.setAttribute("data-theme", savedTheme);
+            themeToggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
+
+            themeToggle.addEventListener("click", () => {
+                const current = html.getAttribute("data-theme");
+                const next = current === "dark" ? "light" : "dark";
+                html.setAttribute("data-theme", next);
+                themeToggle.textContent = next === "dark" ? "🌙" : "☀️";
+                localStorage.setItem("theme", next);
+            });
+
+            // =====================================================
+            // NAVBAR SCROLL
+            // =====================================================
+            const navbar = document.getElementById("navbar");
+            let lastScroll = 0;
+
+            window.addEventListener(
+                "scroll",
+                () => {
+                    const scrollY = window.scrollY;
+                    if (scrollY > 20) {
+                        navbar.classList.add("scrolled");
+                    } else {
+                        navbar.classList.remove("scrolled");
+                    }
+                    lastScroll = scrollY;
+                },
+                { passive: true },
+            );
+
+            // =====================================================
+            // MOBILE MENU
+            // =====================================================
+            const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("open");
+                mobileMenuBtn.setAttribute("aria-expanded", "true");
+                document.body.style.overflow = "hidden";
+            });
+
+            mobileMenuClose.addEventListener("click", closeMobileMenu);
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove("open");
+                mobileMenuBtn.setAttribute("aria-expanded", "false");
+                document.body.style.overflow = "";
+            }
+
+            // =====================================================
+            // TYPING ANIMATION
+            // =====================================================
+            const taglines = CONTENT.hero.taglines;
+
+            let taglineIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const typedEl = document.getElementById("typed-text");
+
+            function typeLoop() {
+                const current = taglines[taglineIndex];
+
+                if (!isDeleting) {
+                    typedEl.textContent = current.slice(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === current.length) {
+                        isDeleting = true;
+                        setTimeout(typeLoop, 2200);
+                        return;
+                    }
+                    setTimeout(typeLoop, 55);
+                } else {
+                    typedEl.textContent = current.slice(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        taglineIndex = (taglineIndex + 1) % taglines.length;
+                        setTimeout(typeLoop, 400);
+                        return;
+                    }
+                    setTimeout(typeLoop, 28);
+                }
+            }
+
+            typeLoop();
+
+            // =====================================================
+            // INTERSECTION OBSERVER — FADE UP
+            // =====================================================
+            const fadeEls = document.querySelectorAll(".fade-up");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.1, rootMargin: "0px 0px -48px 0px" },
+            );
+
+            fadeEls.forEach((el) => observer.observe(el));
+
+            // =====================================================
+            // STAT COUNTER ANIMATION
+            // =====================================================
+            const statNumbers = document.querySelectorAll(
+                ".stat-number[data-target]",
+            );
+
+            const counterObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (
+                            entry.isIntersecting &&
+                            !entry.target.dataset.animated
+                        ) {
+                            entry.target.dataset.animated = "true";
+                            const target = parseInt(
+                                entry.target.dataset.target,
+                            );
+                            const duration = 1400;
+                            const start = performance.now();
+
+                            function tick(now) {
+                                const elapsed = now - start;
+                                const progress = Math.min(
+                                    elapsed / duration,
+                                    1,
+                                );
+                                // ease out cubic
+                                const eased = 1 - Math.pow(1 - progress, 3);
+                                entry.target.textContent = Math.round(
+                                    eased * target,
+                                );
+                                if (progress < 1) requestAnimationFrame(tick);
+                            }
+
+                            requestAnimationFrame(tick);
+                        }
+                    });
+                },
+                { threshold: 0.5 },
+            );
+
+            statNumbers.forEach((el) => counterObserver.observe(el));
+
+            // =====================================================
+            // CONTRIBUTION GRAPH GENERATION
+            // =====================================================
+            const contribGrid = document.getElementById("contribGrid");
+            if (contribGrid) {
+                const levels = [0, 0, 0, 1, 1, 2, 2, 2, 3, 3, 4];
+                const totalCells = 53 * 7;
+
+                // Seed-based pseudo-random for consistent pattern
+                function seededRand(seed) {
+                    let s = seed;
+                    return function () {
+                        s = (s * 1664525 + 1013904223) & 0xffffffff;
+                        return (s >>> 0) / 0xffffffff;
+                    };
+                }
+
+                const rand = seededRand(0xdeadbeef);
+                const fragment = document.createDocumentFragment();
+
+                for (let i = 0; i < totalCells; i++) {
+                    const cell = document.createElement("div");
+                    cell.className = "contrib-cell";
+                    const r = rand();
+                    // higher activity in recent weeks
+                    const weekBoost = i > totalCells * 0.7 ? 1.4 : 1;
+                    const pick =
+                        Math.floor(r * weekBoost * levels.length) %
+                        levels.length;
+                    const level = levels[pick];
+                    if (level > 0) cell.classList.add(`level-${level}`);
+                    fragment.appendChild(cell);
+                }
+
+                contribGrid.appendChild(fragment);
+            }
+
+            // =====================================================
+            // PARTICLE CANVAS BACKGROUND
+            // =====================================================
+            (function () {
+                const canvas = document.getElementById("particle-canvas");
+                if (!canvas) return;
+                const ctx = canvas.getContext("2d");
+                let particles = [];
+                let animFrame;
+                let W, H;
+
+                function resize() {
+                    W = canvas.width = canvas.offsetWidth;
+                    H = canvas.height = canvas.offsetHeight;
+                }
+
+                function createParticle() {
+                    return {
+                        x: Math.random() * W,
+                        y: Math.random() * H,
+                        r: Math.random() * 1.5 + 0.5,
+                        vx: (Math.random() - 0.5) * 0.25,
+                        vy: (Math.random() - 0.5) * 0.25,
+                        alpha: Math.random() * 0.5 + 0.1,
+                        hue: Math.random() > 0.5 ? 245 : 190, // indigo or cyan
+                    };
+                }
+
+                function init() {
+                    resize();
+                    const count = Math.min(Math.floor((W * H) / 18000), 80);
+                    particles = Array.from({ length: count }, createParticle);
+                }
+
+                function draw() {
+                    ctx.clearRect(0, 0, W, H);
+
+                    // Draw connections
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < 120) {
+                                ctx.beginPath();
+                                ctx.strokeStyle = `hsla(${particles[i].hue}, 80%, 65%, ${0.08 * (1 - dist / 120)})`;
+                                ctx.lineWidth = 0.5;
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+
+                    // Draw particles
+                    particles.forEach((p) => {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.alpha})`;
+                        ctx.fill();
+
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        if (p.x < 0) p.x = W;
+                        if (p.x > W) p.x = 0;
+                        if (p.y < 0) p.y = H;
+                        if (p.y > H) p.y = 0;
+                    });
+
+                    animFrame = requestAnimationFrame(draw);
+                }
+
+                // Pause when not visible for performance
+                const heroEl = document.querySelector(".hero");
+                const visObserver = new IntersectionObserver(
+                    (entries) => {
+                        if (entries[0].isIntersecting) {
+                            if (!animFrame) draw();
+                        } else {
+                            cancelAnimationFrame(animFrame);
+                            animFrame = null;
+                        }
+                    },
+                    { threshold: 0.01 },
+                );
+
+                if (heroEl) visObserver.observe(heroEl);
+
+                window.addEventListener(
+                    "resize",
+                    () => {
+                        resize();
+                        particles.forEach((p) => {
+                            if (p.x > W) p.x = W;
+                            if (p.y > H) p.y = H;
+                        });
+                    },
+                    { passive: true },
+                );
+
+                // Respect reduced motion
+                if (
+                    !window.matchMedia("(prefers-reduced-motion: reduce)")
+                        .matches
+                ) {
+                    init();
+                    draw();
+                }
+            })();
+        </script>
+    </body>
+</html>
