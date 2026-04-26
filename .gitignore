@@ -6,3 +6,5 @@ guides/
 CLAUDE.md
 .omcustomrc.json
 .mcp.json
+.omx/
+.vercel
