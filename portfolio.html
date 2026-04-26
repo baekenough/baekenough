@@ -1609,7 +1609,8 @@ SangYi Baek`,
                 career: {
                     label: `Career`,
                     heading: `경력 타임라인`,
-                    desc: `Healthcare IT/AI 분야를 중심으로 기술 지원, 개발, 솔루션 엔지니어링까지 다양한 역할을 경험했습니다.`,
+                    desc: `Healthcare IT/AI 분야를 중심으로
+                    기술 지원, 개발, 솔루션 엔지니어링까지 다양한 역할을 경험했습니다.`,
                     items: [
                         {
                             period: `2025.02 — 2026.02`,
@@ -1673,24 +1674,33 @@ SangYi Baek`,
                             stars: 20,
                         },
                         {
-                            name: `AIMS`,
+                            name: `AIMS(Archived)`,
                             tagline: `"AI Agent Management System — 멀티테넌트 오케스트레이션 플랫폼"`,
                             desc: `9개 Go 마이크로서비스 + 이벤트 드리븐 아키텍처
-                            Claude/GPT/Gemini/Ollama 멀티 프로바이더 추상화
-                            Kafka KRaft, 3단계 메모리(PostgreSQL + Qdrant) 통합
-                            멀티테넌트 AI 에이전트 플랫폼 (Archived)`,
-                            highlights: [`9 microservices`, `Multi-LLM`, `Archived`],
+                            Claude/GPT/Gemini/Ollama
+                            멀티 프로바이더 추상화
+                            Kafka KRaft, 3단계 메모리(psql + Qdrant) 통합
+                            멀티테넌트 AI 에이전트 플랫폼`,
+                            highlights: [
+                                `9 microservices`,
+                                `Multi-LLM`,
+                                `Archived`,
+                            ],
                             techs: [`Go`, `Kafka`, `PostgreSQL`],
                             stars: 0,
                         },
                         {
-                            name: `customclaw`,
+                            name: `customclaw(Archived)`,
                             tagline: `"Multi-bot AI agent platform — Claude/Codex CLI"`,
                             desc: `여러 AI 봇을 한 곳에서 생성·운영하는 봇 관리 플랫폼
                             YAML 봇 정의, Claude/Codex CLI 멀티 프로바이더
                             pgvector + OpenSearch 하이브리드 RAG 메모리
-                            GitHub/Airflow 도구 호출 (Archived)`,
-                            highlights: [`Multi-provider`, `Hybrid RAG`, `Archived`],
+                            GitHub/Airflow 도구 호출`,
+                            highlights: [
+                                `Multi-provider`,
+                                `Hybrid RAG`,
+                                `Archived`,
+                            ],
                             techs: [`Go`, `Next.js`, `pgvector`],
                             stars: 1,
                         },
@@ -1986,18 +1996,6 @@ SangYi Baek`,
                                     <span class="dot"></span
                                     ><span
                                         data-copy="about.highlights[2]"
-                                    ></span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="dot"></span
-                                    ><span
-                                        data-copy="about.highlights[3]"
-                                    ></span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="dot"></span
-                                    ><span
-                                        data-copy="about.highlights[4]"
                                     ></span>
                                 </div>
                             </div>
@@ -3394,7 +3392,13 @@ SangYi Baek`,
                         .replace(/>/g, "&gt;")
                         .replace(/"/g, "&quot;")
                         .replace(/'/g, "&#39;");
-                    return esc
+                    var dedented = esc
+                        .split("\n")
+                        .map(function (line) {
+                            return line.replace(/^\s+/, "");
+                        })
+                        .join("\n");
+                    return dedented
                         .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                         .replace(/\n/g, "<br>");
                 };
