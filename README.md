@@ -78,6 +78,32 @@ AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 
 <tr>
 <td width="50%">
 
+#### 🌐 [TNLW](https://tnlw.baekenough.com/) · `비공개`
+
+**There is No Language Wall — 실시간 다국어 영상 회의**
+
+실시간 영상 회의에서 발화 즉시 다국어로 번역하고,
+참가자마다 자신의 언어로 자막을 봅니다. SOUL 개인 학습 탑재
+
+`Next.js` `WebRTC` `LLM` `Realtime`
+
+</td>
+<td width="50%">
+
+#### 🧠 [second-brain](https://github.com/baekenough/second-brain)
+
+**LLM 큐레이션 프라이빗 검색 엔진**
+
+Slack·GitHub·Google Drive·파일시스템을 하이브리드 검색(BM25+pgvector)으로 통합하고,
+LLM이 결과를 큐레이션하는 프라이빗 검색 엔진
+
+`Go` `pgvector` `Kubernetes` `Hybrid Search`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 #### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
 
 **AI Agent Management System**
@@ -101,32 +127,6 @@ Claude CLI 또는 Codex CLI를 프로바이더로 선택 가능
 
 </td>
 </tr>
-<tr>
-<td width="50%">
-
-#### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/)
-
-**`agents.txt` 오픈 스펙 및 레퍼런스 구현**
-
-robots.txt가 크롤러를 안내하듯, agents.txt는 LLM 에이전트의
-문서 탐색을 구조화합니다. 최대 93% 토큰 절감, 다중 LLM 평가 97.7/100
-
-`agents.txt` `Open Spec` `Docker` `Context Optimization`
-
-</td>
-<td width="50%">
-
-#### 📖 [AN-Notes](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com)
-
-**AI 코딩 도구 커뮤니티 가이드 사이트**
-
-PyCon에서 영감을 받은 AI 네이티브 가이드.
-Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
-
-`Next.js` `TypeScript` `MDX` `i18n`
-
-</td>
-</tr>
 </table>
 
 ### 🔬 Research
@@ -140,6 +140,9 @@ Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 ## 💼 경력
 
 ```
+애자일소다 (AgileSoda)       2026.05 ~ 현재       수석 연구원
+└─ AI Agent Platform 팀 / AI Agent Platform 개발
+
 메디웨일 (Mediwhale)       2025.02 ~ 2026.02    시스템 엔지니어
 ├─ SaMD 백엔드 개발 (식약처/FDA 가이드라인)
 ├─ Interface 서버 설계·개발 (응답 시간 4분+ → 절반 이하로 단축)
@@ -171,10 +174,10 @@ Claude Code, GPT Codex, Gemini CLI 실전 팁 15개, 3개 언어 지원
 |:---|:---:|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
 | [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | oh-my-customcode의 Codex 네이티브 포트 |
+| [🌐 **TNLW**](https://tnlw.baekenough.com/) | Private | There is No Language Wall — 실시간 다국어 영상 회의 |
+| [🧠 **second-brain**](https://github.com/baekenough/second-brain) | Active | LLM 큐레이션 프라이빗 검색 엔진 — 하이브리드 검색 + AI 큐레이션 |
 | [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | 멀티테넌트 AI 에이전트 생성·배포·오케스트레이션 플랫폼 |
 | [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Claude CLI / Codex CLI 기반 멀티 AI 봇 운영 플랫폼 |
-| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [데모](https://agentnav.baekenough.com/) | Active | agents.txt 오픈 스펙 및 레퍼런스 구현 · LLM 에이전트 문서 탐색 |
-| [📖 **AN-Notes**](https://github.com/baekenough/AN-notes) · [사이트](https://ancon.baekenough.com) | Active | AI 코딩 도구 커뮤니티 가이드 · Claude Code, GPT Codex, Gemini CLI 실전 팁 |
 
 </div>
 

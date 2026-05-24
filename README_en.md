@@ -79,6 +79,32 @@ Framework for compiling an AI agent stack around Codex.
 <tr>
 <td width="50%">
 
+#### 🌐 [TNLW](https://tnlw.baekenough.com/) · `Private`
+
+**There is No Language Wall — real-time multilingual video meetings**
+
+Instantly translates speech into multiple languages during live calls;
+each participant sees subtitles in their own language. Includes SOUL personalization
+
+`Next.js` `WebRTC` `LLM` `Realtime`
+
+</td>
+<td width="50%">
+
+#### 🧠 [second-brain](https://github.com/baekenough/second-brain)
+
+**LLM-curated private search engine**
+
+Unifies Slack, GitHub, Google Drive, and the filesystem via hybrid search (BM25 + pgvector),
+with an LLM curating the results
+
+`Go` `pgvector` `Kubernetes` `Hybrid Search`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 #### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
 
 **AI Agent Management System**
@@ -102,32 +128,6 @@ Supports Claude CLI or Codex CLI as the provider per bot
 
 </td>
 </tr>
-<tr>
-<td width="50%">
-
-#### 🧭 [AgentNav](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/)
-
-**`agents.txt` open spec & reference implementation**
-
-Like robots.txt guides crawlers, agents.txt structures documentation
-navigation for LLM agents. Up to 93% token reduction, 97.7/100 multi-LLM eval
-
-`agents.txt` `Open Spec` `Docker` `Context Optimization`
-
-</td>
-<td width="50%">
-
-#### 📖 [AN-Notes](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com)
-
-**Community guide site for AI coding tools**
-
-Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
-15 guides across 3 languages (ko/en/es) with cross-tool linking
-
-`Next.js` `TypeScript` `MDX` `i18n`
-
-</td>
-</tr>
 </table>
 
 ### 🔬 Research
@@ -141,6 +141,9 @@ Inspired by PyCon — practical tips for Claude Code, GPT Codex, Gemini CLI.
 ## 💼 Career
 
 ```
+AgileSoda                2026.05 ~ Present    Principal Researcher
+└─ AI Agent Platform team / AI Agent Platform development
+
 Mediwhale               2025.02 ~ 2026.02    Systems Engineer
 ├─ SaMD backend (KFDA/FDA guidelines)
 ├─ Interface server (response time 4min+ → under half)
@@ -172,10 +175,10 @@ UBcare                  2018.09 ~ 2021.01
 |:---|:---:|:---|
 | [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh style customization framework for Claude Code |
 | [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | Codex-native port of oh-my-customcode |
+| [🌐 **TNLW**](https://tnlw.baekenough.com/) | Private | There is No Language Wall — real-time multilingual video meetings |
+| [🧠 **second-brain**](https://github.com/baekenough/second-brain) | Active | LLM-curated private search engine — hybrid search + AI curation |
 | [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | Multi-tenant platform for AI agent creation, deployment, and orchestration |
 | [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Multi-AI bot operations platform using Claude CLI or Codex CLI |
-| [🧭 **AgentNav**](https://github.com/baekenough/AgentNav) · [Demo](https://agentnav.baekenough.com/) | Active | agents.txt open spec & reference implementation for LLM agent navigation |
-| [📖 **AN-Notes**](https://github.com/baekenough/AN-notes) · [Live](https://ancon.baekenough.com) | Active | Community guide for AI coding tools — Claude Code, GPT Codex, Gemini CLI tips |
 
 </div>
 

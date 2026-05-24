@@ -913,10 +913,6 @@
                 gap: 24px;
             }
 
-            .project-card--featured {
-                grid-column: 1 / -1;
-            }
-
             @media (max-width: 1024px) {
                 .projects-grid {
                     grid-template-columns: repeat(2, 1fr);
@@ -1687,6 +1683,15 @@ SangYi Baek`,
                             stars: 24,
                         },
                         {
+                            name: `oh-my-customcodex`,
+                            tagline: `"oh-my-customcode의 Codex 네이티브 포트"`,
+                            desc: `에이전트 스택을 Codex 중심으로 컴파일하는 프레임워크
+                            48개 에이전트, 112개 스킬, 22개 룰을 하나의 흐름으로 구성`,
+                            highlights: [`48 agents`, `Codex-native`],
+                            techs: [`TypeScript`, `Codex CLI`, `Agent Stack`],
+                            stars: 3,
+                        },
+                        {
                             name: `TNLW`,
                             tagline: `"There is No Language Wall — 실시간 다국어 영상 회의"`,
                             desc: `실시간 영상 회의에서 발화 즉시 다국어로 번역
@@ -1707,7 +1712,7 @@ SangYi Baek`,
                             LLM이 결과를 큐레이션하는 프라이빗 검색 엔진`,
                             highlights: [`34.5MB binary`, `Korean NLP`],
                             techs: [`Go`, `pgvector`, `Kubernetes`],
-                            stars: 2,
+                            stars: 4,
                         },
                         {
                             name: `AIMS(Archived)`,
@@ -2308,7 +2313,7 @@ SangYi Baek`,
                     <div class="projects-grid">
                         <!-- oh-my-customcode -->
                         <article
-                            class="project-card project-card--featured fade-up"
+                            class="project-card fade-up"
                             aria-label="oh-my-customcode 프로젝트"
                         >
                             <div class="project-header">
@@ -2384,6 +2389,79 @@ SangYi Baek`,
                             </div>
                         </article>
 
+                        <!-- oh-my-customcodex -->
+                        <article
+                            class="project-card fade-up fade-up-delay-1"
+                            aria-label="oh-my-customcodex 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🧩
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/oh-my-customcodex"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="oh-my-customcodex GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="project-name"
+                                data-copy="projects.items[1].name"
+                            >
+                                oh-my-customcodex
+                            </h3>
+                            <p
+                                class="project-tagline"
+                                data-copy="projects.items[1].tagline"
+                            ></p>
+                            <p
+                                class="project-desc"
+                                data-copy="projects.items[1].desc"
+                            ></p>
+                            <div class="project-highlights">
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[1].highlights[0]"
+                                    >48 agents</span
+                                >
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[1].highlights[1]"
+                                    >Codex-native</span
+                                >
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Codex CLI</span>
+                                    <span class="tech-tag">Agent Stack</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 3개"
+                                >
+                                    ⭐ 3
+                                </div>
+                            </div>
+                        </article>
+
                         <!-- TNLW -->
                         <article
                             class="project-card fade-up fade-up-delay-1"
@@ -2418,27 +2496,27 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[1].name"
+                                data-copy="projects.items[2].name"
                             >
                                 TNLW
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[1].tagline"
+                                data-copy="projects.items[2].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[1].desc"
+                                data-copy="projects.items[2].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[1].highlights[0]"
+                                    data-copy="projects.items[2].highlights[0]"
                                     >Private</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[1].highlights[1]"
+                                    data-copy="projects.items[2].highlights[1]"
                                     >Realtime translation</span
                                 >
                             </div>
@@ -2459,7 +2537,7 @@ SangYi Baek`,
 
                         <!-- second-brain -->
                         <article
-                            class="project-card fade-up fade-up-delay-1"
+                            class="project-card fade-up fade-up-delay-2"
                             aria-label="second-brain 프로젝트"
                         >
                             <div class="project-header">
@@ -2491,27 +2569,27 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[2].name"
+                                data-copy="projects.items[3].name"
                             >
                                 second-brain
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[2].tagline"
+                                data-copy="projects.items[3].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[2].desc"
+                                data-copy="projects.items[3].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[2].highlights[0]"
+                                    data-copy="projects.items[3].highlights[0]"
                                     >34.5MB binary</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[2].highlights[1]"
+                                    data-copy="projects.items[3].highlights[1]"
                                     >Korean NLP</span
                                 >
                             </div>
@@ -2523,9 +2601,9 @@ SangYi Baek`,
                                 </div>
                                 <div
                                     class="project-stars"
-                                    aria-label="스타 2개"
+                                    aria-label="스타 4개"
                                 >
-                                    ⭐ 2
+                                    ⭐ 4
                                 </div>
                             </div>
                         </article>
@@ -2564,32 +2642,32 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[3].name"
+                                data-copy="projects.items[4].name"
                             >
                                 AIMS(Archived)
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[3].tagline"
+                                data-copy="projects.items[4].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[3].desc"
+                                data-copy="projects.items[4].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[3].highlights[0]"
+                                    data-copy="projects.items[4].highlights[0]"
                                     >9 microservices</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[3].highlights[1]"
+                                    data-copy="projects.items[4].highlights[1]"
                                     >Multi-LLM</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[3].highlights[2]"
+                                    data-copy="projects.items[4].highlights[2]"
                                     >Archived</span
                                 >
                             </div>
@@ -2642,32 +2720,32 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[4].name"
+                                data-copy="projects.items[5].name"
                             >
                                 customclaw(Archived)
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[4].tagline"
+                                data-copy="projects.items[5].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[4].desc"
+                                data-copy="projects.items[5].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[4].highlights[0]"
+                                    data-copy="projects.items[5].highlights[0]"
                                     >Multi-provider</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[4].highlights[1]"
+                                    data-copy="projects.items[5].highlights[1]"
                                     >Hybrid RAG</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[4].highlights[2]"
+                                    data-copy="projects.items[5].highlights[2]"
                                     >Archived</span
                                 >
                             </div>
