@@ -909,8 +909,12 @@
 
             .projects-grid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 gap: 24px;
+            }
+
+            .project-card--featured {
+                grid-column: 1 / -1;
             }
 
             @media (max-width: 1024px) {
@@ -1601,9 +1605,9 @@ SangYi Baek`,
                     ],
                     stats: [
                         { value: 8, label: `Years Experience` },
-                        { value: 15, label: `Public Repos` },
-                        { value: 30, label: `GitHub Stars` },
-                        { value: 4, label: `Companies` },
+                        { value: 12, label: `Public Repos` },
+                        { value: 41, label: `GitHub Stars` },
+                        { value: 5, label: `Companies` },
                     ],
                 },
                 career: {
@@ -1612,6 +1616,15 @@ SangYi Baek`,
                     desc: `Healthcare IT/AI 분야를 중심으로
                     기술 지원, 개발, 솔루션 엔지니어링까지 다양한 역할을 경험했습니다.`,
                     items: [
+                        {
+                            period: `2026.05 — 현재`,
+                            company: `AgileSoda`,
+                            role: `수석 연구원`,
+                            desc: `AI Agent Platform 팀
+                            AI Agent Platform 개발`,
+                            industry: `🤖 AI / Agent Platform`,
+                            duration: `// 진행 중`,
+                        },
                         {
                             period: `2025.02 — 2026.02`,
                             company: `Mediwhale`,
@@ -1671,7 +1684,30 @@ SangYi Baek`,
                                 `4 contributors`,
                             ],
                             techs: [`TypeScript`, `Multi-Agent`, `Claude Code`],
-                            stars: 20,
+                            stars: 24,
+                        },
+                        {
+                            name: `TNLW`,
+                            tagline: `"There is No Language Wall — 실시간 다국어 영상 회의"`,
+                            desc: `실시간 영상 회의에서 발화 즉시 다국어로 번역
+                            참가자마다 자신의 언어로 자막을 표시
+                            회의 중 표현을 학습하는 SOUL 개인화`,
+                            highlights: [
+                                `Private`,
+                                `Realtime translation`,
+                            ],
+                            techs: [`Next.js`, `WebRTC`, `LLM`],
+                            stars: 0,
+                        },
+                        {
+                            name: `second-brain`,
+                            tagline: `"LLM 큐레이션 프라이빗 검색 엔진"`,
+                            desc: `Slack, GitHub, Google Drive, 파일시스템을
+                            하이브리드 검색(BM25 + pgvector)
+                            LLM이 결과를 큐레이션하는 프라이빗 검색 엔진`,
+                            highlights: [`34.5MB binary`, `Korean NLP`],
+                            techs: [`Go`, `pgvector`, `Kubernetes`],
+                            stars: 2,
                         },
                         {
                             name: `AIMS(Archived)`,
@@ -1703,43 +1739,6 @@ SangYi Baek`,
                             ],
                             techs: [`Go`, `Next.js`, `pgvector`],
                             stars: 1,
-                        },
-                        {
-                            name: `second-brain`,
-                            tagline: `"LLM 큐레이션 프라이빗 검색 엔진"`,
-                            desc: `Slack, GitHub, Google Drive, 파일시스템을
-                            하이브리드 검색(BM25 + pgvector)
-                            LLM이 결과를 큐레이션하는 프라이빗 검색 엔진`,
-                            highlights: [`34.5MB binary`, `Korean NLP`],
-                            techs: [`Go`, `pgvector`, `Kubernetes`],
-                            stars: 2,
-                        },
-                        {
-                            name: `clau-doom`,
-                            tagline: `"LLM-orchestrated Multi-Agent DOOM AI"`,
-                            desc: `LLM이 게임플레이 중 호출 없이
-                            DOOM AI를 최적화할 수 있는지 연구
-                            Rust 실시간 결정 + Claude 비동기 분석
-                            45개 실험, 8,850 에피소드 완료`,
-                            highlights: [
-                                `116 formal findings`,
-                                `8,850 episodes`,
-                            ],
-                            techs: [`Rust`, `Go`, `DuckDB`],
-                            stars: 2,
-                        },
-                        {
-                            name: `AgentNav`,
-                            tagline: `"agents.txt — Machine-readable docs for AI agents"`,
-                            desc: `robots.txt가 크롤러를 안내하듯
-                            AI 에이전트를 위한 문서 사이트맵 표준 구현체
-                            651페이지 문서를 3,200 토큰으로 색인하여 93% 토큰 절감 달성`,
-                            highlights: [
-                                `93% token savings`,
-                                `Grade A (Claude & GPT)`,
-                            ],
-                            techs: [`HTML`, `Python`, `Cloudflare`],
-                            stars: 2,
                         },
                     ],
                 },
@@ -2011,7 +2010,7 @@ SangYi Baek`,
                                 </div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-number" data-target="15">
+                                <div class="stat-number" data-target="12">
                                     0
                                 </div>
                                 <div
@@ -2022,7 +2021,7 @@ SangYi Baek`,
                                 </div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-number" data-target="30">
+                                <div class="stat-number" data-target="41">
                                     0
                                 </div>
                                 <div
@@ -2033,7 +2032,7 @@ SangYi Baek`,
                                 </div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-number" data-target="4">0</div>
+                                <div class="stat-number" data-target="5">0</div>
                                 <div
                                     class="stat-label"
                                     data-copy="about.stats[3].label"
@@ -2061,50 +2060,50 @@ SangYi Baek`,
                         <p class="section-desc" data-copy="career.desc"></p>
                     </div>
                     <div class="timeline" role="list">
-                        <!-- Mediwhale -->
+                        <!-- AgileSoda -->
                         <div class="timeline-item fade-up" role="listitem">
                             <div class="timeline-card">
                                 <p
                                     class="timeline-period"
                                     data-copy="career.items[0].period"
                                 >
-                                    2025.02 — 2026.02
+                                    2026.05 — 현재
                                 </p>
                                 <h3
                                     class="timeline-company"
                                     data-copy="career.items[0].company"
                                 >
-                                    Mediwhale
+                                    AgileSoda
                                 </h3>
                                 <p
                                     class="timeline-role"
                                     data-copy="career.items[0].role"
                                 >
-                                    System Engineer
+                                    수석 연구원
                                 </p>
                                 <p
                                     class="timeline-desc"
                                     data-copy="career.items[0].desc"
                                 ></p>
                                 <span class="timeline-industry"
-                                    >🏥 Healthcare AI / 의료 영상 분석</span
+                                    >🤖 AI / Agent Platform</span
                                 >
                                 <p
                                     class="timeline-duration"
                                     data-copy="career.items[0].duration"
                                 >
-                                    // 1년 1개월
+                                    // 진행 중
                                 </p>
                             </div>
                             <div class="timeline-spacer">
                                 <div class="timeline-dot" aria-hidden="true">
-                                    🔬
+                                    🤖
                                 </div>
                             </div>
                             <div class="timeline-empty"></div>
                         </div>
 
-                        <!-- Vuno -->
+                        <!-- Mediwhale -->
                         <div
                             class="timeline-item fade-up fade-up-delay-1"
                             role="listitem"
@@ -2112,7 +2111,7 @@ SangYi Baek`,
                             <div class="timeline-empty"></div>
                             <div class="timeline-spacer">
                                 <div class="timeline-dot" aria-hidden="true">
-                                    🤖
+                                    🔬
                                 </div>
                             </div>
                             <div class="timeline-card">
@@ -2120,37 +2119,37 @@ SangYi Baek`,
                                     class="timeline-period"
                                     data-copy="career.items[1].period"
                                 >
-                                    2022.07 — 2025.01
+                                    2025.02 — 2026.02
                                 </p>
                                 <h3
                                     class="timeline-company"
                                     data-copy="career.items[1].company"
                                 >
-                                    Vuno
+                                    Mediwhale
                                 </h3>
                                 <p
                                     class="timeline-role"
                                     data-copy="career.items[1].role"
                                 >
-                                    Solutions Engineer
+                                    System Engineer
                                 </p>
                                 <p
                                     class="timeline-desc"
                                     data-copy="career.items[1].desc"
                                 ></p>
                                 <span class="timeline-industry"
-                                    >🏥 Healthcare AI / 의료 영상 진단</span
+                                    >🏥 Healthcare AI / 의료 영상 분석</span
                                 >
                                 <p
                                     class="timeline-duration"
                                     data-copy="career.items[1].duration"
                                 >
-                                    // 2년 7개월
+                                    // 1년 1개월
                                 </p>
                             </div>
                         </div>
 
-                        <!-- HD Junction -->
+                        <!-- Vuno -->
                         <div
                             class="timeline-item fade-up fade-up-delay-2"
                             role="listitem"
@@ -2160,43 +2159,43 @@ SangYi Baek`,
                                     class="timeline-period"
                                     data-copy="career.items[2].period"
                                 >
-                                    2021.02 — 2022.07
+                                    2022.07 — 2025.01
                                 </p>
                                 <h3
                                     class="timeline-company"
                                     data-copy="career.items[2].company"
                                 >
-                                    HD Junction
+                                    Vuno
                                 </h3>
                                 <p
                                     class="timeline-role"
                                     data-copy="career.items[2].role"
                                 >
-                                    Technical Support Engineer
+                                    Solutions Engineer
                                 </p>
                                 <p
                                     class="timeline-desc"
                                     data-copy="career.items[2].desc"
                                 ></p>
                                 <span class="timeline-industry"
-                                    >🏥 Healthcare IT / FHIR 표준</span
+                                    >🏥 Healthcare AI / 의료 영상 진단</span
                                 >
                                 <p
                                     class="timeline-duration"
                                     data-copy="career.items[2].duration"
                                 >
-                                    // 1년 6개월
+                                    // 2년 7개월
                                 </p>
                             </div>
                             <div class="timeline-spacer">
                                 <div class="timeline-dot" aria-hidden="true">
-                                    💻
+                                    💊
                                 </div>
                             </div>
                             <div class="timeline-empty"></div>
                         </div>
 
-                        <!-- UBcare -->
+                        <!-- HD Junction -->
                         <div
                             class="timeline-item fade-up fade-up-delay-3"
                             role="listitem"
@@ -2204,7 +2203,7 @@ SangYi Baek`,
                             <div class="timeline-empty"></div>
                             <div class="timeline-spacer">
                                 <div class="timeline-dot" aria-hidden="true">
-                                    📋
+                                    💻
                                 </div>
                             </div>
                             <div class="timeline-card">
@@ -2212,34 +2211,80 @@ SangYi Baek`,
                                     class="timeline-period"
                                     data-copy="career.items[3].period"
                                 >
-                                    2018.09 — 2021.01
+                                    2021.02 — 2022.07
                                 </p>
                                 <h3
                                     class="timeline-company"
                                     data-copy="career.items[3].company"
                                 >
-                                    UBcare
+                                    HD Junction
                                 </h3>
                                 <p
                                     class="timeline-role"
                                     data-copy="career.items[3].role"
                                 >
-                                    Technical Product Manager
+                                    Technical Support Engineer
                                 </p>
                                 <p
                                     class="timeline-desc"
                                     data-copy="career.items[3].desc"
                                 ></p>
                                 <span class="timeline-industry"
-                                    >🏥 Healthcare IT / EMR</span
+                                    >🏥 Healthcare IT / FHIR 표준</span
                                 >
                                 <p
                                     class="timeline-duration"
                                     data-copy="career.items[3].duration"
                                 >
+                                    // 1년 6개월
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- UBcare -->
+                        <div
+                            class="timeline-item fade-up fade-up-delay-4"
+                            role="listitem"
+                        >
+                            <div class="timeline-card">
+                                <p
+                                    class="timeline-period"
+                                    data-copy="career.items[4].period"
+                                >
+                                    2018.09 — 2021.01
+                                </p>
+                                <h3
+                                    class="timeline-company"
+                                    data-copy="career.items[4].company"
+                                >
+                                    UBcare
+                                </h3>
+                                <p
+                                    class="timeline-role"
+                                    data-copy="career.items[4].role"
+                                >
+                                    Technical Product Manager
+                                </p>
+                                <p
+                                    class="timeline-desc"
+                                    data-copy="career.items[4].desc"
+                                ></p>
+                                <span class="timeline-industry"
+                                    >🏥 Healthcare IT / EMR</span
+                                >
+                                <p
+                                    class="timeline-duration"
+                                    data-copy="career.items[4].duration"
+                                >
                                     // 2년 5개월
                                 </p>
                             </div>
+                            <div class="timeline-spacer">
+                                <div class="timeline-dot" aria-hidden="true">
+                                    📋
+                                </div>
+                            </div>
+                            <div class="timeline-empty"></div>
                         </div>
                     </div>
                 </div>
@@ -2263,7 +2308,7 @@ SangYi Baek`,
                     <div class="projects-grid">
                         <!-- oh-my-customcode -->
                         <article
-                            class="project-card fade-up"
+                            class="project-card project-card--featured fade-up"
                             aria-label="oh-my-customcode 프로젝트"
                         >
                             <div class="project-header">
@@ -2332,16 +2377,162 @@ SangYi Baek`,
                                 </div>
                                 <div
                                     class="project-stars"
-                                    aria-label="스타 20개"
+                                    aria-label="스타 24개"
                                 >
-                                    ⭐ 20
+                                    ⭐ 24
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- TNLW -->
+                        <article
+                            class="project-card fade-up fade-up-delay-1"
+                            aria-label="TNLW 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🌐
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://tnlw.baekenough.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="TNLW 웹사이트 열기"
+                                        title="Website"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="project-name"
+                                data-copy="projects.items[1].name"
+                            >
+                                TNLW
+                            </h3>
+                            <p
+                                class="project-tagline"
+                                data-copy="projects.items[1].tagline"
+                            ></p>
+                            <p
+                                class="project-desc"
+                                data-copy="projects.items[1].desc"
+                            ></p>
+                            <div class="project-highlights">
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[1].highlights[0]"
+                                    >Private</span
+                                >
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[1].highlights[1]"
+                                    >Realtime translation</span
+                                >
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">WebRTC</span>
+                                    <span class="tech-tag">LLM</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 0개"
+                                >
+                                    ⭐ 0
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- second-brain -->
+                        <article
+                            class="project-card fade-up fade-up-delay-1"
+                            aria-label="second-brain 프로젝트"
+                        >
+                            <div class="project-header">
+                                <div class="project-icon" aria-hidden="true">
+                                    🧠
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/baekenough/second-brain"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link"
+                                        aria-label="second-brain GitHub 저장소 열기"
+                                        title="GitHub"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="project-name"
+                                data-copy="projects.items[2].name"
+                            >
+                                second-brain
+                            </h3>
+                            <p
+                                class="project-tagline"
+                                data-copy="projects.items[2].tagline"
+                            ></p>
+                            <p
+                                class="project-desc"
+                                data-copy="projects.items[2].desc"
+                            ></p>
+                            <div class="project-highlights">
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[2].highlights[0]"
+                                    >34.5MB binary</span
+                                >
+                                <span
+                                    class="highlight-badge"
+                                    data-copy="projects.items[2].highlights[1]"
+                                    >Korean NLP</span
+                                >
+                            </div>
+                            <div class="project-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Go</span>
+                                    <span class="tech-tag">pgvector</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                </div>
+                                <div
+                                    class="project-stars"
+                                    aria-label="스타 2개"
+                                >
+                                    ⭐ 2
                                 </div>
                             </div>
                         </article>
 
                         <!-- AIMS -->
                         <article
-                            class="project-card fade-up fade-up-delay-1"
+                            class="project-card fade-up fade-up-delay-2"
                             aria-label="AIMS 프로젝트"
                         >
                             <div class="project-header">
@@ -2373,32 +2564,32 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[1].name"
+                                data-copy="projects.items[3].name"
                             >
-                                AIMS
+                                AIMS(Archived)
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[1].tagline"
+                                data-copy="projects.items[3].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[1].desc"
+                                data-copy="projects.items[3].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[1].highlights[0]"
+                                    data-copy="projects.items[3].highlights[0]"
                                     >9 microservices</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[1].highlights[1]"
+                                    data-copy="projects.items[3].highlights[1]"
                                     >Multi-LLM</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[1].highlights[2]"
+                                    data-copy="projects.items[3].highlights[2]"
                                     >Archived</span
                                 >
                             </div>
@@ -2451,32 +2642,32 @@ SangYi Baek`,
                             </div>
                             <h3
                                 class="project-name"
-                                data-copy="projects.items[2].name"
+                                data-copy="projects.items[4].name"
                             >
-                                customclaw
+                                customclaw(Archived)
                             </h3>
                             <p
                                 class="project-tagline"
-                                data-copy="projects.items[2].tagline"
+                                data-copy="projects.items[4].tagline"
                             ></p>
                             <p
                                 class="project-desc"
-                                data-copy="projects.items[2].desc"
+                                data-copy="projects.items[4].desc"
                             ></p>
                             <div class="project-highlights">
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[2].highlights[0]"
+                                    data-copy="projects.items[4].highlights[0]"
                                     >Multi-provider</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[2].highlights[1]"
+                                    data-copy="projects.items[4].highlights[1]"
                                     >Hybrid RAG</span
                                 >
                                 <span
                                     class="highlight-badge"
-                                    data-copy="projects.items[2].highlights[2]"
+                                    data-copy="projects.items[4].highlights[2]"
                                     >Archived</span
                                 >
                             </div>
@@ -2491,225 +2682,6 @@ SangYi Baek`,
                                     aria-label="스타 1개"
                                 >
                                     ⭐ 1
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- second-brain -->
-                        <article
-                            class="project-card fade-up fade-up-delay-1"
-                            aria-label="second-brain 프로젝트"
-                        >
-                            <div class="project-header">
-                                <div class="project-icon" aria-hidden="true">
-                                    🧠
-                                </div>
-                                <div class="project-links">
-                                    <a
-                                        href="https://github.com/baekenough/second-brain"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="project-link"
-                                        aria-label="second-brain GitHub 저장소 열기"
-                                        title="GitHub"
-                                    >
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                                            />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <h3
-                                class="project-name"
-                                data-copy="projects.items[3].name"
-                            >
-                                second-brain
-                            </h3>
-                            <p
-                                class="project-tagline"
-                                data-copy="projects.items[3].tagline"
-                            ></p>
-                            <p
-                                class="project-desc"
-                                data-copy="projects.items[3].desc"
-                            ></p>
-                            <div class="project-highlights">
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[3].highlights[0]"
-                                    >34.5MB binary</span
-                                >
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[3].highlights[1]"
-                                    >Korean NLP</span
-                                >
-                            </div>
-                            <div class="project-footer">
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Go</span>
-                                    <span class="tech-tag">pgvector</span>
-                                    <span class="tech-tag">Kubernetes</span>
-                                </div>
-                                <div
-                                    class="project-stars"
-                                    aria-label="스타 2개"
-                                >
-                                    ⭐ 2
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- clau-doom -->
-                        <article
-                            class="project-card fade-up fade-up-delay-2"
-                            aria-label="clau-doom 프로젝트"
-                        >
-                            <div class="project-header">
-                                <div class="project-icon" aria-hidden="true">
-                                    🎮
-                                </div>
-                                <div class="project-links">
-                                    <a
-                                        href="https://github.com/baekenough/clau-doom"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="project-link"
-                                        aria-label="clau-doom GitHub 저장소 열기"
-                                        title="GitHub"
-                                    >
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                                            />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <h3
-                                class="project-name"
-                                data-copy="projects.items[4].name"
-                            >
-                                clau-doom
-                            </h3>
-                            <p
-                                class="project-tagline"
-                                data-copy="projects.items[4].tagline"
-                            ></p>
-                            <p
-                                class="project-desc"
-                                data-copy="projects.items[4].desc"
-                            ></p>
-                            <div class="project-highlights">
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[4].highlights[0]"
-                                    >116 formal findings</span
-                                >
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[4].highlights[1]"
-                                    >8,850 episodes</span
-                                >
-                            </div>
-                            <div class="project-footer">
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Rust</span>
-                                    <span class="tech-tag">Go</span>
-                                    <span class="tech-tag">DuckDB</span>
-                                </div>
-                                <div
-                                    class="project-stars"
-                                    aria-label="스타 2개"
-                                >
-                                    ⭐ 2
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- AgentNav -->
-                        <article
-                            class="project-card fade-up fade-up-delay-3"
-                            aria-label="AgentNav 프로젝트"
-                        >
-                            <div class="project-header">
-                                <div class="project-icon" aria-hidden="true">
-                                    🗺️
-                                </div>
-                                <div class="project-links">
-                                    <a
-                                        href="https://github.com/baekenough/AgentNav"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="project-link"
-                                        aria-label="AgentNav GitHub 저장소 열기"
-                                        title="GitHub"
-                                    >
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                                            />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <h3
-                                class="project-name"
-                                data-copy="projects.items[5].name"
-                            >
-                                AgentNav
-                            </h3>
-                            <p
-                                class="project-tagline"
-                                data-copy="projects.items[5].tagline"
-                            ></p>
-                            <p
-                                class="project-desc"
-                                data-copy="projects.items[5].desc"
-                            ></p>
-                            <div class="project-highlights">
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[5].highlights[0]"
-                                    >93% token savings</span
-                                >
-                                <span
-                                    class="highlight-badge"
-                                    data-copy="projects.items[5].highlights[1]"
-                                    >Grade A (Claude & GPT)</span
-                                >
-                            </div>
-                            <div class="project-footer">
-                                <div class="tech-tags">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Cloudflare</span>
-                                </div>
-                                <div
-                                    class="project-stars"
-                                    aria-label="스타 2개"
-                                >
-                                    ⭐ 2
                                 </div>
                             </div>
                         </article>
@@ -3106,19 +3078,19 @@ SangYi Baek`,
                                 <span class="github-stat-label"
                                     >📦 Public Repos</span
                                 >
-                                <span class="github-stat-value">15</span>
+                                <span class="github-stat-value">12</span>
                             </div>
                             <div class="github-stat-row">
                                 <span class="github-stat-label"
                                     >⭐ Total Stars</span
                                 >
-                                <span class="github-stat-value">30</span>
+                                <span class="github-stat-value">41</span>
                             </div>
                             <div class="github-stat-row">
                                 <span class="github-stat-label"
                                     >👥 Followers</span
                                 >
-                                <span class="github-stat-value">11</span>
+                                <span class="github-stat-value">14</span>
                             </div>
                             <div class="github-stat-row">
                                 <span class="github-stat-label"
