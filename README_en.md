@@ -1,8 +1,8 @@
 <p align="right"><a href="./README.md">한국어</a> &nbsp;·&nbsp; <strong>English</strong></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/hero-dark.svg">
-  <img src="./assets/profile/hero-light.svg" alt="SangYi Baek — Real problems. Working systems. Software built for people." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/hero-en-dark.svg">
+  <img src="./assets/profile/hero-en-light.svg" alt="SangYi Baek — Real problems. Working systems. Software built for people." width="100%">
 </picture>
 
 <br>
@@ -33,14 +33,14 @@ AgentX Team 1 · AX Dev Chapter Lead
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/baekenough/oh-my-customcode"><img src="./assets/profile/agent-stack.svg" alt="Agent engineering: reusable skills connected to specialist agents and verification." width="100%"></a>
+      <a href="https://github.com/baekenough/oh-my-customcode"><img src="./assets/profile/agent-stack-en.svg" alt="Agent engineering: reusable skills connected to specialist agents and verification." width="100%"></a>
       <h3><a href="https://github.com/baekenough/oh-my-customcode">oh-my-customcode ↗</a></h3>
       <p><strong>Make AI coding a repeatable process.</strong></p>
       <p>A Claude Code harness that connects reusable skills, specialist agents, routing, and verification.</p>
       <p><code>TypeScript</code> <code>Claude Code</code> <code>npm</code></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/baekenough/second-brain"><img src="./assets/profile/knowledge-map.svg" alt="Knowledge systems: scattered sources connected to a searchable knowledge core." width="100%"></a>
+      <a href="https://github.com/baekenough/second-brain"><img src="./assets/profile/knowledge-map-en.svg" alt="Knowledge systems: scattered sources connected to a searchable knowledge core." width="100%"></a>
       <h3><a href="https://github.com/baekenough/second-brain">second-brain ↗</a></h3>
       <p><strong>Turn scattered records into useful knowledge.</strong></p>
       <p>Private search across documents, Slack, GitHub, and email, with hybrid retrieval, LLM curation, and MCP.</p>

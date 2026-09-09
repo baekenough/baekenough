@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" role="img" aria-labelledby="title description">
-  <title id="title">01 — 에이전트 엔지니어링</title>
-  <desc id="description">재사용 가능한 스킬을 전문 에이전트와 검증 단계로 연결합니다.</desc>
+  <title id="title">01 — Agent engineering</title>
+  <desc id="description">Three reusable skills route into a specialist agent and a verification step.</desc>
   <rect width="720" height="224" fill="#183c2a"/>
-  <text x="32" y="44" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans CJK KR', sans-serif" font-size="19" letter-spacing="1.7" fill="#c6e98a">01 / 에이전트 엔지니어링</text>
+  <text x="32" y="44" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="19" letter-spacing="1.7" fill="#c6e98a">01 / AGENT ENGINEERING</text>
   <path d="M32 65H688" stroke="#476348"/>
   <g fill="none" stroke="#c6e98a" stroke-width="2.5">
     <path d="M116 107H252V146H332M116 146H332M116 185H252V146M412 146H537"/>

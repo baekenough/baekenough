@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" role="img" aria-labelledby="title description">
-  <title id="title">02 — 지식관리 시스템</title>
-  <desc id="description">흩어진 문서를 지식 인덱스와 검색 결과로 연결합니다.</desc>
+  <title id="title">02 — Knowledge systems</title>
+  <desc id="description">Scattered documents are connected to a central knowledge index and a search result.</desc>
   <rect width="720" height="224" fill="#e7eccf"/>
-  <text x="32" y="44" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans CJK KR', sans-serif" font-size="19" letter-spacing="1.7" fill="#183c2a">02 / 지식관리 시스템</text>
+  <text x="32" y="44" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="19" letter-spacing="1.7" fill="#183c2a">02 / KNOWLEDGE SYSTEMS</text>
   <path d="M32 65H688" stroke="#b8c6a0"/>
   <g fill="none" stroke="#6d875d" stroke-width="2">
     <path d="M122 111 338 143M150 181 338 143M248 95 338 143M416 143H554"/>

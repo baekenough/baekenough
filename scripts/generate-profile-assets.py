@@ -7,28 +7,38 @@ from pathlib import Path
 OUTPUT = Path(__file__).resolve().parents[1] / "assets" / "profile"
 SANS = "'Helvetica Neue', Helvetica, Arial, sans-serif"
 MONO = "'SFMono-Regular', Consolas, 'Liberation Mono', monospace"
+KOREAN = "'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans CJK KR', sans-serif"
 
 
-def hero(dark: bool) -> str:
+def hero(dark: bool, korean: bool = True) -> str:
     background, ink, muted, line, panel = (
         ("#111c18", "#f0f2e8", "#aab9ae", "#35483b", "#1d342a")
         if dark
         else ("#f3f3eb", "#183c2a", "#546b5b", "#d1d8ca", "#183c2a")
     )
+    name = "백상이" if korean else "SANGYI BAEK"
+    title = "백상이 — 현장의 문제를, 작동하는 시스템으로." if korean else "SangYi Baek — Real problems. Working systems."
+    description = "현장의 문제를 구현과 검증으로 연결하는 초록색 프로필 배너." if korean else "An editorial profile banner connecting a problem, its implementation, and verification."
+    first = "현장의 문제를," if korean else "Real problems."
+    second = "작동하는 시스템으로." if korean else "Working systems."
+    subtitle = "사람을 향하는 엔지니어링." if korean else "Software engineering, with people in mind."
+    footer = ("에이전트 시스템", "지식과 자동화", "설계 / 개발 / 운영") if korean else ("AGENT SYSTEMS", "KNOWLEDGE &amp; AUTOMATION", "DESIGN / BUILD / OPERATE")
+    sans, mono = (KOREAN, KOREAN) if korean else (SANS, MONO)
+    size = 76 if korean else 83
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" role="img" aria-labelledby="title description">
-  <title id="title">SangYi Baek — Real problems. Working systems.</title>
-  <desc id="description">An editorial profile banner with a green and lime diagram connecting a problem, its implementation, and verification.</desc>
+  <title id="title">{title}</title>
+  <desc id="description">{description}</desc>
   <rect width="1440" height="480" fill="{background}"/>
   <path d="M64 82H1376M64 403H1376" stroke="{line}"/>
-  <g font-family="{MONO}" font-size="19" letter-spacing="2" fill="{ink}">
-    <text x="64" y="51">SANGYI BAEK</text>
+  <g font-family="{mono}" font-size="19" letter-spacing="2" fill="{ink}">
+    <text x="64" y="51">{name}</text>
     <text x="1376" y="51" text-anchor="end">BAEKENOUGH</text>
   </g>
-  <g font-family="{SANS}" font-weight="600" font-size="83" letter-spacing="-3.6" fill="{ink}">
-    <text x="59" y="206">Real problems.</text>
-    <text x="59" y="303">Working systems.</text>
+  <g font-family="{sans}" font-weight="600" font-size="{size}" letter-spacing="-3.6" fill="{ink}">
+    <text x="59" y="206">{first}</text>
+    <text x="59" y="303">{second}</text>
   </g>
-  <text x="64" y="355" font-family="{SANS}" font-size="23" fill="{muted}">Software engineering, with people in mind.</text>
+  <text x="64" y="355" font-family="{sans}" font-size="23" fill="{muted}">{subtitle}</text>
   <g transform="translate(1050 117)">
     <rect width="326" height="250" rx="10" fill="{panel}"/>
     <g stroke="#607953" stroke-width="1" opacity=".5">
@@ -42,10 +52,10 @@ def hero(dark: bool) -> str:
     <path d="m152 192 7 7 14-15" fill="none" stroke="#c6e98a" stroke-width="3"/>
     <circle cx="68" cy="124" r="5" fill="#c6e98a"/>
   </g>
-  <g font-family="{MONO}" font-size="17" letter-spacing="1.1" fill="{muted}">
-    <text x="64" y="448">AGENT SYSTEMS</text>
-    <text x="394" y="448">KNOWLEDGE &amp; AUTOMATION</text>
-    <text x="1376" y="448" text-anchor="end">DESIGN / BUILD / OPERATE</text>
+  <g font-family="{mono}" font-size="17" letter-spacing="1.1" fill="{muted}">
+    <text x="64" y="448">{footer[0]}</text>
+    <text x="394" y="448">{footer[1]}</text>
+    <text x="1376" y="448" text-anchor="end">{footer[2]}</text>
   </g>
 </svg>
 '''
@@ -104,8 +114,12 @@ if __name__ == "__main__":
     for name, content in {
         "hero-light.svg": hero(False),
         "hero-dark.svg": hero(True),
-        "agent-stack.svg": AGENT_STACK,
-        "knowledge-map.svg": KNOWLEDGE_MAP,
+        "hero-en-light.svg": hero(False, korean=False),
+        "hero-en-dark.svg": hero(True, korean=False),
+        "agent-stack.svg": AGENT_STACK.replace(MONO, KOREAN).replace("01 — Agent engineering", "01 — 에이전트 엔지니어링").replace("01 / AGENT ENGINEERING", "01 / 에이전트 엔지니어링").replace("Three reusable skills route into a specialist agent and a verification step.", "재사용 가능한 스킬을 전문 에이전트와 검증 단계로 연결합니다."),
+        "knowledge-map.svg": KNOWLEDGE_MAP.replace(MONO, KOREAN).replace("02 — Knowledge systems", "02 — 지식관리 시스템").replace("02 / KNOWLEDGE SYSTEMS", "02 / 지식관리 시스템").replace("Scattered documents are connected to a central knowledge index and a search result.", "흩어진 문서를 지식 인덱스와 검색 결과로 연결합니다."),
+        "agent-stack-en.svg": AGENT_STACK,
+        "knowledge-map-en.svg": KNOWLEDGE_MAP,
     }.items():
         (OUTPUT / name).write_text(content, encoding="utf-8")
         print(f"Generated {name}")
