@@ -1,191 +1,105 @@
-<!-- [🇰🇷 한국어](./README.md) | 🇺🇸 English -->
+<p align="right"><a href="./README.md">한국어</a> &nbsp;·&nbsp; <strong>English</strong></p>
 
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/hero-dark.svg">
+  <img src="./assets/profile/hero-light.svg" alt="SangYi Baek — Real problems. Working systems. Software built for people." width="100%">
+</picture>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=SangYi%20Baek&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=AI-Native%20Engineer%20·%208%2B%20Years%20in%20Software%20Engineering&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<br>
 
-[![한국어](https://img.shields.io/badge/🇰🇷_한국어-여기를_클릭-2563eb?style=for-the-badge)](./README.md)
+**SangYi Baek · Software Engineer**
 
-</div>
+I turn complex problems in the field into software people can use.
+My background in healthcare software integration and operations now informs my work on **AI agents, knowledge systems, and developer tools**.
+I enjoy taking a problem from discovery through design, implementation, verification, and ongoing operation.
 
-<br/>
+[Portfolio](https://portfolio.baekenough.com/) &nbsp; / &nbsp; [LinkedIn](https://www.linkedin.com/in/sangyi-baek-a8b028203/) &nbsp; / &nbsp; [Email](mailto:baekenough@gmail.com)
 
-<div align="center">
+<br>
 
-```
-An engineer oriented toward human-centered engineering.
-I dream of enhancing productivity for individuals and organizations,
-and building safe, refined products and society through AI.
-I want everyone to leverage LLM services easily and fearlessly
-to achieve higher personal and business goals.
-```
+## Current work
 
-</div>
+**AgileSoDa · Principal Researcher** &nbsp; <sub>May 2026 — Present</sub><br>
+AgentX Team 1 · AX Dev Chapter Lead
 
-<br/>
+- **Internal AX & knowledge systems** — Design and build data collection pipelines, RAG search and Q&A, and services for project visibility and risk management.
+- **Public enterprise AX project lead** — Translate customer requirements into platform changes, support deployment in isolated networks, and resolve technical issues. Teach AI-assisted coding and harness engineering.
+- **Agent development & operations** — Improve FastAPI, LangChain, and LangGraph runtimes, logging and observability, Kubernetes deployments, and developer tooling.
 
-<div align="center">
+<br>
 
-[![Gmail](https://img.shields.io/badge/Gmail-baekenough@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:baekenough@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-baekenough-181717?style=flat-square&logo=github)](https://github.com/baekenough)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-SangYi_Baek-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sangyi-baek-a8b028203/)
-
-</div>
-
----
-
-## 🧠 About Me
-
-> A software engineer with 8+ years of experience, oriented toward human-centered engineering.
-
-- 🏥 Maximized productivity in complex environments: **Medical (SaMD)**, On-Premise, per-client customization
-- 🤖 Orchestrates design → execution → validation through a **multi-LLM agent system**
-- 🔥 Open-sourced [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) harness, developing AI agent skill marketplace [baekenough-skills](https://github.com/baekenough/baekenough-skills)
-- 📈 Building tools and environments so everyone can leverage LLM easily and fearlessly
-
----
-
-## 🚀 Featured Projects
-
-### 🛠️ Products
+## Selected work
 
 <table>
-<tr>
-<td width="50%">
-
-#### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
-
-**oh-my-zsh style customization framework for Claude Code**
-
-Multi-agent orchestration, automated memory observation system,
-and release pipelines in a comprehensive harness
-
-`TypeScript` `Claude Code` `npm` `Multi-Agent`
-
-</td>
-<td width="50%">
-
-#### 🤖 [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex)
-
-**Codex-native port of oh-my-customcode**
-
-Framework for compiling an AI agent stack around Codex.
-48 agents, 112 skills, and 22 rules assembled into one workflow
-
-`TypeScript` `Codex CLI` `npm` `Agent Stack`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-#### 🌐 [TNLW](https://tnlw.baekenough.com/) · `Private`
-
-**There is No Language Wall — real-time multilingual video meetings**
-
-Instantly translates speech into multiple languages during live calls;
-each participant sees subtitles in their own language. Includes SOUL personalization
-
-`Next.js` `WebRTC` `LLM` `Realtime`
-
-</td>
-<td width="50%">
-
-#### 🧠 [second-brain](https://github.com/baekenough/second-brain)
-
-**LLM-curated private search engine**
-
-Unifies Slack, GitHub, Google Drive, and the filesystem via hybrid search (BM25 + pgvector),
-with an LLM curating the results
-
-`Go` `pgvector` `Kubernetes` `Hybrid Search`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-#### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
-
-**AI Agent Management System**
-
-Multi-tenant platform for creating, deploying, and orchestrating AI agents.
-Built around MSA, event-driven architecture, and a Memory API
-
-`Go` `Next.js` `Kafka` `Archived`
-
-</td>
-<td width="50%">
-
-#### 🐾 [customclaw](https://github.com/baekenough/customclaw) · `Archived`
-
-**Multi-AI bot operations platform**
-
-Platform for creating and operating multiple AI bots in one place.
-Supports Claude CLI or Codex CLI as the provider per bot
-
-`Python` `Go` `Next.js` `Archived`
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/baekenough/oh-my-customcode"><img src="./assets/profile/agent-stack.svg" alt="Agent engineering: reusable skills connected to specialist agents and verification." width="100%"></a>
+      <h3><a href="https://github.com/baekenough/oh-my-customcode">oh-my-customcode ↗</a></h3>
+      <p><strong>Make AI coding a repeatable process.</strong></p>
+      <p>A Claude Code harness that connects reusable skills, specialist agents, routing, and verification.</p>
+      <p><code>TypeScript</code> <code>Claude Code</code> <code>npm</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/baekenough/second-brain"><img src="./assets/profile/knowledge-map.svg" alt="Knowledge systems: scattered sources connected to a searchable knowledge core." width="100%"></a>
+      <h3><a href="https://github.com/baekenough/second-brain">second-brain ↗</a></h3>
+      <p><strong>Turn scattered records into useful knowledge.</strong></p>
+      <p>Private search across documents, Slack, GitHub, and email, with hybrid retrieval, LLM curation, and MCP.</p>
+      <p><code>Go</code> <code>PostgreSQL</code> <code>pgvector</code> <code>MCP</code></p>
+    </td>
+  </tr>
 </table>
 
-### 🔬 Research
+**More tools I build**
 
-| Project | Description |
+- [**baekenough-skills**](https://github.com/baekenough/baekenough-skills) — Reusable agent skills for multi-LLM reviews, CLI execution, and YAML workflows.
+- [**workspace-brain**](https://github.com/baekenough/workspace-brain) — A Go prototype exploring tenant isolation and a shared RAG interface, with Slack and HTTP adapters and a local search core.
+
+<details>
+<summary>Earlier projects & experiments</summary>
+
+<br>
+
+| Project | Exploration |
 |:---|:---|
-| 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `Research Concluded` | LLM-orchestrated Multi-Agent DOOM AI — RAG experience accumulation + DOE optimization + generational evolution |
+| [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex) · Archived | Adapting the Claude Code harness to a Codex-native workflow |
+| [AIMS](https://github.com/baekenough/aims) · Archived | Multi-tenant agent creation, deployment, and orchestration |
+| [customclaw](https://github.com/baekenough/customclaw) · Archived | Operating multiple AI bots with Claude and Codex |
+| [clau-doom](https://github.com/baekenough/clau-doom) · Research concluded | DOOM agents combining LLM orchestration, RAG, and design of experiments |
+
+</details>
+
+<br>
+
+## Engineering practice
+
+**Define → Design → Build → Verify → Operate**
+
+I use Claude Code and Codex in daily development.
+I define agent roles, context, and tools, then connect implementation to code review, regression checks, and handoff notes.
+Verifying the result and preserving what the next task can reuse are part of the work.
+
+| Area | Tools I work with |
+|:---|:---|
+| Languages | Python · Go · TypeScript |
+| Applications | FastAPI · React · Next.js |
+| Agents & data | LangChain · LangGraph · MCP · PostgreSQL · pgvector · ClickHouse · Redis |
+| Delivery | Docker · Kubernetes · Helm · GitHub Actions · AWS · Linux |
+
+<br>
+
+## Background
+
+Since 2018, I have worked across healthcare software support, system integration, and deployment automation.
+That experience shapes how I account for real operating constraints and carry software into everyday use.
+
+| Period | Company · Work |
+|:---|:---|
+| Feb 2025 — Feb 2026 | **Mediwhale** · Customer-specific interface servers, PyQt applications, and deployment and update automation |
+| Jul 2022 — Jan 2025 | **VUNO** · EMR ↔ AI server integration, data processing, on-premise deployment, and technical support |
+| Feb 2021 — Jul 2022 | **HD Junction** · Data migration, external system integration, and QA process development |
+
+<br>
 
 ---
 
-## 💼 Career
-
-```
-AgileSoda                2026.05 ~ Present    Principal Researcher
-└─ AI Agent Platform team / AI Agent Platform development
-
-Mediwhale               2025.02 ~ 2026.02    Systems Engineer
-├─ SaMD backend (KFDA/FDA guidelines)
-├─ Interface server (response time 4min+ → under half)
-├─ App deployment server (NSIS + GitHub Actions)
-├─ Headless PACS development
-└─ PyQt desktop application
-
-Vuno                    2022.07 ~ 2025.01    Solutions Engineer
-├─ EMR ↔ AI Server interface (DB parsing 56%↑)
-├─ On-Premise install simplification (20+ steps → 1 step)
-└─ Hospital system integration consulting
-
-HD Junction             2021.02 ~ 2022.07    Technical Support
-├─ Third-party web application development
-├─ DB migration solution
-└─ Jira/Confluence automation
-
-UBcare                  2018.09 ~ 2021.01
-└─ TCP/IP print delivery solution TF PM
-```
-
----
-
-## 📈 GitHub Activity
-
-<div align="center">
-
-| Repository | Status | Snapshot |
-|:---|:---:|:---|
-| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh style customization framework for Claude Code |
-| [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | Codex-native port of oh-my-customcode |
-| [🌐 **TNLW**](https://tnlw.baekenough.com/) | Private | There is No Language Wall — real-time multilingual video meetings |
-| [🧠 **second-brain**](https://github.com/baekenough/second-brain) | Active | LLM-curated private search engine — hybrid search + AI curation |
-| [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | Multi-tenant platform for AI agent creation, deployment, and orchestration |
-| [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Multi-AI bot operations platform using Claude CLI or Codex CLI |
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=100&section=footer" width="100%"/>
-
-</div>
+<sub>Engineering for people. &nbsp; · &nbsp; <a href="mailto:baekenough@gmail.com">Let's talk ↗</a></sub>

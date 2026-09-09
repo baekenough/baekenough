@@ -1,190 +1,105 @@
-<!-- 🇰🇷 한국어 | [🇺🇸 English](./README_en.md) -->
+<p align="right"><strong>한국어</strong> &nbsp;·&nbsp; <a href="./README_en.md">English</a></p>
 
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/hero-dark.svg">
+  <img src="./assets/profile/hero-light.svg" alt="SangYi Baek — Real problems. Working systems. 사람을 위한 소프트웨어를 만듭니다." width="100%">
+</picture>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=230&section=header&text=백상이%20(SangYi%20Baek)&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=AI-Native%20Engineer%20·%208년차%20소프트웨어%20엔지니어&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn" width="100%"/>
+<br>
 
-[![English](https://img.shields.io/badge/🇺🇸_English-Click_Here-2563eb?style=for-the-badge)](./README_en.md)
+**백상이 · Software Engineer**
 
-</div>
+복잡한 현장의 문제를, 사람들이 쓸 수 있는 소프트웨어로 만듭니다.
+의료 소프트웨어의 시스템 연동·운영 경험을 바탕으로 **AI Agent, 지식관리 시스템, 개발 자동화 도구**를 설계하고 개발합니다.
+문제를 발견하는 일부터 구현, 검증, 배포 이후의 운영까지 직접 연결하는 일을 좋아합니다.
 
-<br/>
+[Portfolio](https://portfolio.baekenough.com/) &nbsp; / &nbsp; [LinkedIn](https://www.linkedin.com/in/sangyi-baek-a8b028203/) &nbsp; / &nbsp; [Email](mailto:baekenough@gmail.com)
 
-<div align="center">
+<br>
 
-```
-사람을 향하는 엔지니어링을 지향하는 엔지니어입니다.
-AI를 활용하여 개인, 조직의 생산성 향상과 안전하고 정교한 제품, 사회를 꿈꿉니다.
-모두가 쉽고 공포감 없이 LLM Service를 활용하며
-더 높은 개인적, 비즈니스적 목표를 달성하게끔 하고 싶습니다.
-```
+## 지금 하는 일
 
-</div>
+**애자일소다 · 수석 연구원** &nbsp; <sub>2026.05 — 현재</sub><br>
+AgentX 1팀 · AX Dev Chapter 리드
 
-<br/>
+- **사내 AX와 지식관리** — 업무 데이터 수집·정제, RAG 기반 검색·질의응답, 프로젝트 현황·리스크 관리 서비스를 기획하고 개발합니다.
+- **공기업 AX 프로젝트 PL** — 고객 요구사항 분석, AI Agent 플랫폼 커스터마이징, 폐쇄망 배포 환경 구성과 기술지원을 수행합니다. 바이브 코딩·하네스 엔지니어링 교육도 진행합니다.
+- **Agent 개발·운영 기반** — FastAPI·LangChain·LangGraph 기반 실행 환경, 로깅·관측성, Kubernetes 배포와 개발 도구를 개선합니다.
 
-<div align="center">
+<br>
 
-[![Gmail](https://img.shields.io/badge/Gmail-baekenough@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:baekenough@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-baekenough-181717?style=flat-square&logo=github)](https://github.com/baekenough)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-SangYi_Baek-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sangyi-baek-a8b028203/)
-
-</div>
-
----
-
-## 🧠 About Me
-
-> 사람을 향하는 엔지니어링을 지향하는 8년차 소프트웨어 엔지니어입니다.
-
-- 🏥 의료(SaMD), On-Premise, 고객사별 커스터마이징 등 **복잡한 환경**에서 생산성을 극대화해왔습니다
-- 🤖 **멀티 LLM 에이전트 시스템**으로 설계 → 실행 → 검증을 오케스트레이션합니다
-- 🔥 하네스 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode) 오픈소스 배포, AI 에이전트 스킬 마켓플레이스 [baekenough-skills](https://github.com/baekenough/baekenough-skills) 개발
-- 📈 모두가 쉽고 공포감 없이 LLM을 활용할 수 있는 도구와 환경을 만들고 있습니다
-
----
-
-## 🚀 Featured Projects
-
-### 🛠️ Products
+## Selected work
 
 <table>
-<tr>
-<td width="50%">
-
-#### 🔧 [oh-my-customcode](https://github.com/baekenough/oh-my-customcode)
-
-**oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크**
-
-멀티 에이전트 오케스트레이션, 자동화된 메모리 관찰 시스템,
-릴리스 파이프라인을 포함하는 종합 하네스
-
-`TypeScript` `Claude Code` `npm` `Multi-Agent`
-
-</td>
-<td width="50%">
-
-#### 🤖 [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex)
-
-**oh-my-customcode의 Codex 네이티브 포트**
-
-에이전트 스택을 Codex 중심으로 컴파일하는 프레임워크.
-48개 에이전트, 112개 스킬, 22개 룰을 하나의 흐름으로 구성
-
-`TypeScript` `Codex CLI` `npm` `Agent Stack`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-#### 🌐 [TNLW](https://tnlw.baekenough.com/) · `비공개`
-
-**There is No Language Wall — 실시간 다국어 영상 회의**
-
-실시간 영상 회의에서 발화 즉시 다국어로 번역하고,
-참가자마다 자신의 언어로 자막을 봅니다. SOUL 개인 학습 탑재
-
-`Next.js` `WebRTC` `LLM` `Realtime`
-
-</td>
-<td width="50%">
-
-#### 🧠 [second-brain](https://github.com/baekenough/second-brain)
-
-**LLM 큐레이션 프라이빗 검색 엔진**
-
-Slack·GitHub·Google Drive·파일시스템을 하이브리드 검색(BM25+pgvector)으로 통합하고,
-LLM이 결과를 큐레이션하는 프라이빗 검색 엔진
-
-`Go` `pgvector` `Kubernetes` `Hybrid Search`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-#### 🏗️ [AIMS](https://github.com/baekenough/aims) · `Archived`
-
-**AI Agent Management System**
-
-멀티테넌트 AI 에이전트 생성, 배포, 오케스트레이션 플랫폼.
-MSA, 이벤트 드리븐 아키텍처, Memory API 중심으로 설계
-
-`Go` `Next.js` `Kafka` `Archived`
-
-</td>
-<td width="50%">
-
-#### 🐾 [customclaw](https://github.com/baekenough/customclaw) · `Archived`
-
-**멀티 AI 봇 운영 플랫폼**
-
-여러 AI 봇을 한 곳에서 생성·운영하는 플랫폼.
-Claude CLI 또는 Codex CLI를 프로바이더로 선택 가능
-
-`Python` `Go` `Next.js` `Archived`
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/baekenough/oh-my-customcode"><img src="./assets/profile/agent-stack.svg" alt="Agent engineering: reusable skills connected to specialist agents and verification." width="100%"></a>
+      <h3><a href="https://github.com/baekenough/oh-my-customcode">oh-my-customcode ↗</a></h3>
+      <p><strong>AI 코딩을 반복 가능한 개발 과정으로.</strong></p>
+      <p>스킬·전문 에이전트·라우팅·검증 규칙을 엮어 개발 과정을 표준화하는 Claude Code 하네스.</p>
+      <p><code>TypeScript</code> <code>Claude Code</code> <code>npm</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/baekenough/second-brain"><img src="./assets/profile/knowledge-map.svg" alt="Knowledge systems: scattered sources connected to a searchable knowledge core." width="100%"></a>
+      <h3><a href="https://github.com/baekenough/second-brain">second-brain ↗</a></h3>
+      <p><strong>흩어진 기록을, 다시 쓸 수 있는 지식으로.</strong></p>
+      <p>문서·Slack·GitHub·메일을 수집하고 하이브리드 검색·LLM 큐레이션·MCP로 연결하는 프라이빗 검색 엔진.</p>
+      <p><code>Go</code> <code>PostgreSQL</code> <code>pgvector</code> <code>MCP</code></p>
+    </td>
+  </tr>
 </table>
 
-### 🔬 Research
+**그 밖의 도구**
 
-| Project | Description |
+- [**baekenough-skills**](https://github.com/baekenough/baekenough-skills) — 다중 LLM 검토, CLI 실행, YAML 파이프라인 등 재사용 가능한 Agent 스킬 모음.
+- [**workspace-brain**](https://github.com/baekenough/workspace-brain) — 프로젝트별 지식 격리와 공통 RAG 인터페이스를 탐구하는 Go 프로토타입. Slack·HTTP 어댑터와 로컬 검색 코어를 구현했습니다.
+
+<details>
+<summary>이전 프로젝트와 실험</summary>
+
+<br>
+
+| 프로젝트 | 다룬 문제 |
 |:---|:---|
-| 🎮 [**clau-doom**](https://github.com/baekenough/clau-doom) · `연구 종료` | LLM 오케스트레이션 기반 멀티에이전트 DOOM AI — RAG 경험 축적 + DOE 최적화 + 세대별 진화 |
+| [oh-my-customcodex](https://github.com/baekenough/oh-my-customcodex) · 보관 | Claude Code 하네스를 Codex 환경에 맞게 이식 |
+| [AIMS](https://github.com/baekenough/aims) · 보관 | 멀티테넌트 AI Agent 생성·배포·오케스트레이션 |
+| [customclaw](https://github.com/baekenough/customclaw) · 보관 | Claude·Codex 기반 여러 AI 봇의 통합 운영 |
+| [clau-doom](https://github.com/baekenough/clau-doom) · 연구 종료 | LLM 오케스트레이션, RAG와 실험계획법을 이용한 DOOM 에이전트 연구 |
+
+</details>
+
+<br>
+
+## Engineering practice
+
+**문제 정의 → 설계 → 구현 → 검증 → 운영**
+
+Claude Code와 Codex를 실제 개발 과정에 사용합니다.
+에이전트의 역할·맥락·도구를 정하고, 코드 검토·회귀 테스트·작업 인계까지 이어지는 흐름을 구성합니다.
+자동화한 결과를 확인하고 다음 작업에서 재사용할 수 있도록 남기는 것까지 개발의 일부로 봅니다.
+
+| 영역 | 주로 사용하는 기술 |
+|:---|:---|
+| Languages | Python · Go · TypeScript |
+| Applications | FastAPI · React · Next.js |
+| Agents & data | LangChain · LangGraph · MCP · PostgreSQL · pgvector · ClickHouse · Redis |
+| Delivery | Docker · Kubernetes · Helm · GitHub Actions · AWS · Linux |
+
+<br>
+
+## Background
+
+2018년부터 의료 소프트웨어의 기술지원, 시스템 연동, 배포 자동화를 경험해 왔습니다.
+현장의 제약을 이해하고, 실제 운영까지 이어지는 구조를 만드는 데 이 경험을 활용합니다.
+
+| 기간 | 회사 · 주요 업무 |
+|:---|:---|
+| 2025.02 — 2026.02 | **Mediwhale** · 고객별 인터페이스 서버, PyQt 애플리케이션, 배포·업데이트 자동화 |
+| 2022.07 — 2025.01 | **VUNO** · EMR ↔ AI 서버 연동, 데이터 처리, 온프레미스 배포·기술지원 |
+| 2021.02 — 2022.07 | **HD Junction** · 데이터 마이그레이션, 외부 시스템 연동, QA 프로세스 정비 |
+
+<br>
 
 ---
 
-## 💼 경력
-
-```
-애자일소다 (AgileSoda)       2026.05 ~ 현재       수석 연구원
-└─ AI Agent Platform 팀 / AI Agent Platform 개발
-
-메디웨일 (Mediwhale)       2025.02 ~ 2026.02    시스템 엔지니어
-├─ SaMD 백엔드 개발 (식약처/FDA 가이드라인)
-├─ Interface 서버 설계·개발 (응답 시간 4분+ → 절반 이하로 단축)
-├─ 어플리케이션 배포 서버 (NSIS + GitHub Actions 자동화)
-├─ Headless PACS 개발
-└─ PyQt 윈도우 어플리케이션 개발
-
-뷰노 (Vuno)                2022.07 ~ 2025.01    솔루션 엔지니어
-├─ EMR ↔ AI Server 인터페이스 (DB 파싱 속도 56%↑)
-├─ On-Premise 설치 간소화 (20+ steps → 1 step)
-└─ 원내 시스템 연동 컨설팅
-
-에이치디정션 (HD Junction)    2021.02 ~ 2022.07    기술지원
-├─ Third-party 웹 어플리케이션 개발
-├─ DB 마이그레이션 솔루션 개발
-└─ Jira/Confluence 운영 자동화
-
-유비케어 (UBcare)            2018.09 ~ 2021.01
-└─ TCP/IP 프린트 전달·출력 솔루션 TF PM
-```
-
----
-
-## 📈 GitHub Activity
-
-<div align="center">
-
-| Repository | Status | Snapshot |
-|:---|:---:|:---|
-| [🔧 **oh-my-customcode**](https://github.com/baekenough/oh-my-customcode) | Active | oh-my-zsh 스타일의 Claude Code 커스터마이징 프레임워크 |
-| [🤖 **oh-my-customcodex**](https://github.com/baekenough/oh-my-customcodex) | Active | oh-my-customcode의 Codex 네이티브 포트 |
-| [🌐 **TNLW**](https://tnlw.baekenough.com/) | Private | There is No Language Wall — 실시간 다국어 영상 회의 |
-| [🧠 **second-brain**](https://github.com/baekenough/second-brain) | Active | LLM 큐레이션 프라이빗 검색 엔진 — 하이브리드 검색 + AI 큐레이션 |
-| [🏗️ **AIMS**](https://github.com/baekenough/aims) | Archived | 멀티테넌트 AI 에이전트 생성·배포·오케스트레이션 플랫폼 |
-| [🐾 **customclaw**](https://github.com/baekenough/customclaw) | Archived | Claude CLI / Codex CLI 기반 멀티 AI 봇 운영 플랫폼 |
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:1e3a5f,100:22d3ee&height=100&section=footer" width="100%"/>
-
-</div>
+<sub>사람을 향하는 엔지니어링. &nbsp; · &nbsp; <a href="mailto:baekenough@gmail.com">함께 이야기하기 ↗</a></sub>

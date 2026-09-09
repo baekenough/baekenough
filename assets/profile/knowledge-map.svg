@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" role="img" aria-labelledby="title description">
+  <title id="title">02 — Knowledge systems</title>
+  <desc id="description">Scattered documents are connected to a central knowledge index and a search result.</desc>
+  <rect width="720" height="224" fill="#e7eccf"/>
+  <text x="32" y="44" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="19" letter-spacing="1.7" fill="#183c2a">02 / KNOWLEDGE SYSTEMS</text>
+  <path d="M32 65H688" stroke="#b8c6a0"/>
+  <g fill="none" stroke="#6d875d" stroke-width="2">
+    <path d="M122 111 338 143M150 181 338 143M248 95 338 143M416 143H554"/>
+    <circle cx="248" cy="95" r="8" fill="#e7eccf"/>
+    <circle cx="150" cy="181" r="8" fill="#e7eccf"/>
+    <rect x="95" y="89" width="28" height="38" rx="3" fill="#e7eccf"/>
+    <path d="M102 101h14M102 109h14M102 117h9"/>
+  </g>
+  <g stroke="#183c2a" stroke-width="2" fill="#183c2a">
+    <path d="m377 103 40 21v40l-40 21-40-21v-40Z"/>
+    <path d="m337 124 40 21 40-21M377 145v40" fill="none" stroke="#c6e98a"/>
+  </g>
+  <circle cx="575" cy="136" r="24" fill="none" stroke="#183c2a" stroke-width="4"/>
+  <path d="m592 153 24 24" stroke="#183c2a" stroke-width="5"/>
+  <path d="M647 103v74M638 112h18M638 133h18M638 154h18" stroke="#b8c6a0" stroke-width="2"/>
+</svg>
